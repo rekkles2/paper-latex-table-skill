@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "case_id": "synthetic-ablation",
+  "source_type": "structured_synthetic",
+  "table_type": "ablation",
+  "venue": "generic",
+  "template": "article",
+  "columns": 4,
+  "features": [
+    "component_matrix"
+  ],
+  "rights": "original-project-example",
+  "provenance": "Newly authored synthetic data; not measurements and not copied from user references",
+  "design_rationale": "Minimal executable pattern; inspect at final size",
+  "verified": true,
+  "compilation": "passed_generic_article",
+  "visual_status": "reviewed_2026-10-23",
+  "sources": [
+    {
+      "path": "data.json",
+      "sha256": "60ccb8868550ffb68b0be32fccd96f79f227d16794ad58c629190a87975c70cb"
+    },
+    {
+      "path": "table.tex",
+      "sha256": "3893302ba190d7521d90de9dd6d991c9ca35cd52d27922e43f7597966475d7d3"
+    }
+  ],
+  "numerical_status": "exact_contract_renderer_match",
+  "verification_scope": "Synthetic example only; not official-venue compliance",
+  "tested_engine": "pdfTeX (TeX Live 2023); installed siunitx recorded in engine logs"
+}

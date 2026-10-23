@@ -1,0 +1,43 @@
+{
+  "alignment": "decimal",
+  "columns": [
+    {
+      "id": "value",
+      "label": "Value",
+      "direction": "none"
+    }
+  ],
+  "rows": [
+    {
+      "id": "Negative",
+      "label": "Negative",
+      "values": {
+        "value": "-0.120"
+      }
+    },
+    {
+      "id": "Integer",
+      "label": "Integer",
+      "values": {
+        "value": "12"
+      }
+    },
+    {
+      "id": "Exponent",
+      "label": "Exponent",
+      "values": {
+        "value": "1.2e-3"
+      }
+    },
+    {
+      "id": "Missing",
+      "label": "Missing",
+      "values": {
+        "value": null
+      }
+    }
+  ],
+  "schema_version": 1,
+  "caption": "Illustrative synthetic decimal results; not measured experiments.",
+  "label": "tab:decimal"
+}

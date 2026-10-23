@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "case_id": "synthetic-cross-dataset",
+  "source_type": "structured_synthetic",
+  "table_type": "cross_dataset",
+  "venue": "generic",
+  "template": "article",
+  "columns": 2,
+  "features": [
+    "cross_dataset"
+  ],
+  "rights": "original-project-example",
+  "provenance": "Newly authored synthetic data; not measurements and not copied from user references",
+  "design_rationale": "Minimal executable pattern; inspect at final size",
+  "verified": true,
+  "compilation": "passed_generic_article",
+  "visual_status": "reviewed_2026-10-23",
+  "sources": [
+    {
+      "path": "data.json",
+      "sha256": "32af0c2d6217dc0770cb82160180fe24c7de8a3b766854e8a695f3ad6e7ce4a6"
+    },
+    {
+      "path": "table.tex",
+      "sha256": "560c87361470d11502a0ea9c2491b1a7f47987dd4eaa43f76f9a736dde74b8b5"
+    }
+  ],
+  "numerical_status": "exact_contract_renderer_match",
+  "verification_scope": "Synthetic example only; not official-venue compliance",
+  "tested_engine": "pdfTeX (TeX Live 2023); installed siunitx recorded in engine logs"
+}

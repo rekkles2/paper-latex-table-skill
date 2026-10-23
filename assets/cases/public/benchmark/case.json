@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "case_id": "synthetic-benchmark",
+  "source_type": "structured_synthetic",
+  "table_type": "model_comparison",
+  "venue": "generic",
+  "template": "article",
+  "columns": 4,
+  "features": [
+    "efficiency",
+    "best_second"
+  ],
+  "rights": "original-project-example",
+  "provenance": "Newly authored synthetic data; not measurements and not copied from user references",
+  "design_rationale": "Minimal executable pattern; inspect at final size",
+  "verified": true,
+  "compilation": "passed_generic_article",
+  "visual_status": "reviewed_2026-10-23",
+  "sources": [
+    {
+      "path": "data.json",
+      "sha256": "08e42199faa5df84a05a28da65dedba1e257f5f7ced26ef66b7ad6a19f78ed9c"
+    },
+    {
+      "path": "table.tex",
+      "sha256": "11e51ed7c9d108df19a3724b96a3c1821132c194febc65f4fcd567b394a2af84"
+    }
+  ],
+  "numerical_status": "exact_contract_renderer_match",
+  "verification_scope": "Synthetic example only; not official-venue compliance",
+  "tested_engine": "pdfTeX (TeX Live 2023); installed siunitx recorded in engine logs"
+}

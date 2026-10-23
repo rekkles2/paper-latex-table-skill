@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "case_id": "synthetic-ties-missing",
+  "source_type": "structured_synthetic",
+  "table_type": "ties_missing",
+  "venue": "generic",
+  "template": "article",
+  "columns": 4,
+  "features": [
+    "best_second",
+    "missing_values",
+    "ties"
+  ],
+  "rights": "original-project-example",
+  "provenance": "Newly authored synthetic data; not measurements and not copied from user references",
+  "design_rationale": "Minimal executable pattern; inspect at final size",
+  "verified": true,
+  "compilation": "passed_generic_article",
+  "visual_status": "reviewed_2026-10-23",
+  "sources": [
+    {
+      "path": "data.json",
+      "sha256": "e7e678db88e56a76a59a788911c439931498af596227563181033f05597e9bf2"
+    },
+    {
+      "path": "table.tex",
+      "sha256": "0c90d4d910b7dbd8cb9333fb4b97e3cd258957737169ac6b1bc17fcac641263d"
+    }
+  ],
+  "numerical_status": "exact_contract_renderer_match",
+  "verification_scope": "Synthetic example only; not official-venue compliance",
+  "tested_engine": "pdfTeX (TeX Live 2023); installed siunitx recorded in engine logs"
+}

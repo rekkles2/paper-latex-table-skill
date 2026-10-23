@@ -1,0 +1,86 @@
+{
+  "float": "table*",
+  "columns": [
+    {
+      "id": "m1",
+      "label": "M1",
+      "direction": "higher",
+      "header_group": "Family A"
+    },
+    {
+      "id": "m2",
+      "label": "M2",
+      "direction": "higher",
+      "header_group": "Family A"
+    },
+    {
+      "id": "m3",
+      "label": "M3",
+      "direction": "higher",
+      "header_group": "Family A"
+    },
+    {
+      "id": "m4",
+      "label": "M4",
+      "direction": "higher",
+      "header_group": "Family A"
+    },
+    {
+      "id": "m5",
+      "label": "M5",
+      "direction": "higher",
+      "header_group": "Family B"
+    },
+    {
+      "id": "m6",
+      "label": "M6",
+      "direction": "higher",
+      "header_group": "Family B"
+    },
+    {
+      "id": "m7",
+      "label": "M7",
+      "direction": "higher",
+      "header_group": "Family B"
+    },
+    {
+      "id": "m8",
+      "label": "M8",
+      "direction": "higher",
+      "header_group": "Family B"
+    }
+  ],
+  "rows": [
+    {
+      "id": "Base",
+      "label": "Base",
+      "values": {
+        "m1": "61.00",
+        "m2": "62.00",
+        "m3": "63.00",
+        "m4": "64.00",
+        "m5": "65.00",
+        "m6": "66.00",
+        "m7": "67.00",
+        "m8": "68.00"
+      }
+    },
+    {
+      "id": "Full",
+      "label": "Full",
+      "values": {
+        "m1": "64.20",
+        "m2": "65.20",
+        "m3": "66.20",
+        "m4": "67.20",
+        "m5": "68.20",
+        "m6": "69.20",
+        "m7": "70.20",
+        "m8": "71.20"
+      }
+    }
+  ],
+  "schema_version": 1,
+  "caption": "Illustrative synthetic wide results; not measured experiments.",
+  "label": "tab:wide"
+}

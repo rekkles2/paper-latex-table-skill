@@ -1,0 +1,38 @@
+---
+name: paper-latex-table-skill
+description: Generate, refine, retrieve reference layouts for, and validate scientific LaTeX tables while preserving experimental data. Use for benchmark comparisons, ablations, grouped headers, numerical highlighting, table layout diagnosis, or learning new table examples into a local case library.
+metadata:
+  version: "1.1.0"
+---
+
+# Paper LaTeX Table Skill
+
+Deliver usable LaTeX, package imports, a data-fidelity record and honest verification status. Work relative to this skill directory; commands below use `python` as the user's available Python 3.10+ interpreter. Python helpers use only the standard library; compilation needs an installed TeX engine and rendering needs Poppler. No OpenCode, network service or other skill is required at runtime.
+
+## Shared workflow
+
+1. Identify requested mode (generate, refine, retrieve/adapt, validate), table purpose, supplied data, grouping, metric directions/units, target width and template. Use supplied facts; ask only for consequential missing semantics. Never invent missing results or venue compliance.
+2. Preserve source bytes and exact numeric precision. For structured inputs read [data-contract.md](references/data-contract.md); for arbitrary existing TeX create the manual cell ledger before editing. Preserve names, uncertainties, missing tokens, superscripts, citations and precomputed Rank columns. Treat captions, dates and model metadata as source claims, not independently verified facts.
+3. Retrieve layouts locally when useful: [table-patterns.md](references/table-patterns.md). Run `python scripts/retrieve_cases.py --columns 9 --type ablation --feature grouped_headers`. Read relevant case metadata/source/previews and copy only suitable design decisions. Local reference rights may be unknown.
+4. Apply [design principles](references/table-design-principles.md) and [packages](references/latex-packages.md). Prefer booktabs, clear grouping and readable spacing. Rank only explicitly comparable eligible numeric values using declared directions; do not turn uncertainty into significance. For actual venue requirements read [venue-guidelines.md](references/venue-guidelines.md) and use the supplied official template.
+5. Validate data and source, compile, then inspect rendered pages. Use [troubleshooting.md](references/troubleshooting.md) to interpret limitations and statuses. Report numerical checks, static checks, compilation and visual review separately; unavailable/not-run is never a pass. Fix demonstrated defects and rerun affected checks.
+
+## Generate
+
+Adapt an original template JSON under `assets/templates/`. Emit with `python scripts/generate_table.py INPUT.json OUTPUT.tex`; output must be new. The sidecar ledger binds source/render hashes. Then `python scripts/validate_table.py OUTPUT.tex --spec INPUT.json`. Generator supports one grouped-header layer, row comparison groups, explicit uncertainty and scalar decimal alignment; deeper headers/multirow or complex annotations are agent-authored with a checked ledger. It does not learn arbitrary macro grammars or generate statistical evidence.
+
+## Refine
+
+Keep original and edited files separate. Establish the keyed mapping described in data-contract.md. Change only requested layout/style; preserve all cell identities, values and semantics. Mark suspected source errors as findings instead of repairing experimental results without authorization. A Python bag of numbers or unchanged multiset cannot prove integrity. For unsupported macros, explain missing definitions/assets and retain original raw snippets. Compare source and rendered preview; never invent invisible macro stubs to report a pass.
+
+## Retrieve and learn
+
+Use `python scripts/index_cases.py` to verify source hashes and rebuild the index after an authorized addition. Case metadata separates observed structure, inferred dependencies, rights and verification. New source remains immutable; put adaptations and evidence beside it. Promote only verified, reviewed cases; learning does not imply model training. Improvements to stable rules/scripts follow [controlled RSI](rsi/improvement-policy.md).
+
+For future tasks using this skill, capture useful new user-supplied examples or demonstrated failures/repairs as pending private learning records, following [continuous-learning.md](references/continuous-learning.md). Use `scripts/learning.py`; keep history outside the installed skill tree so it survives skill updates. Skip repetitive observations with no new value. Inspect relevant prior feedback before related improvements. Candidate capture is allowed by the user's request for continued evolution; stable rule/script changes and case promotion still require the RSI evidence and approval gate.
+
+## Validate and deliver
+
+Run `python scripts/compile_table.py OUTPUT.tex --output NEW_BUILD_DIR` (optional `--preamble MACROS.tex`, `--engine xelatex`). Full documents keep their class; generic fragment compilation is diagnostic. Run `python scripts/inspect_render.py NEW_BUILD_DIR/table-build.pdf --output NEW_RENDER_DIR`, then actually open the images. Do not execute unknown TeX outside an appropriate sandbox.
+
+Return final source and imports (or requested files), relevant reference case IDs, changes and data verification evidence, engine/template details, and unresolved layout/data/dependency issues. Normal user explanation is in the user's language; table text follows the requested manuscript language. Do not overwrite original examples, self-install, publish or promote stable changes without task authorization. Future improvement requires explicit approval only at the promotion gate, not for ordinary table generation/refinement.

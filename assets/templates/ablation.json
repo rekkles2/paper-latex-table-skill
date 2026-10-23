@@ -1,0 +1,53 @@
+{
+  "columns": [
+    {
+      "id": "memory",
+      "label": "Memory",
+      "direction": "none",
+      "kind": "text"
+    },
+    {
+      "id": "rule",
+      "label": "Rule",
+      "direction": "none",
+      "kind": "text"
+    },
+    {
+      "id": "f1",
+      "label": "F1",
+      "direction": "higher"
+    }
+  ],
+  "rows": [
+    {
+      "id": "Base",
+      "label": "Base",
+      "values": {
+        "memory": "off",
+        "rule": "off",
+        "f1": "65.20"
+      }
+    },
+    {
+      "id": "+Memory",
+      "label": "+Memory",
+      "values": {
+        "memory": "on",
+        "rule": "off",
+        "f1": "67.50"
+      }
+    },
+    {
+      "id": "Full",
+      "label": "Full",
+      "values": {
+        "memory": "on",
+        "rule": "on",
+        "f1": "69.10"
+      }
+    }
+  ],
+  "schema_version": 1,
+  "caption": "Illustrative synthetic ablation results; not measured experiments.",
+  "label": "tab:ablation"
+}

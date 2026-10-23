@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "caption": "Synthetic component ablation (mean plus or minus standard deviation). Not measured experiments.",
+  "label": "tab:demo-ablation",
+  "columns": [
+    {
+      "id": "memory",
+      "label": "Memory",
+      "direction": "none",
+      "kind": "text"
+    },
+    {
+      "id": "rules",
+      "label": "Rules",
+      "direction": "none",
+      "kind": "text"
+    },
+    {
+      "id": "auc",
+      "label": "AUC",
+      "direction": "higher",
+      "unit": "%",
+      "rank_on": "mean"
+    },
+    {
+      "id": "f1",
+      "label": "F1",
+      "direction": "higher",
+      "unit": "%",
+      "rank_on": "mean"
+    }
+  ],
+  "rows": [
+    {
+      "id": "base",
+      "label": "Baseline",
+      "values": {
+        "memory": "off",
+        "rules": "off",
+        "auc": {
+          "mean": "81.20",
+          "std": "0.24"
+        },
+        "f1": {
+          "mean": "74.10",
+          "std": "0.31"
+        }
+      }
+    },
+    {
+      "id": "memory",
+      "label": "Memory only",
+      "values": {
+        "memory": "on",
+        "rules": "off",
+        "auc": {
+          "mean": "83.60",
+          "std": "0.21"
+        },
+        "f1": {
+          "mean": "76.30",
+          "std": "0.28"
+        }
+      }
+    },
+    {
+      "id": "rules",
+      "label": "Rules only",
+      "values": {
+        "memory": "off",
+        "rules": "on",
+        "auc": {
+          "mean": "82.90",
+          "std": "0.23"
+        },
+        "f1": {
+          "mean": "75.70",
+          "std": "0.30"
+        }
+      }
+    },
+    {
+      "id": "full",
+      "label": "Memory + rules",
+      "values": {
+        "memory": "on",
+        "rules": "on",
+        "auc": {
+          "mean": "85.10",
+          "std": "0.19"
+        },
+        "f1": {
+          "mean": "78.20",
+          "std": "0.25"
+        }
+      }
+    }
+  ]
+}

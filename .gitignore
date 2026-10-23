@@ -1,0 +1,19 @@
+# Private reference material: keep locally, exclude from publication.
+/assets/cases/local/
+/assets/case-index.json
+/build/
+/state/
+/skill-state/
+**/__pycache__/
+*.py[cod]
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+.env
+.env.*
+*.key
+auth.json
+.opencode-local/

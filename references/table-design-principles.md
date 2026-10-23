@@ -1,0 +1,7 @@
+# Design choices
+
+Use booktabs rules and modest whitespace by default; no vertical/double rules; caption above, label immediately after caption. Preserve source conventions when the user requests minimal edits. These are recommendations, not claims about every venue. Use cmidrule(lr) for groups, left-align identifiers, make dataset/metric nesting unambiguous and state units and metric direction. Define all symbols and missing entries in the caption/notes. Best=bold, second=underline unless supplied rules differ; use color only as redundant encoding and check grayscale.
+
+Before shrinking: remove redundant repeated text, wrap long labels, shorten headers with defined abbreviations, reduce tabcolsep moderately, use table* in a two-column template, or split semantically independent panels. Use tabularx X for wrapping text, not forced scaling of numeric columns. An adjustbox max-width is a last bounded fit, not evidence of readability. Inspect final effective point size after scaling. Avoid automatic tiny/scriptsize and negative vspace. Do not use ranking to hide tradeoffs or inconsistent evaluation settings.
+
+Read source previews for grouping, density and annotation ideas, but do not copy custom macros, experimental values, venue identity or claims into unrelated tasks. Source styles may contain mistakes. A visually attractive example is not a numerical oracle outside its own data.

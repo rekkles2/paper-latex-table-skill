@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "case_id": "synthetic-wide",
+  "source_type": "structured_synthetic",
+  "table_type": "wide",
+  "venue": "generic",
+  "template": "article",
+  "columns": 9,
+  "features": [
+    "grouped_headers",
+    "wide"
+  ],
+  "rights": "original-project-example",
+  "provenance": "Newly authored synthetic data; not measurements and not copied from user references",
+  "design_rationale": "Minimal executable pattern; inspect at final size",
+  "verified": true,
+  "compilation": "passed_generic_article",
+  "visual_status": "reviewed_2026-10-23",
+  "sources": [
+    {
+      "path": "data.json",
+      "sha256": "024dbbea3e56ed2054dc25d7907999b30f813438120607871e7eb9141cb79ca3"
+    },
+    {
+      "path": "table.tex",
+      "sha256": "92187da8cf3b9a41cf4df64b8a94306b203ae8e4179f6692a649c9cbfa732abc"
+    }
+  ],
+  "numerical_status": "exact_contract_renderer_match",
+  "verification_scope": "Synthetic example only; not official-venue compliance",
+  "tested_engine": "pdfTeX (TeX Live 2023); installed siunitx recorded in engine logs"
+}

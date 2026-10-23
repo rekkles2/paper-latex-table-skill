@@ -1,0 +1,54 @@
+{
+  "columns": [
+    {
+      "id": "auc",
+      "label": "AUC",
+      "direction": "higher",
+      "rank_on": "mean"
+    },
+    {
+      "id": "f1",
+      "label": "F1",
+      "direction": "none"
+    }
+  ],
+  "rows": [
+    {
+      "id": "A",
+      "label": "A",
+      "values": {
+        "auc": {
+          "mean": "80.00",
+          "std": "0.20"
+        },
+        "f1": {
+          "mean": "70.0",
+          "ci": [
+            "69.1",
+            "70.9"
+          ]
+        }
+      }
+    },
+    {
+      "id": "B",
+      "label": "B",
+      "values": {
+        "auc": {
+          "mean": "81.00",
+          "std": "0.30"
+        },
+        "f1": {
+          "mean": "71.0",
+          "ci": [
+            "70.0",
+            "72.0"
+          ]
+        }
+      }
+    }
+  ],
+  "schema_version": 1,
+  "caption": "Illustrative synthetic uncertainty results; not measured experiments.",
+  "label": "tab:uncertainty"
+}

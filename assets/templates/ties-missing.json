@@ -1,0 +1,61 @@
+{
+  "columns": [
+    {
+      "id": "auc",
+      "label": "AUC",
+      "direction": "higher"
+    },
+    {
+      "id": "error",
+      "label": "Error",
+      "direction": "lower"
+    },
+    {
+      "id": "params",
+      "label": "Params",
+      "direction": "none",
+      "kind": "text"
+    }
+  ],
+  "rows": [
+    {
+      "id": "A",
+      "label": "A",
+      "values": {
+        "auc": "85.00",
+        "error": "2.0",
+        "params": "4M"
+      }
+    },
+    {
+      "id": "B",
+      "label": "B",
+      "values": {
+        "auc": "85.00",
+        "error": "1.0",
+        "params": "5M"
+      }
+    },
+    {
+      "id": "C",
+      "label": "C",
+      "values": {
+        "auc": "84.00",
+        "error": null,
+        "params": "3M"
+      }
+    },
+    {
+      "id": "D",
+      "label": "D",
+      "values": {
+        "auc": null,
+        "error": "1.5",
+        "params": "2M"
+      }
+    }
+  ],
+  "schema_version": 1,
+  "caption": "Illustrative synthetic ties-missing results; not measured experiments.",
+  "label": "tab:ties-missing"
+}

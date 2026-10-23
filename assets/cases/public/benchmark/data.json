@@ -1,0 +1,45 @@
+{
+  "columns": [
+    {
+      "id": "auc",
+      "label": "AUC",
+      "direction": "higher",
+      "unit": "%"
+    },
+    {
+      "id": "latency",
+      "label": "Latency",
+      "direction": "lower",
+      "unit": "ms"
+    },
+    {
+      "id": "params",
+      "label": "Parameters",
+      "direction": "none",
+      "kind": "text"
+    }
+  ],
+  "rows": [
+    {
+      "id": "Baseline",
+      "label": "Baseline",
+      "values": {
+        "auc": "81.20",
+        "latency": "13.5",
+        "params": "8M"
+      }
+    },
+    {
+      "id": "Candidate",
+      "label": "Candidate",
+      "values": {
+        "auc": "83.40",
+        "latency": "11.2",
+        "params": "10M"
+      }
+    }
+  ],
+  "schema_version": 1,
+  "caption": "Illustrative synthetic benchmark results; not measured experiments.",
+  "label": "tab:benchmark"
+}

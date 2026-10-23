@@ -1,0 +1,53 @@
+{
+  "columns": [
+    {
+      "id": "a_auc",
+      "label": "AUC",
+      "direction": "higher",
+      "header_group": "Dataset A"
+    },
+    {
+      "id": "a_f1",
+      "label": "F1",
+      "direction": "higher",
+      "header_group": "Dataset A"
+    },
+    {
+      "id": "b_auc",
+      "label": "AUC",
+      "direction": "higher",
+      "header_group": "Dataset B"
+    },
+    {
+      "id": "b_error",
+      "label": "Error",
+      "direction": "lower",
+      "header_group": "Dataset B"
+    }
+  ],
+  "rows": [
+    {
+      "id": "Baseline",
+      "label": "Baseline",
+      "values": {
+        "a_auc": "76.20",
+        "a_f1": "71.0",
+        "b_auc": "78.0",
+        "b_error": "18.4"
+      }
+    },
+    {
+      "id": "Candidate",
+      "label": "Candidate",
+      "values": {
+        "a_auc": "79.30",
+        "a_f1": "73.5",
+        "b_auc": "80.2",
+        "b_error": "16.2"
+      }
+    }
+  ],
+  "schema_version": 1,
+  "caption": "Illustrative synthetic multi-dataset results; not measured experiments.",
+  "label": "tab:multi-dataset"
+}

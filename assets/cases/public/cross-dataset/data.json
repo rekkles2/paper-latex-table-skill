@@ -1,0 +1,40 @@
+{
+  "row_header": "Train -> test",
+  "columns": [
+    {
+      "id": "auc",
+      "label": "AUC",
+      "direction": "higher",
+      "unit": "%"
+    }
+  ],
+  "rows": [
+    {
+      "id": "A -> B",
+      "label": "A -> B",
+      "values": {
+        "auc": "72.40"
+      },
+      "group": "Test B"
+    },
+    {
+      "id": "C -> B",
+      "label": "C -> B",
+      "values": {
+        "auc": "70.10"
+      },
+      "group": "Test B"
+    },
+    {
+      "id": "B -> A",
+      "label": "B -> A",
+      "values": {
+        "auc": "74.50"
+      },
+      "group": "Test A"
+    }
+  ],
+  "schema_version": 1,
+  "caption": "Illustrative synthetic cross-dataset results; not measured experiments.",
+  "label": "tab:cross-dataset"
+}

@@ -1,0 +1,17 @@
+% Generated from an explicit data contract. Source precision preserved.
+% Packages: booktabs
+\begin{table}[t]
+\centering
+\caption{Synthetic component ablation (mean plus or minus standard deviation). Not measured experiments.}
+\label{tab:demo-ablation}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Method & Memory & Rules & AUC (\%) $\uparrow$ & F1 (\%) $\uparrow$ \\
+\midrule
+Baseline & off & off & 81.20\,$\pm$\,0.24 & 74.10\,$\pm$\,0.31 \\
+Memory only & on & off & \underline{83.60\,$\pm$\,0.21} & \underline{76.30\,$\pm$\,0.28} \\
+Rules only & off & on & 82.90\,$\pm$\,0.23 & 75.70\,$\pm$\,0.30 \\
+Memory + rules & on & on & \textbf{85.10\,$\pm$\,0.19} & \textbf{78.20\,$\pm$\,0.25} \\
+\bottomrule
+\end{tabular}
+\end{table}
