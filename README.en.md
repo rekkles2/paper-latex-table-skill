@@ -1,28 +1,49 @@
 # Paper LaTeX Table Skill
 
-**paper-latex-table-skill** is a local Codex Agent Skill that turns experimental results into clean, publication-ready LaTeX tables. It covers `booktabs` styling, grouped headers, multi-dataset comparisons and ablation studies, with deterministic highlighting rules (bold best, underline second best), checks for numerical fidelity, and a controlled learning loop so the skill can improve from real usage without touching model weights.
+**Give experimental results the clarity of a well-designed paper table.**
 
-It is designed for researchers using Codex who want consistent, defensible tables rather than hand-tuned LaTeX battles. The local helper tools require no additional model account, embedding service or network call; Codex supplies the host agent.
+A Codex Skill for data-to-LaTeX generation, source-preserving refinement, screenshot reconstruction and reference-informed design reuse. Build a visual hierarchy with grouped headers, restrained color, deliberate typography and meaningful emphasis, while preserving the data and comparison contract.
 
-[简体中文使用指南（Guide in Chinese）](docs/guide.zh-CN.md)
+[简体中文](README.md) · [Guide in Chinese](docs/guide.zh-CN.md) · [Skill contract](SKILL.md) · [Layout catalog](references/reference-catalog.md)
 
-## Example output
+**Data → tables · Code + image → faithful reconstruction · Image → editable TeX · Examples → reusable design knowledge**
 
-All figures below were compiled from the bundled example sources using **independently authored synthetic data**; they are not real experimental measurements and not automatically scored visual benchmarks.
+## See what a table can communicate
 
-![Compiled LaTeX grouped multi-dataset comparison table showing accuracy and latency tradeoffs across synthetic datasets.](docs/images/benchmark.png)
+These previews are **compiled from the bundled editable LaTeX sources**. All model names, datasets, values and coverage assignments are original synthetic illustrations, not experimental results. Advanced layouts are agent-authored; the JSON generator does not automatically produce arbitrary table designs.
 
-AUC denotes area under the receiver operating characteristic curve; F1 denotes the F1 score.
+### 01 / Main results: dense, with a clear hierarchy
 
-*A multi-dataset comparison with grouped headers: accuracy versus latency tradeoffs. Editable source and spec: [docs/examples/benchmark.json](docs/examples/benchmark.json). All values synthetic.*
+![Synthetic comparison with grouped headers, model families, violet method rows and direction-aware rankings](docs/images/showcase-main.png)
 
-![Compiled LaTeX component ablation table reporting mean and standard deviation for each configuration.](docs/images/ablation.png)
+**Three benchmarks × two settings.** Bold-italic family bands organize the rows; a pale violet accent locates the featured methods. Best and distinct second-best values are marked across all comparable rows. Latency remains a separate lower-is-better tradeoff.
 
-*A component ablation with mean ± std display. Editable spec: [docs/examples/ablation.json](docs/examples/ablation.json). All values synthetic.*
+[Editable TeX](docs/examples/showcase/showcase-main.tex) · [Synthetic data](docs/examples/showcase/data.json)
 
-![Before-and-after comparison of a synthetic grid-rule table and its booktabs refinement where all body cells are identical.](docs/images/refinement.png)
+### 02 / Ablation: make every component earn its place
 
-*A refinement example: same data, from grid rules to booktabs. Editable sources: [before](docs/examples/refinement-before.tex) / [after](docs/examples/refinement-after.tex).*
+![Synthetic ablation with component toggles, quiet uncertainty and explicit baseline-relative gains](docs/images/showcase-ablation.png)
+
+Read **components → accuracy → mean gain** in one row. Smaller gray standard deviations keep the means legible; gains declare their baseline and percentage-point units. Ranking means does not establish significance.
+
+[Editable TeX](docs/examples/showcase/showcase-ablation.tex) · [Synthetic data](docs/examples/showcase/data.json)
+
+### 03 / Coverage: show the gaps as clearly as the strengths
+
+![Synthetic capability matrix with grouped axes and full, partial and absent coverage symbols](docs/images/showcase-coverage.png)
+
+Perception, time and definition axes share a **full / partial / absent** symbol vocabulary. Shape carries the meaning; color reinforces it. Sizes, evaluation units and the legend stay close to the table.
+
+[Editable TeX](docs/examples/showcase/showcase-coverage.tex) · [Rebuild previews](docs/render_showcase.py)
+
+<details>
+<summary>More examples: same-data refinement and basic generation</summary>
+
+![Grid-to-booktabs refinement with identical synthetic body cells](docs/images/refinement.png)
+
+[Before](docs/examples/refinement-before.tex) · [After](docs/examples/refinement-after.tex) · [Basic benchmark spec](docs/examples/benchmark.json) · [Basic ablation spec](docs/examples/ablation.json)
+
+</details>
 
 ## Capabilities
 
@@ -113,10 +134,10 @@ Run the regression suite against your copy:
 python tests/test_tables.py
 ```
 
-Optional: regenerate the documentation preview images (requires TeX, Poppler and Pillow):
+Regenerate the showcase (requires XeLaTeX, TeX Gyre fonts, Poppler and Pillow; choose a fresh build directory):
 
 ```text
-python docs/render_previews.py --build-root build/readme-previews
+python docs/render_showcase.py --build-root build/readme-showcase
 ```
 
 ## Scope & limits

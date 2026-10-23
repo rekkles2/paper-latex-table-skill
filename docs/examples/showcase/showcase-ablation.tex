@@ -1,0 +1,41 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=210mm,paperheight=115mm,margin=8mm]{geometry}
+\usepackage{fontspec,booktabs,multirow,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
+\definecolor{ink}{HTML}{18283B}
+\definecolor{teal}{HTML}{167D8D}
+\definecolor{violet}{HTML}{6750A4}
+\definecolor{wash}{HTML}{F0EDF8}
+\definecolor{mist}{HTML}{EAF3F4}
+\definecolor{muted}{HTML}{64748B}
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.22}\setlength{\tabcolsep}{5.0pt}
+\newcommand{\yes}{\textcolor{teal}{$\checkmark$}}
+\newcommand{\no}{\textcolor{muted}{--}}
+\newcommand{\full}{\tikz[baseline=-.5ex]\fill[teal] (0,0) circle (2pt);}
+\newcommand{\emptyc}{\tikz[baseline=-.5ex]\draw[muted] (0,0) circle (2pt);}
+\newcommand{\halfc}{\tikz[baseline=-.5ex]{\fill[teal] (0,0)--(0,2pt) arc (90:270:2pt)--cycle;\draw[teal] (0,0) circle (2pt);}}
+\newcommand{\unc}[2]{#1\,{\scriptsize\textcolor{muted}{$\pm$#2}}}
+\newcommand{\band}[2]{\rowcolor{mist}\multicolumn{#1}{l}{\textbf{\textit{#2}}}\\}
+\newcommand{\titleline}[2]{{\sffamily\small\bfseries\color{teal}#1}\par\smallskip{\Large\bfseries\color{ink}#2}\par\medskip}
+\begin{document}\color{ink}
+\titleline{02 / ABLATION}{Make every component earn its place.}
+{\small Component toggles, quiet uncertainty and explicit gains in one compact layout.}\par\medskip
+\begin{tabular}{@{}lccc*{3}{r}r@{}}\toprule
+\multirow{2}{*}{\textbf{Configuration}} & \multicolumn{3}{c}{\textbf{Components}} & \multicolumn{3}{c}{\textbf{Accuracy (\%) $\uparrow$}} & \multirow{2}{*}{\textbf{$\Delta$ mean}}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+ & C & M & R & SceneBench & TimeBench & RuleBench & \\\midrule
+\band{8}{Compact encoder / mean $\pm$ standard deviation}
+Base & \no & \no & \no & \unc{76.20}{0.31} & \unc{72.10}{0.28} & \unc{69.40}{0.35} & -- \\
+Context & \yes & \no & \no & \unc{78.40}{0.27} & \unc{74.20}{0.25} & \unc{71.60}{0.30} & \textcolor{teal}{+2.17} \\
+Memory & \no & \yes & \no & \unc{79.10}{0.25} & \unc{75.80}{0.22} & \unc{72.30}{0.29} & \textcolor{teal}{+3.17} \\
+Context + memory & \yes & \yes & \no & \unc{\underline{81.30}}{0.21} & \unc{\underline{78.10}}{0.20} & \unc{\underline{75.20}}{0.24} & \textcolor{teal}{+5.63} \\
+\rowcolor{wash}
+\textbf{\textcolor{violet}{Full model}} & \yes & \yes & \yes & \unc{\textbf{83.60}}{0.18} & \unc{\textbf{80.40}}{0.17} & \unc{\textbf{78.10}}{0.22} & \textcolor{teal}{+8.13} \\
+\bottomrule\end{tabular}
+\par\medskip{\footnotesize C = context; M = memory; R = rule conditioning. $\Delta$ = mean accuracy change vs. Base, in percentage points.\par Rankings use means only; uncertainty does not imply statistical significance. Synthetic data, not measured experiments.}
+
+\end{document}

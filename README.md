@@ -1,24 +1,62 @@
 # Paper LaTeX Table Skill
 
-面向 Codex 的科研 LaTeX 表格技能。根据实验数据生成表格，对已有 TeX 做保真排版，或从图片重建可编辑表格；把后续积累的案例与修复经验保存为可审阅的学习记录。
+**让实验结果拥有论文主表的表达力。**
 
-[English](README.en.md) · [中文教程](docs/guide.zh-CN.md) · [Skill 入口](SKILL.md) · [参考布局目录](references/reference-catalog.md)
+面向 Codex 的科研 LaTeX 表格 Skill：从数据生成、已有 TeX 精修，到截图重建与参考设计复用。用分层表头、分组字体、克制配色和有依据的数值强调，建立清晰的阅读层次，同时保留原始数据与比较语义。
 
-## 展示
+[English](README.en.md) · [中文教程](docs/guide.zh-CN.md) · [Skill 入口](SKILL.md) · [参考布局](references/reference-catalog.md)
 
-以下预览均由随仓库提供的 LaTeX 源码实际编译，使用原创合成数据，不代表真实实验结果。
+**数据 → 表格 · 代码 + 图片 → 保真重建 · 图片 → 可编辑 TeX · 好案例 → 可复用的设计经验**
 
-<table>
-<tr><th>多数据集对比</th><th>组件消融与不确定性</th></tr>
-<tr><td><img src="docs/images/benchmark.png" alt="合成数据的分组表头对比表"></td><td><img src="docs/images/ablation.png" alt="合成数据的组件消融表"></td></tr>
-<tr><td><a href="docs/examples/benchmark.json">可编辑数据规格</a></td><td><a href="docs/examples/ablation.json">可编辑数据规格</a></td></tr>
-</table>
+## 看见表格的表达力
 
-### 原样式 / 优化后
+以下三张表均由随仓库提供的 **可编辑 LaTeX 源码实际编译**。模型、数据集、数值和覆盖关系均为原创合成示例，不是真实实验结果。复杂布局由 Codex 辅助编写，不代表 JSON 生成器能一键生成任意表格。
+
+### 01 / 综合主表：密集，但不拥挤
+
+![综合主表：分层表头、模型家族分区、淡紫方法行及最优次优强调](docs/images/showcase-main.png)
+
+**三个基准 × 两种设置**，先看清比较结构，再读数值。粗斜体区分模型家族，淡紫色定位重点方法；最优/次优在全部可比行中计算，延迟按更低更好独立强调。
+
+[可编辑 TeX](docs/examples/showcase/showcase-main.tex) · [合成数据](docs/examples/showcase/data.json)
+
+### 02 / 组件消融：把“为什么有效”排清楚
+
+![组件消融：开关、小号灰色标准差、基线增益与完整方法强调](docs/images/showcase-ablation.png)
+
+**组件开关 → 指标变化 → 平均增益**，一行读完。标准差用小号灰字退后一级；增益明确比较基线与百分点单位，均值排名不被解释为统计显著性。
+
+[可编辑 TeX](docs/examples/showcase/showcase-ablation.tex) · [合成数据](docs/examples/showcase/data.json)
+
+### 03 / 能力矩阵：覆盖与空缺，都可见
+
+![能力矩阵：感知、时间、定义三组表头及三态覆盖符号](docs/images/showcase-coverage.png)
+
+**实心 / 半实心 / 空心** 分别表达完整、部分与未覆盖，附带规模、评估单位和图例。符号形状承载语义，颜色只是辅助。
+
+[可编辑 TeX](docs/examples/showcase/showcase-coverage.tex) · [重建预览脚本](docs/render_showcase.py)
+
+## 不止是换一个 booktabs 样式
+
+| 特点 | 实际工作方式 |
+| --- | --- |
+| **参考设计复用** | 检索相近布局，拆解表头、分组、字体与强调角色，再适配自己的数据；原始参考单独保存。 |
+| **数据保真精修** | 核对单元格身份、数值字符串、精度、不确定性和引用；代码与图片冲突时保留独立版本。 |
+| **有依据的强调** | 按指标方向、比较范围和并列规则标记最优/次优，不把所有参数列都当成绩。 |
+| **可编辑重建** | 恢复宏与依赖；图片先逐格转写，看不清的值标为 [?]，不猜数字。 |
+| **可追溯的学习** | 保存案例与失败修复的私有待审记录，供后续检索；稳定规则更新另经回归与审核。 |
+| **分层验证** | 数据核对、静态检查、实际编译和渲染审阅分别报告，保留源码与证据。 |
+
+<details>
+<summary>更多示例：同数据精修与基础生成</summary>
 
 ![同一组合成数据从网格表到 booktabs 的排版对比](docs/images/refinement.png)
 
-[优化前 TeX](docs/examples/refinement-before.tex) · [优化后 TeX](docs/examples/refinement-after.tex)。排版调整保持原始单元格内容。
+[优化前](docs/examples/refinement-before.tex) · [优化后](docs/examples/refinement-after.tex)。原始单元格内容保持不变。
+
+[基础主表规格](docs/examples/benchmark.json) · [基础消融规格](docs/examples/ablation.json)
+
+</details>
 
 ## 三种输入方式
 
@@ -131,8 +169,8 @@ README 目录与原图/复现画廊的组织参考了 [Trae1ounG/paper-plot-skil
 
 新增 `rsi_episode.py` 记录实际学习过程，`compose_designs.py` 生成并核对设计候选。当前自动组合范围为列间距、行距、分组斜体/粗斜体；复杂表头、配色和线型由 Codex 基于参考与核对记录编写。日常复用不需额外的全局升级批准；稳定规则与脚本晋升单独管理。详见[三模式教程与命令](references/three-rsi-loops.md)。
 
-### Design reuse: one data contract, three candidates
+### 设计复用：一份数据，三种候选
 
-![Three actual compiled layout candidates using the same synthetic data and 10pt body text](docs/images/design-reuse.png)
+![同一组合成数据与 10pt 正文字号的三种实际编译候选](docs/images/design-reuse.png)
 
-[Baseline TeX](docs/examples/design-reuse/baseline.tex) · [Grouped variant](docs/examples/design-reuse/grouped-readable.tex) · [Compact variant](docs/examples/design-reuse/compact-readable.tex). Synthetic data only; these are alternatives to inspect, not an automatically ranked aesthetic result.
+[Baseline TeX](docs/examples/design-reuse/baseline.tex) · [Grouped variant](docs/examples/design-reuse/grouped-readable.tex) · [Compact variant](docs/examples/design-reuse/compact-readable.tex). 仅使用合成数据；候选用于人工比较，不代表自动审美排名。

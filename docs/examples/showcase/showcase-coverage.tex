@@ -1,0 +1,41 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=210mm,paperheight=115mm,margin=8mm]{geometry}
+\usepackage{fontspec,booktabs,multirow,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
+\definecolor{ink}{HTML}{18283B}
+\definecolor{teal}{HTML}{167D8D}
+\definecolor{violet}{HTML}{6750A4}
+\definecolor{wash}{HTML}{F0EDF8}
+\definecolor{mist}{HTML}{EAF3F4}
+\definecolor{muted}{HTML}{64748B}
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.22}\setlength{\tabcolsep}{5.0pt}
+\newcommand{\yes}{\textcolor{teal}{$\checkmark$}}
+\newcommand{\no}{\textcolor{muted}{--}}
+\newcommand{\full}{\tikz[baseline=-.5ex]\fill[teal] (0,0) circle (2pt);}
+\newcommand{\emptyc}{\tikz[baseline=-.5ex]\draw[muted] (0,0) circle (2pt);}
+\newcommand{\halfc}{\tikz[baseline=-.5ex]{\fill[teal] (0,0)--(0,2pt) arc (90:270:2pt)--cycle;\draw[teal] (0,0) circle (2pt);}}
+\newcommand{\unc}[2]{#1\,{\scriptsize\textcolor{muted}{$\pm$#2}}}
+\newcommand{\band}[2]{\rowcolor{mist}\multicolumn{#1}{l}{\textbf{\textit{#2}}}\\}
+\newcommand{\titleline}[2]{{\sffamily\small\bfseries\color{teal}#1}\par\smallskip{\Large\bfseries\color{ink}#2}\par\medskip}
+\begin{document}\color{ink}
+\titleline{03 / BENCHMARK MAP}{Show coverage. Expose the gaps.}
+{\small A capability matrix with three-state symbols and grouped evaluation axes.}\par\medskip
+\begin{tabular}{@{}lllc c c c c c@{}}\toprule
+\multirow{2}{*}{\textbf{Collection}} & \multirow{2}{*}{\textbf{Size}} & \multirow{2}{*}{\textbf{Unit}} & \multicolumn{2}{c}{\textbf{Perception}} & \multicolumn{2}{c}{\textbf{Time}} & \multicolumn{2}{c}{\textbf{Definitions}}\\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(l){8-9}
+ & & & Spatial & Events & Order & Causal & Rules & Updates\\\midrule
+FrameSet & 12k & Image & \full & \emptyc & \emptyc & \emptyc & \emptyc & \emptyc \\
+ClipSet & 8k & Clip & \full & \full & \halfc & \emptyc & \emptyc & \emptyc \\
+EventSet & 24k & Clip & \full & \full & \full & \halfc & \emptyc & \emptyc \\
+StreamSet & 6k & Stream & \full & \full & \full & \full & \halfc & \emptyc \\
+RuleStream & 18k & Stream & \full & \full & \full & \full & \full & \halfc \\
+\rowcolor{wash}
+\textbf{\textcolor{violet}{Atlas suite}} & 32k & Mixed & \full & \full & \full & \full & \full & \full \\
+\bottomrule\end{tabular}
+\par\medskip{\footnotesize\full\ full coverage\qquad\halfc\ partial coverage\qquad\emptyc\ not covered\quad(k = thousand units).\par All collections, sizes and coverage assignments are invented to demonstrate layout; they are not a dataset survey.}
+
+\end{document}
