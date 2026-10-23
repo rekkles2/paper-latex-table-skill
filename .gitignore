@@ -17,3 +17,6 @@
 *.key
 auth.json
 .opencode-local/
+
+# Internal review evidence, backups and local release archives.
+/.local/

@@ -1,1 +1,1 @@
-A Codex skill for publication-quality LaTeX tables, with reusable layouts, numerical integrity checks, and controlled self-improvement.
+A Codex skill for publication-quality LaTeX tables: code/image reconstruction, reusable designs, data integrity checks, and evidence-based self-improvement.

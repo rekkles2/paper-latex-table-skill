@@ -276,7 +276,7 @@ class RSITests(unittest.TestCase):
         digest=rsi.tree_hash(candidate); baseline=rsi.tree_hash(rsi.ROOT)
         write_json(p/'proposal.json',{'candidate':str(candidate),'candidate_hash':digest,'baseline_hash':baseline})
         (p/'tests.log').write_text('Synthetic regression fixture, not a real test run')
-        write_json(p/'evaluation.json',{'status':'passed','returncode':0,'candidate_hash':digest,'baseline_hash':baseline,'tests_sha256':sha256(p/'tests.log'),'harness_sha256':sha256(rsi.ROOT/'tests'/'test_tables.py')})
+        write_json(p/'evaluation.json',{'status':'passed','returncode':0,'candidate_hash':digest,'baseline_hash':baseline,'tests_sha256':sha256(p/'tests.log'),'harness_sha256':rsi.tree_hash(rsi.ROOT/'tests')})
         (p/'artifact.txt').write_text('Synthetic visual attestation fixture, not an inspected PDF')
         write_json(p/'visual.json',{'candidate_hash':digest,'status':'passed','reviewer':'unit-test-only','artifacts':[{'path':'artifact.txt','sha256':sha256(p/'artifact.txt')}]})
         return p/'visual.json'

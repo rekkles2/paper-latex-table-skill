@@ -1,0 +1,10 @@
+{
+  "tabcolsep_pt": 3.5,
+  "arraystretch": 1.06,
+  "group_weight": "italic",
+  "parents": [
+    "booktabs-base@1",
+    "compact-spacing@1"
+  ],
+  "reason": "Compare readable grouping and spacing at the same physical font size; data and metric scopes unchanged."
+}

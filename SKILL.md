@@ -1,8 +1,8 @@
 ---
 name: paper-latex-table-skill
-description: Generate, refine, retrieve reference layouts for, and validate scientific LaTeX tables while preserving experimental data. Use for benchmark comparisons, ablations, grouped headers, numerical highlighting, table layout diagnosis, or learning new table examples into a local case library.
+description: Generate, refine, reconstruct from images, retrieve reference layouts for, and validate scientific LaTeX tables while preserving experimental data. Use for benchmark comparisons, ablations, grouped headers, numerical highlighting, table layout diagnosis, or learning new table examples into a local case library.
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Paper LaTeX Table Skill
@@ -17,6 +17,14 @@ Deliver usable LaTeX, package imports, a data-fidelity record and honest verific
 4. Apply [design principles](references/table-design-principles.md) and [packages](references/latex-packages.md). Prefer booktabs, clear grouping and readable spacing. Rank only explicitly comparable eligible numeric values using declared directions; do not turn uncertainty into significance. For actual venue requirements read [venue-guidelines.md](references/venue-guidelines.md) and use the supplied official template.
 5. Validate data and source, compile, then inspect rendered pages. Use [troubleshooting.md](references/troubleshooting.md) to interpret limitations and statuses. Report numerical checks, static checks, compilation and visual review separately; unavailable/not-run is never a pass. Fix demonstrated defects and rerun affected checks.
 
+## Input routes and reference reconstruction
+
+Read [input-routes.md](references/input-routes.md) for code+image, code-only or image-only work. For paired inputs, compare source authority before changing anything: source text controls the default data-preserving version, while the image supplies observed layout. Record contradictory cells/rows/columns/captions and keep image-authoritative alternatives separate. Do not force agreement by changing results.
+
+For image-only input, create a keyed transcription ledger with `read`, `ambiguous` or `illegible` status for every cell. Never use expected rankings, arithmetic plausibility or nearby values to guess a digit. Unresolved cells render as `[?]`; report them explicitly. `python scripts/transcribe_table.py LEDGER.json NEW_TABLE.tex` emits editable escaped text and a hash-bound sidecar; this helper is not OCR and does not independently verify transcription. Import booktabs, adjustbox, graphicx and TikZ (for partial-coverage symbols). Preserve visible emphasis as observed, without recomputing rank unless requested and semantically justified.
+
+For learned layouts read [reference-catalog.md](references/reference-catalog.md). When the private local collection is present, open its `assets/cases/local/GALLERY.md` and relevant case profile. Run `python scripts/reproduce_case.py CASE_ID --output NEW_DIR` to verify original hashes, embed the original fragment without edits, compile with restored macros, and optionally create a comparison sheet. Reproduction needs XeLaTeX, the packages in the profile, TeX Gyre Termes, Poppler, and optional Pillow. Never use a full-table screenshot as the reconstruction. Label recovered vs inferred macros and atomic raster logos. Source preservation, compilation, visual correspondence and publication-size readability are distinct checks; a compiled reference may retain source defects or differ from another source version.
+
 ## Generate
 
 Adapt an original template JSON under `assets/templates/`. Emit with `python scripts/generate_table.py INPUT.json OUTPUT.tex`; output must be new. The sidecar ledger binds source/render hashes. Then `python scripts/validate_table.py OUTPUT.tex --spec INPUT.json`. Generator supports one grouped-header layer, row comparison groups, explicit uncertainty and scalar decimal alignment; deeper headers/multirow or complex annotations are agent-authored with a checked ledger. It does not learn arbitrary macro grammars or generate statistical evidence.
@@ -24,6 +32,14 @@ Adapt an original template JSON under `assets/templates/`. Emit with `python scr
 ## Refine
 
 Keep original and edited files separate. Establish the keyed mapping described in data-contract.md. Change only requested layout/style; preserve all cell identities, values and semantics. Mark suspected source errors as findings instead of repairing experimental results without authorization. A Python bag of numbers or unchanged multiset cannot prove integrity. For unsupported macros, explain missing definitions/assets and retain original raw snippets. Compare source and rendered preview; never invent invisible macro stubs to report a pass.
+
+## Three RSI loops and design reuse
+
+For useful new paired examples, image-only reconstruction, or design recombination, follow [three-rsi-loops.md](references/three-rsi-loops.md). Capture an immutable episode with `scripts/rsi_episode.py` in the applicable mode (`paired`, `image-only`, `reuse`). Inspect relevant prior cases, failure reviews and reviewed local atoms before adapting a related design. Keep source authority, typography and semantic/transcription evidence separate.
+
+For reuse, preserve the user's data/comparison contract and draw specific roles from suitable parent designs. Compare a baseline plus at most two justified alternatives at the actual target width. `scripts/compose_designs.py` automates a limited spacing/group-typography subset and verifies its deterministic data-preserving composition; more complex designs remain agent-authored with a ledger. Inspect actual PDF fonts: a float can reset a font setting, and scaling can make the final text smaller than its configured size. Check bold, italic, bold-italic, underline, uncertainty and caption roles against the reference.
+
+Review/selection enables task-local reuse only. Extract a design atom only from parameters actually present in that reviewed candidate; recheck origin hashes when reusing it. Keep failures and linked repairs. Stable code/rule promotion still follows the controlled RSI gate. Routine task-local design reuse needs no new stable-promotion approval. Do not claim automatic aesthetic optimization, OCR or independent verification from a review JSON alone.
 
 ## Retrieve and learn
 

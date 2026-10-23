@@ -1,83 +1,89 @@
 # Paper LaTeX Table Skill
 
-**paper-latex-table-skill** is a local Codex Agent Skill that turns experimental results into clean, publication-ready LaTeX tables. It covers `booktabs` styling, grouped headers, multi-dataset comparisons and ablation studies, with deterministic highlighting rules (bold best, underline second best), checks for numerical fidelity, and a controlled learning loop so the skill can improve from real usage without touching model weights.
+面向 Codex 的科研 LaTeX 表格技能。根据实验数据生成表格，对已有 TeX 做保真排版，或从图片重建可编辑表格；把后续积累的案例与修复经验保存为可审阅的学习记录。
 
-It is designed for researchers using Codex who want consistent, defensible tables rather than hand-tuned LaTeX battles. The local helper tools require no additional model account, embedding service or network call; Codex supplies the host agent.
+[English](README.en.md) · [中文教程](docs/guide.zh-CN.md) · [Skill 入口](SKILL.md) · [参考布局目录](references/reference-catalog.md)
 
-[简体中文使用指南（Guide in Chinese）](docs/guide.zh-CN.md)
+## 展示
 
-## Example output
+以下预览均由随仓库提供的 LaTeX 源码实际编译，使用原创合成数据，不代表真实实验结果。
 
-All figures below were compiled from the bundled example sources using **independently authored synthetic data**; they are not real experimental measurements and not automatically scored visual benchmarks.
+<table>
+<tr><th>多数据集对比</th><th>组件消融与不确定性</th></tr>
+<tr><td><img src="docs/images/benchmark.png" alt="合成数据的分组表头对比表"></td><td><img src="docs/images/ablation.png" alt="合成数据的组件消融表"></td></tr>
+<tr><td><a href="docs/examples/benchmark.json">可编辑数据规格</a></td><td><a href="docs/examples/ablation.json">可编辑数据规格</a></td></tr>
+</table>
 
-![Compiled LaTeX grouped multi-dataset comparison table showing accuracy and latency tradeoffs across synthetic datasets.](docs/images/benchmark.png)
+### 原样式 / 优化后
 
-AUC denotes area under the receiver operating characteristic curve; F1 denotes the F1 score.
+![同一组合成数据从网格表到 booktabs 的排版对比](docs/images/refinement.png)
 
-*A multi-dataset comparison with grouped headers: accuracy versus latency tradeoffs. Editable source and spec: [docs/examples/benchmark.json](docs/examples/benchmark.json). All values synthetic.*
+[优化前 TeX](docs/examples/refinement-before.tex) · [优化后 TeX](docs/examples/refinement-after.tex)。排版调整保持原始单元格内容。
 
-![Compiled LaTeX component ablation table reporting mean and standard deviation for each configuration.](docs/images/ablation.png)
+## 三种输入方式
 
-*A component ablation with mean ± std display. Editable spec: [docs/examples/ablation.json](docs/examples/ablation.json). All values synthetic.*
+| 输入 | 工作方式 | 交付 |
+| --- | --- | --- |
+| 代码 + 图片 | 对照代码与原图，恢复宏和依赖，检查行列、数值、字体、粗斜体及强调标记 | TeX、依赖说明、冲突记录、实际编译与原图对比 |
+| 仅代码 / 数据 | 保留原始字符串与精度，按目标版心生成或精修 | 可编辑 TeX、数据核对记录、PDF/PNG |
+| 仅图片 | 先建立逐格转写记录；模糊字符保留 `[?]`，再重建表格 | TeX、图片哈希、转写状态及待确认清单 |
 
-![Before-and-after comparison of a synthetic grid-rule table and its booktabs refinement where all body cells are identical.](docs/images/refinement.png)
+代码与图片可能来自不同版本。默认保留代码数据；如果需要按图复现，建立独立版本，不用修改数字来掩盖冲突。辅助脚本不是 OCR，也不能凭图片确认实验真实性。
 
-*A refinement example: same data, from grid rules to booktabs. Editable sources: [before](docs/examples/refinement-before.tex) / [after](docs/examples/refinement-after.tex).*
+## 已学习的布局
 
-## Capabilities
+本地完整版包含 **10 个用户提供的代码 + 图片案例**，原始 23 个文件保留哈希；每案提供恢复宏、源码保真编译及原图对比。另有 **8 个公开合成案例**供生成与回归使用。
 
-| Capability | What it does |
-| --- | --- |
-| Table generation | Produce LaTeX tables from a JSON spec: `booktabs` rules, one grouped-header level, multiple datasets, ablation layouts. |
-| Ranking & emphasis | Explicit higher/lower/none direction per column; **bold** best, <u>underline</u> distinct second best; shared marks for ties; missing values excluded; parameters unranked unless you ask. |
-| Numeric fidelity | Explicit numeric source strings and precision are preserved in the data contract; no silent re-rounding. |
-| Uncertainty display | Explicit mean/std or confidence intervals shown as configured; no significance inference is drawn for you. |
-| Agent-assisted refinement | Complex or macro-heavy tables are refined via an agent-reviewed cell ledger, not blind LaTeX parsing. |
-| Case retrieval | Deterministic local retrieval of similar public example cases. |
-| Validation & preview | Static heuristic checks, TeX compilation and PDF rendering/inspection helpers. |
-| Controlled learning | Records useful real examples or failure feedback as private candidates for later review. |
+| 布局 | 主要设计 | 关注细节 |
+| --- | --- | --- |
+| Few-shot 组件消融 | 9 列、3 个组件、两种 backbone、成对 shot 列 | 均值 ± 标准差、粗体最优行、斜体分组、增益箭头 |
+| 多数据集组件消融 | 11 列、Global/Local 分组、淡色区块 | 粗体/下划线作用域、紫色完整方法、细字号注释 |
+| 数据集能力矩阵 | 14 列、分层表头、覆盖圆点 | 实心/半实心/空心、图例与字号比例 |
+| 空间能力主表 | 12 列、旋转列名、3 类指标 | Rank 原值、分组斜体、深浅灰强调 |
+| Omni 模型主表 | 15 列、类别与难度分组 | 分组粗斜体、品牌图标、参数字符串 |
+| 多领域工具主表 | 13 列、能力图标、标准差、双 Δ 列 | 小号灰色不确定性、下标、平均行 |
+| Zero-shot 综合表 | 25 列源码 / 23 列图片 | 旋转彩色表头、平均列、版本冲突隔离 |
+| 编码器比较 | 8 列、中心化/全局/局部分组 | 灰色基线、粗体正文、不同增益基准 |
+| 联邦数据划分 | 6 列、Local/Global 成对比较 | 多行 setting、希腊字母、百分点变化 |
+| 模型资源目录 | 5 列、按家族分组、长 URL | 粗斜体家族名、正文粗体、可编辑链接 |
 
-See [SKILL.md](SKILL.md) for the full contract.
+详细经验见[参考目录](references/reference-catalog.md)。原始参考材料的再分发权尚未确认，因此本地原图、复现图及逐案审核放在 `assets/cases/local/GALLERY.md`；公开 GitHub 包不包含该私有目录。本地画廊展示的是实际重建与残差，不宣称像素完全一致。
 
-## Installation
+## 安装到 Codex
 
-Easiest path: open Codex and ask —
-
-> Install this local paper-latex-table-skill folder into my configured Codex skill directory, preserve existing skills, and verify discovery.
-
-Manual installation (Windows PowerShell, run from this repository root):
-
-```powershell
-$source = (Resolve-Path .).Path
-if (-not (Test-Path (Join-Path $source 'SKILL.md'))) { throw 'Run from the skill repository root.' }
-$codexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME '.codex' }
-$destination = Join-Path $codexHome 'skills/paper-latex-table-skill'
-if (Test-Path $destination) { throw 'Already installed; compare changes before updating.' }
-New-Item -ItemType Directory -Force -Path (Split-Path $destination) | Out-Null
-Copy-Item -LiteralPath $source -Destination $destination -Recurse
-```
-
-After copying, confirm the skill is discovered and enabled in your Codex client; if the skill picker looks stale, restart Codex. Next turn, invoke `$paper-latex-table-skill`. These paths follow the current local Codex installation convention — adjust for your configured skill directory if it differs. User-directory installation normally requires no administrator privileges.
-
-## Requirements
-
-- Python 3.10+ (stdlib only for the helpers)
-- An installed TeX engine (for `compile_table.py`)
-- `pdftoppm`/Poppler (for PDF previews)
-- Pillow, optionally, only if you regenerate the documentation preview images
-
-## Quick start
-
-Tell Codex what you want, naming the skill explicitly:
+在 Codex 中打开本仓库，发送：
 
 ```text
-$paper-latex-table-skill Create a grouped-header multi-dataset comparison from results/data.json.
-$paper-latex-table-skill Improve the LaTeX in draft.tex to booktabs style without changing any data.
-$paper-latex-table-skill Record the table in my_note.tex as a learning example; type is ablation, 9 columns, grouped headers.
-$paper-latex-table-skill Check this table for overflow risk and verify the ranking marks are correct.
+请将当前 paper-latex-table-skill 安装到我已配置的 Codex skills 目录。
+如已存在，请先比较和备份，保留已有学习记录，安装后验证技能可发现。
 ```
 
-You can also drive the helpers directly from the repository root:
+手动安装（Windows PowerShell；从包含 SKILL.md 的仓库根目录执行）：
+
+```powershell
+$skillSource = (Resolve-Path .).Path
+if (-not (Test-Path (Join-Path $skillSource 'SKILL.md'))) { throw '请在技能仓库根目录执行' }
+$skillHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME '.codex' }
+$skillTarget = Join-Path $skillHome 'skills/paper-latex-table-skill'
+if (Test-Path $skillTarget) { throw '目标已存在，请先比较并备份再更新' }
+New-Item -ItemType Directory -Force -Path $skillTarget | Out-Null
+Get-ChildItem -LiteralPath $skillSource -Force |
+    Where-Object { $_.Name -notin @('.git', '.local', 'build', 'state', 'skill-state', '__pycache__') } |
+    ForEach-Object { Copy-Item -LiteralPath $_.FullName -Destination $skillTarget -Recurse }
+```
+
+安装后检查 Codex 的技能列表。若列表未刷新，重启客户端后在新一轮对话中输入 `$paper-latex-table-skill`。无需启用 OpenCode；它仅用于开发评审。
+
+## 使用示例
+
+```text
+$paper-latex-table-skill 用 results.json 生成双栏论文通栏表；accuracy 越高越好，latency 越低越好。
+$paper-latex-table-skill 按 figure.png 复现 table.tex，对齐字体、字号、粗体、斜体、下划线与间距，保留全部数值。
+$paper-latex-table-skill 只有这张截图，请先逐格转写，再重建可编辑 LaTeX；看不清的值不要猜。
+$paper-latex-table-skill 学习这份新表格，保存源代码/图片、设计参数与核对记录，作为待审阅参考。
+```
+
+命令行（输出应使用新文件/目录）：
 
 ```text
 python scripts/index_cases.py
@@ -88,53 +94,45 @@ python scripts/inspect_render.py build/demo-compile/table-build.pdf --output bui
 python scripts/retrieve_cases.py --columns 9 --type ablation --feature grouped_headers
 ```
 
-Generation and compilation refuse existing outputs; use fresh filenames/directories when repeating these commands. Open the rendered PNGs to inspect the final table.
+本地参考复现与图片转写的命令、格式和依赖见[输入流程](references/input-routes.md)。JSON 生成器支持一层分组表头；复杂 multirow、深层表头和专用宏由代理结合核对记录编写。
 
-## Learning loop
+## 持续学习
 
-The skill implements **controlled self-improvement**. When you supply a genuinely reusable example or report a real failure, `learning.py` records it as a pending private candidate with observed source hashes and evidence, stored outside the installed tree (default `$CODEX_HOME/skill-state/paper-latex-table-skill`, or `~/.codex/skill-state/...`), so it survives skill upgrades.
+新案例或真实修复经验会保存为私有 pending 记录，默认位于 `$CODEX_HOME/skill-state/paper-latex-table-skill`，不随技能更新覆盖。后续相关任务可以检索这些记录，复用经过核对的布局与修复方法。
 
-During authorized table tasks, useful observations can be captured as candidates. Stable promotion requires regression tests, compilation/visual/provenance review, explicit approval recorded with `rsi.py`, and manual integration. There is no background process, no autonomous rewrite of stable files, and no training of any model weights. Details: [references/continuous-learning.md](references/continuous-learning.md) and [rsi/improvement-policy.md](rsi/improvement-policy.md).
+稳定规则、脚本和案例晋升需经过回归、来源检查、实际渲染审阅及明确批准。这里的“自我进化”是可追溯的经验积累与受控改进，不是模型权重训练或后台自行改写。见[学习流程](references/continuous-learning.md)和[改进政策](rsi/improvement-policy.md)。
 
-Record an example manually:
+## 依赖与验证
 
-```text
-python scripts/learning.py --kind case --source path/to/table.tex --reason "Reusable grouped-header pattern" --type ablation --columns 9 --feature grouped_headers
-```
+- Python 3.10+；核心生成、校验、转写脚本仅用标准库。
+- TeX 引擎与所需宏包；本地恢复案例使用 XeLaTeX、fontspec、TikZ 等。
+- Poppler `pdftoppm` 用于 PDF 转 PNG；Pillow 为对比图/文档预览的可选依赖。
+- 字体对齐分支优先使用本机 Times New Roman，缺少时回退 TeX Gyre Termes；截图无法提供确切字体元数据，推断和替代会写入记录。
 
-## Reproducibility & testing
+数据核对、编译成功、视觉对应与投稿尺寸可读性分别报告。编译成功不等于视觉通过，也不代表符合任一会议官方模板。
 
-Run the regression suite against your copy:
-
-```text
-python tests/test_tables.py
-```
-
-Optional: regenerate the documentation preview images (requires TeX, Poppler and Pillow):
+## 公开打包
 
 ```text
-python docs/render_previews.py --build-root build/readme-previews
+python scripts/export_public.py .local/releases/paper-latex-table-skill-1.2.0.zip
 ```
 
-## Scope & limits
+导出排除私有参考、构建日志、学习状态、Git 历史与内部备份，保留公开示例、README 图片及可运行工具。项目许可证状态见 [LICENSE](LICENSE)；第三方参考不会自动继承项目许可。
 
-- A passing compile is **not** a visual pass. Static checks are heuristic; test against the actual official conference template you are targeting before submission. Compatibility with any specific venue is not claimed.
-- The public bundle contains eight original **synthetic** example cases. Private development references, if present, have separate provenance and redistribution rights and are excluded from the public export.
-- Structured generation supports one grouped-header level. More complex refinement is agent-assisted and uses a reviewed ledger rather than a general LaTeX parser.
-- Every preview figure in this README uses synthetic data.
+README 目录与原图/复现画廊的组织参考了 [Trae1ounG/paper-plot-skills](https://github.com/Trae1ounG/paper-plot-skills)。开发中使用本机 OpenCode API 完成了一份文档与流程评审；运行本技能不依赖它。
 
-## Publishing a clean copy
+## 三条 RSI 学习与复用流程
 
-Local-only cases (`assets/cases/local/`) and private learning state must never be published. The root `.gitignore` excludes them. If `index_cases` output is absent after cloning, run `python scripts/index_cases.py`.
+| 模式 | 如何学习 | 如何复用 |
+| --- | --- | --- |
+| Code + Figure | 原件快照 → 行列/数值/样式冲突核对 → 宏与字体恢复 → 编译对比 | 从已审阅版本提取布局参数；代码版与图片版分开 |
+| Figure Only | 逐格转写 → 模糊值 `[?]` → 可编辑 TeX → 字体与粗斜体对照 | 保存图片哈希、转写与恢复经验；未确认值阻止晋升 |
+| 设计复用 | 检索相近案例/历史失败 → 分解设计角色 → 基线 + 最多两个组合候选 | 同数据、同最小字号下比较；只保留经核对的参数组合 |
 
-To export only public material:
+新增 `rsi_episode.py` 记录实际学习过程，`compose_designs.py` 生成并核对设计候选。当前自动组合范围为列间距、行距、分组斜体/粗斜体；复杂表头、配色和线型由 Codex 基于参考与核对记录编写。日常复用不需额外的全局升级批准；稳定规则与脚本晋升单独管理。详见[三模式教程与命令](references/three-rsi-loops.md)。
 
-```text
-python scripts/export_public.py ../dist/paper-latex-table-skill.zip
-```
+### Design reuse: one data contract, three candidates
 
-Publish the extracted `paper-latex-table-skill` subfolder from that archive — it contains the README, figures, sources and public cases only.
+![Three actual compiled layout candidates using the same synthetic data and 10pt body text](docs/images/design-reuse.png)
 
-## License
-
-See [LICENSE](LICENSE). License selection is still pending; nothing here grants rights to relicense user-provided examples or local references.
+[Baseline TeX](docs/examples/design-reuse/baseline.tex) · [Grouped variant](docs/examples/design-reuse/grouped-readable.tex) · [Compact variant](docs/examples/design-reuse/compact-readable.tex). Synthetic data only; these are alternatives to inspect, not an automatically ranked aesthetic result.

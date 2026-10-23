@@ -7,8 +7,8 @@ from tablelib import ROOT, sha256, read_json
 
 def export(output: Path) -> list[dict]:
     entries={}
-    extensions={'agents':{'.yaml'},'references':{'.md'},'scripts':{'.py'},'tests':{'.py'},'rsi':{'.md'},'assets/templates':{'.json','.tex'}}
-    for directory in ('agents','references','scripts','tests','rsi','assets/templates'):
+    extensions={'agents':{'.yaml'},'references':{'.md'},'scripts':{'.py'},'tests':{'.py'},'rsi':{'.md'},'rsi/templates':{'.json'},'assets/templates':{'.json','.tex'}}
+    for directory in ('agents','references','scripts','tests','rsi','rsi/templates','assets/templates'):
         for p in (ROOT/directory).rglob('*'):
             relative=p.relative_to(ROOT)
             if p.is_file() and p.suffix in extensions[directory] and not any(part.startswith('.') or part=='__pycache__' for part in relative.parts):
@@ -35,16 +35,17 @@ def export(output: Path) -> list[dict]:
         entries['paper-latex-table-skill/'+meta.relative_to(ROOT).as_posix()]=meta.read_bytes()
         record['metadata_path']=meta.relative_to(ROOT/'assets'/'cases').as_posix(); public.append(record)
     entries['paper-latex-table-skill/assets/case-index.json']=json.dumps({'schema_version':1,'cases':public},indent=2).encode()
-    for name in ('README.md','LICENSE','.gitignore'):
+    for name in ('README.md','README.en.md','LICENSE','.gitignore'):
         local=ROOT/name
         if local.is_file():
             entries['paper-latex-table-skill/'+name]=local.read_bytes()
             if name=='README.md':
                 entries[name]=b'# Paper LaTeX Table Skill\n\nRead the [illustrated README and installation guide](paper-latex-table-skill/README.md).\n'
-            else:
+            elif name != 'README.en.md':
                 entries[name]=local.read_bytes()
         else:
-            entries[name]=(ROOT.parent/name).read_bytes()
+            if name != 'README.en.md':
+                entries[name]=(ROOT.parent/name).read_bytes()
     forbidden={sha256(p) for p in (ROOT/'assets'/'cases'/'local').rglob('*') if p.is_file()}
     import hashlib
     manifest=[]

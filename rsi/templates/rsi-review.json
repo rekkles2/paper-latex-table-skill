@@ -1,0 +1,58 @@
+{
+  "candidate_hash": "REPLACE_WITH_ACTUAL_HASH",
+  "input_hash": "REPLACE_WITH_ACTUAL_HASH",
+  "reviewer": "REPLACE_WITH_ACTUAL_REVIEWER",
+  "review_type": "self_review",
+  "unresolved_semantic_cells": 0,
+  "checks": {
+    "data": {
+      "status": "pending",
+      "evidence": [
+        "REPLACE_WITH_SNAPSHOTTED_ARTIFACT_NAME"
+      ]
+    },
+    "compilation": {
+      "status": "pending",
+      "evidence": [
+        "REPLACE_WITH_SNAPSHOTTED_ARTIFACT_NAME"
+      ]
+    },
+    "visual": {
+      "status": "pending",
+      "evidence": [
+        "REPLACE_WITH_SNAPSHOTTED_ARTIFACT_NAME"
+      ]
+    },
+    "typography": {
+      "status": "pending",
+      "evidence": [
+        "REPLACE_WITH_SNAPSHOTTED_ARTIFACT_NAME"
+      ]
+    },
+    "readability": {
+      "status": "pending",
+      "evidence": [
+        "REPLACE_WITH_SNAPSHOTTED_ARTIFACT_NAME"
+      ]
+    },
+    "constraints": {
+      "status": "pending",
+      "evidence": [
+        "REPLACE_WITH_SNAPSHOTTED_ARTIFACT_NAME"
+      ]
+    },
+    "source_conflicts": {
+      "status": "pending",
+      "evidence": [
+        "REPLACE_WITH_SNAPSHOTTED_ARTIFACT_NAME"
+      ]
+    },
+    "transcription": {
+      "status": "pending",
+      "evidence": [
+        "REPLACE_WITH_SNAPSHOTTED_ARTIFACT_NAME"
+      ]
+    }
+  },
+  "baseline_comparison": "REPLACE_WITH_OBSERVED_DIFFERENCES; required for reuse"
+}

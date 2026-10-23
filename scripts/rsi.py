@@ -13,7 +13,7 @@ from tablelib import ROOT, read_json, sha256, write_json
 def tree_hash(root: Path) -> str:
     h=hashlib.sha256()
     for path in sorted(root.rglob('*')):
-        if path.is_file() and not any(p in ('__pycache__','.git','state','build') for p in path.relative_to(root).parts):
+        if path.is_file() and not any(p in ('__pycache__','.git','.local','state','skill-state','build') for p in path.relative_to(root).parts):
             h.update(path.relative_to(root).as_posix().encode()); h.update(bytes.fromhex(sha256(path)))
     return h.hexdigest()
 
@@ -31,7 +31,7 @@ def propose(candidate: Path, state: Path, reason: str, case: str) -> Path:
     # A rollback snapshot of the stable skill, not a destructive installation.
     with zipfile.ZipFile(folder/'baseline.zip','x',zipfile.ZIP_DEFLATED) as z:
         for f in sorted(ROOT.rglob('*')):
-            if f.is_file() and not any(x in ('__pycache__','state','build') for x in f.relative_to(ROOT).parts):
+            if f.is_file() and not any(x in ('__pycache__','.git','.local','state','skill-state','build') for x in f.relative_to(ROOT).parts):
                 z.write(f,f.relative_to(ROOT))
     write_json(folder/'proposal.json',{'candidate':str(candidate),'candidate_hash':digest,'baseline_hash':tree_hash(ROOT),'reason':reason,'case':case,'created_utc':datetime.now(timezone.utc).isoformat(),'status':'pending'})
     return folder
@@ -42,10 +42,10 @@ def evaluate(folder: Path) -> dict:
     if tree_hash(candidate)!=proposal['candidate_hash']: raise ValueError('Candidate changed')
     # Execute the maintained stable test harness against candidate modules.
     # Candidate code is executable; evaluate only user-authorized local candidates.
-    cmd=[sys.executable,'-B',str(ROOT/'tests'/'test_tables.py'),'--candidate',str(candidate)]
+    cmd=[sys.executable,'-B',str(ROOT/'tests'/'run_regressions.py'),'--candidate',str(candidate)]
     result=subprocess.run(cmd,capture_output=True,timeout=180)
     log=folder/'tests.log'; log.write_bytes(result.stdout+result.stderr)
-    evidence={'status':'passed' if result.returncode==0 else 'failed','returncode':result.returncode,'command':cmd,'tests_sha256':sha256(log),'harness_sha256':sha256(ROOT/'tests'/'test_tables.py'),'candidate_hash':tree_hash(candidate),'baseline_hash':tree_hash(ROOT)}
+    evidence={'status':'passed' if result.returncode==0 else 'failed','returncode':result.returncode,'command':cmd,'tests_sha256':sha256(log),'harness_sha256':tree_hash(ROOT/'tests'),'candidate_hash':tree_hash(candidate),'baseline_hash':tree_hash(ROOT)}
     write_json(folder/'evaluation.json',evidence); return evidence
 
 def accept(folder: Path, approver: str, approval: str, visual: Path) -> dict:
@@ -55,7 +55,7 @@ def accept(folder: Path, approver: str, approval: str, visual: Path) -> dict:
     if e['status']!='passed' or e['returncode']!=0: raise ValueError('Regression failed')
     if e['candidate_hash']!=p['candidate_hash'] or tree_hash(Path(p['candidate']))!=p['candidate_hash']: raise ValueError('Stale candidate')
     if tree_hash(ROOT)!=p['baseline_hash'] or e['baseline_hash']!=p['baseline_hash']: raise ValueError('Stable baseline changed')
-    if sha256(folder/'tests.log')!=e['tests_sha256'] or sha256(ROOT/'tests'/'test_tables.py')!=e['harness_sha256']: raise ValueError('Evidence changed')
+    if sha256(folder/'tests.log')!=e['tests_sha256'] or tree_hash(ROOT/'tests')!=e['harness_sha256']: raise ValueError('Evidence changed')
     v=read_json(visual)
     if v.get('candidate_hash')!=p['candidate_hash'] or v.get('status')!='passed' or not v.get('reviewer') or not v.get('artifacts'):
         raise ValueError('Need candidate-bound visual/compile review with artifact hashes')

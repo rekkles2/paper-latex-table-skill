@@ -1,0 +1,9 @@
+{
+  "goal": "Readable publication table with preserved data and clear grouping",
+  "constraints": {
+    "target_width_mm": 170,
+    "min_font_pt": 9,
+    "font_pt": 10,
+    "header_layers": 1
+  }
+}
