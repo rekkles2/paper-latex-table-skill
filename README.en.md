@@ -8,161 +8,75 @@ A Codex Skill for experimental data, existing TeX and table screenshots. Deliver
 
 ## Table Examples
 
+Each comparison table presents the original reference figure on the left (with an explicit disclosure when the original image is unavailable) and the compiled, editable LaTeX reconstruction on the right; click any image to inspect it at full resolution, and use the TeX row links to access the corresponding source files.
+
 ### Benchmark Comparison
 
 #### Public Benchmark Comparison
 
-**Original Image:**
-
-Not provided; this is a project-authored synthetic example.
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/public-benchmark/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/public-benchmark/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-benchmark/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-benchmark/reconstruction.tex) |
 
 #### Public Wide-Table Comparison
 
-**Original Image:**
-
-Not provided; this is a project-authored synthetic example.
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/public-wide/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/public-wide/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-wide/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-wide/reconstruction.tex) |
 
 #### Main-Table Showcase
 
-**Original Image:**
-
-Not provided; this is a project-authored synthetic example.
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/showcase-main/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/showcase-main/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/showcase-main/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/showcase-main/reconstruction.tex) |
 
 #### Paired-Generation Showcase
 
-**Original Image:**
-
-Not provided; this is a project-authored synthetic example.
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/showcase-paired/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/showcase-paired/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/showcase-paired/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/showcase-paired/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Main Table Example 1
 
-**Original Image:**
-
-![Original Image](examples/references/main_table-example1/original.png)
-
-**Original TeX:**
-
-[Original TeX](examples/references/main_table-example1/original.tex)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/main_table-example1/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/main_table-example1/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/main_table-example1/original.png) | ![Skill Reconstruction](examples/references/main_table-example1/reconstruction.png) |
+| **TeX:** [Original TeX](examples/references/main_table-example1/original.tex) | **TeX:** [Reconstruction TeX](examples/references/main_table-example1/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Main Table Example 2
 
-**Original Image:**
-
-![Original Image](examples/references/main_table-example2/original.png)
-
-**Original TeX:**
-
-[Original TeX](examples/references/main_table-example2/original.tex)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/main_table-example2/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/main_table-example2/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/main_table-example2/original.png) | ![Skill Reconstruction](examples/references/main_table-example2/reconstruction.png) |
+| **TeX:** [Original TeX](examples/references/main_table-example2/original.tex) | **TeX:** [Reconstruction TeX](examples/references/main_table-example2/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Main Table Example 3
 
-**Original Image:**
-
-![Original Image](examples/references/main_table-example3/original.png)
-
-**Original TeX:**
-
-[Original TeX](examples/references/main_table-example3/original.tex)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/main_table-example3/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/main_table-example3/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/main_table-example3/original.png) | ![Skill Reconstruction](examples/references/main_table-example3/reconstruction.png) |
+| **TeX:** [Original TeX](examples/references/main_table-example3/original.tex) | **TeX:** [Reconstruction TeX](examples/references/main_table-example3/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Main Table: 25-Column Source Branch
 
-**Original Image:**
-
-No matching original image was supplied for this 25-column TeX branch; the preserved screenshot belongs to the separate Image-23 branch below.
-
-**Original TeX:**
-
-[Original TeX](examples/references/main_table-example4/original.tex)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/main_table-example4/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/main_table-example4/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| No matching original image was supplied for this 25-column TeX branch; the preserved screenshot belongs to the separate Image-23 branch below. | ![Skill Reconstruction](examples/references/main_table-example4/reconstruction.png) |
+| **TeX:** [Original TeX](examples/references/main_table-example4/original.tex) | **TeX:** [Reconstruction TeX](examples/references/main_table-example4/reconstruction.tex) |
 
 Provenance: Unresolved citation keys: aircraft, basic, cars, cheng_2017_resisc, coca, coco, dfn, eva18b, flickr, flower102, food101, imagenet, imagenet-a, imagenet-r, imagenet-sketch, imagenetv2, internvl, objectnet, pali, pets, siglip, siglip2, sun397, thomee2016yfcc100m, vit, vit22b; Unresolved cross-reference labels: appx:zeroshot_settings; Source TeX is from the 25-column branch; image-23 is a separate image branch and must not be represented as its matching source image.
 
@@ -171,21 +85,10 @@ Provenance: Unresolved citation keys: aircraft, basic, cars, cheng_2017_resisc, 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Main Table: Image-23 Branch
 
-**Original Image:**
-
-![Original Image](examples/references/main_table-example4-image-23/original.png)
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/main_table-example4-image-23/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/main_table-example4-image-23/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/main_table-example4-image-23/original.png) | ![Skill Reconstruction](examples/references/main_table-example4-image-23/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/main_table-example4-image-23/reconstruction.tex) |
 
 Provenance: The 23-column count includes metadata columns such as model, parameters, resolution and data. This image-authoritative branch is separate from the 25-column source branch and from the 13 benchmark metric columns in the Cambrian-S table.
 
@@ -194,63 +97,30 @@ Provenance: The 23-column count includes metadata columns such as model, paramet
 <!-- LOCAL-ONLY:BEGIN -->
 #### Diffusion Benchmark Comparison
 
-**Original Image:**
-
-![Original Image](examples/references/diffusion-main/original.png)
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/diffusion-main/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/diffusion-main/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/diffusion-main/original.png) | ![Skill Reconstruction](examples/references/diffusion-main/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/diffusion-main/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Paired-Generation Comparison
 
-**Original Image:**
-
-![Original Image](examples/references/paired-generation/original.png)
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/paired-generation/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/paired-generation/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/paired-generation/original.png) | ![Skill Reconstruction](examples/references/paired-generation/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/paired-generation/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Guidance Comparison
 
-**Original Image:**
-
-![Original Image](examples/references/guidance-comparison/original.png)
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/guidance-comparison/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/guidance-comparison/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/guidance-comparison/original.png) | ![Skill Reconstruction](examples/references/guidance-comparison/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/guidance-comparison/reconstruction.tex) |
 
 Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 68
 
@@ -259,21 +129,10 @@ Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Multimodal Benchmark Comparison
 
-**Original Image:**
-
-![Original Image](examples/references/multimodal-main/original.png)
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/multimodal-main/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/multimodal-main/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/multimodal-main/original.png) | ![Skill Reconstruction](examples/references/multimodal-main/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/multimodal-main/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
@@ -281,157 +140,69 @@ Missing (no original TeX provided)
 
 #### Public Ablation Example
 
-**Original Image:**
-
-Not provided; this is a project-authored synthetic example.
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/public-ablation/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/public-ablation/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-ablation/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-ablation/reconstruction.tex) |
 
 #### Sensitivity-Analysis Showcase
 
-**Original Image:**
-
-Not provided; this is a project-authored synthetic example.
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/showcase-sensitivity/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/showcase-sensitivity/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/showcase-sensitivity/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/showcase-sensitivity/reconstruction.tex) |
 
 #### Ablation-Study Showcase
 
-**Original Image:**
-
-Not provided; this is a project-authored synthetic example.
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/showcase-ablation/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/showcase-ablation/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/showcase-ablation/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/showcase-ablation/reconstruction.tex) |
 
 #### Basic Ablation Example
 
-**Original Image:**
-
-Not provided; this is a project-authored synthetic example.
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/basic-ablation/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/basic-ablation/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/basic-ablation/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/basic-ablation/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Ablation Table Example 1
 
-**Original Image:**
-
-![Original Image](examples/references/ablation_table-example1/original.png)
-
-**Original TeX:**
-
-[Original TeX](examples/references/ablation_table-example1/original.tex)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/ablation_table-example1/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/ablation_table-example1/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/ablation_table-example1/original.png) | ![Skill Reconstruction](examples/references/ablation_table-example1/reconstruction.png) |
+| **TeX:** [Original TeX](examples/references/ablation_table-example1/original.tex) | **TeX:** [Reconstruction TeX](examples/references/ablation_table-example1/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Ablation Table Example 2
 
-**Original Image:**
-
-![Original Image](examples/references/ablation_table-example2/original.png)
-
-**Original TeX:**
-
-[Original TeX](examples/references/ablation_table-example2/original.tex)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/ablation_table-example2/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/ablation_table-example2/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/ablation_table-example2/original.png) | ![Skill Reconstruction](examples/references/ablation_table-example2/reconstruction.png) |
+| **TeX:** [Original TeX](examples/references/ablation_table-example2/original.tex) | **TeX:** [Reconstruction TeX](examples/references/ablation_table-example2/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Representation Ablation
 
-**Original Image:**
-
-![Original Image](examples/references/representation-ablation/original.png)
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/representation-ablation/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/representation-ablation/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/representation-ablation/original.png) | ![Skill Reconstruction](examples/references/representation-ablation/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/representation-ablation/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Data-Mixture Ablation
 
-**Original Image:**
-
-![Original Image](examples/references/data-mixture/original.png)
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/data-mixture/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/data-mixture/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/data-mixture/original.png) | ![Skill Reconstruction](examples/references/data-mixture/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/data-mixture/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
@@ -439,97 +210,42 @@ Missing (no original TeX provided)
 
 #### Public Cross-Dataset Example
 
-**Original Image:**
-
-Not provided; this is a project-authored synthetic example.
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/public-cross-dataset/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/public-cross-dataset/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-cross-dataset/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-cross-dataset/reconstruction.tex) |
 
 #### Public Multi-Dataset Example
 
-**Original Image:**
-
-Not provided; this is a project-authored synthetic example.
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/public-multi-dataset/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/public-multi-dataset/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-multi-dataset/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-multi-dataset/reconstruction.tex) |
 
 #### Dataset Capability Matrix
 
-**Original Image:**
-
-Not provided; this is a project-authored synthetic example.
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/showcase-coverage/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/showcase-coverage/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/showcase-coverage/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/showcase-coverage/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Dataset Benchmark Table
 
-**Original Image:**
-
-![Original Image](examples/references/dataset_benchmark_table/original.png)
-
-**Original TeX:**
-
-[Original TeX](examples/references/dataset_benchmark_table/original.tex)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/dataset_benchmark_table/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/dataset_benchmark_table/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/dataset_benchmark_table/original.png) | ![Skill Reconstruction](examples/references/dataset_benchmark_table/reconstruction.png) |
+| **TeX:** [Original TeX](examples/references/dataset_benchmark_table/original.tex) | **TeX:** [Reconstruction TeX](examples/references/dataset_benchmark_table/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Related-Datasets Table
 
-**Original Image:**
-
-![Original Image](examples/references/related-datasets/original.png)
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/related-datasets/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/related-datasets/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/related-datasets/original.png) | ![Skill Reconstruction](examples/references/related-datasets/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/related-datasets/reconstruction.tex) |
 
 Provenance: Original TeX not provided; caption claims not independently verified.
 
@@ -540,21 +256,10 @@ Provenance: Original TeX not provided; caption claims not independently verified
 <!-- LOCAL-ONLY:BEGIN -->
 #### Human-Judge Evaluation
 
-**Original Image:**
-
-![Original Image](examples/references/human-judge/original.png)
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/human-judge/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/human-judge/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/human-judge/original.png) | ![Skill Reconstruction](examples/references/human-judge/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/human-judge/reconstruction.tex) |
 
 Provenance: Original TeX not provided; caption claims not independently verified.
 
@@ -565,21 +270,10 @@ Provenance: Original TeX not provided; caption claims not independently verified
 <!-- LOCAL-ONLY:BEGIN -->
 #### Behavioral VQA Examples
 
-**Original Image:**
-
-![Original Image](examples/references/behavior-vqa/original.png)
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/behavior-vqa/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/behavior-vqa/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/behavior-vqa/original.png) | ![Skill Reconstruction](examples/references/behavior-vqa/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/behavior-vqa/reconstruction.tex) |
 
 Provenance: Original TeX not provided; caption claims not independently verified.
 
@@ -590,84 +284,40 @@ Provenance: Original TeX not provided; caption claims not independently verified
 <!-- LOCAL-ONLY:BEGIN -->
 #### Protocol Example 1
 
-**Original Image:**
-
-![Original Image](examples/references/others-example1/original.png)
-
-**Original TeX:**
-
-[Original TeX](examples/references/others-example1/original.tex)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/others-example1/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/others-example1/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/others-example1/original.png) | ![Skill Reconstruction](examples/references/others-example1/reconstruction.png) |
+| **TeX:** [Original TeX](examples/references/others-example1/original.tex) | **TeX:** [Reconstruction TeX](examples/references/others-example1/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Protocol Example 2
 
-**Original Image:**
-
-![Original Image](examples/references/others-example2/original.png)
-
-**Original TeX:**
-
-[Original TeX](examples/references/others-example2/original.tex)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/others-example2/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/others-example2/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/others-example2/original.png) | ![Skill Reconstruction](examples/references/others-example2/reconstruction.png) |
+| **TeX:** [Original TeX](examples/references/others-example2/original.tex) | **TeX:** [Reconstruction TeX](examples/references/others-example2/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Protocol Example 3
 
-**Original Image:**
-
-![Original Image](examples/references/others-example3/original.png)
-
-**Original TeX:**
-
-[Original TeX](examples/references/others-example3/original.tex)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/others-example3/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/others-example3/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/others-example3/original.png) | ![Skill Reconstruction](examples/references/others-example3/reconstruction.png) |
+| **TeX:** [Original TeX](examples/references/others-example3/original.tex) | **TeX:** [Reconstruction TeX](examples/references/others-example3/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### MeanFlow Algorithm
 
-**Original Image:**
-
-![Original Image](examples/references/meanflow-algorithm/original.png)
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/references/meanflow-algorithm/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/references/meanflow-algorithm/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/meanflow-algorithm/original.png) | ![Skill Reconstruction](examples/references/meanflow-algorithm/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/meanflow-algorithm/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
@@ -675,115 +325,49 @@ Missing (no original TeX provided)
 
 #### Public Decimal-Reporting Example
 
-**Original Image:**
-
-Not provided; this is a project-authored synthetic example.
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/public-decimal/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/public-decimal/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-decimal/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-decimal/reconstruction.tex) |
 
 #### Public Ties and Missing-Values Example
 
-**Original Image:**
-
-Not provided; this is a project-authored synthetic example.
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/public-ties-missing/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/public-ties-missing/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-ties-missing/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-ties-missing/reconstruction.tex) |
 
 #### Public Uncertainty-Reporting Example
 
-**Original Image:**
-
-Not provided; this is a project-authored synthetic example.
-
-**Original TeX:**
-
-Missing (no original TeX provided)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/public-uncertainty/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/public-uncertainty/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-uncertainty/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-uncertainty/reconstruction.tex) |
 
 #### After Numerical Refinement
 
-**Original Image:**
-
-![Original Image](examples/public/refinement-after/original.png)
-
-**Original TeX:**
-
-[Original TeX](examples/public/refinement-after/original.tex)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/refinement-after/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/refinement-after/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/public/refinement-after/original.png) | ![Skill Reconstruction](examples/public/refinement-after/reconstruction.png) |
+| **TeX:** [Original TeX](examples/public/refinement-after/original.tex) | **TeX:** [Reconstruction TeX](examples/public/refinement-after/reconstruction.tex) |
 
 Provenance: Original image is a project-authored synthetic baseline, not an external source-paper image.
 
 #### Grouped Design Reuse
 
-**Original Image:**
-
-![Original Image](examples/public/reuse-grouped/original.png)
-
-**Original TeX:**
-
-[Original TeX](examples/public/reuse-grouped/original.tex)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/reuse-grouped/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/reuse-grouped/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/public/reuse-grouped/original.png) | ![Skill Reconstruction](examples/public/reuse-grouped/reconstruction.png) |
+| **TeX:** [Original TeX](examples/public/reuse-grouped/original.tex) | **TeX:** [Reconstruction TeX](examples/public/reuse-grouped/reconstruction.tex) |
 
 Provenance: Original image is a project-authored synthetic baseline, not an external source-paper image.
 
 #### Compact Design Reuse
 
-**Original Image:**
-
-![Original Image](examples/public/reuse-compact/original.png)
-
-**Original TeX:**
-
-[Original TeX](examples/public/reuse-compact/original.tex)
-
-**Skill Reconstruction:**
-
-![Skill Reconstruction](examples/public/reuse-compact/reconstruction.png)
-
-**Reconstruction TeX:**
-
-[Reconstruction TeX](examples/public/reuse-compact/reconstruction.tex)
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/public/reuse-compact/original.png) | ![Skill Reconstruction](examples/public/reuse-compact/reconstruction.png) |
+| **TeX:** [Original TeX](examples/public/reuse-compact/original.tex) | **TeX:** [Reconstruction TeX](examples/public/reuse-compact/reconstruction.tex) |
 
 Provenance: Original image is a project-authored synthetic baseline, not an external source-paper image.
 

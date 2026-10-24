@@ -8,161 +8,75 @@
 
 ## 表格示例
 
+以下对比表左侧展示原始参考图（若未提供原图则标注缺失说明），右侧展示对应的可编译 LaTeX 重建渲染图；点击任意图片可查看完整分辨率大图，底部 TeX 链接指向对应的可编辑源码文件。
+
 ### Benchmark Comparison
 
 #### 公开基准比较
 
-**原图:**
-
-未提供原图；此项为项目编写的合成示例。
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/public-benchmark/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/public-benchmark/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-benchmark/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-benchmark/reconstruction.tex) |
 
 #### 公开宽表比较
 
-**原图:**
-
-未提供原图；此项为项目编写的合成示例。
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/public-wide/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/public-wide/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-wide/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-wide/reconstruction.tex) |
 
 #### 主表示例
 
-**原图:**
-
-未提供原图；此项为项目编写的合成示例。
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/showcase-main/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/showcase-main/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/showcase-main/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/showcase-main/reconstruction.tex) |
 
 #### 成对生成示例
 
-**原图:**
-
-未提供原图；此项为项目编写的合成示例。
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/showcase-paired/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/showcase-paired/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/showcase-paired/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/showcase-paired/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 主表示例 1
 
-**原图:**
-
-![原图](examples/references/main_table-example1/original.png)
-
-**原始 TeX:**
-
-[原始 TeX](examples/references/main_table-example1/original.tex)
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/main_table-example1/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/main_table-example1/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/main_table-example1/original.png) | ![Skill 重建结果](examples/references/main_table-example1/reconstruction.png) |
+| **TeX:** [原始 TeX](examples/references/main_table-example1/original.tex) | **TeX:** [重建 TeX](examples/references/main_table-example1/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 主表示例 2
 
-**原图:**
-
-![原图](examples/references/main_table-example2/original.png)
-
-**原始 TeX:**
-
-[原始 TeX](examples/references/main_table-example2/original.tex)
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/main_table-example2/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/main_table-example2/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/main_table-example2/original.png) | ![Skill 重建结果](examples/references/main_table-example2/reconstruction.png) |
+| **TeX:** [原始 TeX](examples/references/main_table-example2/original.tex) | **TeX:** [重建 TeX](examples/references/main_table-example2/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 主表示例 3
 
-**原图:**
-
-![原图](examples/references/main_table-example3/original.png)
-
-**原始 TeX:**
-
-[原始 TeX](examples/references/main_table-example3/original.tex)
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/main_table-example3/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/main_table-example3/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/main_table-example3/original.png) | ![Skill 重建结果](examples/references/main_table-example3/reconstruction.png) |
+| **TeX:** [原始 TeX](examples/references/main_table-example3/original.tex) | **TeX:** [重建 TeX](examples/references/main_table-example3/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 主表：25 列源文件分支
 
-**原图:**
-
-未提供与此 25 列源码分支匹配的原图；保留的截图属于下方独立的 Image-23 图像分支。
-
-**原始 TeX:**
-
-[原始 TeX](examples/references/main_table-example4/original.tex)
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/main_table-example4/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/main_table-example4/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供与此 25 列源码分支匹配的原图；保留的截图属于下方独立的 Image-23 图像分支。 | ![Skill 重建结果](examples/references/main_table-example4/reconstruction.png) |
+| **TeX:** [原始 TeX](examples/references/main_table-example4/original.tex) | **TeX:** [重建 TeX](examples/references/main_table-example4/reconstruction.tex) |
 
 Provenance: Unresolved citation keys: aircraft, basic, cars, cheng_2017_resisc, coca, coco, dfn, eva18b, flickr, flower102, food101, imagenet, imagenet-a, imagenet-r, imagenet-sketch, imagenetv2, internvl, objectnet, pali, pets, siglip, siglip2, sun397, thomee2016yfcc100m, vit, vit22b; Unresolved cross-reference labels: appx:zeroshot_settings; Source TeX is from the 25-column branch; image-23 is a separate image branch and must not be represented as its matching source image.
 
@@ -171,21 +85,10 @@ Provenance: Unresolved citation keys: aircraft, basic, cars, cheng_2017_resisc, 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 主表：Image-23 图像分支
 
-**原图:**
-
-![原图](examples/references/main_table-example4-image-23/original.png)
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/main_table-example4-image-23/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/main_table-example4-image-23/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/main_table-example4-image-23/original.png) | ![Skill 重建结果](examples/references/main_table-example4-image-23/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/main_table-example4-image-23/reconstruction.tex) |
 
 来源说明：此处的 23 列指完整表格列数，包含模型、参数量、分辨率及数据量等说明列；与上方 25 列源码分支分别保留。它们也不同于 Cambrian-S 表中的 13 个基准指标列。
 
@@ -194,63 +97,30 @@ Provenance: Unresolved citation keys: aircraft, basic, cars, cheng_2017_resisc, 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 扩散模型基准比较
 
-**原图:**
-
-![原图](examples/references/diffusion-main/original.png)
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/diffusion-main/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/diffusion-main/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/diffusion-main/original.png) | ![Skill 重建结果](examples/references/diffusion-main/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/diffusion-main/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 成对生成比较
 
-**原图:**
-
-![原图](examples/references/paired-generation/original.png)
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/paired-generation/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/paired-generation/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/paired-generation/original.png) | ![Skill 重建结果](examples/references/paired-generation/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/paired-generation/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 引导方法比较
 
-**原图:**
-
-![原图](examples/references/guidance-comparison/original.png)
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/guidance-comparison/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/guidance-comparison/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/guidance-comparison/original.png) | ![Skill 重建结果](examples/references/guidance-comparison/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/guidance-comparison/reconstruction.tex) |
 
 Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 68
 
@@ -259,21 +129,10 @@ Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 多模态基准比较
 
-**原图:**
-
-![原图](examples/references/multimodal-main/original.png)
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/multimodal-main/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/multimodal-main/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/multimodal-main/original.png) | ![Skill 重建结果](examples/references/multimodal-main/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/multimodal-main/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
@@ -281,157 +140,69 @@ Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 
 
 #### 公开消融示例
 
-**原图:**
-
-未提供原图；此项为项目编写的合成示例。
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/public-ablation/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/public-ablation/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-ablation/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-ablation/reconstruction.tex) |
 
 #### 敏感性分析示例
 
-**原图:**
-
-未提供原图；此项为项目编写的合成示例。
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/showcase-sensitivity/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/showcase-sensitivity/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/showcase-sensitivity/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/showcase-sensitivity/reconstruction.tex) |
 
 #### 消融研究示例
 
-**原图:**
-
-未提供原图；此项为项目编写的合成示例。
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/showcase-ablation/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/showcase-ablation/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/showcase-ablation/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/showcase-ablation/reconstruction.tex) |
 
 #### 基础消融示例
 
-**原图:**
-
-未提供原图；此项为项目编写的合成示例。
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/basic-ablation/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/basic-ablation/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/basic-ablation/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/basic-ablation/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 消融表格示例 1
 
-**原图:**
-
-![原图](examples/references/ablation_table-example1/original.png)
-
-**原始 TeX:**
-
-[原始 TeX](examples/references/ablation_table-example1/original.tex)
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/ablation_table-example1/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/ablation_table-example1/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/ablation_table-example1/original.png) | ![Skill 重建结果](examples/references/ablation_table-example1/reconstruction.png) |
+| **TeX:** [原始 TeX](examples/references/ablation_table-example1/original.tex) | **TeX:** [重建 TeX](examples/references/ablation_table-example1/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 消融表格示例 2
 
-**原图:**
-
-![原图](examples/references/ablation_table-example2/original.png)
-
-**原始 TeX:**
-
-[原始 TeX](examples/references/ablation_table-example2/original.tex)
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/ablation_table-example2/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/ablation_table-example2/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/ablation_table-example2/original.png) | ![Skill 重建结果](examples/references/ablation_table-example2/reconstruction.png) |
+| **TeX:** [原始 TeX](examples/references/ablation_table-example2/original.tex) | **TeX:** [重建 TeX](examples/references/ablation_table-example2/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 表征消融
 
-**原图:**
-
-![原图](examples/references/representation-ablation/original.png)
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/representation-ablation/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/representation-ablation/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/representation-ablation/original.png) | ![Skill 重建结果](examples/references/representation-ablation/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/representation-ablation/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 数据混合消融
 
-**原图:**
-
-![原图](examples/references/data-mixture/original.png)
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/data-mixture/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/data-mixture/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/data-mixture/original.png) | ![Skill 重建结果](examples/references/data-mixture/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/data-mixture/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
@@ -439,97 +210,42 @@ Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 
 
 #### 公开跨数据集示例
 
-**原图:**
-
-未提供原图；此项为项目编写的合成示例。
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/public-cross-dataset/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/public-cross-dataset/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-cross-dataset/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-cross-dataset/reconstruction.tex) |
 
 #### 公开多数据集示例
 
-**原图:**
-
-未提供原图；此项为项目编写的合成示例。
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/public-multi-dataset/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/public-multi-dataset/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-multi-dataset/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-multi-dataset/reconstruction.tex) |
 
 #### 数据集能力矩阵
 
-**原图:**
-
-未提供原图；此项为项目编写的合成示例。
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/showcase-coverage/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/showcase-coverage/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/showcase-coverage/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/showcase-coverage/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 数据集基准表
 
-**原图:**
-
-![原图](examples/references/dataset_benchmark_table/original.png)
-
-**原始 TeX:**
-
-[原始 TeX](examples/references/dataset_benchmark_table/original.tex)
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/dataset_benchmark_table/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/dataset_benchmark_table/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/dataset_benchmark_table/original.png) | ![Skill 重建结果](examples/references/dataset_benchmark_table/reconstruction.png) |
+| **TeX:** [原始 TeX](examples/references/dataset_benchmark_table/original.tex) | **TeX:** [重建 TeX](examples/references/dataset_benchmark_table/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 相关数据集表
 
-**原图:**
-
-![原图](examples/references/related-datasets/original.png)
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/related-datasets/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/related-datasets/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/related-datasets/original.png) | ![Skill 重建结果](examples/references/related-datasets/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/related-datasets/reconstruction.tex) |
 
 Provenance: Original TeX not provided; caption claims not independently verified.
 
@@ -540,21 +256,10 @@ Provenance: Original TeX not provided; caption claims not independently verified
 <!-- LOCAL-ONLY:BEGIN -->
 #### 人工评审评估
 
-**原图:**
-
-![原图](examples/references/human-judge/original.png)
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/human-judge/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/human-judge/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/human-judge/original.png) | ![Skill 重建结果](examples/references/human-judge/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/human-judge/reconstruction.tex) |
 
 Provenance: Original TeX not provided; caption claims not independently verified.
 
@@ -565,21 +270,10 @@ Provenance: Original TeX not provided; caption claims not independently verified
 <!-- LOCAL-ONLY:BEGIN -->
 #### 行为问答示例
 
-**原图:**
-
-![原图](examples/references/behavior-vqa/original.png)
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/behavior-vqa/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/behavior-vqa/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/behavior-vqa/original.png) | ![Skill 重建结果](examples/references/behavior-vqa/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/behavior-vqa/reconstruction.tex) |
 
 Provenance: Original TeX not provided; caption claims not independently verified.
 
@@ -590,84 +284,40 @@ Provenance: Original TeX not provided; caption claims not independently verified
 <!-- LOCAL-ONLY:BEGIN -->
 #### 协议示例 1
 
-**原图:**
-
-![原图](examples/references/others-example1/original.png)
-
-**原始 TeX:**
-
-[原始 TeX](examples/references/others-example1/original.tex)
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/others-example1/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/others-example1/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/others-example1/original.png) | ![Skill 重建结果](examples/references/others-example1/reconstruction.png) |
+| **TeX:** [原始 TeX](examples/references/others-example1/original.tex) | **TeX:** [重建 TeX](examples/references/others-example1/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 协议示例 2
 
-**原图:**
-
-![原图](examples/references/others-example2/original.png)
-
-**原始 TeX:**
-
-[原始 TeX](examples/references/others-example2/original.tex)
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/others-example2/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/others-example2/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/others-example2/original.png) | ![Skill 重建结果](examples/references/others-example2/reconstruction.png) |
+| **TeX:** [原始 TeX](examples/references/others-example2/original.tex) | **TeX:** [重建 TeX](examples/references/others-example2/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 协议示例 3
 
-**原图:**
-
-![原图](examples/references/others-example3/original.png)
-
-**原始 TeX:**
-
-[原始 TeX](examples/references/others-example3/original.tex)
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/others-example3/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/others-example3/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/others-example3/original.png) | ![Skill 重建结果](examples/references/others-example3/reconstruction.png) |
+| **TeX:** [原始 TeX](examples/references/others-example3/original.tex) | **TeX:** [重建 TeX](examples/references/others-example3/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### MeanFlow 算法
 
-**原图:**
-
-![原图](examples/references/meanflow-algorithm/original.png)
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/references/meanflow-algorithm/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/references/meanflow-algorithm/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/meanflow-algorithm/original.png) | ![Skill 重建结果](examples/references/meanflow-algorithm/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/meanflow-algorithm/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
 
@@ -675,115 +325,49 @@ Provenance: Original TeX not provided; caption claims not independently verified
 
 #### 公开小数报告示例
 
-**原图:**
-
-未提供原图；此项为项目编写的合成示例。
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/public-decimal/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/public-decimal/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-decimal/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-decimal/reconstruction.tex) |
 
 #### 公开并列与缺失值示例
 
-**原图:**
-
-未提供原图；此项为项目编写的合成示例。
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/public-ties-missing/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/public-ties-missing/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-ties-missing/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-ties-missing/reconstruction.tex) |
 
 #### 公开不确定性报告示例
 
-**原图:**
-
-未提供原图；此项为项目编写的合成示例。
-
-**原始 TeX:**
-
-未提供原始 TeX
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/public-uncertainty/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/public-uncertainty/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-uncertainty/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-uncertainty/reconstruction.tex) |
 
 #### 数值精化后
 
-**原图:**
-
-![原图](examples/public/refinement-after/original.png)
-
-**原始 TeX:**
-
-[原始 TeX](examples/public/refinement-after/original.tex)
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/refinement-after/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/refinement-after/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/public/refinement-after/original.png) | ![Skill 重建结果](examples/public/refinement-after/reconstruction.png) |
+| **TeX:** [原始 TeX](examples/public/refinement-after/original.tex) | **TeX:** [重建 TeX](examples/public/refinement-after/reconstruction.tex) |
 
 Provenance: Original image is a project-authored synthetic baseline, not an external source-paper image.
 
 #### 分组设计复用
 
-**原图:**
-
-![原图](examples/public/reuse-grouped/original.png)
-
-**原始 TeX:**
-
-[原始 TeX](examples/public/reuse-grouped/original.tex)
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/reuse-grouped/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/reuse-grouped/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/public/reuse-grouped/original.png) | ![Skill 重建结果](examples/public/reuse-grouped/reconstruction.png) |
+| **TeX:** [原始 TeX](examples/public/reuse-grouped/original.tex) | **TeX:** [重建 TeX](examples/public/reuse-grouped/reconstruction.tex) |
 
 Provenance: Original image is a project-authored synthetic baseline, not an external source-paper image.
 
 #### 紧凑设计复用
 
-**原图:**
-
-![原图](examples/public/reuse-compact/original.png)
-
-**原始 TeX:**
-
-[原始 TeX](examples/public/reuse-compact/original.tex)
-
-**Skill 重建结果:**
-
-![Skill 重建结果](examples/public/reuse-compact/reconstruction.png)
-
-**重建 TeX:**
-
-[重建 TeX](examples/public/reuse-compact/reconstruction.tex)
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/public/reuse-compact/original.png) | ![Skill 重建结果](examples/public/reuse-compact/reconstruction.png) |
+| **TeX:** [原始 TeX](examples/public/reuse-compact/original.tex) | **TeX:** [重建 TeX](examples/public/reuse-compact/reconstruction.tex) |
 
 Provenance: Original image is a project-authored synthetic baseline, not an external source-paper image.
 
