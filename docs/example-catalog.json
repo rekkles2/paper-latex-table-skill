@@ -6,7 +6,7 @@
       "source_ids": [
         "public-ablation"
       ],
-      "category": "Ablation Study",
+      "category": "Ablation Table",
       "title_zh": "公开消融示例",
       "title_en": "Public Ablation Example",
       "kind": "structured-synthetic",
@@ -29,7 +29,7 @@
       "source_ids": [
         "public-benchmark"
       ],
-      "category": "Benchmark Comparison",
+      "category": "Main Table",
       "title_zh": "公开基准比较",
       "title_en": "Public Benchmark Comparison",
       "kind": "structured-synthetic",
@@ -52,7 +52,7 @@
       "source_ids": [
         "public-cross-dataset"
       ],
-      "category": "Dataset Comparison & Capability Matrix",
+      "category": "Main Table",
       "title_zh": "公开跨数据集示例",
       "title_en": "Public Cross-Dataset Example",
       "kind": "structured-synthetic",
@@ -75,7 +75,7 @@
       "source_ids": [
         "public-decimal"
       ],
-      "category": "Numerical Reporting & Refinement",
+      "category": "Others",
       "title_zh": "公开小数报告示例",
       "title_en": "Public Decimal-Reporting Example",
       "kind": "structured-synthetic",
@@ -98,7 +98,7 @@
       "source_ids": [
         "public-multi-dataset"
       ],
-      "category": "Dataset Comparison & Capability Matrix",
+      "category": "Main Table",
       "title_zh": "公开多数据集示例",
       "title_en": "Public Multi-Dataset Example",
       "kind": "structured-synthetic",
@@ -121,7 +121,7 @@
       "source_ids": [
         "public-ties-missing"
       ],
-      "category": "Numerical Reporting & Refinement",
+      "category": "Others",
       "title_zh": "公开并列与缺失值示例",
       "title_en": "Public Ties and Missing-Values Example",
       "kind": "structured-synthetic",
@@ -144,7 +144,7 @@
       "source_ids": [
         "public-uncertainty"
       ],
-      "category": "Numerical Reporting & Refinement",
+      "category": "Others",
       "title_zh": "公开不确定性报告示例",
       "title_en": "Public Uncertainty-Reporting Example",
       "kind": "structured-synthetic",
@@ -167,7 +167,7 @@
       "source_ids": [
         "public-wide"
       ],
-      "category": "Benchmark Comparison",
+      "category": "Main Table",
       "title_zh": "公开宽表比较",
       "title_en": "Public Wide-Table Comparison",
       "kind": "structured-synthetic",
@@ -190,7 +190,7 @@
       "source_ids": [
         "showcase-main"
       ],
-      "category": "Benchmark Comparison",
+      "category": "Main Table",
       "title_zh": "主表示例",
       "title_en": "Main-Table Showcase",
       "kind": "advanced-synthetic",
@@ -213,7 +213,7 @@
       "source_ids": [
         "showcase-sensitivity"
       ],
-      "category": "Ablation Study",
+      "category": "Ablation Table",
       "title_zh": "敏感性分析示例",
       "title_en": "Sensitivity-Analysis Showcase",
       "kind": "advanced-synthetic",
@@ -236,7 +236,7 @@
       "source_ids": [
         "showcase-paired"
       ],
-      "category": "Benchmark Comparison",
+      "category": "Main Table",
       "title_zh": "成对生成示例",
       "title_en": "Paired-Generation Showcase",
       "kind": "advanced-synthetic",
@@ -259,7 +259,7 @@
       "source_ids": [
         "showcase-ablation"
       ],
-      "category": "Ablation Study",
+      "category": "Ablation Table",
       "title_zh": "消融研究示例",
       "title_en": "Ablation-Study Showcase",
       "kind": "advanced-synthetic",
@@ -282,7 +282,7 @@
       "source_ids": [
         "showcase-coverage"
       ],
-      "category": "Dataset Comparison & Capability Matrix",
+      "category": "Benchmark Table",
       "title_zh": "数据集能力矩阵",
       "title_en": "Dataset Capability Matrix",
       "kind": "advanced-synthetic",
@@ -305,7 +305,7 @@
       "source_ids": [
         "basic-ablation"
       ],
-      "category": "Ablation Study",
+      "category": "Ablation Table",
       "title_zh": "基础消融示例",
       "title_en": "Basic Ablation Example",
       "kind": "documentation-synthetic",
@@ -330,7 +330,7 @@
         "refinement-before",
         "basic-benchmark"
       ],
-      "category": "Numerical Reporting & Refinement",
+      "category": "Others",
       "title_zh": "数值精化后",
       "title_en": "After Numerical Refinement",
       "kind": "refinement-synthetic",
@@ -356,7 +356,7 @@
         "reuse-grouped",
         "reuse-baseline"
       ],
-      "category": "Numerical Reporting & Refinement",
+      "category": "Others",
       "title_zh": "分组设计复用",
       "title_en": "Grouped Design Reuse",
       "kind": "design-reuse-synthetic",
@@ -382,7 +382,7 @@
         "reuse-compact",
         "reuse-baseline"
       ],
-      "category": "Numerical Reporting & Refinement",
+      "category": "Others",
       "title_zh": "紧凑设计复用",
       "title_en": "Compact Design Reuse",
       "kind": "design-reuse-synthetic",
@@ -407,7 +407,7 @@
       "source_ids": [
         "ablation_table-example1"
       ],
-      "category": "Ablation Study",
+      "category": "Ablation Table",
       "title_zh": "消融表格示例 1",
       "title_en": "Ablation Table Example 1",
       "kind": "paired-reference",
@@ -430,7 +430,7 @@
       "source_ids": [
         "ablation_table-example2"
       ],
-      "category": "Ablation Study",
+      "category": "Ablation Table",
       "title_zh": "消融表格示例 2",
       "title_en": "Ablation Table Example 2",
       "kind": "paired-reference",
@@ -453,7 +453,7 @@
       "source_ids": [
         "dataset_benchmark_table"
       ],
-      "category": "Dataset Comparison & Capability Matrix",
+      "category": "Benchmark Table",
       "title_zh": "数据集基准表",
       "title_en": "Dataset Benchmark Table",
       "kind": "paired-reference",
@@ -476,7 +476,7 @@
       "source_ids": [
         "main_table-example1"
       ],
-      "category": "Benchmark Comparison",
+      "category": "Main Table",
       "title_zh": "主表示例 1",
       "title_en": "Main Table Example 1",
       "kind": "paired-reference",
@@ -499,7 +499,7 @@
       "source_ids": [
         "main_table-example2"
       ],
-      "category": "Benchmark Comparison",
+      "category": "Main Table",
       "title_zh": "主表示例 2",
       "title_en": "Main Table Example 2",
       "kind": "paired-reference",
@@ -558,7 +558,7 @@
       "source_ids": [
         "main_table-example3"
       ],
-      "category": "Benchmark Comparison",
+      "category": "Main Table",
       "title_zh": "主表示例 3",
       "title_en": "Main Table Example 3",
       "kind": "paired-reference",
@@ -602,7 +602,7 @@
       "source_ids": [
         "main_table-example4"
       ],
-      "category": "Benchmark Comparison",
+      "category": "Main Table",
       "title_zh": "主表：25 列源文件分支",
       "title_en": "Main Table: 25-Column Source Branch",
       "kind": "paired-reference",
@@ -629,7 +629,7 @@
       "source_ids": [
         "others-example1"
       ],
-      "category": "Algorithms & Protocols",
+      "category": "Others",
       "title_zh": "协议示例 1",
       "title_en": "Protocol Example 1",
       "kind": "paired-reference",
@@ -652,7 +652,7 @@
       "source_ids": [
         "others-example2"
       ],
-      "category": "Algorithms & Protocols",
+      "category": "Others",
       "title_zh": "协议示例 2",
       "title_en": "Protocol Example 2",
       "kind": "paired-reference",
@@ -675,7 +675,7 @@
       "source_ids": [
         "others-example3"
       ],
-      "category": "Algorithms & Protocols",
+      "category": "Others",
       "title_zh": "协议示例 3",
       "title_en": "Protocol Example 3",
       "kind": "paired-reference",
@@ -698,7 +698,7 @@
       "source_ids": [
         "main_table-example4-image-23"
       ],
-      "category": "Benchmark Comparison",
+      "category": "Main Table",
       "title_zh": "主表：Image-23 图像分支",
       "title_en": "Main Table: Image-23 Branch",
       "kind": "image-authoritative-branch",
@@ -723,7 +723,7 @@
       "source_ids": [
         "diffusion-main"
       ],
-      "category": "Benchmark Comparison",
+      "category": "Main Table",
       "title_zh": "扩散模型基准比较",
       "title_en": "Diffusion Benchmark Comparison",
       "kind": "image-only-reference",
@@ -746,7 +746,7 @@
       "source_ids": [
         "representation-ablation"
       ],
-      "category": "Ablation Study",
+      "category": "Ablation Table",
       "title_zh": "表征消融",
       "title_en": "Representation Ablation",
       "kind": "image-only-reference",
@@ -769,7 +769,7 @@
       "source_ids": [
         "paired-generation"
       ],
-      "category": "Benchmark Comparison",
+      "category": "Main Table",
       "title_zh": "成对生成比较",
       "title_en": "Paired-Generation Comparison",
       "kind": "image-only-reference",
@@ -792,7 +792,7 @@
       "source_ids": [
         "guidance-comparison"
       ],
-      "category": "Benchmark Comparison",
+      "category": "Main Table",
       "title_zh": "引导方法比较",
       "title_en": "Guidance Comparison",
       "kind": "image-only-reference",
@@ -817,7 +817,7 @@
       "source_ids": [
         "meanflow-algorithm"
       ],
-      "category": "Algorithms & Protocols",
+      "category": "Others",
       "title_zh": "MeanFlow 算法",
       "title_en": "MeanFlow Algorithm",
       "kind": "image-only-reference",
@@ -840,7 +840,7 @@
       "source_ids": [
         "multimodal-main"
       ],
-      "category": "Benchmark Comparison",
+      "category": "Main Table",
       "title_zh": "多模态基准比较",
       "title_en": "Multimodal Benchmark Comparison",
       "kind": "image-only-reference",
@@ -863,7 +863,7 @@
       "source_ids": [
         "data-mixture"
       ],
-      "category": "Ablation Study",
+      "category": "Ablation Table",
       "title_zh": "数据混合消融",
       "title_en": "Data-Mixture Ablation",
       "kind": "image-only-reference",
@@ -886,7 +886,7 @@
       "source_ids": [
         "related-datasets"
       ],
-      "category": "Dataset Comparison & Capability Matrix",
+      "category": "Benchmark Table",
       "title_zh": "相关数据集表",
       "title_en": "Related-Datasets Table",
       "kind": "image-reference",
@@ -911,7 +911,7 @@
       "source_ids": [
         "human-judge"
       ],
-      "category": "Human–Judge Evaluation",
+      "category": "Others",
       "title_zh": "人工评审评估",
       "title_en": "Human-Judge Evaluation",
       "kind": "image-reference",
@@ -936,7 +936,7 @@
       "source_ids": [
         "behavior-vqa"
       ],
-      "category": "Qualitative VQA",
+      "category": "Others",
       "title_zh": "行为问答示例",
       "title_en": "Behavioral VQA Examples",
       "kind": "image-reference",

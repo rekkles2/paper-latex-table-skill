@@ -8,9 +8,18 @@ A Codex Skill for experimental data, existing TeX and table screenshots. Deliver
 
 ## Table Examples
 
-Each comparison table presents the original reference figure on the left (with an explicit disclosure when the original image is unavailable) and the compiled, editable LaTeX reconstruction on the right; click any image to inspect it at full resolution, and use the TeX row links to access the corresponding source files.
+All 38 table examples below are organized by their experimental role into four sections: [Main Table](#main-table), [Benchmark Table](#benchmark-table), [Ablation Table](#ablation-table), and [Others](#others). Each entry preserves its original provenance notes, documentation/script links, and two-column comparison layout with the reference image on the left (Original), the compiled LaTeX reconstruction on the right (Reconstruction), and the `.tex` source link row underneath.
 
-### Benchmark Comparison
+| Category | Experimental Role & Key Traits | Count |
+| :--- | :--- | :---: |
+| [Main Table](#main-table) | Primary method vs. baseline/SOTA performance comparisons (single/cross/multi-dataset evaluations, paired baseline vs. w/RCG FID/IS results, guidance comparisons, and wide multi-column tables) | 15 |
+| [Benchmark Table](#benchmark-table) | Dataset or benchmark property summaries, scale statistics, and capability coverage matrices | 3 |
+| [Ablation Table](#ablation-table) | Controlled ablations on model components, hyperparameter sensitivity, representation choices, and training data mixtures | 8 |
+| [Others](#others) | Algorithm pseudocode, experimental protocols, numerical/uncertainty formatting specs, layout refinement/reuse demos, human evaluation, and qualitative cases | 12 |
+
+### Main Table
+
+Primary quantitative performance comparisons against baselines or SOTA methods, including single-, cross-, and multi-dataset evaluations, wide multi-column benchmarks, multimodal/diffusion comparisons, and paired baseline vs. w/RCG (FID/IS) performance tables.
 
 #### Public Benchmark Comparison
 
@@ -19,12 +28,16 @@ Each comparison table presents the original reference figure on the left (with a
 | Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-benchmark/reconstruction.png) |
 | **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-benchmark/reconstruction.tex) |
 
+---
+
 #### Public Wide-Table Comparison
 
 | Original Reference Figure | Editable Skill Reconstruction |
 | :--- | :--- |
 | Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-wide/reconstruction.png) |
 | **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-wide/reconstruction.tex) |
+
+---
 
 #### Main-Table Showcase
 
@@ -33,12 +46,16 @@ Each comparison table presents the original reference figure on the left (with a
 | Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/showcase-main/reconstruction.png) |
 | **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/showcase-main/reconstruction.tex) |
 
+---
+
 #### Paired-Generation Showcase
 
 | Original Reference Figure | Editable Skill Reconstruction |
 | :--- | :--- |
 | Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/showcase-paired/reconstruction.png) |
 | **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/showcase-paired/reconstruction.tex) |
+
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Main Table Example 1
@@ -50,6 +67,8 @@ Each comparison table presents the original reference figure on the left (with a
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### Main Table Example 2
 
@@ -60,6 +79,8 @@ Each comparison table presents the original reference figure on the left (with a
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### Main Table Example 3
 
@@ -69,6 +90,8 @@ Each comparison table presents the original reference figure on the left (with a
 | **TeX:** [Original TeX](examples/references/main_table-example3/original.tex) | **TeX:** [Reconstruction TeX](examples/references/main_table-example3/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
+
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Main Table: 25-Column Source Branch
@@ -82,6 +105,8 @@ Provenance: Unresolved citation keys: aircraft, basic, cars, cheng_2017_resisc, 
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### Main Table: Image-23 Branch
 
@@ -94,6 +119,8 @@ Provenance: The 23-column count includes metadata columns such as model, paramet
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### Diffusion Benchmark Comparison
 
@@ -104,6 +131,8 @@ Provenance: The 23-column count includes metadata columns such as model, paramet
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### Paired-Generation Comparison
 
@@ -113,6 +142,8 @@ Provenance: The 23-column count includes metadata columns such as model, paramet
 | **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/paired-generation/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
+
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Guidance Comparison
@@ -126,6 +157,8 @@ Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### Multimodal Benchmark Comparison
 
@@ -136,77 +169,7 @@ Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 
 
 <!-- LOCAL-ONLY:END -->
 
-### Ablation Study
-
-#### Public Ablation Example
-
-| Original Reference Figure | Editable Skill Reconstruction |
-| :--- | :--- |
-| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-ablation/reconstruction.png) |
-| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-ablation/reconstruction.tex) |
-
-#### Sensitivity-Analysis Showcase
-
-| Original Reference Figure | Editable Skill Reconstruction |
-| :--- | :--- |
-| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/showcase-sensitivity/reconstruction.png) |
-| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/showcase-sensitivity/reconstruction.tex) |
-
-#### Ablation-Study Showcase
-
-| Original Reference Figure | Editable Skill Reconstruction |
-| :--- | :--- |
-| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/showcase-ablation/reconstruction.png) |
-| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/showcase-ablation/reconstruction.tex) |
-
-#### Basic Ablation Example
-
-| Original Reference Figure | Editable Skill Reconstruction |
-| :--- | :--- |
-| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/basic-ablation/reconstruction.png) |
-| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/basic-ablation/reconstruction.tex) |
-
-<!-- LOCAL-ONLY:BEGIN -->
-#### Ablation Table Example 1
-
-| Original Reference Figure | Editable Skill Reconstruction |
-| :--- | :--- |
-| ![Original Image](examples/references/ablation_table-example1/original.png) | ![Skill Reconstruction](examples/references/ablation_table-example1/reconstruction.png) |
-| **TeX:** [Original TeX](examples/references/ablation_table-example1/original.tex) | **TeX:** [Reconstruction TeX](examples/references/ablation_table-example1/reconstruction.tex) |
-
-<!-- LOCAL-ONLY:END -->
-
-<!-- LOCAL-ONLY:BEGIN -->
-#### Ablation Table Example 2
-
-| Original Reference Figure | Editable Skill Reconstruction |
-| :--- | :--- |
-| ![Original Image](examples/references/ablation_table-example2/original.png) | ![Skill Reconstruction](examples/references/ablation_table-example2/reconstruction.png) |
-| **TeX:** [Original TeX](examples/references/ablation_table-example2/original.tex) | **TeX:** [Reconstruction TeX](examples/references/ablation_table-example2/reconstruction.tex) |
-
-<!-- LOCAL-ONLY:END -->
-
-<!-- LOCAL-ONLY:BEGIN -->
-#### Representation Ablation
-
-| Original Reference Figure | Editable Skill Reconstruction |
-| :--- | :--- |
-| ![Original Image](examples/references/representation-ablation/original.png) | ![Skill Reconstruction](examples/references/representation-ablation/reconstruction.png) |
-| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/representation-ablation/reconstruction.tex) |
-
-<!-- LOCAL-ONLY:END -->
-
-<!-- LOCAL-ONLY:BEGIN -->
-#### Data-Mixture Ablation
-
-| Original Reference Figure | Editable Skill Reconstruction |
-| :--- | :--- |
-| ![Original Image](examples/references/data-mixture/original.png) | ![Skill Reconstruction](examples/references/data-mixture/reconstruction.png) |
-| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/data-mixture/reconstruction.tex) |
-
-<!-- LOCAL-ONLY:END -->
-
-### Dataset Comparison & Capability Matrix
+---
 
 #### Public Cross-Dataset Example
 
@@ -215,6 +178,8 @@ Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 
 | Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-cross-dataset/reconstruction.png) |
 | **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-cross-dataset/reconstruction.tex) |
 
+---
+
 #### Public Multi-Dataset Example
 
 | Original Reference Figure | Editable Skill Reconstruction |
@@ -222,12 +187,18 @@ Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 
 | Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-multi-dataset/reconstruction.png) |
 | **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-multi-dataset/reconstruction.tex) |
 
+### Benchmark Table
+
+Comparisons of dataset or benchmark metadata, statistical scale, task dimensions, and capability coverage matrices rather than model evaluation scores.
+
 #### Dataset Capability Matrix
 
 | Original Reference Figure | Editable Skill Reconstruction |
 | :--- | :--- |
 | Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/showcase-coverage/reconstruction.png) |
 | **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/showcase-coverage/reconstruction.tex) |
+
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Dataset Benchmark Table
@@ -238,6 +209,8 @@ Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 
 | **TeX:** [Original TeX](examples/references/dataset_benchmark_table/original.tex) | **TeX:** [Reconstruction TeX](examples/references/dataset_benchmark_table/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
+
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Related-Datasets Table
@@ -251,7 +224,95 @@ Provenance: Original TeX not provided; caption claims not independently verified
 
 <!-- LOCAL-ONLY:END -->
 
-### Human–Judge Evaluation
+### Ablation Table
+
+Controlled experimental studies isolating the impact of component additions/removals, hyperparameter sensitivity, representation choices, and data mixture ratios.
+
+#### Public Ablation Example
+
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-ablation/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-ablation/reconstruction.tex) |
+
+---
+
+#### Sensitivity-Analysis Showcase
+
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/showcase-sensitivity/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/showcase-sensitivity/reconstruction.tex) |
+
+---
+
+#### Ablation-Study Showcase
+
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/showcase-ablation/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/showcase-ablation/reconstruction.tex) |
+
+---
+
+#### Basic Ablation Example
+
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/basic-ablation/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/basic-ablation/reconstruction.tex) |
+
+---
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Ablation Table Example 1
+
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/ablation_table-example1/original.png) | ![Skill Reconstruction](examples/references/ablation_table-example1/reconstruction.png) |
+| **TeX:** [Original TeX](examples/references/ablation_table-example1/original.tex) | **TeX:** [Reconstruction TeX](examples/references/ablation_table-example1/reconstruction.tex) |
+
+<!-- LOCAL-ONLY:END -->
+
+---
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Ablation Table Example 2
+
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/ablation_table-example2/original.png) | ![Skill Reconstruction](examples/references/ablation_table-example2/reconstruction.png) |
+| **TeX:** [Original TeX](examples/references/ablation_table-example2/original.tex) | **TeX:** [Reconstruction TeX](examples/references/ablation_table-example2/reconstruction.tex) |
+
+<!-- LOCAL-ONLY:END -->
+
+---
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Representation Ablation
+
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/representation-ablation/original.png) | ![Skill Reconstruction](examples/references/representation-ablation/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/representation-ablation/reconstruction.tex) |
+
+<!-- LOCAL-ONLY:END -->
+
+---
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Data-Mixture Ablation
+
+| Original Reference Figure | Editable Skill Reconstruction |
+| :--- | :--- |
+| ![Original Image](examples/references/data-mixture/original.png) | ![Skill Reconstruction](examples/references/data-mixture/reconstruction.png) |
+| **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/references/data-mixture/reconstruction.tex) |
+
+<!-- LOCAL-ONLY:END -->
+
+### Others
+
+Algorithm pseudocode, experimental protocol specifications, numerical/uncertainty formatting examples, layout refinement and grouped/compact reuse demonstrations, human evaluations, and qualitative case studies.
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Human-Judge Evaluation
@@ -265,7 +326,7 @@ Provenance: Original TeX not provided; caption claims not independently verified
 
 <!-- LOCAL-ONLY:END -->
 
-### Qualitative VQA
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Behavioral VQA Examples
@@ -279,7 +340,7 @@ Provenance: Original TeX not provided; caption claims not independently verified
 
 <!-- LOCAL-ONLY:END -->
 
-### Algorithms & Protocols
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Protocol Example 1
@@ -291,6 +352,8 @@ Provenance: Original TeX not provided; caption claims not independently verified
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### Protocol Example 2
 
@@ -300,6 +363,8 @@ Provenance: Original TeX not provided; caption claims not independently verified
 | **TeX:** [Original TeX](examples/references/others-example2/original.tex) | **TeX:** [Reconstruction TeX](examples/references/others-example2/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
+
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### Protocol Example 3
@@ -311,6 +376,8 @@ Provenance: Original TeX not provided; caption claims not independently verified
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### MeanFlow Algorithm
 
@@ -321,7 +388,7 @@ Provenance: Original TeX not provided; caption claims not independently verified
 
 <!-- LOCAL-ONLY:END -->
 
-### Numerical Reporting & Refinement
+---
 
 #### Public Decimal-Reporting Example
 
@@ -330,6 +397,8 @@ Provenance: Original TeX not provided; caption claims not independently verified
 | Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-decimal/reconstruction.png) |
 | **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-decimal/reconstruction.tex) |
 
+---
+
 #### Public Ties and Missing-Values Example
 
 | Original Reference Figure | Editable Skill Reconstruction |
@@ -337,12 +406,16 @@ Provenance: Original TeX not provided; caption claims not independently verified
 | Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-ties-missing/reconstruction.png) |
 | **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-ties-missing/reconstruction.tex) |
 
+---
+
 #### Public Uncertainty-Reporting Example
 
 | Original Reference Figure | Editable Skill Reconstruction |
 | :--- | :--- |
 | Not provided; this is a project-authored synthetic example. | ![Skill Reconstruction](examples/public/public-uncertainty/reconstruction.png) |
 | **TeX:** Missing (no original TeX provided) | **TeX:** [Reconstruction TeX](examples/public/public-uncertainty/reconstruction.tex) |
+
+---
 
 #### After Numerical Refinement
 
@@ -353,6 +426,8 @@ Provenance: Original TeX not provided; caption claims not independently verified
 
 Provenance: Original image is a project-authored synthetic baseline, not an external source-paper image.
 
+---
+
 #### Grouped Design Reuse
 
 | Original Reference Figure | Editable Skill Reconstruction |
@@ -361,6 +436,8 @@ Provenance: Original image is a project-authored synthetic baseline, not an exte
 | **TeX:** [Original TeX](examples/public/reuse-grouped/original.tex) | **TeX:** [Reconstruction TeX](examples/public/reuse-grouped/reconstruction.tex) |
 
 Provenance: Original image is a project-authored synthetic baseline, not an external source-paper image.
+
+---
 
 #### Compact Design Reuse
 
@@ -469,7 +546,7 @@ python docs/render_showcase.py --build-root build/readme-showcase
 ## Scope & limits
 
 - A passing compile is **not** a visual pass. Static checks are heuristic; test against the actual official conference template you are targeting before submission. Compatibility with any specific venue is not claimed.
-- The current gallery has **38 canonical examples** in seven categories: 17 public synthetic examples and 21 private reference reconstructions. All 41 input identifiers remain represented through canonical entries, aliases and baseline relationships. The 20 public input entries are consolidated into 17 canonical examples without deleting the original files. Private references have separate provenance and redistribution rights and are excluded from the public export.
+- The current gallery has **38 canonical examples** in four experimental-role categories: 17 public synthetic examples and 21 private reference reconstructions. All 41 input identifiers remain represented through canonical entries, aliases and baseline relationships. The 20 public input entries are consolidated into 17 canonical examples without deleting the original files. Private references have separate provenance and redistribution rights and are excluded from the public export.
 - Structured generation supports one grouped-header level. More complex refinement is agent-assisted and uses a reviewed ledger rather than a general LaTeX parser.
 - Public demonstration previews use synthetic data; optional private references reproduce user-supplied sources, whose claims are not independently verified.
 

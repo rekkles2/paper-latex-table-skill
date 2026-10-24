@@ -8,9 +8,18 @@
 
 ## 表格示例
 
-以下对比表左侧展示原始参考图（若未提供原图则标注缺失说明），右侧展示对应的可编译 LaTeX 重建渲染图；点击任意图片可查看完整分辨率大图，底部 TeX 链接指向对应的可编辑源码文件。
+以下全部 38 个表格示例按其在论文中的实验角色划分为 [Main Table](#main-table)、[Benchmark Table](#benchmark-table)、[Ablation Table](#ablation-table) 和 [Others](#others) 四类。每个条目完整保留原有的来源说明、文档/脚本链接与双栏对比结构：左侧为原始参考图（Original；未提供时保留缺失说明），右侧为对应的 LaTeX 重建渲染图（Reconstruction），底部附有对应的 `.tex` 源码链接。
 
-### Benchmark Comparison
+| 类别导航 | 表格实验角色与典型特征 | 条目数量 |
+| :--- | :--- | :---: |
+| [Main Table](#main-table) | 核心方法与基线/SOTA 综合性能对比（含单/跨/多数据集评测、成对基线 vs. w/RCG 的 FID/IS 对比、引导策略与多列宽表） | 15 |
+| [Benchmark Table](#benchmark-table) | 数据集或基准本身的属性统计、规模盘点与能力覆盖矩阵对比 | 3 |
+| [Ablation Table](#ablation-table) | 模型组件增删、超参数敏感性、表征选择与训练数据配比等受控消融分析 | 8 |
+| [Others](#others) | 算法伪代码与实验协议、数值与不确定性排版规范、版式精化/复用演示、人工评审及定性案例展示 | 12 |
+
+### Main Table
+
+展示核心方法与主流基线或 SOTA 的定量性能对比主表，涵盖公开基准评测、跨数据集与多数据集性能汇总、多列宽表、多模态与扩散模型对比，以及基线与加 RCG 方法成对比较（FID/IS）实验表。
 
 #### 公开基准比较
 
@@ -19,12 +28,16 @@
 | 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-benchmark/reconstruction.png) |
 | **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-benchmark/reconstruction.tex) |
 
+---
+
 #### 公开宽表比较
 
 | 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
 | :--- | :--- |
 | 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-wide/reconstruction.png) |
 | **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-wide/reconstruction.tex) |
+
+---
 
 #### 主表示例
 
@@ -33,12 +46,16 @@
 | 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/showcase-main/reconstruction.png) |
 | **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/showcase-main/reconstruction.tex) |
 
+---
+
 #### 成对生成示例
 
 | 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
 | :--- | :--- |
 | 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/showcase-paired/reconstruction.png) |
 | **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/showcase-paired/reconstruction.tex) |
+
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 主表示例 1
@@ -50,6 +67,8 @@
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### 主表示例 2
 
@@ -60,6 +79,8 @@
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### 主表示例 3
 
@@ -69,6 +90,8 @@
 | **TeX:** [原始 TeX](examples/references/main_table-example3/original.tex) | **TeX:** [重建 TeX](examples/references/main_table-example3/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
+
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 主表：25 列源文件分支
@@ -82,6 +105,8 @@ Provenance: Unresolved citation keys: aircraft, basic, cars, cheng_2017_resisc, 
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### 主表：Image-23 图像分支
 
@@ -94,6 +119,8 @@ Provenance: Unresolved citation keys: aircraft, basic, cars, cheng_2017_resisc, 
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### 扩散模型基准比较
 
@@ -104,6 +131,8 @@ Provenance: Unresolved citation keys: aircraft, basic, cars, cheng_2017_resisc, 
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### 成对生成比较
 
@@ -113,6 +142,8 @@ Provenance: Unresolved citation keys: aircraft, basic, cars, cheng_2017_resisc, 
 | **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/paired-generation/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
+
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 引导方法比较
@@ -126,6 +157,8 @@ Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### 多模态基准比较
 
@@ -136,77 +169,7 @@ Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 
 
 <!-- LOCAL-ONLY:END -->
 
-### Ablation Study
-
-#### 公开消融示例
-
-| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
-| :--- | :--- |
-| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-ablation/reconstruction.png) |
-| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-ablation/reconstruction.tex) |
-
-#### 敏感性分析示例
-
-| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
-| :--- | :--- |
-| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/showcase-sensitivity/reconstruction.png) |
-| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/showcase-sensitivity/reconstruction.tex) |
-
-#### 消融研究示例
-
-| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
-| :--- | :--- |
-| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/showcase-ablation/reconstruction.png) |
-| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/showcase-ablation/reconstruction.tex) |
-
-#### 基础消融示例
-
-| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
-| :--- | :--- |
-| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/basic-ablation/reconstruction.png) |
-| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/basic-ablation/reconstruction.tex) |
-
-<!-- LOCAL-ONLY:BEGIN -->
-#### 消融表格示例 1
-
-| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
-| :--- | :--- |
-| ![原图](examples/references/ablation_table-example1/original.png) | ![Skill 重建结果](examples/references/ablation_table-example1/reconstruction.png) |
-| **TeX:** [原始 TeX](examples/references/ablation_table-example1/original.tex) | **TeX:** [重建 TeX](examples/references/ablation_table-example1/reconstruction.tex) |
-
-<!-- LOCAL-ONLY:END -->
-
-<!-- LOCAL-ONLY:BEGIN -->
-#### 消融表格示例 2
-
-| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
-| :--- | :--- |
-| ![原图](examples/references/ablation_table-example2/original.png) | ![Skill 重建结果](examples/references/ablation_table-example2/reconstruction.png) |
-| **TeX:** [原始 TeX](examples/references/ablation_table-example2/original.tex) | **TeX:** [重建 TeX](examples/references/ablation_table-example2/reconstruction.tex) |
-
-<!-- LOCAL-ONLY:END -->
-
-<!-- LOCAL-ONLY:BEGIN -->
-#### 表征消融
-
-| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
-| :--- | :--- |
-| ![原图](examples/references/representation-ablation/original.png) | ![Skill 重建结果](examples/references/representation-ablation/reconstruction.png) |
-| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/representation-ablation/reconstruction.tex) |
-
-<!-- LOCAL-ONLY:END -->
-
-<!-- LOCAL-ONLY:BEGIN -->
-#### 数据混合消融
-
-| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
-| :--- | :--- |
-| ![原图](examples/references/data-mixture/original.png) | ![Skill 重建结果](examples/references/data-mixture/reconstruction.png) |
-| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/data-mixture/reconstruction.tex) |
-
-<!-- LOCAL-ONLY:END -->
-
-### Dataset Comparison & Capability Matrix
+---
 
 #### 公开跨数据集示例
 
@@ -215,6 +178,8 @@ Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 
 | 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-cross-dataset/reconstruction.png) |
 | **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-cross-dataset/reconstruction.tex) |
 
+---
+
 #### 公开多数据集示例
 
 | 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
@@ -222,12 +187,18 @@ Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 
 | 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-multi-dataset/reconstruction.png) |
 | **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-multi-dataset/reconstruction.tex) |
 
+### Benchmark Table
+
+聚焦数据集或评测基准本身的属性特征、数据规模、任务维度与能力覆盖矩阵对比，而非特定模型在基准上的得分表。
+
 #### 数据集能力矩阵
 
 | 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
 | :--- | :--- |
 | 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/showcase-coverage/reconstruction.png) |
 | **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/showcase-coverage/reconstruction.tex) |
+
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 数据集基准表
@@ -238,6 +209,8 @@ Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 
 | **TeX:** [原始 TeX](examples/references/dataset_benchmark_table/original.tex) | **TeX:** [重建 TeX](examples/references/dataset_benchmark_table/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
+
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 相关数据集表
@@ -251,7 +224,95 @@ Provenance: Original TeX not provided; caption claims not independently verified
 
 <!-- LOCAL-ONLY:END -->
 
-### Human–Judge Evaluation
+### Ablation Table
+
+用于检验模型模块增删、受控变量、超参数敏感性、表征设计及数据混合配比对最终性能贡献的消融与分析实验表。
+
+#### 公开消融示例
+
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-ablation/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-ablation/reconstruction.tex) |
+
+---
+
+#### 敏感性分析示例
+
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/showcase-sensitivity/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/showcase-sensitivity/reconstruction.tex) |
+
+---
+
+#### 消融研究示例
+
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/showcase-ablation/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/showcase-ablation/reconstruction.tex) |
+
+---
+
+#### 基础消融示例
+
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/basic-ablation/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/basic-ablation/reconstruction.tex) |
+
+---
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### 消融表格示例 1
+
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/ablation_table-example1/original.png) | ![Skill 重建结果](examples/references/ablation_table-example1/reconstruction.png) |
+| **TeX:** [原始 TeX](examples/references/ablation_table-example1/original.tex) | **TeX:** [重建 TeX](examples/references/ablation_table-example1/reconstruction.tex) |
+
+<!-- LOCAL-ONLY:END -->
+
+---
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### 消融表格示例 2
+
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/ablation_table-example2/original.png) | ![Skill 重建结果](examples/references/ablation_table-example2/reconstruction.png) |
+| **TeX:** [原始 TeX](examples/references/ablation_table-example2/original.tex) | **TeX:** [重建 TeX](examples/references/ablation_table-example2/reconstruction.tex) |
+
+<!-- LOCAL-ONLY:END -->
+
+---
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### 表征消融
+
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/representation-ablation/original.png) | ![Skill 重建结果](examples/references/representation-ablation/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/representation-ablation/reconstruction.tex) |
+
+<!-- LOCAL-ONLY:END -->
+
+---
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### 数据混合消融
+
+| 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
+| :--- | :--- |
+| ![原图](examples/references/data-mixture/original.png) | ![Skill 重建结果](examples/references/data-mixture/reconstruction.png) |
+| **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/references/data-mixture/reconstruction.tex) |
+
+<!-- LOCAL-ONLY:END -->
+
+### Others
+
+涵盖算法流程伪代码、实验设置与协议清单、小数/并列/缺失值/不确定性等数值报告规范、表格精化与分组/紧凑版式复用演示，以及人工评审和定性案例表。
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 人工评审评估
@@ -265,7 +326,7 @@ Provenance: Original TeX not provided; caption claims not independently verified
 
 <!-- LOCAL-ONLY:END -->
 
-### Qualitative VQA
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 行为问答示例
@@ -279,7 +340,7 @@ Provenance: Original TeX not provided; caption claims not independently verified
 
 <!-- LOCAL-ONLY:END -->
 
-### Algorithms & Protocols
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 协议示例 1
@@ -291,6 +352,8 @@ Provenance: Original TeX not provided; caption claims not independently verified
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### 协议示例 2
 
@@ -300,6 +363,8 @@ Provenance: Original TeX not provided; caption claims not independently verified
 | **TeX:** [原始 TeX](examples/references/others-example2/original.tex) | **TeX:** [重建 TeX](examples/references/others-example2/reconstruction.tex) |
 
 <!-- LOCAL-ONLY:END -->
+
+---
 
 <!-- LOCAL-ONLY:BEGIN -->
 #### 协议示例 3
@@ -311,6 +376,8 @@ Provenance: Original TeX not provided; caption claims not independently verified
 
 <!-- LOCAL-ONLY:END -->
 
+---
+
 <!-- LOCAL-ONLY:BEGIN -->
 #### MeanFlow 算法
 
@@ -321,7 +388,7 @@ Provenance: Original TeX not provided; caption claims not independently verified
 
 <!-- LOCAL-ONLY:END -->
 
-### Numerical Reporting & Refinement
+---
 
 #### 公开小数报告示例
 
@@ -330,6 +397,8 @@ Provenance: Original TeX not provided; caption claims not independently verified
 | 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-decimal/reconstruction.png) |
 | **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-decimal/reconstruction.tex) |
 
+---
+
 #### 公开并列与缺失值示例
 
 | 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
@@ -337,12 +406,16 @@ Provenance: Original TeX not provided; caption claims not independently verified
 | 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-ties-missing/reconstruction.png) |
 | **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-ties-missing/reconstruction.tex) |
 
+---
+
 #### 公开不确定性报告示例
 
 | 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
 | :--- | :--- |
 | 未提供原图；此项为项目编写的合成示例。 | ![Skill 重建结果](examples/public/public-uncertainty/reconstruction.png) |
 | **TeX:** 未提供原始 TeX | **TeX:** [重建 TeX](examples/public/public-uncertainty/reconstruction.tex) |
+
+---
 
 #### 数值精化后
 
@@ -353,6 +426,8 @@ Provenance: Original TeX not provided; caption claims not independently verified
 
 Provenance: Original image is a project-authored synthetic baseline, not an external source-paper image.
 
+---
+
 #### 分组设计复用
 
 | 原始参考图表 (Original Reference) | Skill 可编辑重建结果 (Editable Reconstruction) |
@@ -361,6 +436,8 @@ Provenance: Original image is a project-authored synthetic baseline, not an exte
 | **TeX:** [原始 TeX](examples/public/reuse-grouped/original.tex) | **TeX:** [重建 TeX](examples/public/reuse-grouped/reconstruction.tex) |
 
 Provenance: Original image is a project-authored synthetic baseline, not an external source-paper image.
+
+---
 
 #### 紧凑设计复用
 
@@ -394,7 +471,7 @@ Provenance: Original image is a project-authored synthetic baseline, not an exte
 
 ## 已学习的布局
 
-当前画廊按 7 类展示 **38 个独立示例**：17 个公开合成示例与 21 个私有参考示例；通过别名及基线关系保留全部 **41 个输入示例标识**。私有参考由原有 18 对 figure/TeX 对照及本次新增的 Related Datasets、Human–Judge、Behavior VQA 三例组成。缺少原始 TeX 的案例已逐项标注。公开合成画廊的 20 个输入条目合并为 17 个独立展示项，原有文件保留。历史参考的细节见[参考示例明细](references/example-details.md)，当前完整索引见[示例目录](docs/example-catalog.json)。原图与源码保持独立；源代码与截图冲突时保留两条分支。
+当前画廊按 4 类实验表格类型展示 **38 个独立示例**：17 个公开合成示例与 21 个私有参考示例；通过别名及基线关系保留全部 **41 个输入示例标识**。私有参考由原有 18 对 figure/TeX 对照及本次新增的 Related Datasets、Human–Judge、Behavior VQA 三例组成。缺少原始 TeX 的案例已逐项标注。公开合成画廊的 20 个输入条目合并为 17 个独立展示项，原有文件保留。历史参考的细节见[参考示例明细](references/example-details.md)，当前完整索引见[示例目录](docs/example-catalog.json)。原图与源码保持独立；源代码与截图冲突时保留两条分支。
 
 | 布局 | 主要设计 | 关注细节 |
 | --- | --- | --- |
