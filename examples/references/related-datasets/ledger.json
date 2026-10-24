@@ -1,0 +1,233 @@
+{
+  "artifact": "related-datasets",
+  "source_image": "related-datasets.png",
+  "source_approx_pixels": "917x521",
+  "source_truth": "PNG only; caption science is not independently verified here.",
+  "original_tex": {
+    "status": "MISSING",
+    "detail": "Original TeX was not supplied in this packet and is not present in any accessible file. reconstruction.tex is newly authored, not original."
+  },
+  "caption_verbatim": "Table 1: Comparison of Related Datasets. We compare our dataset with a related dataset of general motion or driving scenes. From left to right, the columns are the dataset name, total frame count or time duration, human count, providing labels of motion, trajectory, VQA pairs, and text descriptions, and the number of behavior classes. ‡ represents a general motion dataset. Dataset labeled with * in the “Instance” column captures the motion from real participants. † means upper-bound. Datasets labeled with “Unstructured” in the last column do not provide explicit human behavior labels but involve them in the QA pairs or captions. Our dataset supports all four tasks and provides the most behavior classes among all of the datasets.",
+  "columns": [
+    "Dataset",
+    "Frames / Duration (s)",
+    "Instances",
+    "Motion",
+    "Trajectory",
+    "VQA",
+    "Text",
+    "Behaviors"
+  ],
+  "markers": {
+    "*": "Superscript star on Instances: 54*, 11*, 7*, 11*.",
+    "†": "Superscript dagger on JAAD Frames/Duration 33k† and in caption (upper-bound).",
+    "‡": "Superscript double dagger on 3DPW, Human3.6M, and Human3.6M Behaviors 15‡."
+  },
+  "rows": [
+    {
+      "dataset": "PIE [10]",
+      "citation": "10",
+      "frames_duration": "293k / -",
+      "instances": "1.3k",
+      "motion": "✗",
+      "trajectory": "✗",
+      "vqa": "✗",
+      "text": "✗",
+      "behaviors": "1"
+    },
+    {
+      "dataset": "Euro-PVI [11]",
+      "citation": "11",
+      "frames_duration": "83k / -",
+      "instances": "7.7k",
+      "motion": "✗",
+      "trajectory": "✗",
+      "vqa": "✗",
+      "text": "✗",
+      "behaviors": "1"
+    },
+    {
+      "dataset": "PMR [14]",
+      "citation": "14",
+      "frames_duration": "225k / -",
+      "instances": "54*",
+      "motion": "✓",
+      "trajectory": "✓",
+      "vqa": "✗",
+      "text": "✗",
+      "behaviors": "✗"
+    },
+    {
+      "dataset": "CityWalker [16]",
+      "citation": "16",
+      "frames_duration": "- / 110k",
+      "instances": "120k",
+      "motion": "✓",
+      "trajectory": "✓",
+      "vqa": "✗",
+      "text": "✓",
+      "behaviors": "✗"
+    },
+    {
+      "dataset": "BlindWays [15]",
+      "citation": "15",
+      "frames_duration": "300k / 10k",
+      "instances": "11*",
+      "motion": "✓",
+      "trajectory": "✓",
+      "vqa": "✗",
+      "text": "✓",
+      "behaviors": "Unstructured"
+    },
+    {
+      "dataset": "3DPW‡ [84]",
+      "citation": "84",
+      "frames_duration": "51k / 1.7k",
+      "instances": "7*",
+      "motion": "✓",
+      "trajectory": "✓",
+      "vqa": "✗",
+      "text": "✗",
+      "behaviors": "✗"
+    },
+    {
+      "dataset": "Human3.6M‡ [34]",
+      "citation": "34",
+      "frames_duration": "3.6M / -",
+      "instances": "11*",
+      "motion": "✓",
+      "trajectory": "✓",
+      "vqa": "✗",
+      "text": "✗",
+      "behaviors": "15‡"
+    },
+    {
+      "dataset": "JAAD [12]",
+      "citation": "12",
+      "frames_duration": "82k / 33k†",
+      "instances": "2.2k",
+      "motion": "✗",
+      "trajectory": "✗",
+      "vqa": "✗",
+      "text": "✗",
+      "behaviors": "11"
+    },
+    {
+      "dataset": "Drama [85]",
+      "citation": "85",
+      "frames_duration": "- / 36k",
+      "instances": "-",
+      "motion": "✗",
+      "trajectory": "✗",
+      "vqa": "General Driving",
+      "text": "✓",
+      "behaviors": "Unstructured"
+    },
+    {
+      "dataset": "CoVLA [75]",
+      "citation": "75",
+      "frames_duration": "6M / -",
+      "instances": "-",
+      "motion": "✗",
+      "trajectory": "✗",
+      "vqa": "General Driving",
+      "text": "✓",
+      "behaviors": "Unstructured"
+    },
+    {
+      "dataset": "DriveLM-nuScenes [68]",
+      "citation": "68",
+      "frames_duration": "4.8k / -",
+      "instances": "-",
+      "motion": "✗",
+      "trajectory": "✗",
+      "vqa": "General Driving",
+      "text": "✓",
+      "behaviors": "Unstructured"
+    },
+    {
+      "dataset": "nuScenes-QA [78]",
+      "citation": "78",
+      "frames_duration": "340k / -",
+      "instances": "-",
+      "motion": "✗",
+      "trajectory": "✗",
+      "vqa": "General Driving",
+      "text": "✓",
+      "behaviors": "✗"
+    },
+    {
+      "dataset": "MMHU (Ours)",
+      "citation": "",
+      "frames_duration": "1.73M / 173K",
+      "instances": "57K",
+      "motion": "✓",
+      "trajectory": "✓",
+      "vqa": "Human-Centric",
+      "text": "✓",
+      "behaviors": "13"
+    }
+  ],
+  "corrections": [
+    {
+      "cell": "PIE / Text",
+      "earlier_proposal": "✓",
+      "source_truth": "✗",
+      "status": "corrected"
+    },
+    {
+      "cell": "Euro-PVI / Text",
+      "earlier_proposal": "✓",
+      "source_truth": "✗",
+      "status": "corrected"
+    },
+    {
+      "cell": "Human3.6M marker",
+      "earlier_proposal": "†",
+      "source_truth": "‡",
+      "status": "corrected"
+    },
+    {
+      "cell": "Human3.6M / Behaviors",
+      "earlier_proposal": "15†",
+      "source_truth": "15‡",
+      "status": "corrected"
+    },
+    {
+      "cell": "JAAD / Text",
+      "earlier_proposal": "✓",
+      "source_truth": "✗",
+      "status": "corrected"
+    }
+  ],
+  "layout": {
+    "engine": "XeLaTeX standalone",
+    "font": "TeX Gyre Termes",
+    "body_size": "10pt",
+    "caption_size": "11pt",
+    "paper": "185mm x 114mm",
+    "margin": "2mm",
+    "rules": "above header, below header, bottom only; no vertical rules",
+    "columns_count": 8,
+    "alignment": "dataset left; all other body cells centered",
+    "citation_style": "blue underlined numbers in square brackets",
+    "marks": "pifont \\ding{51} check and \\ding{55} cross",
+    "ours_row_bold": false,
+    "caption_font_pt": 12.5,
+    "ours_bold": false
+  },
+  "verification": {
+    "all_13_rows_present": true,
+    "source_crosses": [
+      "PIE Text",
+      "Euro-PVI Text",
+      "JAAD Text",
+      "nuScenes-QA Behaviors"
+    ],
+    "human36m_marker": "double dagger ‡",
+    "jaad_dagger": "single dagger † retained on 33k",
+    "no_invented_citations": true,
+    "no_screenshot_embedding": true,
+    "compilation": "No compilation was performed or claimed."
+  }
+}

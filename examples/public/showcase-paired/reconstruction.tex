@@ -1,0 +1,36 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=190mm,paperheight=140mm,margin=7mm]{geometry}
+\usepackage{fontspec,booktabs,multirow,amssymb,graphicx}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\setmainfont{TeX Gyre Termes}
+\definecolor{sectiongray}{gray}{0.91}
+\definecolor{selected}{RGB}{237,249,237}
+\definecolor{quiet}{gray}{0.42}
+\definecolor{gain}{RGB}{0,105,32}
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.04}
+\newcommand{\captext}[3]{\noindent Table #1: \textbf{#2} #3\par\vspace{5pt}}
+\newcommand{\band}[2]{\rowcolor{sectiongray}\multicolumn{#1}{l}{\textit{#2}}\\}
+\newcommand{\unc}[2]{#1\,{\scriptsize\textcolor{quiet}{$\pm$#2}}}
+\newcommand{\yes}{$\checkmark$}
+\newcommand{\no}{--}
+\newcommand{\full}{\begin{tikzpicture}[baseline=-.5ex]\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\filldraw[draw=black,fill=black,line width=.095ex] (0,0) circle[radius=.78ex];\end{tikzpicture}}
+\newcommand{\emptyc}{\begin{tikzpicture}[baseline=-.5ex]\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\draw[black,fill=none,line width=.095ex] (0,0) circle[radius=.78ex];\end{tikzpicture}}
+\newcommand{\halfc}{\begin{tikzpicture}[baseline=-.5ex]\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\fill[black] (0,.78ex) arc[start angle=90,end angle=270,radius=.78ex] -- cycle;\draw[black,line width=.095ex] (0,0) circle[radius=.78ex];\end{tikzpicture}}
+\begin{document}
+\captext{5}{Paired comparison with rule conditioning.}{Each pair uses the same encoder and evaluation setting. Parentheses report changes relative to its own baseline. Values are synthetic; accuracy is in \% and latency in ms.}
+\begin{center}\begin{tabular}{@{}llrr@{}}\toprule
+Encoder & Setting & Accuracy $\uparrow$ & Latency $\downarrow$\\\midrule
+\multirow{2}{*}{Small} & baseline & 76.2 & 8.0 \\
+ & \textbf{+ rules} & \textbf{79.4} {\small\textcolor{gain}{(+3.2)}} & 8.6 {\small (+0.6)} \\
+\midrule
+\multirow{2}{*}{Base} & baseline & 80.4 & 10.2 \\
+ & \textbf{+ rules} & \textbf{83.1} {\small\textcolor{gain}{(+2.7)}} & 11.0 {\small (+0.8)} \\
+\midrule
+\multirow{2}{*}{Large} & baseline & 83.6 & 14.1 \\
+ & \textbf{+ rules} & \textbf{85.2} {\small\textcolor{gain}{(+1.6)}} & 15.3 {\small (+1.2)} \\
+\bottomrule\end{tabular}\end{center}
+{\footnotesize Accuracy changes are percentage points. Green indicates higher accuracy; latency increases remain black.}
+
+\end{document}

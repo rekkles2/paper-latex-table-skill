@@ -1,0 +1,42 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=190mm,paperheight=140mm,margin=7mm]{geometry}
+\usepackage{fontspec,booktabs,multirow,amssymb,graphicx}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\setmainfont{TeX Gyre Termes}
+\definecolor{sectiongray}{gray}{0.91}
+\definecolor{selected}{RGB}{237,249,237}
+\definecolor{quiet}{gray}{0.42}
+\definecolor{gain}{RGB}{0,105,32}
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.04}
+\newcommand{\captext}[3]{\noindent Table #1: \textbf{#2} #3\par\vspace{5pt}}
+\newcommand{\band}[2]{\rowcolor{sectiongray}\multicolumn{#1}{l}{\textit{#2}}\\}
+\newcommand{\unc}[2]{#1\,{\scriptsize\textcolor{quiet}{$\pm$#2}}}
+\newcommand{\yes}{$\checkmark$}
+\newcommand{\no}{--}
+\newcommand{\full}{\begin{tikzpicture}[baseline=-.5ex]\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\filldraw[draw=black,fill=black,line width=.095ex] (0,0) circle[radius=.78ex];\end{tikzpicture}}
+\newcommand{\emptyc}{\begin{tikzpicture}[baseline=-.5ex]\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\draw[black,fill=none,line width=.095ex] (0,0) circle[radius=.78ex];\end{tikzpicture}}
+\newcommand{\halfc}{\begin{tikzpicture}[baseline=-.5ex]\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\fill[black] (0,.78ex) arc[start angle=90,end angle=270,radius=.78ex] -- cycle;\draw[black,line width=.095ex] (0,0) circle[radius=.78ex];\end{tikzpicture}}
+\begin{document}
+\captext{1}{Multi-benchmark comparison.}{Accuracy (\%) is reported under static and shifted scenes, short and long temporal contexts, and seen and novel rules. Bold and underline mark the best and distinct second-best values across all methods. All data are synthetic.}
+\begin{center}\begin{tabular}{@{}l*{8}{r}@{}}\toprule
+\multirow{2}{*}{Method} & \multicolumn{2}{c}{SceneBench} & \multicolumn{2}{c}{TimeBench} & \multicolumn{2}{c}{RuleBench} & \multicolumn{2}{c}{Summary}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(l){8-9}
+ & \rotatebox{65}{Static $\uparrow$} & \rotatebox{65}{Shift $\uparrow$} & \rotatebox{65}{Short $\uparrow$} & \rotatebox{65}{Long $\uparrow$} & \rotatebox{65}{Seen $\uparrow$} & \rotatebox{65}{Novel $\uparrow$} & Mean $\uparrow$ & ms $\downarrow$\\\midrule
+\band{9}{Frozen representations}
+Frame encoder & 74.2 & 69.8 & 67.1 & 61.4 & 58.2 & 52.7 & 63.9 & \textbf{7.4} \\
+Clip encoder & 78.6 & 73.1 & 71.4 & 65.2 & 61.8 & 55.9 & 67.7 & 9.1 \\
+Temporal pooling & 80.1 & 75.6 & 72.3 & 67.8 & 64.2 & 58.1 & 69.7 & \underline{8.6} \\
+\band{9}{Memory-augmented models}
+Local memory & 83.4 & 78.5 & 76.1 & 70.2 & 67.8 & 62.4 & 73.1 & 12.8 \\
+Hierarchical memory & 84.7 & 80.2 & 78.6 & 72.5 & 70.1 & 65.3 & 75.2 & 15.6 \\
+Prototype retrieval & 85.1 & 79.8 & 77.9 & 73.4 & 69.7 & 64.8 & 75.1 & 11.3 \\
+\rowcolor{selected}
+\textbf{Atlas / compact} & \underline{85.8} & \underline{81.4} & \underline{79.2} & \underline{74.6} & \underline{71.8} & \underline{66.9} & \underline{76.6} & 10.2 \\
+\rowcolor{selected}
+\textbf{Atlas / full} & \textbf{87.3} & \textbf{83.0} & \textbf{81.5} & \textbf{77.2} & \textbf{74.1} & \textbf{69.8} & \textbf{78.8} & 14.1 \\
+\bottomrule\end{tabular}\end{center}
+{\footnotesize Mean averages the six accuracy columns. Latency is in milliseconds; lower is better.}
+
+\end{document}

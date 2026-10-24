@@ -38,9 +38,8 @@ def generate(ledger: dict) -> tuple[str, list]:
             raise ValueError('Header groups must cover the columns')
         lines.append(' & '.join(r'\multicolumn{%d}{c}{%s}' % (g['span'], escape(g['label'])) for g in groups) + r' \\')
     lines += [' & '.join((r'\rotatebox{90}{' + styled(escape(c['label']), c) + '}') if c.get('rotate') else styled(escape(c['label']), c) for c in columns) + r' \\', r'\midrule']
-    symbols = {'full': r'$\bullet$', 'empty': r'$\circ$'}
+    symbols = {'full': '\\begin{tikzpicture}[baseline=-.5ex]\\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\\filldraw[draw=black,fill=black,line width=.095ex] (0,0) circle[radius=.78ex];\\end{tikzpicture}', 'half': '\\begin{tikzpicture}[baseline=-.5ex]\\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\\fill[black] (0,.78ex) arc[start angle=90,end angle=270,radius=.78ex] -- cycle;\\draw[black,line width=.095ex] (0,0) circle[radius=.78ex];\\end{tikzpicture}', 'empty': '\\begin{tikzpicture}[baseline=-.5ex]\\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\\draw[black,fill=none,line width=.095ex] (0,0) circle[radius=.78ex];\\end{tikzpicture}'}
     # Half coverage uses a native vector glyph from the TeX symbol font.
-    symbols['half'] = r'\raisebox{.1ex}{\tikz{\fill (0,.5ex) arc(90:270:.5ex)--cycle;\draw (0,0) circle(.5ex);}}'
     for row in rows:
         if set(row['cells']) != set(ids): raise ValueError('Each row must contain exactly the declared columns')
         cells = []

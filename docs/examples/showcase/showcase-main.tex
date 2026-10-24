@@ -15,9 +15,9 @@
 \newcommand{\unc}[2]{#1\,{\scriptsize\textcolor{quiet}{$\pm$#2}}}
 \newcommand{\yes}{$\checkmark$}
 \newcommand{\no}{--}
-\newcommand{\full}{\tikz[baseline=-.5ex]\fill (0,0) circle (1.8pt);}
-\newcommand{\emptyc}{\tikz[baseline=-.5ex]\draw (0,0) circle (1.8pt);}
-\newcommand{\halfc}{\tikz[baseline=-.5ex]{\fill (0,0)--(0,1.8pt) arc (90:270:1.8pt)--cycle;\draw (0,0) circle (1.8pt);}}
+\newcommand{\full}{\begin{tikzpicture}[baseline=-.5ex]\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\filldraw[draw=black,fill=black,line width=.095ex] (0,0) circle[radius=.78ex];\end{tikzpicture}}
+\newcommand{\emptyc}{\begin{tikzpicture}[baseline=-.5ex]\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\draw[black,fill=none,line width=.095ex] (0,0) circle[radius=.78ex];\end{tikzpicture}}
+\newcommand{\halfc}{\begin{tikzpicture}[baseline=-.5ex]\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\fill[black] (0,.78ex) arc[start angle=90,end angle=270,radius=.78ex] -- cycle;\draw[black,line width=.095ex] (0,0) circle[radius=.78ex];\end{tikzpicture}}
 \begin{document}
 \captext{1}{Multi-benchmark comparison.}{Accuracy (\%) is reported under static and shifted scenes, short and long temporal contexts, and seen and novel rules. Bold and underline mark the best and distinct second-best values across all methods. All data are synthetic.}
 \begin{center}\begin{tabular}{@{}l*{8}{r}@{}}\toprule

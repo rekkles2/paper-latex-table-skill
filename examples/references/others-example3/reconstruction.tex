@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage[paperwidth=200mm,paperheight=300mm,margin=10mm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+\usepackage{amsmath,amssymb,graphicx,booktabs,multirow,array,adjustbox,pifont,xspace,tikz}
+\usepackage{caption,url}
+\pagestyle{empty}
+\makeatletter\setlength{\@fptop}{0pt}\makeatother
+\definecolor{ggreen}{HTML}{2E9B57}
+\definecolor{deltatext}{HTML}{7A3EB1}
+\definecolor{refgray}{RGB}{145,145,145}
+\definecolor{sectionmist}{HTML}{F3F1F7}
+\definecolor{sgaRow}{HTML}{EEE9F7}
+\definecolor{deeper-gray}{gray}{0.65}
+\definecolor{light-gray}{gray}{0.85}
+\newcommand{\refitem}[1]{\textcolor{refgray}{#1}}
+\newcommand{\increase}[1]{{\fontsize{5.2pt}{5.2pt}\selectfont\color{deltatext}{($\uparrow$\,#1)}}}
+\newcommand{\decrease}[1]{{\fontsize{5.2pt}{5.2pt}\selectfont\color{ggreen}{($\downarrow$\,#1)}}}
+\newcommand{\sectionband}[1]{\multicolumn{8}{@{}>{\columncolor{sectionmist}}l@{}}{\rule{0pt}{1.08em}\hspace{0.35em}#1}\\[-0.05em]}
+\newcommand{\sectiondash}{\hdashline\noalign{\vspace{0.03cm}}}
+\newcommand{\rot}[1]{\rotatebox{45}{#1}}
+\newcommand{\fullcirc}{\tikz[baseline=-0.5ex]\fill (0,0) circle (0.48ex);}
+\newcommand{\emptycirc}{\tikz[baseline=-0.5ex]\draw[line width=.3pt] (0,0) circle (0.48ex);}
+\newcommand{\halfcirc}{\tikz[baseline=-0.5ex]{\fill (0,.48ex) arc(90:270:.48ex)--cycle;\draw[line width=.3pt] (0,0) circle(.48ex);}}
+
+\usepackage{fix-cm}
+\renewcommand{\caption}[1]{}
+
+\begin{document}
+\graphicspath{{assets/}}
+\begin{table}[t]
+    \centering
+    \setlength{\tabcolsep}{1.6mm}
+    \renewcommand\arraystretch{1.15}
+    \vspace{-0.8cm}
+    \resizebox{1.0\linewidth}{!}{
+        \mdseries
+\begin{tabular}{cc|ccl}
+        \hline
+        \multicolumn{1}{c|}{{Models}} & \multicolumn{1}{c|}{{Year}} & \multicolumn{1}{c|}{{Resolution}} & \multicolumn{1}{c|}{{Source}} & \multicolumn{1}{c}{{URL}} \\ 
+        \hline
+        \multicolumn{5}{c}{\textit{\textbf{1. Diffusion Generative Model}}} \\ 
+        \hline
+        \multicolumn{1}{c|}{SD-1.5} & 2021.12 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{checkpoint} & https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5 \\
+        \multicolumn{1}{c|}{PixArt-alpha} & 2023.10 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{checkpoint} & https://huggingface.co/PixArt-alpha/PixArt-XL-2-1024-MS \\
+        \multicolumn{1}{c|}{Playground-v2.5} & 2024.02 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{checkpoint} & https://huggingface.co/playgroundai/playground-v2.5-1024px-aesthetic \\
+        \multicolumn{1}{c|}{SD-XL} & 2023.07 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{checkpoint} & https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0 \\
+        \multicolumn{1}{c|}{PixArt-sigma} & 2024.04 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{checkpoint} & https://huggingface.co/PixArt-alpha/PixArt-Sigma-XL-2-1024-MS \\
+        \multicolumn{1}{c|}{SD-3-M} & 2024.03 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{checkpoint} &  https://huggingface.co/stabilityai/stable-diffusion-3-medium \\
+        \multicolumn{1}{c|}{SD-3.5-L} & 2024.11 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{checkpoint} & https://www.modelscope.cn/models/AI-ModelScope/stable-diffusion-3.5-large \\
+        \multicolumn{1}{c|}{SANA 1.5} & 2025.01 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{checkpoint} & https://huggingface.co/Efficient-Large-Model/SANA1.5\_4.8B\_1024px\_diffusers \\
+        \multicolumn{1}{c|}{FLUX.1-dev} & 2024.12 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{checkpoint} & https://huggingface.co/black-forest-labs/FLUX.1-dev \\
+        \multicolumn{1}{c|}{FLUX.1-krea} & 2025.07 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{checkpoint} & https://huggingface.co/black-forest-labs/FLUX.1-Krea-dev \\
+        \multicolumn{1}{c|}{Qwen-Image} & 2025.08 & \multicolumn{1}{c|}{1328$\times$1328} & \multicolumn{1}{c|}{checkpoint} & https://huggingface.co/Qwen/Qwen-Image \\ 
+        \hline
+        \multicolumn{5}{c}{\textit{\textbf{2. AutoRegressive Generative Model}}} \\ 
+        \hline
+        \multicolumn{1}{c|}{OminiGen2} & 2025.06 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{checkpoint} & https://github.com/VectorSpaceLab/OmniGen2 \\
+        \multicolumn{1}{c|}{NextStep-1} & 2025.08 & \multicolumn{1}{c|}{512$\times$512} & \multicolumn{1}{c|}{checkpoint} & https://github.com/stepfun-ai/NextStep-1 \\
+        \multicolumn{1}{c|}{Infinity} & 2024.12 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{checkpoint} & https://github.com/FoundationVision/Infinity \\ 
+        \hline
+        \multicolumn{5}{c}{\textit{\textbf{3. Unified Generative Model}}} \\ 
+        \hline
+        \multicolumn{1}{c|}{Show-o} & 2024.08 & \multicolumn{1}{c|}{512$\times$512} & \multicolumn{1}{c|}{checkpoint} & https://github.com/showlab/Show-o \\
+        \multicolumn{1}{c|}{Janus-Pro} & 2025.01 & \multicolumn{1}{c|}{384$\times$384} & \multicolumn{1}{c|}{checkpoint} & https://github.com/deepseek-ai/Janus \\
+        \multicolumn{1}{c|}{UniWorld-V1} & 2025.06 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{checkpoint} & https://github.com/PKU-YuanGroup/UniWorld-V1 \\
+        \multicolumn{1}{c|}{UniPic-v2} & 2025.08 & \multicolumn{1}{c|}{512$\times$384} & \multicolumn{1}{c|}{checkpoint} & https://github.com/SkyworkAI/UniPic/tree/main/UniPic-2 \\
+        \multicolumn{1}{c|}{Bagel} & 2025.05 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{checkpoint} & https://github.com/ByteDance-Seed/Bagel \\ 
+        \hline
+        \multicolumn{5}{c}{\textit{\textbf{4. Closed-source Generative Model}}} \\ 
+        \hline
+        \multicolumn{1}{c|}{DALL-E-3} & 2023.10 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{API} & https://openai.com/zh-Hans-CN/index/dall-e-3 \\
+        \multicolumn{1}{c|}{GPT-Image-1} & 2025.04 & \multicolumn{1}{c|}{1024$\times$1024} & \multicolumn{1}{c|}{API} &  https://platform.openai.com \\ 
+        \multicolumn{1}{c|}{{Nano Banana}} & {2025.08} & \multicolumn{1}{c|}{{1024$\times$1024}} & \multicolumn{1}{c|}{{API}} &  {https://developers.googleblog.com/en/introducing-gemini-2-5-flash-image} \\ 
+        \multicolumn{1}{c|}{{Seed Dream 4.0}} & {2025.08} & \multicolumn{1}{c|}{{1024$\times$1024}} & \multicolumn{1}{c|}{{API}} &  {https://research.doubao.com/zh/seedream4\_0} \\ 
+        \hline
+        \end{tabular}
+    }
+    % Caption intentionally outside screenshot crop; immutable original retains it.
+
+    \label{tab:model_source}
+    \vspace{-0.3cm}
+\end{table}
+\end{document}

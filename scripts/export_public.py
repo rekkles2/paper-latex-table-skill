@@ -7,6 +7,7 @@ from tablelib import ROOT, sha256, read_json
 
 def public_markdown(text: str) -> str:
     """Strip explicitly marked local-only blocks; fail closed on malformed markers."""
+    from gallery_export import check_private_links
     begin='<!-- LOCAL-ONLY:BEGIN -->';end='<!-- LOCAL-ONLY:END -->'
     out=[];inside=False
     for line in text.splitlines(keepends=True):
@@ -22,10 +23,11 @@ def public_markdown(text: str) -> str:
     import re
     if re.search(r'(?:\]\([^)]*|(?:src|href)=[\x22\x27][^\x22\x27]*)assets/cases/local/',cleaned):
         raise ValueError('Private link outside a local-only block')
-    return cleaned
+    return check_private_links(cleaned)
 
 
 def export(output: Path) -> list[dict]:
+    from gallery_export import enhance_entries
     entries={}
     extensions={'agents':{'.yaml'},'references':{'.md'},'scripts':{'.py'},'tests':{'.py'},'rsi':{'.md'},'rsi/templates':{'.json'},'assets/templates':{'.json','.tex'}}
     for directory in ('agents','references','scripts','tests','rsi','rsi/templates','assets/templates'):
@@ -68,6 +70,7 @@ def export(output: Path) -> list[dict]:
                 entries[name]=(ROOT.parent/name).read_bytes()
     forbidden={sha256(p) for p in (ROOT/'assets'/'cases'/'local').rglob('*') if p.is_file()}
     import hashlib
+    entries = enhance_entries(entries, ROOT)
     manifest=[]
     for name,data in sorted(entries.items()):
         digest=hashlib.sha256(data).hexdigest()

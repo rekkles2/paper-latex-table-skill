@@ -1,0 +1,37 @@
+\begin{table*}[ht]
+\caption{Ablation experiments using Conv-4 and ResNet-12 backbones on the CUB, Dogs, and Cars datasets.}
+\label{table2}
+\centering
+\begin{adjustbox}{max width=\textwidth}
+\renewcommand{\arraystretch}{1.0}  % row distance
+\setlength{\tabcolsep}{2.0mm}      % column distance
+\small
+\begin{tabular}{cc|c|cc|cc|cc}
+\noalign{\hrule height 1.5pt}
+\multicolumn{2}{c|}{VRAS}  & \multirow{2}{*}{ER} & \multicolumn{2}{c|}{CUB} & \multicolumn{2}{c|}{Dogs} & \multicolumn{2}{c}{Cars} \\
+\cline{1-2} \cline{4-5} \cline{6-7} \cline{8-9}
+CFS & ECA &  & 1-shot & 5-shot & 1-shot & 5-shot & 1-shot & 5-shot \\ 
+\hline
+\rowcolor{gray!20}
+\multicolumn{9}{c}{\it{Conv-4 Backbone}} \\
+\hline
+\xmark & \xmark & \xmark & 73.73±0.21 & 88.46±0.13 & 60.53±0.21 & 79.29±0.15 & 67.68±0.22 & 87.24±0.12 \\
+\cmark & \xmark & \xmark & 76.26±0.20~\increase{2.53} & 89.82±0.12~\increase{1.36} & 63.93±0.22~\increase{3.40} & 81.33±0.14~\increase{2.04} & 72.42±0.21~\increase{4.74} & 89.91±0.10~\increase{2.67} \\
+\cmark & \cmark & \xmark & 78.29±0.20~\increase{2.03} & 91.00±0.11~\increase{1.18} & 65.93±0.21~\increase{2.00} & 83.04±0.13~\increase{1.71} & 74.31±0.22~\increase{1.89} & 91.47±0.09~\increase{1.56} \\
+\rowcolor{cvprblue!10}  
+\cmark & \cmark & \cmark & \textbf{79.20±0.20}~\increase{0.91} & \textbf{91.28±0.11}~\increase{0.28} & \textbf{68.06±0.21}~\increase{2.13} & \textbf{83.26±0.13}~\increase{0.22} & \textbf{76.17±0.21}~\increase{1.86} & \textbf{92.10±0.09}~\increase{0.63} \\
+
+\hline
+\rowcolor{gray!20}
+\multicolumn{9}{c}{\it{ResNet-12 Backbone}} \\
+\hline
+\xmark & \xmark & \xmark & 82.86±0.19 & 92.41±0.10 & 76.76±0.21 & 88.74±0.12 & 87.90±0.17 & 95.69±0.07 \\
+\cmark & \xmark & \xmark & 83.53±0.18~\increase{0.67} & 93.32±0.09~\increase{0.91} & 77.27±0.20~\increase{0.51} & 89.12±0.11~\increase{0.38} & 87.74±0.16~\decrease{0.16} & 96.57±0.06~\increase{0.88} \\
+\cmark & \cmark & \xmark & 83.98±0.18~\increase{0.45} & 93.42±0.09~\increase{0.10} & 78.39±0.19~\increase{1.12} & 89.52±0.10~\increase{0.40} & 87.96±0.17~\increase{0.22} & 97.01±0.06~\increase{0.44} \\
+\rowcolor{cvprblue!10}  
+\cmark & \cmark & \cmark & \textbf{84.54±0.17}~\increase{0.56} & \textbf{93.87±0.09}~\increase{0.45} & \textbf{78.56±0.19}~\increase{0.17} & \textbf{89.84±0.11}~\increase{0.32} & \textbf{88.21±0.16}~\increase{0.25} & \textbf{97.06±0.06}~\increase{0.05} \\
+\noalign{\hrule height 1.5pt}
+\end{tabular}%
+\end{adjustbox}
+\vspace{-1.5ex}
+\end{table*}

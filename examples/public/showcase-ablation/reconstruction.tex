@@ -1,0 +1,36 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=190mm,paperheight=140mm,margin=7mm]{geometry}
+\usepackage{fontspec,booktabs,multirow,amssymb,graphicx}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\setmainfont{TeX Gyre Termes}
+\definecolor{sectiongray}{gray}{0.91}
+\definecolor{selected}{RGB}{237,249,237}
+\definecolor{quiet}{gray}{0.42}
+\definecolor{gain}{RGB}{0,105,32}
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.04}
+\newcommand{\captext}[3]{\noindent Table #1: \textbf{#2} #3\par\vspace{5pt}}
+\newcommand{\band}[2]{\rowcolor{sectiongray}\multicolumn{#1}{l}{\textit{#2}}\\}
+\newcommand{\unc}[2]{#1\,{\scriptsize\textcolor{quiet}{$\pm$#2}}}
+\newcommand{\yes}{$\checkmark$}
+\newcommand{\no}{--}
+\newcommand{\full}{\begin{tikzpicture}[baseline=-.5ex]\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\filldraw[draw=black,fill=black,line width=.095ex] (0,0) circle[radius=.78ex];\end{tikzpicture}}
+\newcommand{\emptyc}{\begin{tikzpicture}[baseline=-.5ex]\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\draw[black,fill=none,line width=.095ex] (0,0) circle[radius=.78ex];\end{tikzpicture}}
+\newcommand{\halfc}{\begin{tikzpicture}[baseline=-.5ex]\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\fill[black] (0,.78ex) arc[start angle=90,end angle=270,radius=.78ex] -- cycle;\draw[black,line width=.095ex] (0,0) circle[radius=.78ex];\end{tikzpicture}}
+\begin{document}
+\captext{2}{Component ablation.}{All variants use the same compact encoder. Entries report synthetic mean accuracy (\%) $\pm$ standard deviation; $\Delta$ is the mean change from Base in percentage points.}
+\begin{center}\begin{tabular}{@{}lccc*{3}{r}r@{}}\toprule
+\multirow{2}{*}{Variant} & \multicolumn{3}{c}{Components} & \multicolumn{3}{c}{Accuracy $\uparrow$} & \multirow{2}{*}{$\Delta$ mean}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+ & C & M & R & SceneBench & TimeBench & RuleBench & \\\midrule
+Base & \no & \no & \no & \unc{76.20}{0.31} & \unc{72.10}{0.28} & \unc{69.40}{0.35} & -- \\
+Context & \yes & \no & \no & \unc{78.40}{0.27} & \unc{74.20}{0.25} & \unc{71.60}{0.30} & +2.17 \\
+Memory & \no & \yes & \no & \unc{79.10}{0.25} & \unc{75.80}{0.22} & \unc{72.30}{0.29} & +3.17 \\
+Context + memory & \yes & \yes & \no & \unc{\underline{81.30}}{0.21} & \unc{\underline{78.10}}{0.20} & \unc{\underline{75.20}}{0.24} & +5.63 \\
+\rowcolor{sectiongray}
+\textbf{Full model} & \yes & \yes & \yes & \unc{\textbf{83.60}}{0.18} & \unc{\textbf{80.40}}{0.17} & \unc{\textbf{78.10}}{0.22} & +8.13 \\
+\bottomrule\end{tabular}\end{center}
+{\footnotesize C: context; M: memory; R: rule conditioning. Ranking uses means, without a significance claim.}
+
+\end{document}

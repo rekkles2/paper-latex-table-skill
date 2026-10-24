@@ -1,0 +1,168 @@
+\documentclass{article}
+\usepackage[paperwidth=305mm,paperheight=300mm,margin=10mm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+\usepackage{amsmath,amssymb,graphicx,booktabs,multirow,array,adjustbox,pifont,arydshln,xspace,tikz}
+\usepackage{caption,url}
+\pagestyle{empty}
+\makeatletter\setlength{\@fptop}{0pt}\makeatother
+\definecolor{ggreen}{HTML}{2E9B57}
+\definecolor{deltatext}{HTML}{7A3EB1}
+\definecolor{refgray}{RGB}{145,145,145}
+\definecolor{sectionmist}{HTML}{F3F1F7}
+\definecolor{sgaRow}{HTML}{EEE9F7}
+\definecolor{deeper-gray}{gray}{0.65}
+\definecolor{light-gray}{gray}{0.85}
+\newcommand{\refitem}[1]{\textcolor{refgray}{#1}}
+\newcommand{\increase}[1]{{\fontsize{5.2pt}{5.2pt}\selectfont\color{deltatext}{($\uparrow$\,#1)}}}
+\newcommand{\decrease}[1]{{\fontsize{5.2pt}{5.2pt}\selectfont\color{ggreen}{($\downarrow$\,#1)}}}
+\newcommand{\sectionband}[1]{\multicolumn{8}{@{}>{\columncolor{sectionmist}}l@{}}{\rule{0pt}{1.08em}\hspace{0.35em}#1}\\[-0.05em]}
+\newcommand{\sectiondash}{\hdashline\noalign{\vspace{0.03cm}}}
+\newcommand{\rot}[1]{\rotatebox{45}{#1}}
+\newcommand{\fullcirc}{\tikz[baseline=-0.5ex]\fill (0,0) circle (0.48ex);}
+\newcommand{\emptycirc}{\tikz[baseline=-0.5ex]\draw[line width=.3pt] (0,0) circle (0.48ex);}
+\newcommand{\halfcirc}{\tikz[baseline=-0.5ex]{\fill (0,.48ex) arc(90:270:.48ex)--cycle;\draw[line width=.3pt] (0,0) circle(.48ex);}}
+\definecolor{c1}{HTML}{E5EFED}
+\definecolor{c2}{HTML}{E5EFED}
+\definecolor{c3}{HTML}{E5EFED}
+\newcolumntype{y}[1]{>{\raggedright\arraybackslash}p{#1mm}}
+\expandafter\let\csname NC@find@w\endcsname\relax
+\newcolumntype{w}{>{\centering\arraybackslash}m{8mm}}
+\newcolumntype{a}{>{\columncolor{gray!12}\centering\arraybackslash}m{8mm}}
+\newcommand{\tablestyle}[2]{\setlength{\tabcolsep}{#1}\renewcommand{\arraystretch}{#2}\scriptsize}
+\newcommand{\shline}{\hline}
+\newcommand{\ct}[2][c1]{\cellcolor{#1}\textcolor{teal}{#2}}
+\newcommand{\cb}[3][white]{\cellcolor{#1}\rotatebox{90}{\parbox{24mm}{\scriptsize\raggedright #2\par #3}}}
+\newcommand{\ca}[1]{#1}
+\newcommand{\cat}[1]{#1}
+\newcommand{\PEcore}[1]{PE$_{\text{core}}$#1}
+\setcounter{table}{2}
+
+\errorcontextlines=100
+\usepackage{fix-cm}
+
+\Urlmuskip=0mu plus 1mu\relax
+\begin{document}
+\graphicspath{{assets/}}
+%##################################################################################################
+%                      Zero-shot classitication
+%##################################################################################################
+\begin{table*}[t!]
+    \centering
+    \makebox[\linewidth][c]{
+    \tablestyle{0pt}{1.15} 
+    \begin{tabular}{y{55}www awwwwww awwwwwwww awwww}
+        \shline
+        \multirow{2}{*}{\vspace{-2.2cm} Model}  &&&& \multicolumn{7}{c}{\ct[c1]{\it Zero-Shot Classification}} %
+        & \multicolumn{9}{c}{\ct[c2]{\it Zero-Shot Fine-Grained Classification}} %
+        & \multicolumn{5}{c}{\ct[c3]{\it Zero-Shot Retrieval}}\\
+            & \cb{Encoder Params}{}
+            & \cb{Resolution}{}
+            & \cb{Data}{}
+            & \cb[c1]{\textit{\textbf{Avg Class.}}}{}
+            & \cb[c1]{ImageNet}{val~\textcolor{blue}{\texttt{[\allowbreak i\allowbreak m\allowbreak a\allowbreak g\allowbreak e\allowbreak n\allowbreak e\allowbreak t\allowbreak ]}}}
+            & \cb[c1]{ImageNet}{v2~\textcolor{blue}{\texttt{[\allowbreak i\allowbreak m\allowbreak a\allowbreak g\allowbreak e\allowbreak n\allowbreak e\allowbreak t\allowbreak v\allowbreak 2\allowbreak ]}}}
+            & \cb[c1]{ObjectNet}{IN Classes~\textcolor{blue}{\texttt{[\allowbreak o\allowbreak b\allowbreak j\allowbreak e\allowbreak c\allowbreak t\allowbreak n\allowbreak e\allowbreak t\allowbreak ]}}}
+            & \cb[c1]{ImageNet}{Adversarial~\textcolor{blue}{\texttt{[\allowbreak i\allowbreak m\allowbreak a\allowbreak g\allowbreak e\allowbreak n\allowbreak e\allowbreak t\allowbreak -\allowbreak a\allowbreak ]}}}
+            & \cb[c1]{ImageNet}{Renditions~\textcolor{blue}{\texttt{[\allowbreak i\allowbreak m\allowbreak a\allowbreak g\allowbreak e\allowbreak n\allowbreak e\allowbreak t\allowbreak -\allowbreak r\allowbreak ]}}}
+            & \cb[c1]{ImageNet}{Sketch~\textcolor{blue}{\texttt{[\allowbreak i\allowbreak m\allowbreak a\allowbreak g\allowbreak e\allowbreak n\allowbreak e\allowbreak t\allowbreak -\allowbreak s\allowbreak k\allowbreak e\allowbreak t\allowbreak c\allowbreak h\allowbreak ]}}}
+            %
+            & \cb[c2]{\textit{\textbf{Avg Fine.}}}{}
+            & \cb[c2]{Food}{101~\textcolor{blue}{\texttt{[\allowbreak f\allowbreak o\allowbreak o\allowbreak d\allowbreak 1\allowbreak 0\allowbreak 1\allowbreak ]}}}
+            & \cb[c2]{Flowers}{Oxford~\textcolor{blue}{\texttt{[\allowbreak f\allowbreak l\allowbreak o\allowbreak w\allowbreak e\allowbreak r\allowbreak 1\allowbreak 0\allowbreak 2\allowbreak ]}}}
+            & \cb[c2]{Pets}{Oxford~\textcolor{blue}{\texttt{[\allowbreak p\allowbreak e\allowbreak t\allowbreak s\allowbreak ]}}}
+            & \cb[c2]{Cars}{Stanford~\textcolor{blue}{\texttt{[\allowbreak c\allowbreak a\allowbreak r\allowbreak s\allowbreak ]}}}
+            & \cb[c2]{Aircrafts}{FGVC~\textcolor{blue}{\texttt{[\allowbreak a\allowbreak i\allowbreak r\allowbreak c\allowbreak r\allowbreak a\allowbreak f\allowbreak t\allowbreak ]}}}
+            & \cb[c2]{Countries}{211~\textcolor{blue}{\texttt{[\allowbreak t\allowbreak h\allowbreak o\allowbreak m\allowbreak e\allowbreak e\allowbreak 2\allowbreak 0\allowbreak 1\allowbreak 6\allowbreak y\allowbreak f\allowbreak c\allowbreak c\allowbreak 1\allowbreak 0\allowbreak 0\allowbreak m\allowbreak ]}}}
+            & \cb[c2]{Scenes}{SUN397~\textcolor{blue}{\texttt{[\allowbreak s\allowbreak u\allowbreak n\allowbreak 3\allowbreak 9\allowbreak 7\allowbreak ]}}}
+            & \cb[c2]{Satellite}{RESISC~\textcolor{blue}{\texttt{[\allowbreak c\allowbreak h\allowbreak e\allowbreak n\allowbreak g\allowbreak \_\allowbreak 2\allowbreak 0\allowbreak 1\allowbreak 7\allowbreak \_\allowbreak r\allowbreak e\allowbreak s\allowbreak i\allowbreak s\allowbreak c\allowbreak ]}}}
+            %
+            & \cb[c3]{\textit{\textbf{Avg Retrieval}}}{}
+            & \cb[c3]{MS-COCO}{txt$\rightarrow$img~\textcolor{blue}{\texttt{[\allowbreak c\allowbreak o\allowbreak c\allowbreak o\allowbreak ]}}}
+            & \cb[c3]{MS-COCO}{img$\rightarrow$txt~\textcolor{blue}{\texttt{[\allowbreak c\allowbreak o\allowbreak c\allowbreak o\allowbreak ]}}}
+            & \cb[c3]{Flickr-30k}{txt$\rightarrow$img~\textcolor{blue}{\texttt{[\allowbreak f\allowbreak l\allowbreak i\allowbreak c\allowbreak k\allowbreak r\allowbreak ]}}}
+            & \cb[c3]{Flickr-30k}{img$\rightarrow$txt~\textcolor{blue}{\texttt{[\allowbreak f\allowbreak l\allowbreak i\allowbreak c\allowbreak k\allowbreak r\allowbreak ]}}}
+            \\
+        \hline
+        \multicolumn{4}{l}{{\textit{Proprietary}}} & \cat{} &&&&&&& \cat{} &&&&&&&&& \cat{} \\
+        BASIC~\textcolor{blue}{\texttt{[\allowbreak b\allowbreak a\allowbreak s\allowbreak i\allowbreak c\allowbreak ]}}          & 2.4B    & 224 & 6.6B    & \ca{\textcolor{black}{84.3}} & \textcolor{black}{85.7} & \textcolor{black}{80.6} & \textcolor{black}{82.3} & \textcolor{black}{85.6} & \textcolor{black}{95.7} & {\textcolor{black}{76.1}} %
+                & \ca{\textcolor{black}-} & \textcolor{black}{95.1} & \textcolor{black}{91.2} & \textcolor{black}{97.9} &\textcolor{black}- &\textcolor{black}- &\textcolor{black}- & \textcolor{black}{76.2} & \textcolor{black}{72.7}
+            %
+            & \ca{\textcolor{black}-} & \textcolor{black}- & \textcolor{black}- & \textcolor{black}- & \textcolor{black}-  \\
+        CoCa~\textcolor{blue}{\texttt{[\allowbreak c\allowbreak o\allowbreak c\allowbreak a\allowbreak ]}}            & 1.0B    & 576 & 4.8B    & \ca{\textcolor{black}{85.7}} & {\textcolor{black}{86.3}} & {\textcolor{black}{80.7}} & \textcolor{black}{82.7} & {\textcolor{black}{90.2}} & {\textcolor{black}{96.5}} & {\textcolor{black}{77.6}}  %
+                & \ca{\textcolor{black}-} &\textcolor{black}- &\textcolor{black}- &\textcolor{black}- &\textcolor{black}- &\textcolor{black}- &\textcolor{black}- &\textcolor{black}- &\textcolor{black}-
+        %
+        & \ca{\textcolor{black}{72.6}} & \textcolor{black}{51.2} & \textcolor{black}{66.3} & \textcolor{black}{80.4} & \textcolor{black}{92.5} \\
+        LiT-22B~\textcolor{blue}{\texttt{[\allowbreak v\allowbreak i\allowbreak t\allowbreak 2\allowbreak 2\allowbreak b\allowbreak ]}}       & 21.7B\,\,\,   & 224 & 15B     & \ca{\textcolor{black}-}    & {\textcolor{black}{85.9}} & {\textcolor{black}{80.9}} & {\textcolor{black}{87.6}} & \textcolor{black}{90.1} & \textcolor{black}{96.0} &  \textcolor{black}-  %
+                & \ca{\textcolor{black}-} &\textcolor{black}- &\textcolor{black}- &\textcolor{black}- &\textcolor{black}- &\textcolor{black}- &\textcolor{black}- &\textcolor{black}- &\textcolor{black}- 
+            %
+            & \ca{\textcolor{black}-} & \textcolor{black}- & \textcolor{black}- & \textcolor{black}- & \textcolor{black}-  \\
+        \hline
+        
+        \multicolumn{4}{l}{{\textit{B Scale}}} & \cat{} &&&&&&& \cat{} &&&&&&&&& \cat{} \\
+        SigLIP-B/16$^\dagger$~\textcolor{blue}{\texttt{[\allowbreak s\allowbreak i\allowbreak g\allowbreak l\allowbreak i\allowbreak p\allowbreak ]}}                & 0.1B  & 224 & 10B   
+        & \ca{69.9} & 76.2 & 69.5 & 70.7 & 45.1 & 90.2 & 67.9 %
+        & \ca{69.5} & 91.6 & 85.2 & 94.2 & 90.8 & 44.0 & 15.9 & 70.0 & 64.6 %
+        & \ca{69.8} & 47.2 & 64.5 & 77.9 & 89.6 \\
+        SigLIP2-B/16$^\dagger$~\textcolor{blue}{\texttt{[\allowbreak s\allowbreak i\allowbreak g\allowbreak l\allowbreak i\allowbreak p\allowbreak 2\allowbreak ]}}      & 0.1B & 224 & 10B   
+        & \ca{{73.1}} & {78.2} & {71.4} & \textbf{73.6} & {55.0} & \textbf{91.7} & \textbf{68.9} %
+        & \ca{{73.1}} & \textbf{92.8} & {85.7} & \textbf{95.4} & \textbf{93.4} & {54.8} & {19.2} & {72.7} & {71.1} %
+        & \ca{{73.7}} & \textbf{52.1} & {68.9} & {80.7} & {93.0} \\
+        {\bf \PEcore{B}}                & 0.1B  & 224 & 5.4B    
+        & \ca{\textbf{73.2}} & \textbf{78.4} & \textbf{71.7} & {71.9} & \textbf{62.4} & {88.7} & {66.1} %
+        & \ca{\textbf{75.0}} & {92.5} & \textbf{86.5} & {94.6} & {92.1} & \textbf{57.0} & \textbf{30.5} & \textbf{74.0} & \textbf{72.7} %
+        & \ca{\textbf{74.3}} & {50.9} & \textbf{71.0} & \textbf{80.8} & \textbf{94.4} \\
+        \hline
+        \multicolumn{4}{l}{{\textit{L Scale}}} & \cat{} &&&&&&& \cat{} &&&&&&&&& \cat{} \\
+        SigLIP-L/16$^\dagger$~\textcolor{blue}{\texttt{[\allowbreak s\allowbreak i\allowbreak g\allowbreak l\allowbreak i\allowbreak p\allowbreak ]}} & 0.3B  & 384 & 10B   
+        & \ca{80.7} & 82.1 & 75.9 & 80.9 & 76.5 & 95.0 & {73.6} %
+        & \ca{74.4} & 95.6 & {89.4} & \textbf{96.8} & {94.8} & 53.2 & 24.7 & 72.5 & 67.9 %
+        & \ca{74.7} & 52.8 & 70.5 & 82.6 & 92.9 \\
+        SigLIP2-L/16$^\dagger$~\textcolor{blue}{\texttt{[\allowbreak s\allowbreak i\allowbreak g\allowbreak l\allowbreak i\allowbreak p\allowbreak 2\allowbreak ]}}   & 0.3B & 384 & 10B
+        & \ca{{83.3}} & {83.1} & {77.4} & {84.4} & {84.3} & \textbf{95.7} & \textbf{75.5} % 
+        & \ca{{78.4}}	& {96.1}	& \textbf{90.0}	& {96.4}	& \textbf{95.8} & {67.0} & {31.6} & {74.8} & {75.5}
+            %
+        & \ca{{76.7}} & {55.3} & {71.4} & {85.0} & {95.2} \\
+        {\bf \PEcore{L}}                & 0.3B  & 336 & 5.4B
+        & \ca{\textbf{83.9}} & \textbf{83.5} & \textbf{77.9} & \textbf{84.7} & \textbf{89.0} & {95.2} & 73.4 %
+        & \ca{\textbf{80.0}} & \textbf{96.2} & 87.2 & {96.4} & 93.7 & \textbf{67.8} & \textbf{45.6} & \textbf{77.4} & \textbf{75.7} %
+        & \ca{\textbf{78.8}} & \textbf{57.1} & \textbf{75.9} & \textbf{85.5} & \textbf{96.6} \\
+        \hline
+        \multicolumn{4}{l}{{\textit{Unbounded Scale}}} & \cat{} &&&&&&& \cat{} &&&&&&&&& \cat{} \\
+        
+        DFN-H+$^\dagger$~\textcolor{blue}{\texttt{[\allowbreak d\allowbreak f\allowbreak n\allowbreak ]}} & 0.6B  & 378 & 5B   & \ca{81.6} & 84.3 & 78.3 & 79.6 & 79.6 & 93.6 & 73.3 %
+        & \ca{80.5} & 96.2 & \textbf{91.6} & 96.8 & \textbf{96.0} & 72.5 & 37.9 & 77.4 & {75.9} 
+        & \ca{75.8} & 55.6 & 71.8 & 82.1 & 93.6  \\
+        InternVL-C~\textcolor{blue}{\texttt{[\allowbreak i\allowbreak n\allowbreak t\allowbreak e\allowbreak r\allowbreak n\allowbreak v\allowbreak l\allowbreak ]}}  & 5.5B    & 224 & 5B      & \ca{82.5} & 83.2 & 77.3 & 80.6 & 83.8 & 95.7 & 74.3 %
+            & \ca{76.4} & 95.3 & 85.8 & 96.3 & 94.4 & 53.3 & 35.1 & 76.3 & 74.4
+            %
+            & \ca{{78.6}} & {\bf 58.6} & {74.9} & {85.0} & 95.7 \\
+        EVA 18B~\textcolor{blue}{\texttt{[\allowbreak e\allowbreak v\allowbreak a\allowbreak 1\allowbreak 8\allowbreak b\allowbreak ]}}       & 17.5B\,\,\, & 224 & 2B       & \ca{83.6} & 83.8 & 77.9 & 82.2 & 87.3 & 95.7 & 74.7 %
+            & \ca{78.8} & 95.8 & 86.0 & 96.1 & {94.9} & 59.7 & 43.1 & {77.7} & \textbf{76.9}
+            & \ca{77.5} & 56.2 & 73.6 & 83.3 & {\bf 96.7} \\
+        EVA 18B+~\textcolor{blue}{\texttt{[\allowbreak e\allowbreak v\allowbreak a\allowbreak 1\allowbreak 8\allowbreak b\allowbreak ]}} & 17.5B\,\,\, & 336 & 2B 
+            & \ca{84.1} & 83.9 & 78.2 & 83.6 & 88.9 & 95.6 & 74.3 %
+            & \ca{-} & -&- &- &- &- &- &- &-
+            & \ca{-} & - & - & - & - \\            
+        SigLIP2-g-opt$^\dagger$~\textcolor{blue}{\texttt{[\allowbreak s\allowbreak i\allowbreak g\allowbreak l\allowbreak i\allowbreak p\allowbreak 2\allowbreak ]}}      & 1.1B & 384 & 10B      
+        & \ca{{86.2}} & 85.0 & {79.8} &  {88.0} & 90.5 & \textbf{96.6} & \textbf{77.4} %
+                & \ca{81.0} & \textbf{97.0} & {91.5} & \textbf{97.8} & {95.9} & {73.6} & 40.1 & 76.3 & {75.9}
+            & \ca{78.0} & 56.1 & 72.8 & \textbf{86.0} & 95.4 \\
+        {\bf \PEcore{G}} {\tiny\it (image only)}                & 1.9B  & 448 & 5.4B    & \ca{86.0} & {85.2} & \textbf{80.2} & 87.1 & {91.2} & 96.1 & 76.1 %
+             & \ca{{82.7}} & 96.6 & 91.0 & 96.4 & 94.6 & {76.7} & {57.3} & 77.5 & 71.8
+             & \ca{74.9} & 53.1 & 70.9 & 81.6 & 93.9 \\
+        {\bf \PEcore{G}}                & 1.9B  & 448 & 5.4B    & \ca{{\bf 86.6}} & \textbf{85.4} & \textbf{80.2} & \textbf{88.2} & \textbf{92.6} & {96.5} & {76.5} %
+                & \ca{\bf 83.7} & {96.9} & 91.4 & {96.9} & 94.7 & \textbf{78.2} & \textbf{57.6} & \textbf{78.5} & 75.8
+            & \ca{\bf 78.9} & {58.1} & {\bf 75.4} & {85.7} & {96.2} \\
+        \shline
+    \end{tabular}
+    }
+    \caption{{\bf Zero-Shot Image Results.} Image zero-shot performance of \PEcore{} compared to the state-of-the-art for \textit{both} proprietary and open models.  \PEcore{G} is the first vision encoder to outperform the best models trained on the proprietary JFT-3B~\textcolor{blue}{\texttt{[\allowbreak v\allowbreak i\allowbreak t\allowbreak ]}} and WebLI~\textcolor{blue}{\texttt{[\allowbreak p\allowbreak a\allowbreak l\allowbreak i\allowbreak ]}} on general classification. 
+    Moreover at all model sizes, \PEcore{} obtains state-of-the-art results across general classification, retrieval, and finegrained classification.
+    $^\dagger$Re-evaluated: DFN by~\textcolor{blue}{\texttt{[\allowbreak e\allowbreak v\allowbreak a\allowbreak 1\allowbreak 8\allowbreak b\allowbreak ]}}; SigLIP and SigLIP2 by us with the same benchmark settings if not reported in~\textcolor{blue}{\texttt{[\allowbreak s\allowbreak i\allowbreak g\allowbreak l\allowbreak i\allowbreak p\allowbreak 2\allowbreak ]}} (see Appendix~\texttt{[\allowbreak u\allowbreak n\allowbreak a\allowbreak v\allowbreak a\allowbreak i\allowbreak l\allowbreak a\allowbreak b\allowbreak l\allowbreak e\allowbreak :\allowbreak a\allowbreak p\allowbreak p\allowbreak x\allowbreak :\allowbreak z\allowbreak e\allowbreak r\allowbreak o\allowbreak s\allowbreak h\allowbreak o\allowbreak t\allowbreak \_\allowbreak s\allowbreak e\allowbreak t\allowbreak t\allowbreak i\allowbreak n\allowbreak g\allowbreak s\allowbreak ]}).
+    }
+    \label{tab:core_general_image}
+\end{table*}
+%##################################################################################################
+\end{document}

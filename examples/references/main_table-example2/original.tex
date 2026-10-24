@@ -1,0 +1,66 @@
+\begin{table*}[!t]
+\centering
+\caption{\textbf{Main results on the OmniGAIA benchmark.} The Pass@1 metric is reported for all tasks. Best and second-best scores are highlighted in \textbf{bold} and \underline{underlined} respectively, shown separately for proprietary and open-source models.}
+\label{tab:omnigaia_results}
+\setlength\tabcolsep{4.2pt}
+\fontsize{8.2pt}{11.4pt}\selectfont
+\begin{tabular}{l c ccccccccc ccc c}
+\toprule
+\multirow{2}[2]{*}{{\bfseries Method}} &
+\multirow{2}[2]{*}{{\bfseries \# Params}} &
+\multicolumn{9}{c}{{\bfseries Category-Wise Breakdown}} &
+\multicolumn{3}{c}{{\bfseries Difficulty Levels}} &
+\multirow{2}[2]{*}{{\bfseries Overall}} \\
+\cmidrule(lr){3-11} \cmidrule(lr){12-14}
+  & & Geo. & Tech. & Hist. & Fin.
+    & Sport & Art & Movie & Sci. & Food
+    & Easy & Med. & Hard &  \\
+\midrule
+\rowcolor[HTML]{f0f0f0}
+\multicolumn{15}{c}{{\bfseries\itshape Proprietary Omni-Modal Models}} \\
+\modelicon{1.1em}{gemini.pdf}\,Gemini-2.5-Flash-Lite
+& - & 5.8 & 8.2 & 14.9 & 4.0 & 10.8 & 8.3 & 6.1 & 3.9 & 11.1 & 9.8 & 8.1 & 7.7 & 8.6 \\
+\modelicon{1.1em}{gemini.pdf}\,Gemini-2.5-Pro
+& - & 23.2 & 28.6 & 32.8 & 20.0 & 32.4 & 41.7 & 42.4 & 26.9 & 33.3 & 41.8 & 26.9 & 21.8 & 30.8 \\
+\modelicon{1.1em}{gemini.pdf}\,Gemini-3-Flash
+& - & \underline{50.7} & \underline{57.1} & \underline{44.8} & \underline{48.0}
+& \underline{59.5} & {\bfseries 55.6} & {\bfseries 54.6} & \underline{38.5} & \underline{61.1}
+& \underline{67.2} & \underline{46.9} & \underline{37.2} & \underline{51.7} \\
+\modelicon{1.1em}{gemini.pdf}\,Gemini-3-Pro
+& - & {\bfseries 65.2} & {\bfseries 59.2} & {\bfseries 62.1} & {\bfseries 72.0}
+& {\bfseries 78.4} & \underline{52.8} & \underline{48.5} & {\bfseries 42.3} & {\bfseries 88.9}
+& {\bfseries 78.7} & {\bfseries 61.9} & {\bfseries 38.5} & {\bfseries 62.5} \\
+\midrule
+\rowcolor[HTML]{f0f0f0}
+\multicolumn{15}{c}{{\bfseries\itshape Open-Source Omni-Modal Models}} \\
+\modelicon{1.0em}{qwen.pdf}~Qwen-2.5-Omni
+& 3B & 0.0 & 2.0 & 4.5 & 0.0 & 0.0 & 0.0 & 0.0 & 3.9 & 0.0 & 1.6 & 1.9 & 0.0 & 1.4 \\
+\modelicon{1.0em}{qwen.pdf}~Qwen-2.5-Omni
+& 7B & 1.5 & 4.1 & 7.5 & 4.0 & 0.0 & 2.8 & 0.0 & 7.7 & 5.6 & 8.2 & 1.3 & 1.3 & 3.6 \\
+\modelicon{0.9em}{baichuan.pdf}~Baichuan-Omni-1.5
+& 8B & 2.9 & 4.1 & 3.0 & 4.0 & 2.7 & 0.0 & 3.0 & 3.8 & 0.0 & 4.9 & 2.5 & 0.0 & 2.8 \\
+\modelicon{0.9em}{openbmb.pdf}~MiniCPM-O-2.6
+& 8B & 2.9 & 2.0 & 1.5 & 0.0 & 2.7 & 8.3 & 3.0 & 3.8 & 5.6 & 3.3 & 2.5 & 3.8 & 3.1 \\
+\modelicon{1.0em}{ming.pdf}~Ming-Lite-Omni-1.5
+& 20B-A3B & 2.9 & 6.1 & 1.5 & 4.0 & 5.4 & 2.8 & 6.1 & 7.7 & 5.6 & 4.9 & 3.8 & 2.6 & 3.9 \\
+\modelicon{1.0em}{qwen.pdf}~Qwen-3-Omni
+& 30B-A3B & \underline{8.7} & 14.3 & 11.9 & \underline{28.0} & 10.8 & 13.9 & \underline{9.1} & {\bfseries 15.4} & \underline{22.2} & 19.7 & 10.6 & {\bfseries 9.0} & \underline{13.3} \\
+\modelicon{1.0em}{ming.pdf}~Ming-Flash-Omni
+& 100B-A6B & 5.8 & 8.2 & 10.4 & 12.0 & 8.1 & 5.6 & 6.1 & \underline{11.5} & 11.1 & 12.3 & 7.5 & 3.8 & 8.3 \\
+\modelicon{1.0em}{longcat.pdf}\,\,LongCat-Flash-Omni
+& 560B-A27B & \underline{8.7} & 10.2 & 16.4 & 12.0 & 10.8 & 8.3 & 6.1 & \underline{11.5} & 16.7 & 16.4 & 9.4 & \underline{6.4} & 11.1 \\
+\hdashline
+\rowcolor[HTML]{f0edff}
+\modelicon{0.97em}{omniagent_icon.png}\,\,OmniAtlas-Qwen-2.5
+& 3B & 4.4 & 12.2 & \underline{16.7} & 4.0 & \underline{16.2} & 11.1 & 3.0 & \underline{11.5} & 11.1 & 13.9 & 10.0 & 5.1 & 10.3 \\
+\rowcolor[HTML]{f0edff}
+\modelicon{0.97em}{omniagent_icon.png}\,\,OmniAtlas-Qwen-2.5
+& 7B & \underline{8.7} & \underline{18.4} & 16.4 & 4.0 & \underline{16.2} & {\bfseries 22.2} & 3.0 & 7.7 & \underline{22.2} & \underline{22.1} & \underline{11.3} & 3.9 & \underline{13.3} \\
+\rowcolor[HTML]{f0edff}
+\modelicon{0.97em}{omniagent_icon.png}\,\,OmniAtlas-Qwen-3
+& 30B-A3B & {\bfseries 10.1} & {\bfseries 30.6} & {\bfseries 29.9} & {\bfseries 32.0}
+& {\bfseries 18.9} & \underline{16.7} & {\bfseries 12.1} & \underline{11.5} & {\bfseries 27.8}
+& {\bfseries 31.1} & {\bfseries 18.8} & {\bfseries 9.0} & {\bfseries 20.8} \\
+\bottomrule
+\end{tabular}
+\end{table*}

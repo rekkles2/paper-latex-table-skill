@@ -2,7 +2,7 @@
 name: paper-latex-table-skill
 description: Generate, refine, reconstruct from images, retrieve reference layouts for, and validate scientific LaTeX tables while preserving experimental data. Use for benchmark comparisons, ablations, grouped headers, numerical highlighting, table layout diagnosis, or learning new table examples into a local case library.
 metadata:
-  version: "1.2.0"
+  version: "1.3.0"
 ---
 
 # Paper LaTeX Table Skill
@@ -56,3 +56,9 @@ For future tasks using this skill, capture useful new user-supplied examples or 
 Run `python scripts/compile_table.py OUTPUT.tex --output NEW_BUILD_DIR` (optional `--preamble MACROS.tex`, `--engine xelatex`). Full documents keep their class; generic fragment compilation is diagnostic. Run `python scripts/inspect_render.py NEW_BUILD_DIR/table-build.pdf --output NEW_RENDER_DIR`, then actually open the images. Do not execute unknown TeX outside an appropriate sandbox.
 
 Return final source and imports (or requested files), relevant reference case IDs, changes and data verification evidence, engine/template details, and unresolved layout/data/dependency issues. Normal user explanation is in the user's language; table text follows the requested manuscript language. Do not overwrite original examples, self-install, publish or promote stable changes without task authorization. Future improvement requires explicit approval only at the promotion gate, not for ordinary table generation/refinement.
+
+## Typed example gallery
+
+Version 1.3.0 has 38 canonical examples across seven types: 17 public synthetic entries and 21 private reference entries, retaining all 41 input identifiers through aliases and baseline roles. The older 18-pair local manifest is historical; the canonical catalog also includes the three new image-only cases. Missing original TeX remains explicit.
+
+For gallery reconstruction, follow [`references/gallery-workflow.md`](references/gallery-workflow.md). Use [`coverage-symbols.md`](references/coverage-symbols.md) for shared coverage-symbol geometry and [`gallery-lessons.md`](references/gallery-lessons.md) for reviewed lessons. The canonical index is [`docs/example-catalog.json`](docs/example-catalog.json): include **all** examples and use the same four fields for each entry: Original Image, Original TeX, Skill Reconstruction Image, and Reconstruction TeX. State explicitly when original TeX is missing. Represent aliases as references to one canonical entry, preserve baseline relationships, and do not duplicate canonical examples. Keep private reference assets out of public exports.

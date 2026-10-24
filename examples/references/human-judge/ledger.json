@@ -1,0 +1,819 @@
+{
+  "columns": [
+    "Add",
+    "Remove",
+    "Replace",
+    "Action",
+    "Counting",
+    "Relation",
+    "All Edits"
+  ],
+  "rows": [
+    {
+      "factor": "Unchanged Regions",
+      "population": "Human",
+      "means": [
+        "5.172",
+        "5.731",
+        "4.972",
+        "4.352",
+        "3.393",
+        "4.992",
+        "4.769"
+      ],
+      "std": [
+        "0.82",
+        "0.75",
+        "1.02",
+        "1.06",
+        "0.68",
+        "0.43",
+        "0.74"
+      ],
+      "highlight": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "factor": "Unchanged Regions",
+      "population": "Our Judge",
+      "means": [
+        "6.444",
+        "5.824",
+        "6.222",
+        "5.826",
+        "4.400",
+        "5.833",
+        "5.758"
+      ],
+      "std": [
+        "0.50",
+        "0.71",
+        "0.63",
+        "0.82",
+        "1.50",
+        "0.90",
+        "0.65"
+      ],
+      "highlight": [
+        "none",
+        "dark",
+        "none",
+        "none",
+        "none",
+        "light",
+        "light"
+      ]
+    },
+    {
+      "factor": "Global Consistency",
+      "population": "Human",
+      "means": [
+        "5.602",
+        "5.982",
+        "5.551",
+        "4.769",
+        "5.243",
+        "5.444",
+        "5.432"
+      ],
+      "std": [
+        "0.70",
+        "0.61",
+        "0.90",
+        "0.87",
+        "1.13",
+        "0.39",
+        "0.37"
+      ],
+      "highlight": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "factor": "Global Consistency",
+      "population": "Our Judge",
+      "means": [
+        "6.333",
+        "5.971",
+        "6.333",
+        "6.087",
+        "4.800",
+        "6.167",
+        "5.948"
+      ],
+      "std": [
+        "0.47",
+        "0.82",
+        "0.47",
+        "0.65",
+        "1.17",
+        "0.69",
+        "0.53"
+      ],
+      "highlight": [
+        "light",
+        "dark",
+        "light",
+        "none",
+        "dark",
+        "light",
+        "light"
+      ]
+    },
+    {
+      "factor": "Identity Preservation",
+      "population": "Human",
+      "means": [
+        "5.613",
+        "5.913",
+        "5.625",
+        "4.871",
+        "4.227",
+        "5.714",
+        "5.327"
+      ],
+      "std": [
+        "0.62",
+        "0.82",
+        "0.84",
+        "1.12",
+        "1.12",
+        "0.20",
+        "0.59"
+      ],
+      "highlight": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "factor": "Identity Preservation",
+      "population": "Our Judge",
+      "means": [
+        "6.889",
+        "6.118",
+        "6.500",
+        "6.696",
+        "6.400",
+        "6.500",
+        "6.517"
+      ],
+      "std": [
+        "0.31",
+        "1.02",
+        "0.96",
+        "0.46",
+        "0.49",
+        "0.50",
+        "0.24"
+      ],
+      "highlight": [
+        "none",
+        "dark",
+        "light",
+        "none",
+        "none",
+        "light",
+        "none"
+      ]
+    },
+    {
+      "factor": "Scale Realism",
+      "population": "Human",
+      "means": [
+        "5.276",
+        "6.286",
+        "5.865",
+        "5.984",
+        "5.510",
+        "6.033",
+        "5.826"
+      ],
+      "std": [
+        "0.95",
+        "0.54",
+        "0.80",
+        "0.61",
+        "0.68",
+        "0.57",
+        "0.34"
+      ],
+      "highlight": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "factor": "Scale Realism",
+      "population": "Our Judge",
+      "means": [
+        "6.444",
+        "6.471",
+        "6.556",
+        "6.565",
+        "6.400",
+        "6.000",
+        "6.406"
+      ],
+      "std": [
+        "0.50",
+        "0.74",
+        "0.60",
+        "0.92",
+        "0.49",
+        "1.41",
+        "0.19"
+      ],
+      "highlight": [
+        "none",
+        "dark",
+        "light",
+        "light",
+        "light",
+        "dark",
+        "light"
+      ]
+    },
+    {
+      "factor": "Spatial Relationship",
+      "population": "Human",
+      "means": [
+        "5.561",
+        "6.225",
+        "5.890",
+        "5.948",
+        "4.650",
+        "5.728",
+        "5.667"
+      ],
+      "std": [
+        "0.79",
+        "0.50",
+        "0.63",
+        "0.74",
+        "1.19",
+        "0.63",
+        "0.50"
+      ],
+      "highlight": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "factor": "Spatial Relationship",
+      "population": "Our Judge",
+      "means": [
+        "6.556",
+        "6.382",
+        "6.778",
+        "6.043",
+        "4.800",
+        "6.667",
+        "6.204"
+      ],
+      "std": [
+        "0.68",
+        "0.84",
+        "0.63",
+        "0.75",
+        "1.17",
+        "0.47",
+        "0.67"
+      ],
+      "highlight": [
+        "light",
+        "dark",
+        "light",
+        "dark",
+        "dark",
+        "light",
+        "light"
+      ]
+    },
+    {
+      "factor": "Texture and Detail",
+      "population": "Human",
+      "means": [
+        "5.504",
+        "5.844",
+        "5.483",
+        "5.643",
+        "5.157",
+        "5.639",
+        "5.545"
+      ],
+      "std": [
+        "0.56",
+        "0.61",
+        "0.80",
+        "0.84",
+        "0.90",
+        "0.59",
+        "0.21"
+      ],
+      "highlight": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "factor": "Texture and Detail",
+      "population": "Our Judge",
+      "means": [
+        "5.889",
+        "5.676",
+        "6.000",
+        "6.000",
+        "5.800",
+        "5.667",
+        "5.839"
+      ],
+      "std": [
+        "0.31",
+        "0.72",
+        "0.47",
+        "0.66",
+        "0.40",
+        "0.75",
+        "0.14"
+      ],
+      "highlight": [
+        "dark",
+        "dark",
+        "light",
+        "dark",
+        "light",
+        "dark",
+        "dark"
+      ]
+    },
+    {
+      "factor": "Image Quality",
+      "population": "Human",
+      "means": [
+        "5.569",
+        "6.048",
+        "5.513",
+        "5.947",
+        "5.247",
+        "5.683",
+        "5.668"
+      ],
+      "std": [
+        "0.54",
+        "0.66",
+        "0.71",
+        "0.71",
+        "0.53",
+        "0.75",
+        "0.27"
+      ],
+      "highlight": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "factor": "Image Quality",
+      "population": "Our Judge",
+      "means": [
+        "6.333",
+        "6.059",
+        "6.556",
+        "6.174",
+        "6.200",
+        "6.333",
+        "6.276"
+      ],
+      "std": [
+        "0.47",
+        "0.59",
+        "0.50",
+        "0.48",
+        "0.40",
+        "0.75",
+        "0.16"
+      ],
+      "highlight": [
+        "light",
+        "dark",
+        "none",
+        "dark",
+        "light",
+        "light",
+        "light"
+      ]
+    },
+    {
+      "factor": "Color and Lighting",
+      "population": "Human",
+      "means": [
+        "5.515",
+        "5.855",
+        "5.442",
+        "5.549",
+        "5.403",
+        "5.553",
+        "5.553"
+      ],
+      "std": [
+        "0.75",
+        "0.71",
+        "0.86",
+        "0.72",
+        "0.83",
+        "0.64",
+        "0.15"
+      ],
+      "highlight": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "factor": "Color and Lighting",
+      "population": "Our Judge",
+      "means": [
+        "6.111",
+        "5.941",
+        "6.278",
+        "5.870",
+        "6.200",
+        "6.167",
+        "6.094"
+      ],
+      "std": [
+        "0.57",
+        "0.87",
+        "0.56",
+        "0.80",
+        "0.75",
+        "0.69",
+        "0.14"
+      ],
+      "highlight": [
+        "light",
+        "dark",
+        "light",
+        "dark",
+        "light",
+        "light",
+        "light"
+      ]
+    },
+    {
+      "factor": "Seamlessness",
+      "population": "Human",
+      "means": [
+        "5.722",
+        "6.101",
+        "5.767",
+        "5.598",
+        "5.357",
+        "5.578",
+        "5.687"
+      ],
+      "std": [
+        "0.64",
+        "0.58",
+        "0.74",
+        "0.83",
+        "1.00",
+        "0.73",
+        "0.23"
+      ],
+      "highlight": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "factor": "Seamlessness",
+      "population": "Our Judge",
+      "means": [
+        "6.000",
+        "5.706",
+        "6.333",
+        "5.913",
+        "5.600",
+        "5.667",
+        "5.870"
+      ],
+      "std": [
+        "0.47",
+        "0.89",
+        "0.58",
+        "0.83",
+        "0.80",
+        "0.75",
+        "0.25"
+      ],
+      "highlight": [
+        "dark",
+        "dark",
+        "light",
+        "dark",
+        "dark",
+        "dark",
+        "dark"
+      ]
+    },
+    {
+      "factor": "Alignment",
+      "population": "Human",
+      "means": [
+        "5.556",
+        "5.927",
+        "5.681",
+        "5.666",
+        "3.437",
+        "5.178",
+        "5.241"
+      ],
+      "std": [
+        "0.49",
+        "0.97",
+        "0.65",
+        "1.13",
+        "1.40",
+        "0.99",
+        "0.84"
+      ],
+      "highlight": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "factor": "Alignment",
+      "population": "Our Judge",
+      "means": [
+        "6.667",
+        "6.471",
+        "6.500",
+        "6.957",
+        "5.200",
+        "6.167",
+        "6.327"
+      ],
+      "std": [
+        "0.94",
+        "1.01",
+        "0.90",
+        "0.20",
+        "2.23",
+        "1.86",
+        "0.56"
+      ],
+      "highlight": [
+        "none",
+        "light",
+        "light",
+        "none",
+        "none",
+        "light",
+        "none"
+      ]
+    },
+    {
+      "factor": "Completeness",
+      "population": "Human",
+      "means": [
+        "5.693",
+        "5.966",
+        "5.789",
+        "5.719",
+        "3.537",
+        "5.556",
+        "5.376"
+      ],
+      "std": [
+        "0.72",
+        "1.17",
+        "0.71",
+        "1.14",
+        "1.74",
+        "0.66",
+        "0.83"
+      ],
+      "highlight": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "factor": "Completeness",
+      "population": "Our Judge",
+      "means": [
+        "6.778",
+        "6.294",
+        "6.389",
+        "6.870",
+        "5.200",
+        "6.167",
+        "6.283"
+      ],
+      "std": [
+        "0.63",
+        "1.30",
+        "1.06",
+        "0.45",
+        "2.23",
+        "1.86",
+        "0.55"
+      ],
+      "highlight": [
+        "none",
+        "dark",
+        "light",
+        "none",
+        "none",
+        "light",
+        "light"
+      ]
+    },
+    {
+      "factor": "Plausibility",
+      "population": "Human",
+      "means": [
+        "5.209",
+        "6.023",
+        "5.743",
+        "5.692",
+        "4.917",
+        "5.586",
+        "5.528"
+      ],
+      "std": [
+        "1.03",
+        "0.78",
+        "0.80",
+        "1.17",
+        "1.08",
+        "0.89",
+        "0.36"
+      ],
+      "highlight": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "factor": "Plausibility",
+      "population": "Our Judge",
+      "means": [
+        "6.667",
+        "6.529",
+        "6.889",
+        "6.826",
+        "6.800",
+        "6.500",
+        "6.702"
+      ],
+      "std": [
+        "0.47",
+        "0.78",
+        "0.31",
+        "0.64",
+        "0.40",
+        "0.76",
+        "0.15"
+      ],
+      "highlight": [
+        "none",
+        "light",
+        "none",
+        "none",
+        "none",
+        "light",
+        "none"
+      ]
+    },
+    {
+      "factor": "Overall Average",
+      "population": "Human",
+      "means": [
+        "5.499",
+        "5.992",
+        "5.610",
+        "5.478",
+        "4.673",
+        "5.557",
+        "5.652"
+      ],
+      "std": [
+        "0.17",
+        "0.15",
+        "0.24",
+        "0.50",
+        "0.78",
+        "0.26",
+        "0.47"
+      ],
+      "highlight": [
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "factor": "Overall Average",
+      "population": "Our Judge",
+      "means": [
+        "6.426",
+        "6.120",
+        "6.444",
+        "6.319",
+        "5.650",
+        "6.153",
+        "6.236"
+      ],
+      "std": [
+        "0.30",
+        "0.29",
+        "0.23",
+        "0.41",
+        "0.74",
+        "0.31",
+        "0.40"
+      ],
+      "highlight": [
+        "light",
+        "dark",
+        "light",
+        "light",
+        "light",
+        "light",
+        "light"
+      ]
+    }
+  ]
+}

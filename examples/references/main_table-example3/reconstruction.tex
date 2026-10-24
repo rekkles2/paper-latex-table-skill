@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage[paperwidth=200mm,paperheight=300mm,margin=10mm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+\usepackage{amsmath,amssymb,graphicx,booktabs,multirow,array,adjustbox,pifont,arydshln,xspace,tikz}
+\usepackage{caption,url}
+\pagestyle{empty}
+\makeatletter\setlength{\@fptop}{0pt}\makeatother
+\definecolor{ggreen}{HTML}{2E9B57}
+\definecolor{deltatext}{HTML}{7A3EB1}
+\definecolor{refgray}{RGB}{145,145,145}
+\definecolor{sectionmist}{HTML}{F3F1F7}
+\definecolor{sgaRow}{HTML}{EEE9F7}
+\definecolor{deeper-gray}{gray}{0.65}
+\definecolor{light-gray}{gray}{0.85}
+\newcommand{\refitem}[1]{\textcolor{refgray}{#1}}
+\newcommand{\increase}[1]{{\fontsize{5.2pt}{5.2pt}\selectfont\color{deltatext}{($\uparrow$\,#1)}}}
+\newcommand{\decrease}[1]{{\fontsize{5.2pt}{5.2pt}\selectfont\color{ggreen}{($\downarrow$\,#1)}}}
+\newcommand{\sectionband}[1]{\multicolumn{8}{@{}>{\columncolor{sectionmist}}l@{}}{\rule{0pt}{1.08em}\hspace{0.35em}#1}\\[-0.05em]}
+\newcommand{\sectiondash}{\hdashline\noalign{\vspace{0.03cm}}}
+\newcommand{\rot}[1]{\rotatebox{45}{#1}}
+\newcommand{\fullcirc}{\tikz[baseline=-0.5ex]\fill (0,0) circle (0.48ex);}
+\newcommand{\emptycirc}{\tikz[baseline=-0.5ex]\draw[line width=.3pt] (0,0) circle (0.48ex);}
+\newcommand{\halfcirc}{\tikz[baseline=-0.5ex]{\fill (0,.48ex) arc(90:270:.48ex)--cycle;\draw[line width=.3pt] (0,0) circle(.48ex);}}
+\newcommand{\vision}{\raisebox{-0.5ex}{\includegraphics[height=1em]{assets/vision.png}}}
+\newcommand{\calculator}{\raisebox{-0.5ex}{\includegraphics[height=1em]{assets/calculator.png}}}
+\newcommand{\knowledge}{\raisebox{-0.5ex}{\includegraphics[height=1em]{assets/knowledge.png}}}
+\newcommand{\steps}{\raisebox{-0.5ex}{\includegraphics[height=1em]{assets/steps.png}}}
+\newcommand{\std}[1]{{\scriptsize\textcolor{gray}{~\raisebox{0.5pt}{$\pm$}#1}}}
+\newcommand{\cmark}{\textcolor{green!50!black}{\ding{51}}}
+\newcommand{\model}{OctoTools\xspace}
+\newcommand{\modelbase}{$\text{OctoTools}_\text{base}$\xspace}
+
+\usepackage{fix-cm}
+
+\begin{document}
+\graphicspath{{assets/}}
+
+\begin{table*}[th!]
+\centering
+\small
+\resizebox{1.0\linewidth}{!}{
+\begin{tabular}{lcccccc|cccc|>{\columncolor{gray!20}}r>{\columncolor{gray!20}}r}
+\hline\toprule
+\textbf{Datasets} & \textbf{Modality}  & \textbf{Domain} & \vision & \calculator & \knowledge & \steps & \multicolumn{1}{|c}{\textbf{0-shot}} & \textbf{CoT} & \textbf{\modelbase} & \textbf{\model} & \multicolumn{1}{|c}{\cellcolor{white}\textbf{$\Delta$ (0-shot)}} & \multicolumn{1}{c}{\cellcolor{white}\textbf{$\Delta$ (CoT)}} \\
+\midrule
+AlgoPuzzleVQA & Vision & General & \cmark & & & \cmark & 41.3\std{0.3} & 42.7\std{1.0} & 44.0\std{0.9} & \textbf{48.7}\std{0.3} & +7.4 & +6.0 \\
+Hallusion-VD & Vision & General & \cmark & & &  & 52.0\std{1.0} & 53.3\std{2.1} & 59.0\std{0.0} & \textbf{63.3}\std{2.9} & +11.3 & +10.0 \\
+PuzzleVQA & Vision & General & \cmark & & & \cmark & 52.2\std{1.0} & 54.0\std{1.3} & 59.3\std{0.8} & \textbf{61.0}\std{0.5} & +8.8 & +7.0 \\
+VQA 2.0 & Vision & General & \cmark & & & \cmark & 50.3\std{1.0} & 48.7\std{0.3} & 47.2\std{0.8} & \textbf{54.5}\std{0.0} & +4.2 & +5.8 \\
+\midrule
+Game of 24 & Text & Mathematical & & \cmark & & \cmark & 22.2\std{2.5} & 33.3\std{1.5} & 37.8\std{3.3} & \textbf{44.7}\std{2.8} & +22.5 & +11.4 \\
+Omni-MATH & Text & Mathematical & & \cmark & \cmark & \cmark & 27.0\std{0.0} & 29.3\std{1.3} & 30.2\std{0.6} & \textbf{32.2}\std{0.8} & +5.2 & +2.9 \\
+CLEVR-Math & Vision & Mathematical & \cmark & \cmark & &  & 64.5\std{3.0} & 75.2\std{1.5} & 68.8\std{0.8} & \textbf{79.0}\std{0.9} & +14.5 & +3.8 \\
+MathVista & Vision & Mathematical & \cmark & \cmark & \cmark & \cmark & 59.3\std{0.8} & 59.5\std{1.5} & 63.0\std{1.3} & \textbf{64.3}\std{1.0} & +5.0 & +4.8 \\
+\midrule
+GPQA & Text & Scientific & & \cmark & \cmark & \cmark & 53.7\std{1.9} & 52.3\std{2.0} & 53.7\std{2.5} & \textbf{54.7}\std{1.3} & +1.0 & +2.4 \\
+MMLU-Pro & Text & Scientific &  & & \cmark & \cmark & 71.7\std{0.3} & 70.3\std{0.6} & 71.5\std{1.3} & \textbf{73.7}\std{1.3} & +2.0 & +3.4 \\
+SciFIBench & Vision & Scientific & \cmark &  & \cmark & & 72.5\std{0.0} & 75.0\std{0.9} & 77.3\std{0.8} & \textbf{78.3}\std{0.6} & +5.8 & +3.3 \\
+\midrule
+MedQA & Text & Medical & & & \cmark &  & 84.5\std{1.0} & 84.8\std{0.6} & \textbf{92.8}\std{0.6} & 91.5\std{1.8} & +7.0 & +6.7 \\
+PathCLS & Vision & Medical & \cmark & & \cmark & & 36.0\std{0.9} & 37.5\std{1.8} & 37.0\std{1.8} & \textbf{58.2}\std{1.3} & +22.2 & +20.7 \\
+PathVQA & Vision & Medical & \cmark & & \cmark & \cmark & 32.0\std{1.8} & 27.8\std{1.8} & 43.5\std{2.6} & \textbf{49.2}\std{1.2} & +17.2 & +21.4 \\
+SLAKE & Vision & Medical & \cmark & & \cmark & \cmark & 59.3\std{1.0} & 60.3\std{0.6} & 59.2\std{1.8} & \textbf{63.8}\std{1.4} & +4.5 & +3.5 \\
+\midrule
+GAIA-Text & Text & Agentic & & \cmark & \cmark & \cmark & ~~8.7\std{0.8} & ~~8.4\std{0.5} & ~~9.7\std{0.9} & \textbf{18.4}\std{1.2} & +9.7 & +10.0 \\
+\midrule
+\rowcolor{red!30} \textbf{Average (\%)} & - & - & - & - & - & - & \multicolumn{1}{|l}{49.2} & 50.8~~~~~~~ & 53.4~~~~~~~ & \textbf{58.5}~~~~~~~ & \textbf{+9.3} & \textbf{+7.7} \\
+\bottomrule
+\end{tabular}
+}
+\vspace{-1mm}
+\caption{Main results across 16 benchmarks spanning different modalities, domains, and required reasoning skills: visual understanding (\vision), numerical calculation (\calculator), knowledge retrieval (\knowledge), and multi-step reasoning (\steps). \modelbase uses only the base tool (\texttt{Generalist\_Solution\_Generator}), while \model uses the optimal toolset. Performance gains ($\Delta$) are computed for OctoTools relative to both zero-shot (0-shot) and chain-of-thought (CoT) baselines, with \model achieving 58.5\% average accuracy and improvements of 9.3\% and 7.7\%, respectively.}
+\vspace{-1mm}
+\label{tab:main_results_across_benchmarks}
+\end{table*}
+\end{document}

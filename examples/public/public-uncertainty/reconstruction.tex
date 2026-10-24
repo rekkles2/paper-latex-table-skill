@@ -1,0 +1,28 @@
+\documentclass[10pt]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+\usepackage{geometry}
+\geometry{paperwidth=200mm,paperheight=150mm,margin=7mm}
+\usepackage{graphicx,booktabs,array,longtable,tabularx,siunitx,multirow,makecell,adjustbox,amsmath,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\graphicspath{{assets/}}
+\pagestyle{empty}
+\begin{document}
+% Generated from an explicit data contract. Source precision preserved.
+% Packages: booktabs
+\begin{table}[t]
+\centering
+\caption{Illustrative synthetic uncertainty results; not measured experiments.}
+\label{tab:uncertainty}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Method & AUC $\uparrow$ & F1 \\
+\midrule
+A & \underline{80.00\,$\pm$\,0.20} & 70.0 [69.1, 70.9] \\
+B & \textbf{81.00\,$\pm$\,0.30} & 71.0 [70.0, 72.0] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}

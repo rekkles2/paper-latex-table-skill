@@ -6,353 +6,786 @@ A Codex Skill for experimental data, existing TeX and table screenshots. Deliver
 
 [简体中文](README.md) · [Guide in Chinese](docs/guide.zh-CN.md) · [Skill contract](SKILL.md) · [Design principles](references/table-design-principles.md)
 
+## Table Examples
+
+### Benchmark Comparison
+
+#### Public Benchmark Comparison
+
+**Original Image:**
+
+Not provided; this is a project-authored synthetic example.
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/public-benchmark/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/public-benchmark/reconstruction.tex)
+
+#### Public Wide-Table Comparison
+
+**Original Image:**
+
+Not provided; this is a project-authored synthetic example.
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/public-wide/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/public-wide/reconstruction.tex)
+
+#### Main-Table Showcase
+
+**Original Image:**
+
+Not provided; this is a project-authored synthetic example.
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/showcase-main/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/showcase-main/reconstruction.tex)
+
+#### Paired-Generation Showcase
+
+**Original Image:**
+
+Not provided; this is a project-authored synthetic example.
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/showcase-paired/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/showcase-paired/reconstruction.tex)
+
 <!-- LOCAL-ONLY:BEGIN -->
-**Private local reference index:** [Diffusion benchmark](#diffusion-main) · [Four-panel ablation](#representation-ablation) · [Paired gains](#paired-generation) · [Guidance control](#guidance-comparison) · [Algorithm listing](#meanflow-algorithm) · [Multimodal wide table](#multimodal-main) · [Data mixture](#data-mixture)
-<!-- LOCAL-ONLY:END -->
+#### Main Table Example 1
 
-## Table examples
+**Original Image:**
 
-These are compiled LaTeX tables with compact serif typography, restrained rules, and gray bands or pale row shading only where they carry a stated role. Caption position, weight and hierarchy follow each table or panel's explanatory role rather than one imposed template; the previews avoid card-like decoration. **All names, values and coverage assignments are synthetic, not experimental results.** Advanced layouts are agent-authored with checked records; they are not arbitrary-layout capabilities of the JSON generator.
+![Original Image](examples/references/main_table-example1/original.png)
 
-### Grouped comparison with rotated headers
+**Original TeX:**
 
-![Paper-style comparison with rotated metric labels, gray category bands and pale green featured rows](docs/images/showcase-main.png)
+[Original TeX](examples/references/main_table-example1/original.tex)
 
-Italic gray bands separate families. Rotated labels fit long headings; bold and underline follow a declared comparison scope. Featured-row shading is separate from ranking.
+**Skill Reconstruction:**
 
-[Editable TeX](docs/examples/showcase/showcase-main.tex) · [Original synthetic data](docs/examples/showcase/data.json)
+![Skill Reconstruction](examples/references/main_table-example1/reconstruction.png)
 
-### Aligned sensitivity panels
+**Reconstruction TeX:**
 
-![Four aligned ablation subtables with gray default settings](docs/images/showcase-sensitivity.png)
-
-One shared caption, four factors. Gray marks defaults; bold marks the best value within each panel and column.
-
-[Editable TeX](docs/examples/showcase/showcase-sensitivity.tex) · [Synthetic data and cell ledger](docs/examples/showcase/academic-ledger.json)
-
-### Paired comparisons with explicit gains
-
-![Paired baseline and improved methods with gains relative to each encoder baseline](docs/images/showcase-paired.png)
-
-Keep each baseline beside its improved variant. Accuracy gains use percentage points; increased latency remains a black cost annotation.
-
-[Editable TeX](docs/examples/showcase/showcase-paired.tex)
-
-### Component ablation
-
-![Compact component ablation with uncertainty and baseline-relative gains](docs/images/showcase-ablation.png)
-
-Preserve mean precision and standard deviations. State component meanings and delta baselines; ranking means does not establish significance.
-
-[Editable TeX](docs/examples/showcase/showcase-ablation.tex)
-
-### Coverage matrix
-
-![Monochrome full, partial and empty coverage symbols with a legend](docs/images/showcase-coverage.png)
-
-Shapes encode coverage without relying on color. Sizes, evaluation units and symbol meanings remain explicit.
-
-[Editable TeX](docs/examples/showcase/showcase-coverage.tex) · [Rebuild previews](docs/render_showcase.py)
-
-<!-- GALLERY:BEGIN -->
-
-## Paired example gallery
-
-Public count: 20 pairs in the public index; 15 displayed directly in this section.
-
-The remaining 5 public pairs are already displayed directly in the sections above: showcase-main, showcase-sensitivity, showcase-paired, showcase-ablation, showcase-coverage
-
-<!-- LOCAL-ONLY:BEGIN -->
-
-Local reference images and source links below are private; public export strips this marked block.
-
-### Local reference (private) (18)
-
-There are 18 private local pairs, separate from 20 public examples.
-
-### diffusion-main
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/diffusion-main/figure.png) | ![Reconstruction](assets/cases/local/diffusion-main/reproduced.png) |
-
-[Reconstruction TeX](assets/cases/local/diffusion-main/table.tex) · [Review](assets/cases/local/diffusion-main/STYLE-REVIEW.json) · [Lesson](assets/cases/local/diffusion-main/lesson.json)
-
-Role: grouped diffusion benchmark with a caption below. Visible matches: two-tier pre-training header, semantic vertical boundaries through the body, gray bands and bold roman JiT names. In the source, the latent label is italic (not bold) and the pixel label bold italic; the caption is three lines and there is no bottom rule.
-
-### representation-ablation
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/representation-ablation/figure.png) | ![Reconstruction](assets/cases/local/representation-ablation/reproduced.png) |
-
-[Reconstruction TeX](assets/cases/local/representation-ablation/table.tex) · [Review](assets/cases/local/representation-ablation/STYLE-REVIEW.json) · [Lesson](assets/cases/local/representation-ablation/lesson.json)
-
-Role: one shared explanation above four side-by-side ablation panels. Visible matches: gray default rows, selective bold values and short panel notes; the source caption spans five lines and the panel tables are narrow/centered, with smaller body type than caption type.
-
-### paired-generation
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/paired-generation/figure.png) | ![Reconstruction](assets/cases/local/paired-generation/reproduced.png) |
-
-[Reconstruction TeX](assets/cases/local/paired-generation/table.tex) · [Review](assets/cases/local/paired-generation/STYLE-REVIEW.json) · [Lesson](assets/cases/local/paired-generation/lesson.json)
-
-Role: paired baseline/RCG gain comparison. Visible matches: multirow method labels, thin pair separators, bold improved values and green signed gains in parentheses; the source table is compact and centered with its caption above.
-
-### guidance-comparison
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/guidance-comparison/figure.png) | ![Reconstruction](assets/cases/local/guidance-comparison/reproduced.png) |
-
-[Reconstruction TeX](assets/cases/local/guidance-comparison/table.tex) · [Review](assets/cases/local/guidance-comparison/STYLE-REVIEW.json) · [Lesson](assets/cases/local/guidance-comparison/lesson.json)
-
-Role: two-tier metric comparison with and without guidance. Visible matches: gray text for the class-conditional population, block-boundary rules and italic group labels. Gray encodes population, not rank; keep this case as a control unless a mismatch is demonstrated.
-
-### meanflow-algorithm
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/meanflow-algorithm/figure.png) | ![Reconstruction](assets/cases/local/meanflow-algorithm/reproduced.png) |
-
-[Reconstruction TeX](assets/cases/local/meanflow-algorithm/table.tex) · [Review](assets/cases/local/meanflow-algorithm/STYLE-REVIEW.json) · [Lesson](assets/cases/local/meanflow-algorithm/lesson.json)
-
-Role: pseudocode listing with title, note and syntax colors. Visible matches: narrow rules, teal comments and magenta keywords/callables. Function names are not underlined, equals signs are black, and the Note is small plain serif text.
-
-### multimodal-main
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/multimodal-main/figure.png) | ![Reconstruction](assets/cases/local/multimodal-main/reproduced.png) |
-
-[Reconstruction TeX](assets/cases/local/multimodal-main/table.tex) · [Review](assets/cases/local/multimodal-main/STYLE-REVIEW.json) · [Lesson](assets/cases/local/multimodal-main/lesson.json)
-
-Role: wide main table split into video and image metrics. Visible matches: 65-degree rotated headers, category bands, pale-green target rows and separate thin block rules; shorten the header through matched type size/spacing, not a new angle.
-
-### data-mixture
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/data-mixture/figure.png) | ![Reconstruction](assets/cases/local/data-mixture/reproduced.png) |
-
-[Reconstruction TeX](assets/cases/local/data-mixture/table.tex) · [Review](assets/cases/local/data-mixture/STYLE-REVIEW.json) · [Lesson](assets/cases/local/data-mixture/lesson.json)
-
-Role: image/video metric blocks for a data-mixture comparison. Visible matches: rotated headers, italic category bands, vertical block boundaries and a pale-green Full Mix row. The Full Mix label and video cells are bold while image cells remain regular; baseline value slant is uncertain, so do not encode a universal roman/italic rule.
+[Reconstruction TeX](examples/references/main_table-example1/reconstruction.tex)
 
 <!-- LOCAL-ONLY:END -->
 
-### Public pairs (15)
-
-### Component ablation (structured synthetic)
-
-![Component ablation](docs/images/public/ablation.png)
-
-[TeX source](assets/cases/public/ablation/table.tex)
-
-### Grouped benchmark (structured synthetic)
-
-![Grouped benchmark](docs/images/public/benchmark.png)
-
-[TeX source](assets/cases/public/benchmark/table.tex)
-
-### Cross-dataset comparison (structured synthetic)
-
-![Cross-dataset comparison](docs/images/public/cross-dataset.png)
-
-[TeX source](assets/cases/public/cross-dataset/table.tex)
-
-### Decimal alignment (structured synthetic)
-
-![Decimal alignment](docs/images/public/decimal.png)
-
-[TeX source](assets/cases/public/decimal/table.tex)
-
-### Grouped multi-dataset table (structured synthetic)
-
-![Grouped multi-dataset table](docs/images/public/multi-dataset.png)
-
-[TeX source](assets/cases/public/multi-dataset/table.tex)
-
-### Ties and missing values (structured synthetic)
-
-![Ties and missing values](docs/images/public/ties-missing.png)
-
-[TeX source](assets/cases/public/ties-missing/table.tex)
-
-### Mean and uncertainty (structured synthetic)
-
-![Mean and uncertainty](docs/images/public/uncertainty.png)
-
-[TeX source](assets/cases/public/uncertainty/table.tex)
-
-### Wide benchmark (structured synthetic)
-
-![Wide benchmark](docs/images/public/wide.png)
-
-[TeX source](assets/cases/public/wide/table.tex)
-
-### Basic benchmark example (documentation synthetic)
-
-![Basic benchmark example](docs/images/benchmark.png)
-
-[TeX source](docs/examples/benchmark.tex)
-
-### Basic ablation example (documentation synthetic)
-
-![Basic ablation example](docs/images/ablation.png)
-
-[TeX source](docs/examples/ablation.tex)
-
-### Before refinement: full grid (refinement synthetic)
-
-![Before refinement: full grid](docs/images/refinement-before.png)
-
-[TeX source](docs/examples/refinement-before.tex)
-
-### After refinement: sparse rules (refinement synthetic)
-
-![After refinement: sparse rules](docs/images/refinement-after.png)
-
-[TeX source](docs/examples/refinement-after.tex)
-
-### Reuse baseline (design-reuse synthetic)
-
-![Reuse baseline](docs/images/reuse-baseline.png)
-
-[TeX source](docs/examples/design-reuse/baseline.tex)
-
-### Grouped reuse variant (design-reuse synthetic)
-
-![Grouped reuse variant](docs/images/reuse-grouped.png)
-
-[TeX source](docs/examples/design-reuse/grouped-readable.tex)
-
-### Compact reuse variant (design-reuse synthetic)
-
-![Compact reuse variant](docs/images/reuse-compact.png)
-
-[TeX source](docs/examples/design-reuse/compact-readable.tex)
-
 <!-- LOCAL-ONLY:BEGIN -->
+#### Main Table Example 2
 
-Local reference images and source links below are private; public export strips this marked block.
+**Original Image:**
 
-### Other local references (11)
+![Original Image](examples/references/main_table-example2/original.png)
 
-### ablation_table-example1
+**Original TeX:**
 
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/ablation_table-example1/figure.png) | ![Reconstruction](assets/cases/local/ablation_table-example1/reproduction/image-style/reproduced.png) |
+[Original TeX](examples/references/main_table-example2/original.tex)
 
-[Original TeX](assets/cases/local/ablation_table-example1/table.tex) · [Reconstruction TeX](assets/cases/local/ablation_table-example1/reproduction/image-style/run-style-3/build/table-build.tex) · [Review](assets/cases/local/ablation_table-example1/reproduction/REVIEW.md)
+**Skill Reconstruction:**
 
-source-preserving style branch; source/image differences remain recorded
+![Skill Reconstruction](examples/references/main_table-example2/reconstruction.png)
 
-### ablation_table-example2
+**Reconstruction TeX:**
 
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/ablation_table-example2/figure.png) | ![Reconstruction](assets/cases/local/ablation_table-example2/reproduction/image-style/reproduced.png) |
-
-[Original TeX](assets/cases/local/ablation_table-example2/table.tex) · [Reconstruction TeX](assets/cases/local/ablation_table-example2/reproduction/image-style/run-style-4/build/table-build.tex) · [Review](assets/cases/local/ablation_table-example2/reproduction/REVIEW.md)
-
-source-preserving style branch; source/image differences remain recorded
-
-### dataset_benchmark_table
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/dataset_benchmark_table/figure.png) | ![Reconstruction](assets/cases/local/dataset_benchmark_table/reproduction/image-style/reproduced.png) |
-
-[Original TeX](assets/cases/local/dataset_benchmark_table/table.tex) · [Reconstruction TeX](assets/cases/local/dataset_benchmark_table/reproduction/image-style/run-style-3/build/table-build.tex) · [Review](assets/cases/local/dataset_benchmark_table/reproduction/REVIEW.md)
-
-source-preserving style branch; source/image differences remain recorded
-
-### main_table-example1
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/main_table-example1/figure.png) | ![Reconstruction](assets/cases/local/main_table-example1/reproduction/image-style/reproduced.png) |
-
-[Original TeX](assets/cases/local/main_table-example1/table.tex) · [Reconstruction TeX](assets/cases/local/main_table-example1/reproduction/image-style/run-style-3/build/table-build.tex) · [Review](assets/cases/local/main_table-example1/reproduction/REVIEW.md)
-
-source-preserving style branch; source/image differences remain recorded
-
-### main_table-example2
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/main_table-example2/figure.png) | ![Reconstruction](assets/cases/local/main_table-example2/reproduction/image-style/reproduced.png) |
-
-[Original TeX](assets/cases/local/main_table-example2/table.tex) · [Reconstruction TeX](assets/cases/local/main_table-example2/reproduction/image-style/run-style-4/build/table-build.tex) · [Review](assets/cases/local/main_table-example2/reproduction/REVIEW.md)
-
-source-preserving style branch; source/image differences remain recorded
-
-### main_table-example3
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/main_table-example3/figure.png) | ![Reconstruction](assets/cases/local/main_table-example3/reproduction/image-style/reproduced.png) |
-
-[Original TeX](assets/cases/local/main_table-example3/table.tex) · [Reconstruction TeX](assets/cases/local/main_table-example3/reproduction/image-style/run-style-3/build/table-build.tex) · [Review](assets/cases/local/main_table-example3/reproduction/REVIEW.md)
-
-source-preserving style branch; source/image differences remain recorded
-
-### main_table-example4
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/main_table-example4/figure.png) | ![Reconstruction](assets/cases/local/main_table-example4/reproduction/image-style/reproduced.png) |
-
-[Original TeX](assets/cases/local/main_table-example4/table.tex) · [Reconstruction TeX](assets/cases/local/main_table-example4/reproduction/image-style/run-style-3/build/table-build.tex) · [Review](assets/cases/local/main_table-example4/reproduction/REVIEW.md)
-
-source-preserving style branch; source/image differences remain recorded
-
-### others-example1
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/others-example1/figure.png) | ![Reconstruction](assets/cases/local/others-example1/reproduction/image-style/reproduced.png) |
-
-[Original TeX](assets/cases/local/others-example1/table.tex) · [Reconstruction TeX](assets/cases/local/others-example1/reproduction/image-style/run-style-3/build/table-build.tex) · [Review](assets/cases/local/others-example1/reproduction/REVIEW.md)
-
-source-preserving style branch; source/image differences remain recorded
-
-### others-example2
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/others-example2/figure.png) | ![Reconstruction](assets/cases/local/others-example2/reproduction/image-style/reproduced.png) |
-
-[Original TeX](assets/cases/local/others-example2/table.tex) · [Reconstruction TeX](assets/cases/local/others-example2/reproduction/image-style/run-style-3/build/table-build.tex) · [Review](assets/cases/local/others-example2/reproduction/REVIEW.md)
-
-source-preserving style branch; source/image differences remain recorded
-
-### others-example3
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/others-example3/figure.png) | ![Reconstruction](assets/cases/local/others-example3/reproduction/image-style/reproduced.png) |
-
-[Original TeX](assets/cases/local/others-example3/table.tex) · [Reconstruction TeX](assets/cases/local/others-example3/reproduction/image-style/run-style-3/build/table-build.tex) · [Review](assets/cases/local/others-example3/reproduction/REVIEW.md)
-
-source-preserving style branch; source/image differences remain recorded
-
-### main_table-example4-image-23
-
-| Original figure | Reconstruction |
-| --- | --- |
-| ![Original figure](assets/cases/local/main_table-example4/figure.png) | ![Reconstruction](assets/cases/local/main_table-example4/reproduction/image-only/styled-reproduced-v2.png) |
-
-[Reconstruction TeX](assets/cases/local/main_table-example4/reproduction/image-only/styled-document-v2.tex)
-
-23-column image branch, separate from 25-column code branch
+[Reconstruction TeX](examples/references/main_table-example2/reconstruction.tex)
 
 <!-- LOCAL-ONLY:END -->
 
-<!-- GALLERY:END -->
+<!-- LOCAL-ONLY:BEGIN -->
+#### Main Table Example 3
+
+**Original Image:**
+
+![Original Image](examples/references/main_table-example3/original.png)
+
+**Original TeX:**
+
+[Original TeX](examples/references/main_table-example3/original.tex)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/main_table-example3/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/main_table-example3/reconstruction.tex)
+
+<!-- LOCAL-ONLY:END -->
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Main Table: 25-Column Source Branch
+
+**Original Image:**
+
+No matching original image was supplied for this 25-column TeX branch; the preserved screenshot belongs to the separate Image-23 branch below.
+
+**Original TeX:**
+
+[Original TeX](examples/references/main_table-example4/original.tex)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/main_table-example4/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/main_table-example4/reconstruction.tex)
+
+Provenance: Unresolved citation keys: aircraft, basic, cars, cheng_2017_resisc, coca, coco, dfn, eva18b, flickr, flower102, food101, imagenet, imagenet-a, imagenet-r, imagenet-sketch, imagenetv2, internvl, objectnet, pali, pets, siglip, siglip2, sun397, thomee2016yfcc100m, vit, vit22b; Unresolved cross-reference labels: appx:zeroshot_settings; Source TeX is from the 25-column branch; image-23 is a separate image branch and must not be represented as its matching source image.
+
+<!-- LOCAL-ONLY:END -->
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Main Table: Image-23 Branch
+
+**Original Image:**
+
+![Original Image](examples/references/main_table-example4-image-23/original.png)
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/main_table-example4-image-23/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/main_table-example4-image-23/reconstruction.tex)
+
+Provenance: The 23-column count includes metadata columns such as model, parameters, resolution and data. This image-authoritative branch is separate from the 25-column source branch and from the 13 benchmark metric columns in the Cambrian-S table.
+
+<!-- LOCAL-ONLY:END -->
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Diffusion Benchmark Comparison
+
+**Original Image:**
+
+![Original Image](examples/references/diffusion-main/original.png)
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/diffusion-main/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/diffusion-main/reconstruction.tex)
+
+<!-- LOCAL-ONLY:END -->
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Paired-Generation Comparison
+
+**Original Image:**
+
+![Original Image](examples/references/paired-generation/original.png)
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/paired-generation/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/paired-generation/reconstruction.tex)
+
+<!-- LOCAL-ONLY:END -->
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Guidance Comparison
+
+**Original Image:**
+
+![Original Image](examples/references/guidance-comparison/original.png)
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/guidance-comparison/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/guidance-comparison/reconstruction.tex)
+
+Provenance: Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 68
+
+<!-- LOCAL-ONLY:END -->
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Multimodal Benchmark Comparison
+
+**Original Image:**
+
+![Original Image](examples/references/multimodal-main/original.png)
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/multimodal-main/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/multimodal-main/reconstruction.tex)
+
+<!-- LOCAL-ONLY:END -->
+
+### Ablation Study
+
+#### Public Ablation Example
+
+**Original Image:**
+
+Not provided; this is a project-authored synthetic example.
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/public-ablation/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/public-ablation/reconstruction.tex)
+
+#### Sensitivity-Analysis Showcase
+
+**Original Image:**
+
+Not provided; this is a project-authored synthetic example.
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/showcase-sensitivity/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/showcase-sensitivity/reconstruction.tex)
+
+#### Ablation-Study Showcase
+
+**Original Image:**
+
+Not provided; this is a project-authored synthetic example.
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/showcase-ablation/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/showcase-ablation/reconstruction.tex)
+
+#### Basic Ablation Example
+
+**Original Image:**
+
+Not provided; this is a project-authored synthetic example.
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/basic-ablation/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/basic-ablation/reconstruction.tex)
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Ablation Table Example 1
+
+**Original Image:**
+
+![Original Image](examples/references/ablation_table-example1/original.png)
+
+**Original TeX:**
+
+[Original TeX](examples/references/ablation_table-example1/original.tex)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/ablation_table-example1/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/ablation_table-example1/reconstruction.tex)
+
+<!-- LOCAL-ONLY:END -->
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Ablation Table Example 2
+
+**Original Image:**
+
+![Original Image](examples/references/ablation_table-example2/original.png)
+
+**Original TeX:**
+
+[Original TeX](examples/references/ablation_table-example2/original.tex)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/ablation_table-example2/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/ablation_table-example2/reconstruction.tex)
+
+<!-- LOCAL-ONLY:END -->
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Representation Ablation
+
+**Original Image:**
+
+![Original Image](examples/references/representation-ablation/original.png)
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/representation-ablation/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/representation-ablation/reconstruction.tex)
+
+<!-- LOCAL-ONLY:END -->
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Data-Mixture Ablation
+
+**Original Image:**
+
+![Original Image](examples/references/data-mixture/original.png)
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/data-mixture/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/data-mixture/reconstruction.tex)
+
+<!-- LOCAL-ONLY:END -->
+
+### Dataset Comparison & Capability Matrix
+
+#### Public Cross-Dataset Example
+
+**Original Image:**
+
+Not provided; this is a project-authored synthetic example.
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/public-cross-dataset/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/public-cross-dataset/reconstruction.tex)
+
+#### Public Multi-Dataset Example
+
+**Original Image:**
+
+Not provided; this is a project-authored synthetic example.
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/public-multi-dataset/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/public-multi-dataset/reconstruction.tex)
+
+#### Dataset Capability Matrix
+
+**Original Image:**
+
+Not provided; this is a project-authored synthetic example.
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/showcase-coverage/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/showcase-coverage/reconstruction.tex)
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Dataset Benchmark Table
+
+**Original Image:**
+
+![Original Image](examples/references/dataset_benchmark_table/original.png)
+
+**Original TeX:**
+
+[Original TeX](examples/references/dataset_benchmark_table/original.tex)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/dataset_benchmark_table/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/dataset_benchmark_table/reconstruction.tex)
+
+<!-- LOCAL-ONLY:END -->
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Related-Datasets Table
+
+**Original Image:**
+
+![Original Image](examples/references/related-datasets/original.png)
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/related-datasets/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/related-datasets/reconstruction.tex)
+
+Provenance: Original TeX not provided; caption claims not independently verified.
+
+<!-- LOCAL-ONLY:END -->
+
+### Human–Judge Evaluation
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Human-Judge Evaluation
+
+**Original Image:**
+
+![Original Image](examples/references/human-judge/original.png)
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/human-judge/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/human-judge/reconstruction.tex)
+
+Provenance: Original TeX not provided; caption claims not independently verified.
+
+<!-- LOCAL-ONLY:END -->
+
+### Qualitative VQA
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Behavioral VQA Examples
+
+**Original Image:**
+
+![Original Image](examples/references/behavior-vqa/original.png)
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/behavior-vqa/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/behavior-vqa/reconstruction.tex)
+
+Provenance: Original TeX not provided; caption claims not independently verified.
+
+<!-- LOCAL-ONLY:END -->
+
+### Algorithms & Protocols
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Protocol Example 1
+
+**Original Image:**
+
+![Original Image](examples/references/others-example1/original.png)
+
+**Original TeX:**
+
+[Original TeX](examples/references/others-example1/original.tex)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/others-example1/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/others-example1/reconstruction.tex)
+
+<!-- LOCAL-ONLY:END -->
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Protocol Example 2
+
+**Original Image:**
+
+![Original Image](examples/references/others-example2/original.png)
+
+**Original TeX:**
+
+[Original TeX](examples/references/others-example2/original.tex)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/others-example2/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/others-example2/reconstruction.tex)
+
+<!-- LOCAL-ONLY:END -->
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### Protocol Example 3
+
+**Original Image:**
+
+![Original Image](examples/references/others-example3/original.png)
+
+**Original TeX:**
+
+[Original TeX](examples/references/others-example3/original.tex)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/others-example3/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/others-example3/reconstruction.tex)
+
+<!-- LOCAL-ONLY:END -->
+
+<!-- LOCAL-ONLY:BEGIN -->
+#### MeanFlow Algorithm
+
+**Original Image:**
+
+![Original Image](examples/references/meanflow-algorithm/original.png)
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/references/meanflow-algorithm/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/references/meanflow-algorithm/reconstruction.tex)
+
+<!-- LOCAL-ONLY:END -->
+
+### Numerical Reporting & Refinement
+
+#### Public Decimal-Reporting Example
+
+**Original Image:**
+
+Not provided; this is a project-authored synthetic example.
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/public-decimal/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/public-decimal/reconstruction.tex)
+
+#### Public Ties and Missing-Values Example
+
+**Original Image:**
+
+Not provided; this is a project-authored synthetic example.
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/public-ties-missing/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/public-ties-missing/reconstruction.tex)
+
+#### Public Uncertainty-Reporting Example
+
+**Original Image:**
+
+Not provided; this is a project-authored synthetic example.
+
+**Original TeX:**
+
+Missing (no original TeX provided)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/public-uncertainty/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/public-uncertainty/reconstruction.tex)
+
+#### After Numerical Refinement
+
+**Original Image:**
+
+![Original Image](examples/public/refinement-after/original.png)
+
+**Original TeX:**
+
+[Original TeX](examples/public/refinement-after/original.tex)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/refinement-after/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/refinement-after/reconstruction.tex)
+
+Provenance: Original image is a project-authored synthetic baseline, not an external source-paper image.
+
+#### Grouped Design Reuse
+
+**Original Image:**
+
+![Original Image](examples/public/reuse-grouped/original.png)
+
+**Original TeX:**
+
+[Original TeX](examples/public/reuse-grouped/original.tex)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/reuse-grouped/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/reuse-grouped/reconstruction.tex)
+
+Provenance: Original image is a project-authored synthetic baseline, not an external source-paper image.
+
+#### Compact Design Reuse
+
+**Original Image:**
+
+![Original Image](examples/public/reuse-compact/original.png)
+
+**Original TeX:**
+
+[Original TeX](examples/public/reuse-compact/original.tex)
+
+**Skill Reconstruction:**
+
+![Skill Reconstruction](examples/public/reuse-compact/reconstruction.png)
+
+**Reconstruction TeX:**
+
+[Reconstruction TeX](examples/public/reuse-compact/reconstruction.tex)
+
+Provenance: Original image is a project-authored synthetic baseline, not an external source-paper image.
 
 ## Capabilities
 
@@ -452,7 +885,7 @@ python docs/render_showcase.py --build-root build/readme-showcase
 ## Scope & limits
 
 - A passing compile is **not** a visual pass. Static checks are heuristic; test against the actual official conference template you are targeting before submission. Compatibility with any specific venue is not claimed.
-- The public gallery contains twenty **synthetic** example pairs: eight structured cases plus showcase, basic, refinement and design-reuse variants. Private development references, if present, have separate provenance and redistribution rights and are excluded from the public export.
+- The current gallery has **38 canonical examples** in seven categories: 17 public synthetic examples and 21 private reference reconstructions. All 41 input identifiers remain represented through canonical entries, aliases and baseline relationships. The 20 public input entries are consolidated into 17 canonical examples without deleting the original files. Private references have separate provenance and redistribution rights and are excluded from the public export.
 - Structured generation supports one grouped-header level. More complex refinement is agent-assisted and uses a reviewed ledger rather than a general LaTeX parser.
 - Public demonstration previews use synthetic data; optional private references reproduce user-supplied sources, whose claims are not independently verified.
 
@@ -464,7 +897,7 @@ python docs/render_showcase.py --build-root build/readme-showcase
 
 ## Publishing a clean copy
 
-Local-only cases (`assets/cases/local/`) and private learning state must never be published. The root `.gitignore` excludes them. If `index_cases` output is absent after cloning, run `python scripts/index_cases.py`.
+The full local gallery includes private reference assets in `examples/references/`; the current repository is private. Public exports exclude that directory, local-only cases (`assets/cases/local/`) and private learning state, and filter the README and catalog accordingly. The root `.gitignore` excludes the raw local cases. Review redistribution rights before changing repository visibility. If `index_cases` output is absent after cloning, run `python scripts/index_cases.py`.
 
 To export only public material:
 
@@ -480,12 +913,6 @@ See [LICENSE](LICENSE). License selection is still pending; nothing here grants 
 
 ## Reference reconstruction and image input
 
-Version 1.2.0 adds source-preserving local reproduction, explicit typography profiles, image transcription ledgers and separate code/image authority. The 10 paired code-and-figure cases support source-preserving compile comparisons; seven image-only references are manual transcriptions and reconstructions, not source-preserving reproductions. The original 23-file hash check covers only the initial 10 paired cases. See [input routes](references/input-routes.md) and [learned layout catalog](references/reference-catalog.md). Local case images and reconstruction evidence stay inside `assets/cases/local/`, excluded from public export. The local gallery documents residual differences rather than claiming pixel identity.
+Version 1.3.0 organizes the original 18 reference pairs and three new image-only cases into 21 private reference entries. Related Datasets, Human–Judge and Behavior VQA include standalone editable TeX; missing original TeX is stated explicitly. The historical 10 paired code-and-figure cases support source-preserving compile comparisons; image-only references use checked transcription and reconstruction. The original 23-file hash check covers only the initial 10 paired cases. See [input routes](references/input-routes.md), the historical [learned layout catalog](references/reference-catalog.md), and the current [example catalog](docs/example-catalog.json). Private assets and evidence are excluded from public exports. The gallery documents source conflicts and residual differences rather than claiming pixel identity.
 
 See [three RSI loops](references/three-rsi-loops.md) for paired/image-only learning, evidence-bound episodes and reviewed design recombination. Local design reuse and stable rule promotion are separate.
-
-### Design reuse: one data contract, three candidates
-
-![Three actual compiled layout candidates using the same synthetic data and 10pt body text](docs/images/design-reuse.png)
-
-[Baseline TeX](docs/examples/design-reuse/baseline.tex) · [Grouped variant](docs/examples/design-reuse/grouped-readable.tex) · [Compact variant](docs/examples/design-reuse/compact-readable.tex). Synthetic data only; these are alternatives to inspect, not an automatically ranked aesthetic result.

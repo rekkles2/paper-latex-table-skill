@@ -1,0 +1,163 @@
+\documentclass{article}
+\usepackage[paperwidth=110mm,paperheight=300mm,margin=10mm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+\usepackage{amsmath,amssymb,graphicx,booktabs,multirow,array,adjustbox,pifont,arydshln,xspace,tikz}
+\usepackage{caption,url}
+\pagestyle{empty}
+\makeatletter\setlength{\@fptop}{0pt}\makeatother
+\definecolor{ggreen}{HTML}{2E9B57}
+\definecolor{deltatext}{HTML}{7A3EB1}
+\definecolor{refgray}{RGB}{145,145,145}
+\definecolor{sectionmist}{HTML}{F3F1F7}
+\definecolor{sgaRow}{HTML}{EEE9F7}
+\definecolor{deeper-gray}{gray}{0.65}
+\definecolor{light-gray}{gray}{0.85}
+\newcommand{\refitem}[1]{\textcolor{refgray}{#1}}
+\newcommand{\increase}[1]{{\fontsize{5.2pt}{5.2pt}\selectfont\color{deltatext}{($\uparrow$\,#1)}}}
+\newcommand{\decrease}[1]{{\fontsize{5.2pt}{5.2pt}\selectfont\color{ggreen}{($\downarrow$\,#1)}}}
+\newcommand{\sectionband}[1]{\multicolumn{8}{@{}>{\columncolor{sectionmist}}l@{}}{\rule{0pt}{1.08em}\hspace{0.35em}#1}\\[-0.05em]}
+\newcommand{\sectiondash}{\hdashline[1.5pt/1.5pt]\noalign{\vspace{0.03cm}}}
+\newcommand{\rot}[1]{\rotatebox{45}{#1}}
+\newcommand{\fullcirc}{\tikz[baseline=-0.5ex]\fill (0,0) circle (0.48ex);}
+\newcommand{\emptycirc}{\tikz[baseline=-0.5ex]\draw[line width=.3pt] (0,0) circle (0.48ex);}
+\newcommand{\halfcirc}{\tikz[baseline=-0.5ex]{\fill (0,.48ex) arc(90:270:.48ex)--cycle;\draw[line width=.3pt] (0,0) circle(.48ex);}}
+
+\usepackage{fix-cm}
+\renewcommand{\caption}[1]{}
+
+\begin{document}
+\graphicspath{{assets/}}
+\begin{table}[t]
+\centering
+\vspace{-0.35em}
+% Caption intentionally outside screenshot crop; immutable original retains it.
+
+\label{tab:encoder_ablation}
+\vspace{-0.95em}
+\scriptsize
+\setlength{\tabcolsep}{2.05pt}
+\renewcommand{\arraystretch}{1.08}
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
+
+\begin{adjustbox}{max width=\columnwidth}
+\mdseries
+\begin{tabular}{
+@{}l
+!{\vrule width 0.40pt}c
+!{\vrule width 0.40pt}c
+!{\vrule width 0.40pt}c
+!{\vrule width 0.40pt}c
+!{\vrule width 0.40pt}c
+!{\vrule width 0.40pt}c
+!{\vrule width 0.40pt}c
+@{}
+}
+\toprule[1.15pt]
+\multicolumn{1}{c}{\textbf{Encoder}}
+& \multicolumn{1}{c}{\textbf{PTBXL-Super}}
+& \multicolumn{1}{c}{\textbf{PTBXL-Sub}}
+& \multicolumn{1}{c}{\textbf{PTBXL-Form}}
+& \multicolumn{1}{c}{\textbf{PTBXL-Rhythm}}
+& \multicolumn{1}{c}{\textbf{CPSC2018}}
+& \multicolumn{1}{c}{\textbf{CSN}}
+& \multicolumn{1}{c}{\textbf{Average}} \\
+\midrule
+
+\sectionband{\textbf{Centralized Training Baseline}}
+
+\refitem{MERL}
+& \refitem{82.39}
+& \refitem{64.90}
+& \refitem{58.26}
+& \refitem{53.33}
+& \refitem{70.33}
+& \refitem{66.60}
+& \refitem{65.97} \\
+
+\refitem{MELP}
+& \refitem{88.83}
+& \refitem{79.22}
+& \refitem{63.41}
+& \refitem{85.82}
+& \refitem{88.54}
+& \refitem{78.25}
+& \refitem{80.68} \\
+
+\refitem{D-BETA}
+& \refitem{83.15}
+& \refitem{77.74}
+& \refitem{70.10}
+& \refitem{86.61}
+& \refitem{85.46}
+& \refitem{80.04}
+& \refitem{80.52} \\
+
+\sectiondash
+\sectionband{\textbf{Global Models}}
+
+MERL
+& 82.66\,\increase{0.27}
+& 74.03\,\increase{9.13}
+& 63.24\,\increase{4.98}
+& 78.61\,\increase{25.28}
+& 71.25\,\increase{0.92}
+& 75.46\,\increase{8.86}
+& 74.21\,\increase{8.24} \\
+
+MELP
+& 84.84\,\decrease{3.99}
+& 76.58\,\decrease{2.64}
+& 69.76\,\increase{6.35}
+& 87.44\,\increase{1.62}
+& 73.37\,\decrease{15.17}
+& 79.32\,\increase{1.07}
+& 78.55\,\decrease{2.13} \\
+
+D-BETA
+& 84.66\,\increase{1.51}
+& 77.15\,\decrease{0.59}
+& 69.26\,\decrease{0.84}
+& 89.94\,\increase{3.33}
+& 75.61\,\decrease{9.85}
+& 80.79\,\increase{0.75}
+& 79.57\,\decrease{0.95} \\
+
+\sectiondash
+\sectionband{\textbf{Local Models}}
+
+MERL
+& 83.44\,\increase{1.05}
+& 75.00\,\increase{10.10}
+& 64.18\,\increase{5.92}
+& 79.47\,\increase{26.14}
+& 70.60\,\increase{0.27}
+& 77.36\,\increase{10.76}
+& 75.01\,\increase{9.04} \\
+
+MELP
+& 85.90\,\decrease{2.93}
+& 77.32\,\decrease{1.90}
+& 70.08\,\increase{6.67}
+& 87.60\,\increase{1.78}
+& 75.05\,\decrease{13.49}
+& 79.97\,\increase{1.72}
+& 79.32\,\decrease{1.36} \\
+
+D-BETA
+& 85.55\,\increase{2.40}
+& 77.12\,\decrease{0.62}
+& 69.86\,\decrease{0.24}
+& 90.06\,\increase{3.45}
+& 75.99\,\decrease{9.47}
+& 81.34\,\increase{1.30}
+& 79.99\,\decrease{0.53} \\
+
+\bottomrule[1.15pt]
+\end{tabular}
+\end{adjustbox}
+\vspace{-0.95em}
+\end{table}
+\end{document}

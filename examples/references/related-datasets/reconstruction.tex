@@ -1,0 +1,47 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=185mm,paperheight=114mm,margin=2mm]{geometry}
+\usepackage{fontspec}
+\usepackage{type1cm}
+\setmainfont{TeX Gyre Termes}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{pifont}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\definecolor{citeblue}{RGB}{0,0,190}
+\DeclareCaptionFont{captionfont}{\fontsize{12.5}{14.2}\selectfont\frenchspacing}
+\captionsetup{font=captionfont,labelfont=normalfont,justification=justified,singlelinecheck=false,skip=2pt}
+\newcommand{\cit}[1]{[\textcolor{citeblue}{\uline{#1}}]}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+\begin{document}
+\begin{center}
+\captionof{table}{\textbf{Comparison of Related Datasets.} We compare our dataset with a related dataset of general motion or driving scenes. From left to right, the columns are the dataset name, total frame count or time duration, human count, providing labels of motion, trajectory, VQA pairs, and text descriptions, and the number of behavior classes.\,\textsuperscript{‡} represents a general motion dataset. Dataset labeled with\,\textsuperscript{*} in the “Instance” column captures the motion from real participants.\,\textsuperscript{†} means upper-bound. Datasets labeled with “Unstructured” in the last column do not provide explicit human behavior labels but involve them in the QA pairs or captions. Our dataset supports all four tasks and provides the most behavior classes among all of the datasets.}
+\smallskip
+\renewcommand{\arraystretch}{0.95}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l c c c c c c c @{}}
+\toprule
+Dataset & Frames / Duration (s) & Instances & Motion & Trajectory & VQA & Text & Behaviors \\
+\midrule
+PIE~\cit{10} & 293k / - & 1.3k & \xmark & \xmark & \xmark & \xmark & 1 \\
+Euro-PVI~\cit{11} & 83k / - & 7.7k & \xmark & \xmark & \xmark & \xmark & 1 \\
+PMR~\cit{14} & 225k / - & 54\textsuperscript{*} & \cmark & \cmark & \xmark & \xmark & \xmark \\
+CityWalker~\cit{16} & - / 110k & 120k & \cmark & \cmark & \xmark & \cmark & \xmark \\
+BlindWays~\cit{15} & 300k / 10k & 11\textsuperscript{*} & \cmark & \cmark & \xmark & \cmark & Unstructured \\
+3DPW\textsuperscript{‡}~\cit{84} & 51k / 1.7k & 7\textsuperscript{*} & \cmark & \cmark & \xmark & \xmark & \xmark \\
+Human3.6M\textsuperscript{‡}~\cit{34} & 3.6M / - & 11\textsuperscript{*} & \cmark & \cmark & \xmark & \xmark & 15\textsuperscript{‡} \\
+JAAD~\cit{12} & 82k / 33k\textsuperscript{†} & 2.2k & \xmark & \xmark & \xmark & \xmark & 11 \\
+Drama~\cit{85} & - / 36k & - & \xmark & \xmark & General Driving & \cmark & Unstructured \\
+CoVLA~\cit{75} & 6M / - & - & \xmark & \xmark & General Driving & \cmark & Unstructured \\
+DriveLM-nuScenes~\cit{68} & 4.8k / - & - & \xmark & \xmark & General Driving & \cmark & Unstructured \\
+nuScenes-QA~\cit{78} & 340k / - & - & \xmark & \xmark & General Driving & \cmark & \xmark \\
+MMHU (Ours) & 1.73M / 173K & 57K & \cmark & \cmark & Human-Centric & \cmark & 13 \\
+\bottomrule
+\end{tabular*}
+\end{center}
+\end{document}

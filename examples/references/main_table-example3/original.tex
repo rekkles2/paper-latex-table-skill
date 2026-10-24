@@ -1,0 +1,41 @@
+
+\begin{table*}[th!]
+% \vspace{-6mm}
+\centering
+ \small
+ \resizebox{1.0\linewidth}{!}{
+\begin{tabular}{lcccccc|cccc|>{\columncolor{gray!20}}r>{\columncolor{gray!20}}r}
+\toprule
+\textbf{Datasets} & \textbf{Modality}  & \textbf{Domain} & \vision & \calculator & \knowledge & \steps & \textbf{0-shot} & \textbf{CoT} & \textbf{\modelbase} & \textbf{\model} & \textbf{$\Delta$ (0-shot)} & \textbf{$\Delta$ (CoT)} \\
+\midrule
+AlgoPuzzleVQA & Vision & General & \cmark & & & \cmark & 41.3\std{0.3} & 42.7\std{1.0} & 44.0\std{0.9} & \textbf{48.7}\std{0.3} & +7.4 & +6.0 \\
+Hallusion-VD & Vision & General & \cmark & & &  & 52.0\std{1.0} & 53.3\std{2.1} & 59.0\std{0.0} & \textbf{63.3}\std{2.9} & +11.3 & +10.0 \\
+PuzzleVQA & Vision & General & \cmark & & & \cmark & 52.2\std{1.0} & 54.0\std{1.3} & 59.3\std{0.8} & \textbf{61.0}\std{0.5} & +8.8 & +7.0 \\
+VQA 2.0 & Vision & General & \cmark & & & \cmark & 50.3\std{1.0} & 48.7\std{0.3} & 47.2\std{0.8} & \textbf{54.5}\std{0.0} & +4.2 & +5.8 \\
+\midrule
+Game of 24 & Text & Mathematical & & \cmark & & \cmark & 22.2\std{2.5} & 33.3\std{1.5} & 37.8\std{3.3} & \textbf{44.7}\std{2.8} & +22.5 & +11.4 \\
+Omni-MATH & Text & Mathematical & & \cmark & \cmark & \cmark & 27.0\std{0.0} & 29.3\std{1.3} & 30.2\std{0.6} & \textbf{32.2}\std{0.8} & +5.2 & +2.9 \\
+CLEVR-Math & Vision & Mathematical & \cmark & \cmark & &  & 64.5\std{3.0} & 75.2\std{1.5} & 68.8\std{0.8} & \textbf{79.0}\std{0.9} & +14.5 & +3.8 \\
+MathVista & Vision & Mathematical & \cmark & \cmark & \cmark & \cmark & 59.3\std{0.8} & 59.5\std{1.5} & 63.0\std{1.3} & \textbf{64.3}\std{1.0} & +5.0 & +4.8 \\
+\midrule
+GPQA & Text & Scientific & & \cmark & \cmark & \cmark & 53.7\std{1.9} & 52.3\std{2.0} & 53.7\std{2.5} & \textbf{54.7}\std{1.3} & +1.0 & +2.4 \\
+MMLU-Pro & Text & Scientific &  & & \cmark & \cmark & 71.7\std{0.3} & 70.3\std{0.6} & 71.5\std{1.3} & \textbf{73.7}\std{1.3} & +2.0 & +3.4 \\
+SciFIBench & Vision & Scientific & \cmark &  & \cmark & & 72.5\std{0.0} & 75.0\std{0.9} & 77.3\std{0.8} & \textbf{78.3}\std{0.6} & +5.8 & +3.3 \\
+\midrule
+MedQA & Text & Medical & & & \cmark &  & 84.5\std{1.0} & 84.8\std{0.6} & \textbf{92.8}\std{0.6} & 91.5\std{1.8} & +7.0 & +6.7 \\
+PathCLS & Vision & Medical & \cmark & & \cmark & & 36.0\std{0.9} & 37.5\std{1.8} & 37.0\std{1.8} & \textbf{58.2}\std{1.3} & +22.2 & +20.7 \\
+PathVQA & Vision & Medical & \cmark & & \cmark & \cmark & 32.0\std{1.8} & 27.8\std{1.8} & 43.5\std{2.6} & \textbf{49.2}\std{1.2} & +17.2 & +21.4 \\
+SLAKE & Vision & Medical & \cmark & & \cmark & \cmark & 59.3\std{1.0} & 60.3\std{0.6} & 59.2\std{1.8} & \textbf{63.8}\std{1.4} & +4.5 & +3.5 \\
+\midrule
+GAIA-Text & Text & Agentic & & \cmark & \cmark & \cmark & ~~8.7\std{0.8} & ~~8.4\std{0.5} & ~~9.7\std{0.9} & \textbf{18.4}\std{1.2} & +9.7 & +10.0 \\
+\midrule
+\rowcolor{red!30} \textbf{Average (\%)} & - & - & - & - & - & - & \multicolumn{1}{l}{49.2} & 50.8~~~~~~~ & 53.4~~~~~~~ & \textbf{58.5}~~~~~~~ & \textbf{+9.3} & \textbf{+7.7} \\
+\bottomrule
+\end{tabular}
+}
+\vspace{-1mm}
+\caption{Main results across 16 benchmarks spanning different modalities, domains, and required reasoning skills: visual understanding (\vision), numerical calculation (\calculator), knowledge retrieval (\knowledge), and multi-step reasoning (\steps). \modelbase uses only the base tool (\texttt{Generalist\_Solution\_Generator}), while \model uses the optimal toolset. Performance gains ($\Delta$) are computed for OctoTools relative to both zero-shot (0-shot) and chain-of-thought (CoT) baselines, with \model achieving 58.5\% average accuracy and improvements of 9.3\% and 7.7\%, respectively.}
+ % All results show average accuracy and standard deviation (gray) over three trials.
+\vspace{-1mm}
+\label{tab:main_results_across_benchmarks}
+\end{table*}

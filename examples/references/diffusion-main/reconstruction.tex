@@ -1,0 +1,67 @@
+% !TEX program = xelatex
+\documentclass[10pt]{article}
+\usepackage{fix-cm}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+\usepackage[paperwidth=140mm,paperheight=134mm,margin=2mm]{geometry}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.16}
+
+% Recovered literal styling (colors transcribed by eye, not from source)
+\definecolor{citeblue}{RGB}{0,60,200}
+\definecolor{refred}{RGB}{200,60,40}
+\definecolor{bandgray}{RGB}{229,229,229}
+
+\newcommand{\lcite}[1]{\textcolor{citeblue}{[#1]}}
+\newcommand{\grouprow}[1]{\multicolumn{8}{@{}l@{}}{\cellcolor{bandgray}#1}}
+
+\pagestyle{empty}
+\begin{document}
+\graphicspath{{assets/}}
+
+\begin{table}[htbp]
+\centering
+\fontsize{10}{11.8}\selectfont
+\begin{tabular}{@{}l|ccc|rr|r|r@{}}
+\multirow[b]{2}{*}{\textbf{ImgNet 512$\times$512}} & \multicolumn{3}{c|}{\textbf{pre-training}} & \multirow[b]{2}{*}{\textbf{params}} & \multirow[b]{2}{*}{\textbf{Gflops}} & \multirow[b]{2}{*}{\textbf{FID}$\downarrow$} & \multirow[b]{2}{*}{\textbf{IS}$\uparrow$} \\
+ & token & perc. & self-sup. & & & & \\
+\specialrule{0.4pt}{0pt}{0pt}
+\rowcolor{bandgray}
+\grouprow{\textit{Latent-space Diffusion}} \\
+DiT-XL/2 \lcite{42} & SD-VAE & VGG & - & 675+49M & 525 & 3.04 & 240.8 \\
+SiT-XL/2 \lcite{36} & SD-VAE & VGG & - & 675+49M & 525 & 2.62 & 252.2 \\
+REPA \lcite{69}, SiT-XL/2 & SD-VAE & VGG & DINOv2 & 675+49M & 525 & 2.08 & 274.6 \\
+DDT-XL/2 \lcite{66} & SD-VAE & VGG & DINOv2 & 675+49M & 525 & 1.28 & 305.1 \\
+RAE \lcite{72}, DiT\textsuperscript{DH}-XL/2 & RAE & VGG & DINOv2 & 839+415M & 642 & \textbf{1.13} & 259.6 \\
+\specialrule{0.4pt}{0pt}{0pt}
+\rowcolor{bandgray}
+\grouprow{\textbf{\textit{Pixel-space Diffusion}}} \\
+ADM-G \lcite{12} & - & - & - & 559M & 1983 & 7.72 & 172.7 \\
+RIN \lcite{26} & - & - & - & 320M & 415 & 3.95 & 216.0 \\
+SiD \lcite{23}, UViT/4 & - & - & - & 2B & 555 & 3.02 & 248.7 \\
+VDM++, UViT/4 & - & - & - & 2B & 555 & 2.65 & 278.1 \\
+SiD2 \lcite{24}, UViT/4 & - & - & - & N/A & 137 & 2.19 & - \\
+SiD2 \lcite{24}, UViT/2 & - & - & - & N/A & 653 & \textbf{1.48} & - \\
+PixNerd \lcite{65}, XL/16 & - & - & DINOv2 & 700 M & 583 & 2.84 & 245.6 \\
+\specialrule{0.4pt}{0pt}{0pt}
+\textbf{JiT-B/32} & - & - & - & 133M & 26 & 4.02 & 271.0 \\
+\textbf{JiT-L/32} & - & - & - & 462M & 89 & 2.53 & 299.9 \\
+\textbf{JiT-H/32} & - & - & - & 956M & 183 & 1.94 & 309.1 \\
+\textbf{JiT-G/32} & - & - & - & 2B & 384 & 1.78 & 306.8 \\
+\end{tabular}
+
+\vspace{0.8em}
+\begin{minipage}{0.93\linewidth}
+\fontsize{13}{15.2}\selectfont\raggedright
+Table 8. \textbf{Reference results on ImageNet 512$\times$512.} JiT has an
+\textit{aggressive} patch size and can use \textit{small} compute to achieve strong
+results. Notations are similar to Tab.\ \textcolor{refred}{7}.
+\end{minipage}
+\end{table}
+
+\end{document}

@@ -1,0 +1,40 @@
+\documentclass[10pt]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{booktabs,multirow,graphicx,xcolor}
+\definecolor{citeblue}{RGB}{45,105,195}
+\definecolor{resultgray}{gray}{0.58}
+\newcommand{\gc}[1]{\textcolor{resultgray}{#1}}
+\newcommand{\citeb}[1]{\textcolor{citeblue}{[#1]}}
+\pagestyle{empty}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{document}
+\graphicspath{{assets/}}
+\noindent\parbox{\linewidth}{Table 3: \textbf{System-level comparison: RCG's unconditional generation performance rivals leading methods in class-conditional image generation} on ImageNet 256$\times$256. Following common practice, we report the number of parameters used during generation. Class-conditional results are marked in gray.}\par
+\vspace{6pt}
+\centering
+\begin{tabular}{@{}lr|cc|cc@{}}
+ & & \multicolumn{2}{|c|}{w/o Guidance} & \multicolumn{2}{c}{w/ Guidance} \\
+ Methods & \#params & FID$\downarrow$ & IS$\uparrow$ & FID$\downarrow$ & IS$\uparrow$ \\
+ \toprule
+ \multicolumn{2}{l|}{\textit{Class-conditional}} & & & & \\
+ \gc{ADM~\textcolor{blue}{\texttt{[18]}}} & \gc{554M} & \gc{10.94} & \gc{101.0} & \gc{4.59} & \gc{186.7} \\
+ \gc{LDM-4~\textcolor{blue}{\texttt{[54]}}} & \gc{400M} & \gc{10.56} & \gc{103.5} & \gc{3.60} & \gc{247.7} \\
+ \gc{U-ViT-H/2-G~\textcolor{blue}{\texttt{[2]}}} & \gc{501M} & \gc{-} & \gc{-} & \gc{2.29} & \gc{263.9} \\
+ \gc{DiT-XL/2~\textcolor{blue}{\texttt{[50]}}} & \gc{675M} & \gc{9.62} & \gc{121.5} & \gc{2.27} & \gc{278.2} \\
+ \gc{DiffiT~\textcolor{blue}{\texttt{[29]}}} & \gc{-} & \gc{-} & \gc{-} & \gc{1.73} & \gc{276.5} \\
+ \gc{BigGAN-deep~\textcolor{blue}{\texttt{[6]}}} & \gc{160M} & \gc{6.95} & \gc{198.2} & \gc{-} & \gc{-} \\
+ \gc{MaskGIT~\textcolor{blue}{\texttt{[10]}}} & \gc{227M} & \gc{6.18} & \gc{182.1} & \gc{-} & \gc{-} \\
+ \gc{MDTv2-XL/2~\textcolor{blue}{\texttt{[24]}}} & \gc{676M} & \gc{5.06} & \gc{155.6} & \gc{\textbf{1.58}} & \gc{314.7} \\
+ \gc{CDM~\textcolor{blue}{\texttt{[34]}}} & \gc{-} & \gc{4.88} & \gc{158.7} & \gc{-} & \gc{-} \\
+ \gc{MAGVIT-v2~\textcolor{blue}{\texttt{[68]}}} & \gc{307M} & \gc{3.65} & \gc{200.5} & \gc{1.78} & \gc{\textbf{319.4}} \\
+   \gc{RIN~\textcolor{blue}{\texttt{[36]}}} & \gc{410M} & \gc{3.42} & \gc{182.0} & \gc{-} & \gc{-} \\
+ \gc{VDM++~\textcolor{blue}{\texttt{[38]}}} & \gc{2B} & \gc{\textbf{2.40}} & \gc{\textbf{225.3}} & \gc{2.12} & \gc{267.7} \\
+ \gc{\textbf{RCG, conditional (MAGE-L)}} & \gc{512M} & \gc{2.99} & \gc{215.5} & \gc{2.25} & \gc{300.7} \\
+ \midrule
+ \multicolumn{2}{l|}{\textit{Unconditional}} & & & & \\
+  \textbf{RCG (MAGE-L)} & \textbf{502M} & 3.44 & 186.9 & 2.15 & 253.4 \\
+\end{tabular}
+\end{document}

@@ -1,0 +1,986 @@
+{
+  "schema_version": 1,
+  "examples": [
+    {
+      "id": "public-ablation",
+      "source_ids": [
+        "public-ablation"
+      ],
+      "category": "Ablation Study",
+      "title_zh": "公开消融示例",
+      "title_en": "Public Ablation Example",
+      "kind": "structured-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/public-ablation/reconstruction.png",
+      "tex": "examples/public/public-ablation/reconstruction.tex",
+      "sha256": {
+        "figure": "87e81ccfd2276b6ab223924e0864792dedc40c293a16dc1c816a9b8ae5fce76f",
+        "tex": "36406e3b71c354cc3eb74d70a7c377623e346a2d3739ecd1c7c8dc0729bda48f"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": null,
+      "original_tex": null
+    },
+    {
+      "id": "public-benchmark",
+      "source_ids": [
+        "public-benchmark"
+      ],
+      "category": "Benchmark Comparison",
+      "title_zh": "公开基准比较",
+      "title_en": "Public Benchmark Comparison",
+      "kind": "structured-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/public-benchmark/reconstruction.png",
+      "tex": "examples/public/public-benchmark/reconstruction.tex",
+      "sha256": {
+        "figure": "4661df8a844526121f5cf0aead06ae39a7758e524eecf5eb11e6fb70739d1e4b",
+        "tex": "6f16e0c055d150c47b3d35de888f9d5c04f4d30cb6de7cb6559ccb25f90c24a9"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": null,
+      "original_tex": null
+    },
+    {
+      "id": "public-cross-dataset",
+      "source_ids": [
+        "public-cross-dataset"
+      ],
+      "category": "Dataset Comparison & Capability Matrix",
+      "title_zh": "公开跨数据集示例",
+      "title_en": "Public Cross-Dataset Example",
+      "kind": "structured-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/public-cross-dataset/reconstruction.png",
+      "tex": "examples/public/public-cross-dataset/reconstruction.tex",
+      "sha256": {
+        "figure": "9c5a57c62d6e1b67a0f9cd76d9b21c531289b97f269d700abfd8cfc7eb28f394",
+        "tex": "8964c3793210c80c19480c20c4c943487c479f31400d4fc7167b8ba9be96ffd9"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": null,
+      "original_tex": null
+    },
+    {
+      "id": "public-decimal",
+      "source_ids": [
+        "public-decimal"
+      ],
+      "category": "Numerical Reporting & Refinement",
+      "title_zh": "公开小数报告示例",
+      "title_en": "Public Decimal-Reporting Example",
+      "kind": "structured-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/public-decimal/reconstruction.png",
+      "tex": "examples/public/public-decimal/reconstruction.tex",
+      "sha256": {
+        "figure": "caed98bcf53c69aa8ba22bbdffc88f62464d8c8666fd4725fec700f84c36e6ce",
+        "tex": "f3d1299010fedf05f195d758f78af291caa001fab673d2711b741d9b25256b34"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": null,
+      "original_tex": null
+    },
+    {
+      "id": "public-multi-dataset",
+      "source_ids": [
+        "public-multi-dataset"
+      ],
+      "category": "Dataset Comparison & Capability Matrix",
+      "title_zh": "公开多数据集示例",
+      "title_en": "Public Multi-Dataset Example",
+      "kind": "structured-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/public-multi-dataset/reconstruction.png",
+      "tex": "examples/public/public-multi-dataset/reconstruction.tex",
+      "sha256": {
+        "figure": "a22d23ca45f6cf33991e667f3db20c6a0afab5cb204c62f74548c40502efca2e",
+        "tex": "6c131fc1eed9ea6ce767467be91ed83d75654cc125a624d602ac9054b93889ba"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": null,
+      "original_tex": null
+    },
+    {
+      "id": "public-ties-missing",
+      "source_ids": [
+        "public-ties-missing"
+      ],
+      "category": "Numerical Reporting & Refinement",
+      "title_zh": "公开并列与缺失值示例",
+      "title_en": "Public Ties and Missing-Values Example",
+      "kind": "structured-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/public-ties-missing/reconstruction.png",
+      "tex": "examples/public/public-ties-missing/reconstruction.tex",
+      "sha256": {
+        "figure": "51e10d35dcd71619cd40a7d17a396f78b6543c930b8d123c68837bb20a53da87",
+        "tex": "00e6368b9a531254399793da03e4bf1bc7cd614710c7c7a46ba62c27ef86c1f7"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": null,
+      "original_tex": null
+    },
+    {
+      "id": "public-uncertainty",
+      "source_ids": [
+        "public-uncertainty"
+      ],
+      "category": "Numerical Reporting & Refinement",
+      "title_zh": "公开不确定性报告示例",
+      "title_en": "Public Uncertainty-Reporting Example",
+      "kind": "structured-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/public-uncertainty/reconstruction.png",
+      "tex": "examples/public/public-uncertainty/reconstruction.tex",
+      "sha256": {
+        "figure": "bc988339f8266fb01605f52fa2810a6890b027b2e466d35c630da09eca50db16",
+        "tex": "f05d0adbeb9b8604268b4eb41bf253a34bc5c659242d469b9c5ed3da93324eef"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": null,
+      "original_tex": null
+    },
+    {
+      "id": "public-wide",
+      "source_ids": [
+        "public-wide"
+      ],
+      "category": "Benchmark Comparison",
+      "title_zh": "公开宽表比较",
+      "title_en": "Public Wide-Table Comparison",
+      "kind": "structured-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/public-wide/reconstruction.png",
+      "tex": "examples/public/public-wide/reconstruction.tex",
+      "sha256": {
+        "figure": "cab3199b8ed2d1fbc2e09f5b8c44b15f68729d7bdeac0084c5765084778257fb",
+        "tex": "70cede2f49719b0ad9b61abdb5b562add092e46dc6c4a7735cc853fdf89830d1"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": null,
+      "original_tex": null
+    },
+    {
+      "id": "showcase-main",
+      "source_ids": [
+        "showcase-main"
+      ],
+      "category": "Benchmark Comparison",
+      "title_zh": "主表示例",
+      "title_en": "Main-Table Showcase",
+      "kind": "advanced-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/showcase-main/reconstruction.png",
+      "tex": "examples/public/showcase-main/reconstruction.tex",
+      "sha256": {
+        "figure": "29ddc5d0440b4d8665777ee4ce8d04962504708c305e60a53e7817310a281bd6",
+        "tex": "0ce14881bc04bdcbeaf227956846bf34de41dd039fe961620f09cee93642b21c"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": null,
+      "original_tex": null
+    },
+    {
+      "id": "showcase-sensitivity",
+      "source_ids": [
+        "showcase-sensitivity"
+      ],
+      "category": "Ablation Study",
+      "title_zh": "敏感性分析示例",
+      "title_en": "Sensitivity-Analysis Showcase",
+      "kind": "advanced-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/showcase-sensitivity/reconstruction.png",
+      "tex": "examples/public/showcase-sensitivity/reconstruction.tex",
+      "sha256": {
+        "figure": "923052d8751c14c8101a579096a5989495f09b45b2774ae0fe8c433c726da7ef",
+        "tex": "d999673045019d185017ff53b626ad444e44cee9fcdfa38b5ab838f43a428b2d"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": null,
+      "original_tex": null
+    },
+    {
+      "id": "showcase-paired",
+      "source_ids": [
+        "showcase-paired"
+      ],
+      "category": "Benchmark Comparison",
+      "title_zh": "成对生成示例",
+      "title_en": "Paired-Generation Showcase",
+      "kind": "advanced-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/showcase-paired/reconstruction.png",
+      "tex": "examples/public/showcase-paired/reconstruction.tex",
+      "sha256": {
+        "figure": "940ef967f7bc64df7a969f5130c3edf1fd17e7b4a8ed8aa727995470e25bc2da",
+        "tex": "da04c74254110fdde88c1ad6c68842564828d99c16e87fcd0b6f0a830a26297a"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": null,
+      "original_tex": null
+    },
+    {
+      "id": "showcase-ablation",
+      "source_ids": [
+        "showcase-ablation"
+      ],
+      "category": "Ablation Study",
+      "title_zh": "消融研究示例",
+      "title_en": "Ablation-Study Showcase",
+      "kind": "advanced-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/showcase-ablation/reconstruction.png",
+      "tex": "examples/public/showcase-ablation/reconstruction.tex",
+      "sha256": {
+        "figure": "5c0d3f3386fa6e539323832f847cd5c1c2732e682e345c46bf3a877c1561ad48",
+        "tex": "7207c636e8851c442ef804918655bc9ecee20517b90f50cfcc6a7263819f10e5"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": null,
+      "original_tex": null
+    },
+    {
+      "id": "showcase-coverage",
+      "source_ids": [
+        "showcase-coverage"
+      ],
+      "category": "Dataset Comparison & Capability Matrix",
+      "title_zh": "数据集能力矩阵",
+      "title_en": "Dataset Capability Matrix",
+      "kind": "advanced-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/showcase-coverage/reconstruction.png",
+      "tex": "examples/public/showcase-coverage/reconstruction.tex",
+      "sha256": {
+        "figure": "d0f65bbc0884f96a4d596e9ddcfbf97d3232bed0806f4f9051faf1e8faedff9d",
+        "tex": "acbcfb4e43bbd53652d4eba594143bbac37fe2daaa2b431383b5cc0b883c37bc"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": null,
+      "original_tex": null
+    },
+    {
+      "id": "basic-ablation",
+      "source_ids": [
+        "basic-ablation"
+      ],
+      "category": "Ablation Study",
+      "title_zh": "基础消融示例",
+      "title_en": "Basic Ablation Example",
+      "kind": "documentation-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/basic-ablation/reconstruction.png",
+      "tex": "examples/public/basic-ablation/reconstruction.tex",
+      "sha256": {
+        "figure": "8e06c640d68daa63a187006f3ad354ace8bccb96f53107512aa49b6197a27ea7",
+        "tex": "fcd8ef42e793ad103e866c1ed3ed64eeb7476c1ee9d7526f84fcb3a6896f8a71"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": null,
+      "original_tex": null
+    },
+    {
+      "id": "refinement-after",
+      "source_ids": [
+        "refinement-after",
+        "refinement-before",
+        "basic-benchmark"
+      ],
+      "category": "Numerical Reporting & Refinement",
+      "title_zh": "数值精化后",
+      "title_en": "After Numerical Refinement",
+      "kind": "refinement-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/refinement-after/reconstruction.png",
+      "tex": "examples/public/refinement-after/reconstruction.tex",
+      "sha256": {
+        "figure": "a284649d88aa61573d41b1daeeda4075cd538c4c985dda2a06c4d6ddc79151fa",
+        "tex": "a313dac58f4cb7d1478c418938e9edc3d169ac9e479141220f2f5e469b99dd5a"
+      },
+      "notes": [
+        "Original image is a project-authored synthetic baseline, not an external source-paper image."
+      ],
+      "dependencies": [],
+      "original_figure": "examples/public/refinement-after/original.png",
+      "original_tex": "examples/public/refinement-after/original.tex"
+    },
+    {
+      "id": "reuse-grouped",
+      "source_ids": [
+        "reuse-grouped",
+        "reuse-baseline"
+      ],
+      "category": "Numerical Reporting & Refinement",
+      "title_zh": "分组设计复用",
+      "title_en": "Grouped Design Reuse",
+      "kind": "design-reuse-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/reuse-grouped/reconstruction.png",
+      "tex": "examples/public/reuse-grouped/reconstruction.tex",
+      "sha256": {
+        "figure": "8d6b01b9b8d7dfd4498769e1fc03fa1325d92dc6179738dc470d788dda1b148d",
+        "tex": "a1ffae586be74a457969fcee0f9198c4a6494a6aa31ca516d4bdb1c12d40dbd9"
+      },
+      "notes": [
+        "Original image is a project-authored synthetic baseline, not an external source-paper image."
+      ],
+      "dependencies": [],
+      "original_figure": "examples/public/reuse-grouped/original.png",
+      "original_tex": "examples/public/reuse-grouped/original.tex"
+    },
+    {
+      "id": "reuse-compact",
+      "source_ids": [
+        "reuse-compact",
+        "reuse-baseline"
+      ],
+      "category": "Numerical Reporting & Refinement",
+      "title_zh": "紧凑设计复用",
+      "title_en": "Compact Design Reuse",
+      "kind": "design-reuse-synthetic",
+      "authority": null,
+      "project_synthetic": true,
+      "private_reference": false,
+      "figure": "examples/public/reuse-compact/reconstruction.png",
+      "tex": "examples/public/reuse-compact/reconstruction.tex",
+      "sha256": {
+        "figure": "bbf1b65a3d68122ae7ee99ae0840d127464a1b47abdac29b3ee08eca724bb5d5",
+        "tex": "6c4d6c7a316e30b0ef0fd0ea808f024a01534268b040fd75131d9ff83267498a"
+      },
+      "notes": [
+        "Original image is a project-authored synthetic baseline, not an external source-paper image."
+      ],
+      "dependencies": [],
+      "original_figure": "examples/public/reuse-compact/original.png",
+      "original_tex": "examples/public/reuse-compact/original.tex"
+    },
+    {
+      "id": "ablation_table-example1",
+      "source_ids": [
+        "ablation_table-example1"
+      ],
+      "category": "Ablation Study",
+      "title_zh": "消融表格示例 1",
+      "title_en": "Ablation Table Example 1",
+      "kind": "paired-reference",
+      "authority": "source-preserving style branch; source/image differences remain recorded",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/ablation_table-example1/reconstruction.png",
+      "tex": "examples/references/ablation_table-example1/reconstruction.tex",
+      "sha256": {
+        "figure": "2901926b2bb0b4a9eceefdc02a9fda159f1ddbf20c506b500c6c17a6a6fe0b48",
+        "tex": "4a882f3b4d49dadd4f1918d897745700e332cbacaadc1101fde137212ee9b6f3"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": "examples/references/ablation_table-example1/original.png",
+      "original_tex": "examples/references/ablation_table-example1/original.tex"
+    },
+    {
+      "id": "ablation_table-example2",
+      "source_ids": [
+        "ablation_table-example2"
+      ],
+      "category": "Ablation Study",
+      "title_zh": "消融表格示例 2",
+      "title_en": "Ablation Table Example 2",
+      "kind": "paired-reference",
+      "authority": "source-preserving style branch; source/image differences remain recorded",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/ablation_table-example2/reconstruction.png",
+      "tex": "examples/references/ablation_table-example2/reconstruction.tex",
+      "sha256": {
+        "figure": "f38af7cdbd0dfe33c7b7015096d0305c8f3f18c3aaab6a24a0510a6dd31cf574",
+        "tex": "075da12a8d7979e139ad0f15893223ffb83f510f622f70a0d7344df2dfd86561"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": "examples/references/ablation_table-example2/original.png",
+      "original_tex": "examples/references/ablation_table-example2/original.tex"
+    },
+    {
+      "id": "dataset_benchmark_table",
+      "source_ids": [
+        "dataset_benchmark_table"
+      ],
+      "category": "Dataset Comparison & Capability Matrix",
+      "title_zh": "数据集基准表",
+      "title_en": "Dataset Benchmark Table",
+      "kind": "paired-reference",
+      "authority": "source-preserving style branch; source/image differences remain recorded",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/dataset_benchmark_table/reconstruction.png",
+      "tex": "examples/references/dataset_benchmark_table/reconstruction.tex",
+      "sha256": {
+        "figure": "e22365e2a92e7645a031b0f184ee9a2fde43978dd11ae3ea200b268ebe1614f8",
+        "tex": "a0f585776ed6eec687e5a55914d2aa806a1bb14c8cfc4a751e69fa7ebb635e8d"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": "examples/references/dataset_benchmark_table/original.png",
+      "original_tex": "examples/references/dataset_benchmark_table/original.tex"
+    },
+    {
+      "id": "main_table-example1",
+      "source_ids": [
+        "main_table-example1"
+      ],
+      "category": "Benchmark Comparison",
+      "title_zh": "主表示例 1",
+      "title_en": "Main Table Example 1",
+      "kind": "paired-reference",
+      "authority": "source-preserving style branch; source/image differences remain recorded",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/main_table-example1/reconstruction.png",
+      "tex": "examples/references/main_table-example1/reconstruction.tex",
+      "sha256": {
+        "figure": "e457fcefa6585f91be9e8688503c5a04bf62b1a1507d9b4ca61c6b5f323061f0",
+        "tex": "272ad68f0e4970484a2419aa049c6aed4c7f869074ffbf1e50e78b658197c8f5"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": "examples/references/main_table-example1/original.png",
+      "original_tex": "examples/references/main_table-example1/original.tex"
+    },
+    {
+      "id": "main_table-example2",
+      "source_ids": [
+        "main_table-example2"
+      ],
+      "category": "Benchmark Comparison",
+      "title_zh": "主表示例 2",
+      "title_en": "Main Table Example 2",
+      "kind": "paired-reference",
+      "authority": "source-preserving style branch; source/image differences remain recorded",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/main_table-example2/reconstruction.png",
+      "tex": "examples/references/main_table-example2/reconstruction.tex",
+      "sha256": {
+        "figure": "ccda2900c9149b9859fbe84bb2d0f1dd3cff5494bf0ce04d5e76e2f1aadf6518",
+        "tex": "038c8b5c2595e11079e8ae224d2ab6b6711b77b7200eb7dc990e20c278527a51"
+      },
+      "notes": [],
+      "dependencies": [
+        {
+          "source": "assets/cases/local/main_table-example2/reproduction/image-style/run-style-4/work/gemini.pdf.png",
+          "asset": "examples/references/main_table-example2/assets/gemini.pdf.png",
+          "sha256": "8d115062266eda6ba49d48738408392e146f657853ac815ae8fdff7318cc3798"
+        },
+        {
+          "source": "assets/cases/local/main_table-example2/reproduction/image-style/run-style-4/work/qwen.pdf.png",
+          "asset": "examples/references/main_table-example2/assets/qwen.pdf.png",
+          "sha256": "da35d433978611f9593686178e233a339451e9ef47dacaa1ea3721eb0ad715c3"
+        },
+        {
+          "source": "assets/cases/local/main_table-example2/reproduction/image-style/run-style-4/work/baichuan.pdf.png",
+          "asset": "examples/references/main_table-example2/assets/baichuan.pdf.png",
+          "sha256": "d3edc2b7c2d104ced70d6fb28d14f0c6346698636ec3733dfb7f06d29ad36cea"
+        },
+        {
+          "source": "assets/cases/local/main_table-example2/reproduction/image-style/run-style-4/work/openbmb.pdf.png",
+          "asset": "examples/references/main_table-example2/assets/openbmb.pdf.png",
+          "sha256": "99569d67968389a16dc879d6191a1a298afbc71f8d6f35af07180efcb2198e8f"
+        },
+        {
+          "source": "assets/cases/local/main_table-example2/reproduction/image-style/run-style-4/work/ming.pdf.png",
+          "asset": "examples/references/main_table-example2/assets/ming.pdf.png",
+          "sha256": "3f46876407f6d38e512245b0a2290caf57a6a7fe8a614fdc28cc540936602757"
+        },
+        {
+          "source": "assets/cases/local/main_table-example2/reproduction/image-style/run-style-4/work/longcat.pdf.png",
+          "asset": "examples/references/main_table-example2/assets/longcat.pdf.png",
+          "sha256": "bb1447a294093b6472a88f197b0f4a3eb15c67aa8d4eb7c0a8db53552845ef11"
+        },
+        {
+          "source": "assets/cases/local/main_table-example2/reproduction/image-style/run-style-4/work/omniagent_icon.png.png",
+          "asset": "examples/references/main_table-example2/assets/omniagent_icon.png.png",
+          "sha256": "4597fd3c6258add1df4a39bfce9bfca38211e0d2b43e98e7e6bf5cf7a4510b5b"
+        }
+      ],
+      "original_figure": "examples/references/main_table-example2/original.png",
+      "original_tex": "examples/references/main_table-example2/original.tex"
+    },
+    {
+      "id": "main_table-example3",
+      "source_ids": [
+        "main_table-example3"
+      ],
+      "category": "Benchmark Comparison",
+      "title_zh": "主表示例 3",
+      "title_en": "Main Table Example 3",
+      "kind": "paired-reference",
+      "authority": "source-preserving style branch; source/image differences remain recorded",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/main_table-example3/reconstruction.png",
+      "tex": "examples/references/main_table-example3/reconstruction.tex",
+      "sha256": {
+        "figure": "a7e41e8fcaf61e910057e6d2923fe5a10ed824463ab16492e948161df764bb17",
+        "tex": "726c24f3a3f0e7371f2e5367dedfbed7a20575dd1e348c8bf7bc4fbbed868026"
+      },
+      "notes": [],
+      "dependencies": [
+        {
+          "source": "assets/cases/local/main_table-example3/reproduction/image-style/run-style-3/work/vision.png",
+          "asset": "examples/references/main_table-example3/assets/vision.png",
+          "sha256": "efb1acab14b2b0bea7b0b91174e79e602f365a6966d8f1b60212ab809812931d"
+        },
+        {
+          "source": "assets/cases/local/main_table-example3/reproduction/image-style/run-style-3/work/calculator.png",
+          "asset": "examples/references/main_table-example3/assets/calculator.png",
+          "sha256": "de906d21a2baf13d9d26f2ec962fab8d3136c9641340bc4600cb07b309003c3d"
+        },
+        {
+          "source": "assets/cases/local/main_table-example3/reproduction/image-style/run-style-3/work/knowledge.png",
+          "asset": "examples/references/main_table-example3/assets/knowledge.png",
+          "sha256": "c8e83f601341b1296ab7f4f7318f636d6e7fd0c8612ff1bf8089c7c7b8c8676a"
+        },
+        {
+          "source": "assets/cases/local/main_table-example3/reproduction/image-style/run-style-3/work/steps.png",
+          "asset": "examples/references/main_table-example3/assets/steps.png",
+          "sha256": "8d8949832169cd5f86edda7071a44fc9b37e6cd2b3d5916efc1f329990432357"
+        }
+      ],
+      "original_figure": "examples/references/main_table-example3/original.png",
+      "original_tex": "examples/references/main_table-example3/original.tex"
+    },
+    {
+      "id": "main_table-example4",
+      "source_ids": [
+        "main_table-example4"
+      ],
+      "category": "Benchmark Comparison",
+      "title_zh": "主表：25 列源文件分支",
+      "title_en": "Main Table: 25-Column Source Branch",
+      "kind": "paired-reference",
+      "authority": "source-preserving style branch; source/image differences remain recorded",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/main_table-example4/reconstruction.png",
+      "tex": "examples/references/main_table-example4/reconstruction.tex",
+      "sha256": {
+        "figure": "8b0dcac4f6288af28a93a0dbda8df8e2b199ace1d23e80642436be5f47d45c34",
+        "tex": "c2afc99426433e4e37c4a40d771f433aa2f2baa1cb19aa78bd44721004bf76c0"
+      },
+      "notes": [
+        "Unresolved citation keys: aircraft, basic, cars, cheng_2017_resisc, coca, coco, dfn, eva18b, flickr, flower102, food101, imagenet, imagenet-a, imagenet-r, imagenet-sketch, imagenetv2, internvl, objectnet, pali, pets, siglip, siglip2, sun397, thomee2016yfcc100m, vit, vit22b",
+        "Unresolved cross-reference labels: appx:zeroshot_settings",
+        "Source TeX is from the 25-column branch; image-23 is a separate image branch and must not be represented as its matching source image."
+      ],
+      "dependencies": [],
+      "original_figure": "examples/references/main_table-example4/original.png",
+      "original_tex": "examples/references/main_table-example4/original.tex"
+    },
+    {
+      "id": "others-example1",
+      "source_ids": [
+        "others-example1"
+      ],
+      "category": "Algorithms & Protocols",
+      "title_zh": "协议示例 1",
+      "title_en": "Protocol Example 1",
+      "kind": "paired-reference",
+      "authority": "source-preserving style branch; source/image differences remain recorded",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/others-example1/reconstruction.png",
+      "tex": "examples/references/others-example1/reconstruction.tex",
+      "sha256": {
+        "figure": "32e89367724e9f7fdb86d31843ffcabcbcb62d102d9a2de951c78988b14b183b",
+        "tex": "c60fe3629f98713715ccd5ffc053fba9b0672e04e0fafd89f48cdb6edea69d50"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": "examples/references/others-example1/original.png",
+      "original_tex": "examples/references/others-example1/original.tex"
+    },
+    {
+      "id": "others-example2",
+      "source_ids": [
+        "others-example2"
+      ],
+      "category": "Algorithms & Protocols",
+      "title_zh": "协议示例 2",
+      "title_en": "Protocol Example 2",
+      "kind": "paired-reference",
+      "authority": "source-preserving style branch; source/image differences remain recorded",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/others-example2/reconstruction.png",
+      "tex": "examples/references/others-example2/reconstruction.tex",
+      "sha256": {
+        "figure": "3ff7a535e05c9589dda66974e7074439669f619f87f639d7960c3869a05a79b4",
+        "tex": "392e3d2bf07af2bce103071b90c5d898a9deef0e9cd92470f554fbe5bceca151"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": "examples/references/others-example2/original.png",
+      "original_tex": "examples/references/others-example2/original.tex"
+    },
+    {
+      "id": "others-example3",
+      "source_ids": [
+        "others-example3"
+      ],
+      "category": "Algorithms & Protocols",
+      "title_zh": "协议示例 3",
+      "title_en": "Protocol Example 3",
+      "kind": "paired-reference",
+      "authority": "source-preserving style branch; source/image differences remain recorded",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/others-example3/reconstruction.png",
+      "tex": "examples/references/others-example3/reconstruction.tex",
+      "sha256": {
+        "figure": "e314eb404c2c76eed54461ba6434958d47aec864c82f49ef07c4b7b075916049",
+        "tex": "4491e89432bfaf01cc0e6f78ed2c8336ead83c62729e201e1f722c116770f6c5"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": "examples/references/others-example3/original.png",
+      "original_tex": "examples/references/others-example3/original.tex"
+    },
+    {
+      "id": "main_table-example4-image-23",
+      "source_ids": [
+        "main_table-example4-image-23"
+      ],
+      "category": "Benchmark Comparison",
+      "title_zh": "主表：Image-23 图像分支",
+      "title_en": "Main Table: Image-23 Branch",
+      "kind": "image-authoritative-branch",
+      "authority": "23-column image branch, separate from 25-column code branch",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/main_table-example4-image-23/reconstruction.png",
+      "tex": "examples/references/main_table-example4-image-23/reconstruction.tex",
+      "sha256": {
+        "figure": "d80c8ac8406756b8413a4007ec317f9d98b2749660063d662552804e656fe5f9",
+        "tex": "7c987cb95316772ab634935ec1800f777c75bdb5e2e651d26adc43702aa3cbf6"
+      },
+      "notes": [
+        "Source TeX is from the 25-column branch; image-23 is a separate image branch and must not be represented as its matching source image."
+      ],
+      "dependencies": [],
+      "original_figure": "examples/references/main_table-example4-image-23/original.png",
+      "original_tex": null
+    },
+    {
+      "id": "diffusion-main",
+      "source_ids": [
+        "diffusion-main"
+      ],
+      "category": "Benchmark Comparison",
+      "title_zh": "扩散模型基准比较",
+      "title_en": "Diffusion Benchmark Comparison",
+      "kind": "image-only-reference",
+      "authority": "manual image transcription; inferred macros/fonts",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/diffusion-main/reconstruction.png",
+      "tex": "examples/references/diffusion-main/reconstruction.tex",
+      "sha256": {
+        "figure": "b001ea358892f7738379377ee0dee49f05af3ce986d2c53732d549cc6f0a0296",
+        "tex": "52fba74b4e580ce066062bad5ed5e06f3133070071d10977c5eadcf0286ccfc9"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": "examples/references/diffusion-main/original.png",
+      "original_tex": null
+    },
+    {
+      "id": "representation-ablation",
+      "source_ids": [
+        "representation-ablation"
+      ],
+      "category": "Ablation Study",
+      "title_zh": "表征消融",
+      "title_en": "Representation Ablation",
+      "kind": "image-only-reference",
+      "authority": "manual image transcription; inferred macros/fonts",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/representation-ablation/reconstruction.png",
+      "tex": "examples/references/representation-ablation/reconstruction.tex",
+      "sha256": {
+        "figure": "854c049ff4d2efea4b5db30b98942216fea692127ea68a1473b75d68b0311581",
+        "tex": "3eeb67506deac265c120f26c08b9f888c2447da2add39d2d453443d97c15feb5"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": "examples/references/representation-ablation/original.png",
+      "original_tex": null
+    },
+    {
+      "id": "paired-generation",
+      "source_ids": [
+        "paired-generation"
+      ],
+      "category": "Benchmark Comparison",
+      "title_zh": "成对生成比较",
+      "title_en": "Paired-Generation Comparison",
+      "kind": "image-only-reference",
+      "authority": "manual image transcription; inferred macros/fonts",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/paired-generation/reconstruction.png",
+      "tex": "examples/references/paired-generation/reconstruction.tex",
+      "sha256": {
+        "figure": "33c8d147f4ed7106d2e463f1fd24836f8ad91e7e4fe93b884a04f746ff8fc480",
+        "tex": "c625530e9bf262a11bb58dd727eea7c69e606b8fdcbd7abc23b657dda137ee84"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": "examples/references/paired-generation/original.png",
+      "original_tex": null
+    },
+    {
+      "id": "guidance-comparison",
+      "source_ids": [
+        "guidance-comparison"
+      ],
+      "category": "Benchmark Comparison",
+      "title_zh": "引导方法比较",
+      "title_en": "Guidance Comparison",
+      "kind": "image-only-reference",
+      "authority": "manual image transcription; inferred macros/fonts",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/guidance-comparison/reconstruction.png",
+      "tex": "examples/references/guidance-comparison/reconstruction.tex",
+      "sha256": {
+        "figure": "503e1b4e27feed8aa88026eb1f2ef8986fd5f4f2077fa4c53f557f3f0ea0e179",
+        "tex": "c02b3ff52b55b8ee92af3deb45fe0329b9b58796ae1743bf127109bf63268a6f"
+      },
+      "notes": [
+        "Unresolved citation keys: 10, 18, 2, 24, 29, 34, 36, 38, 50, 54, 6, 68"
+      ],
+      "dependencies": [],
+      "original_figure": "examples/references/guidance-comparison/original.png",
+      "original_tex": null
+    },
+    {
+      "id": "meanflow-algorithm",
+      "source_ids": [
+        "meanflow-algorithm"
+      ],
+      "category": "Algorithms & Protocols",
+      "title_zh": "MeanFlow 算法",
+      "title_en": "MeanFlow Algorithm",
+      "kind": "image-only-reference",
+      "authority": "manual image transcription; inferred macros/fonts",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/meanflow-algorithm/reconstruction.png",
+      "tex": "examples/references/meanflow-algorithm/reconstruction.tex",
+      "sha256": {
+        "figure": "54a8008a1035c06acf9925117b1ee6e5d63baa161053c0b3dbb6ede5e704d2fb",
+        "tex": "4bc9717c18b3d22a1291655f025590315b512846bde943ff288ccee749cb9aaa"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": "examples/references/meanflow-algorithm/original.png",
+      "original_tex": null
+    },
+    {
+      "id": "multimodal-main",
+      "source_ids": [
+        "multimodal-main"
+      ],
+      "category": "Benchmark Comparison",
+      "title_zh": "多模态基准比较",
+      "title_en": "Multimodal Benchmark Comparison",
+      "kind": "image-only-reference",
+      "authority": "manual image transcription; inferred macros/fonts",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/multimodal-main/reconstruction.png",
+      "tex": "examples/references/multimodal-main/reconstruction.tex",
+      "sha256": {
+        "figure": "6ee2b22185ee88804649eaf30a97b7afb450a85e9b381a5218f771ea3f4635fb",
+        "tex": "49e8d8493fdd68f332c15ff71a56ebaa18542b857851061f0662e12d9bb20e2f"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": "examples/references/multimodal-main/original.png",
+      "original_tex": null
+    },
+    {
+      "id": "data-mixture",
+      "source_ids": [
+        "data-mixture"
+      ],
+      "category": "Ablation Study",
+      "title_zh": "数据混合消融",
+      "title_en": "Data-Mixture Ablation",
+      "kind": "image-only-reference",
+      "authority": "manual image transcription; inferred macros/fonts",
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/data-mixture/reconstruction.png",
+      "tex": "examples/references/data-mixture/reconstruction.tex",
+      "sha256": {
+        "figure": "a3aec94173f968cc96a0828e6765e4913648226ca53a6208a4d310ea2bcf7682",
+        "tex": "784e25d0209910309584d09291a070db06d89b06fef4dc58d27d7cd4b215222f"
+      },
+      "notes": [],
+      "dependencies": [],
+      "original_figure": "examples/references/data-mixture/original.png",
+      "original_tex": null
+    },
+    {
+      "id": "related-datasets",
+      "source_ids": [
+        "related-datasets"
+      ],
+      "category": "Dataset Comparison & Capability Matrix",
+      "title_zh": "相关数据集表",
+      "title_en": "Related-Datasets Table",
+      "kind": "image-reference",
+      "authority": null,
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/related-datasets/reconstruction.png",
+      "tex": "examples/references/related-datasets/reconstruction.tex",
+      "sha256": {
+        "figure": "d18f81f201ef891a83ee4a33db5a11dac0caa31d4cb90bf43556d4dc5b15bc4e",
+        "tex": "8e0a7347468de1cba04c0f67b9037043aa46bfd35e2c2c1358e20770dea01f9b"
+      },
+      "notes": [
+        "Original TeX not provided; caption claims not independently verified."
+      ],
+      "dependencies": [],
+      "original_figure": "examples/references/related-datasets/original.png",
+      "original_tex": null
+    },
+    {
+      "id": "human-judge",
+      "source_ids": [
+        "human-judge"
+      ],
+      "category": "Human–Judge Evaluation",
+      "title_zh": "人工评审评估",
+      "title_en": "Human-Judge Evaluation",
+      "kind": "image-reference",
+      "authority": null,
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/human-judge/reconstruction.png",
+      "tex": "examples/references/human-judge/reconstruction.tex",
+      "sha256": {
+        "figure": "6d569b933c7fa29278e440d97646797009ea0c70f8cf6dbc6f22cba40c8e895b",
+        "tex": "49bda431a64f84fc78e0d297a7b05dbd141b949e9111461f64f79fc3ce37bc3e"
+      },
+      "notes": [
+        "Original TeX not provided; caption claims not independently verified."
+      ],
+      "dependencies": [],
+      "original_figure": "examples/references/human-judge/original.png",
+      "original_tex": null
+    },
+    {
+      "id": "behavior-vqa",
+      "source_ids": [
+        "behavior-vqa"
+      ],
+      "category": "Qualitative VQA",
+      "title_zh": "行为问答示例",
+      "title_en": "Behavioral VQA Examples",
+      "kind": "image-reference",
+      "authority": null,
+      "project_synthetic": false,
+      "private_reference": true,
+      "figure": "examples/references/behavior-vqa/reconstruction.png",
+      "tex": "examples/references/behavior-vqa/reconstruction.tex",
+      "sha256": {
+        "figure": "a2a2ab4fce5d90cdd0ba50cef57ef2fde238185867dcaf4653acf0b9e1376282",
+        "tex": "8d71f31fe3e1b4c24978d045a0d628c46dbf3b2ff6dca1d4d7d607a5189c670e"
+      },
+      "notes": [
+        "Original TeX not provided; caption claims not independently verified."
+      ],
+      "dependencies": [
+        {
+          "source": "assets/cases/local/behavior-vqa/assets/frame-01.png",
+          "asset": "examples/references/behavior-vqa/assets/frame-01.png",
+          "sha256": "f85f97b776f7926e0e7f7c72d4cebe0698eac63957cd648620590c7374a202f6"
+        },
+        {
+          "source": "assets/cases/local/behavior-vqa/assets/frame-02.png",
+          "asset": "examples/references/behavior-vqa/assets/frame-02.png",
+          "sha256": "c75232a67619057c13ee0fd75a0ef30413637c6a38f995860e99cf122f82596a"
+        },
+        {
+          "source": "assets/cases/local/behavior-vqa/assets/frame-03.png",
+          "asset": "examples/references/behavior-vqa/assets/frame-03.png",
+          "sha256": "6d189847b604f9c49bf6ec97b5d576784a11df3960c5cd81bbcf4c150afca544"
+        },
+        {
+          "source": "assets/cases/local/behavior-vqa/assets/frame-04.png",
+          "asset": "examples/references/behavior-vqa/assets/frame-04.png",
+          "sha256": "838d444a664f0398778a2aa4b72348bfd26d36826fdd07621fb1c48360b0ca9f"
+        },
+        {
+          "source": "assets/cases/local/behavior-vqa/assets/frame-05.png",
+          "asset": "examples/references/behavior-vqa/assets/frame-05.png",
+          "sha256": "cf784f7ce01319f0d4f214705c96c4ade9add297869b0e52cb7b731e4deec90e"
+        }
+      ],
+      "original_figure": "examples/references/behavior-vqa/original.png",
+      "original_tex": null
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+\documentclass{article}
+\usepackage[paperwidth=200mm,paperheight=300mm,margin=10mm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+\usepackage{amsmath,amssymb,graphicx,booktabs,multirow,array,adjustbox,pifont,arydshln,xspace,tikz}
+\usepackage{caption,url}
+\pagestyle{empty}
+\makeatletter\setlength{\@fptop}{0pt}\makeatother
+\definecolor{ggreen}{HTML}{2E9B57}
+\definecolor{deltatext}{HTML}{7A3EB1}
+\definecolor{refgray}{RGB}{145,145,145}
+\definecolor{sectionmist}{HTML}{F3F1F7}
+\definecolor{sgaRow}{HTML}{EEE9F7}
+\definecolor{deeper-gray}{gray}{0.65}
+\definecolor{light-gray}{gray}{0.85}
+\newcommand{\refitem}[1]{\textcolor{refgray}{#1}}
+\newcommand{\increase}[1]{{\fontsize{5.2pt}{5.2pt}\selectfont\color{deltatext}{($\uparrow$\,#1)}}}
+\newcommand{\decrease}[1]{{\fontsize{5.2pt}{5.2pt}\selectfont\color{ggreen}{($\downarrow$\,#1)}}}
+\newcommand{\sectionband}[1]{\multicolumn{8}{@{}>{\columncolor{sectionmist}}l@{}}{\rule{0pt}{1.08em}\hspace{0.35em}#1}\\[-0.05em]}
+\newcommand{\sectiondash}{\hdashline[1.5pt/1.5pt]\noalign{\vspace{0.03cm}}}
+\newcommand{\rot}[1]{\rotatebox{45}{#1}}
+\newcommand{\fullcirc}{\tikz[baseline=-0.5ex]\fill (0,0) circle (0.48ex);}
+\newcommand{\emptycirc}{\tikz[baseline=-0.5ex]\draw[line width=.3pt] (0,0) circle (0.48ex);}
+\newcommand{\halfcirc}{\tikz[baseline=-0.5ex]{\fill (0,.48ex) arc(90:270:.48ex)--cycle;\draw[line width=.3pt] (0,0) circle(.48ex);}}
+
+\usepackage{fix-cm}
+\renewcommand{\tablename}{TABLE}\setcounter{table}{3}\captionsetup{font={sf,footnotesize},labelsep=newline,justification=centering}
+
+\IfFontExistsTF{Arial}{\setsansfont{Arial}}{\setsansfont{TeX Gyre Heros}}
+\setlength{\dashlinedash}{1.5pt}
+\setlength{\dashlinegap}{1.5pt}
+
+\begin{document}
+\graphicspath{{assets/}}
+\definecolor{tadmarkred}{HTML}{B95A4A}
+
+\providecommand{\abmark}{}
+\renewcommand{\abmark}{\textcolor{ggreen}{\ding{52}}}
+
+\providecommand{\abxmark}{}
+\renewcommand{\abxmark}{\textcolor{tadmarkred}{\ding{56}}}
+
+\providecommand{\fulltadlabel}{}
+\renewcommand{\fulltadlabel}{\textcolor{deltatext}{\textbf{Full TDFL}}}
+
+\providecommand{\componentsectionband}[1]{}
+\renewcommand{\componentsectionband}[1]{%
+\multicolumn{11}{@{}>{\columncolor{sectionmist}}l@{}}{%
+\rule{0pt}{1.08em}\hspace{0.35em}\textbf{#1}}\\[-0.05em]
+}
+
+\providecommand{\componentdash}{}
+\renewcommand{\componentdash}{%
+\noalign{\vspace{0.03cm}}%
+\arrayrulecolor{gray!55}%
+\hdashline[1.5pt/1.5pt]%
+\arrayrulecolor{black}%
+\noalign{\vspace{0.03cm}}%
+}
+
+\begin{table*}[t]
+\centering
+\caption{Ablation study of TDFL across six datasets under the 1\% training-data setting. The centralized MERL baseline is reported under the same training ratio. In-cell \increase{} and \decrease{} annotations indicate relative changes with respect to the preceding variant. The best and second-best results are shown in \textbf{bold} and \underline{underlined}.}
+\label{tab:tad_ablation_components}
+\vspace{-0.45em}
+\footnotesize
+\setlength{\tabcolsep}{3.8pt}
+\renewcommand{\arraystretch}{1.11}
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
+
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{
+@{}
+l
+@{\hspace{0.45em}}
+c c c
+@{\hspace{0.75em}}
+c c c c c c c
+@{}
+}
+\toprule[1.15pt]
+\multirow{2}{*}{\textbf{Variant}} &
+\multicolumn{3}{c}{\textit{Components}} &
+\multicolumn{7}{c}{\textit{AUC [\%]}} \\
+\cmidrule(lr){2-4}\cmidrule(l){5-11}
+&
+\textbf{TDHD} &
+\textbf{TS} &
+\textbf{DMSA} &
+\textbf{PTB-XL Super} &
+\textbf{PTB-XL Sub} &
+\textbf{PTB-XL Form} &
+\textbf{PTB-XL Rhythm} &
+\textbf{CPSC2018} &
+\textbf{CSN} &
+\textbf{Average} \\
+\midrule
+
+\componentsectionband{Centralized Training Baseline}
+
+\refitem{MERL}
+& \multicolumn{3}{c}{\refitem{--}}
+& \refitem{82.39}
+& \refitem{64.90}
+& \refitem{58.26}
+& \refitem{53.33}
+& \refitem{70.33}
+& \refitem{66.60}
+& \refitem{65.97} \\
+
+\componentdash
+\componentsectionband{Global Models}
+
+\refitem{None}
+& \abxmark & \abxmark & \abxmark
+& 70.41 & 66.39 & 47.40 & \underline{74.50} & 63.14 & 67.57 & 64.90 \\
+
+TDHD
+& \abmark & \abxmark & \abxmark
+& 81.11\,\increase{10.70}
+& 70.96\,\increase{4.57}
+& 61.14\,\increase{13.74}
+& 73.10\,\decrease{1.40}
+& 67.61\,\increase{4.47}
+& 73.13\,\increase{5.56}
+& 71.17\,\increase{6.27} \\
+
+TDHD+TS
+& \abmark & \abmark & \abxmark
+& \underline{81.83}\,\increase{0.72}
+& \underline{72.95}\,\increase{1.99}
+& \textbf{64.16}\,\increase{3.02}
+& 73.08\,\decrease{0.02}
+& \underline{68.59}\,\increase{0.98}
+& \underline{74.74}\,\increase{1.61}
+& \underline{72.56}\,\increase{1.39} \\
+
+\rowcolor{sgaRow}
+\fulltadlabel
+& \abmark & \abmark & \abmark
+& \textbf{82.66}\,\increase{0.83}
+& \textbf{74.03}\,\increase{1.08}
+& \underline{63.24}\,\decrease{0.92}
+& \textbf{78.61}\,\increase{5.53}
+& \textbf{71.25}\,\increase{2.66}
+& \textbf{75.46}\,\increase{0.72}
+& \textbf{74.21}\,\increase{1.65} \\
+
+\componentdash
+\componentsectionband{Local Models}
+
+\refitem{None}
+& \abxmark & \abxmark & \abxmark
+& 71.74 & 68.10 & 52.20 & 75.23 & 63.77 & 68.43 & 66.58 \\
+
+TDHD
+& \abmark & \abxmark & \abxmark
+& 80.63\,\increase{8.89}
+& 71.23\,\increase{3.13}
+& 62.56\,\increase{10.36}
+& 78.55\,\increase{3.32}
+& 67.76\,\increase{3.99}
+& 74.31\,\increase{5.88}
+& 72.51\,\increase{5.93} \\
+
+TDHD+TS
+& \abmark & \abmark & \abxmark
+& \underline{82.65}\,\increase{2.02}
+& \underline{72.66}\,\increase{1.43}
+& \textbf{64.53}\,\increase{1.97}
+& \underline{79.16}\,\increase{0.61}
+& \underline{68.74}\,\increase{0.98}
+& \underline{75.28}\,\increase{0.97}
+& \underline{73.84}\,\increase{1.33} \\
+
+\rowcolor{sgaRow}
+\fulltadlabel
+& \abmark & \abmark & \abmark
+& \textbf{83.44}\,\increase{0.79}
+& \textbf{75.00}\,\increase{2.34}
+& \underline{64.18}\,\decrease{0.35}
+& \textbf{79.47}\,\increase{0.31}
+& \textbf{70.60}\,\increase{1.86}
+& \textbf{77.36}\,\increase{2.08}
+& \textbf{75.01}\,\increase{1.17} \\
+
+\bottomrule[1.15pt]
+\end{tabular}
+\end{adjustbox}
+\vspace{-0.65em}
+\end{table*}
+\end{document}

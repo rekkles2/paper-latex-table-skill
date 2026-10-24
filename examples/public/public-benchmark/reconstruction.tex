@@ -1,0 +1,28 @@
+\documentclass[10pt]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+\usepackage{geometry}
+\geometry{paperwidth=200mm,paperheight=150mm,margin=7mm}
+\usepackage{graphicx,booktabs,array,longtable,tabularx,siunitx,multirow,makecell,adjustbox,amsmath,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\graphicspath{{assets/}}
+\pagestyle{empty}
+\begin{document}
+% Generated from an explicit data contract. Source precision preserved.
+% Packages: booktabs
+\begin{table}[t]
+\centering
+\caption{Illustrative synthetic benchmark results; not measured experiments.}
+\label{tab:benchmark}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Method & AUC (\%) $\uparrow$ & Latency (ms) $\downarrow$ & Parameters \\
+\midrule
+Baseline & \underline{81.20} & \underline{13.5} & 8M \\
+Candidate & \textbf{83.40} & \textbf{11.2} & 10M \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}

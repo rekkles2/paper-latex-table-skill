@@ -1,0 +1,40 @@
+\documentclass[10pt]{article}
+\usepackage{fix-cm}
+\usepackage[paperwidth=240mm,paperheight=160mm,margin=4mm]{geometry}
+\usepackage{fontspec,booktabs,multirow,graphicx}
+\usepackage[table]{xcolor}
+\setmainfont{TeX Gyre Termes}\pagestyle{empty}\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{6pt}\renewcommand{\arraystretch}{.94}
+\definecolor{section}{RGB}{246,243,254}\definecolor{selected}{RGB}{241,255,241}
+\newcommand{\rothead}[1]{\rotatebox{65}{\fontsize{7}{7.5}\selectfont #1}}
+\begin{document}
+\graphicspath{{assets/}}
+{\fontsize{14}{16}\selectfont Table 2: \textbf{Comparison of Cambrian-S with other leading MLLMs.} Cambrian-S outperforms both proprietary and open-source models across benchmarks and model sizes. Detailed evaluation setups are listed in Appendix \textcolor{red}{G}.}\par\vspace{2pt}
+\begin{center}\fontsize{7.5}{8.2}\selectfont\begin{tabular}{@{}l|l|*{10}{c}|ccc@{}}\toprule
+ & & \multicolumn{10}{c|}{Video} & \multicolumn{3}{c}{Image}\\
+Model & Base LM & \rothead{VSI-Bench} & \rothead{VSI-Bench \textsuperscript{Debiased}} & \rothead{Tomato} & \rothead{HourVideo} & \rothead{Video\textsuperscript{MME}} & \rothead{EgoSchema} & \rothead{Video\textsuperscript{MMMU}} & \rothead{LongVBench} & \rothead{MVBench} & \rothead{Percept. Test} & \rothead{MMVP} & \rothead{3DSR} & \rothead{CV-Bench}\\\midrule
+\rowcolor{section}\multicolumn{15}{l}{\textit{Proprietary Models}}\\
+GPT-4o & UNK. & 34.0 & - & 37.7 & 37.2 & 71.9 & - & 61.2 & 66.7 & - & - & \textbf{66.0} & \textbf{44.2} & - \\
+Gemini-1.5-Pro & UNK. & 45.4 & 40.1 & 36.1 & 37.3 & 75.0 & 72.2 & 53.9 & 64.0 & - & - & - & - & - \\
+Gemini-2.5-Pro & UNK. & 51.5 & 49.1 & - & - & - & - & 83.6 & 67.4 & - & - & 51.3 & - & - \\
+\midrule\rowcolor{section}\multicolumn{15}{l}{\textit{Open-Source Models}}\\
+LLaVA-Video-7B & Qwen2-7B & 35.6 & 30.7 & 22.5 & 28.6 & 63.3 & 57.3 & 36.1 & 58.2 & 58.6 & 67.9 & - & - & 75.7 \\
+Qwen-VL-2.5-7B & Qwen2.5-7B & 33.5 & 29.6 & - & - & 65.1 & 65.0 & 47.4 & 56.0 & 69.6 & - & 56.7 & 48.4 & - \\
+InternVL3.5-8B & Qwen3-8B & 56.3 & 49.7 & - & - & \textbf{66.0} & 61.2 & \textbf{49.0} & \textbf{62.1} & \textbf{72.1} & - & 56.0 & - & - \\
+\rowcolor{selected}
+\textbf{Cambrian-S-7B} & Qwen2.5-7B & \textbf{67.5} & \textbf{59.9} & \textbf{27.0} & \textbf{36.5} & 63.4 & \textbf{76.8} & 38.6 & 59.4 & 64.5 & \textbf{69.9} & \textbf{60.0} & \textbf{54.8} & \textbf{76.9} \\
+\midrule
+Qwen2.5-VL-3B & Qwen2.5-3B & 26.8 & 22.7 & - & - & \textbf{61.5} & - & - & \textbf{54.2} & - & \textbf{66.9} & 39.3 & - & - \\
+\rowcolor{selected}
+\textbf{Cambrian-S-3B} & Qwen2.5-3B & \textbf{57.3} & \textbf{49.7} & \textbf{25.4} & \textbf{36.8} & 60.2 & \textbf{73.5} & \textbf{25.2} & 52.3 & \textbf{60.2} & 65.9 & \textbf{50.0} & \textbf{50.9} & \textbf{75.2} \\
+\midrule
+SmolVLM2-2.2B & SmolLM2-1.7B & 27.0 & 22.3 & - & - & - & 34.1 & - & - & 48.7 & 51.1 & - & - & - \\
+InternVL3.5-2B & Qwen3-1.7B & 51.5 & 46.1 & - & - & \textbf{58.4} & 50.8 & - & \textbf{57.4} & 65.9 & - & 44.0 & - & - \\
+\rowcolor{selected}
+\textbf{Cambrian-S-1.5B} & Qwen2.5-1.5B & \textbf{54.8} & \textbf{47.5} & \textbf{22.5} & \textbf{31.4} & 55.6 & \textbf{68.8} & 24.9 & 50.0 & 58.1 & \textbf{63.2} & 42.7 & \textbf{51.9} & \textbf{69.6} \\
+\midrule
+SmolVLM2-0.5B & SmolLM2-360M & 26.1 & 23.1 & - & - & - & 20.3 & - & - & 43.7 & 44.8 & - & - & - \\
+InternVL3.5-1B & Qwen3-0.6B & 49.9 & 41.8 & - & - & \textbf{51.0} & 41.5 & \textbf{33.0} & \textbf{53.0} & - & - & 32.0 & - & - \\
+\rowcolor{selected}
+\textbf{Cambrian-S-0.5B} & Qwen2.5-0.5B & \textbf{50.6} & \textbf{42.2} & \textbf{23.4} & \textbf{27.9} & 44.0 & \textbf{62.4} & 15.7 & 44.0 & 51.8 & \textbf{56.0} & 26.0 & \textbf{48.5} & \textbf{59.8} \\
+\bottomrule\end{tabular}\end{center}\end{document}

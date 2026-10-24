@@ -88,7 +88,7 @@
       "tex": "docs/examples/showcase/showcase-main.tex",
       "sha256": {
         "figure": "29ddc5d0440b4d8665777ee4ce8d04962504708c305e60a53e7817310a281bd6",
-        "tex": "2c9aa1cac02f702f6be3204b1264139ea86a6bd26e93e7f12414a7d7d4fb9541"
+        "tex": "0ce14881bc04bdcbeaf227956846bf34de41dd039fe961620f09cee93642b21c"
       }
     },
     {
@@ -98,7 +98,7 @@
       "tex": "docs/examples/showcase/showcase-sensitivity.tex",
       "sha256": {
         "figure": "923052d8751c14c8101a579096a5989495f09b45b2774ae0fe8c433c726da7ef",
-        "tex": "ab86ac3c165020e8907302c281d0c8b283b9e7c300457d8651afd41024cd970d"
+        "tex": "d999673045019d185017ff53b626ad444e44cee9fcdfa38b5ab838f43a428b2d"
       }
     },
     {
@@ -108,7 +108,7 @@
       "tex": "docs/examples/showcase/showcase-paired.tex",
       "sha256": {
         "figure": "940ef967f7bc64df7a969f5130c3edf1fd17e7b4a8ed8aa727995470e25bc2da",
-        "tex": "f077d1d9b8ad12d1382b63e32d88d021d418be066b01d397010bf84bc01f8776"
+        "tex": "da04c74254110fdde88c1ad6c68842564828d99c16e87fcd0b6f0a830a26297a"
       }
     },
     {
@@ -118,7 +118,7 @@
       "tex": "docs/examples/showcase/showcase-ablation.tex",
       "sha256": {
         "figure": "5c0d3f3386fa6e539323832f847cd5c1c2732e682e345c46bf3a877c1561ad48",
-        "tex": "77543cd8335b3774823281dd849029b9d5690af3712aa357b340253ecc1c34ac"
+        "tex": "7207c636e8851c442ef804918655bc9ecee20517b90f50cfcc6a7263819f10e5"
       }
     },
     {
@@ -127,8 +127,8 @@
       "figure": "docs/images/showcase-coverage.png",
       "tex": "docs/examples/showcase/showcase-coverage.tex",
       "sha256": {
-        "figure": "8528fa05855e4dc77fc4eb5abceca747fd7f8c6f99ba1ed7a408e14b04d81aef",
-        "tex": "5839a7964d958751e59a6f6061d7d9027ce9494b5cde4d4056df9692774ae659"
+        "figure": "23ead4e3823db810542530c75e5275942c917fab4445164337b7918d813ca368",
+        "tex": "acbcfb4e43bbd53652d4eba594143bbac37fe2daaa2b431383b5cc0b883c37bc"
       }
     },
     {

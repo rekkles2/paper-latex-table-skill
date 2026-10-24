@@ -1,0 +1,82 @@
+{
+  "source_file": "behavior-vqa.png",
+  "source_sha256": "323e1f606ffd654a4f65f213ffd536e7eaaf6b52da5b0b5ee40e2330bb6f1ff0",
+  "source_size_bytes": 301198,
+  "source_dimensions_px": [
+    915,
+    713
+  ],
+  "original_source_tex": "missing",
+  "crops": [
+    {
+      "file": "assets/frame-01.png",
+      "crop_xyxy_exclusive": [
+        91,
+        95,
+        234,
+        237
+      ],
+      "dimensions_px": [
+        143,
+        142
+      ],
+      "sha256": "f85f97b776f7926e0e7f7c72d4cebe0698eac63957cd648620590c7374a202f6"
+    },
+    {
+      "file": "assets/frame-02.png",
+      "crop_xyxy_exclusive": [
+        239,
+        95,
+        381,
+        237
+      ],
+      "dimensions_px": [
+        142,
+        142
+      ],
+      "sha256": "c75232a67619057c13ee0fd75a0ef30413637c6a38f995860e99cf122f82596a"
+    },
+    {
+      "file": "assets/frame-03.png",
+      "crop_xyxy_exclusive": [
+        387,
+        95,
+        530,
+        237
+      ],
+      "dimensions_px": [
+        143,
+        142
+      ],
+      "sha256": "6d189847b604f9c49bf6ec97b5d576784a11df3960c5cd81bbcf4c150afca544"
+    },
+    {
+      "file": "assets/frame-04.png",
+      "crop_xyxy_exclusive": [
+        535,
+        95,
+        678,
+        237
+      ],
+      "dimensions_px": [
+        143,
+        142
+      ],
+      "sha256": "838d444a664f0398778a2aa4b72348bfd26d36826fdd07621fb1c48360b0ca9f"
+    },
+    {
+      "file": "assets/frame-05.png",
+      "crop_xyxy_exclusive": [
+        684,
+        95,
+        826,
+        237
+      ],
+      "dimensions_px": [
+        142,
+        142
+      ],
+      "sha256": "cf784f7ce01319f0d4f214705c96c4ade9add297869b0e52cb7b731e4deec90e"
+    }
+  ]
+}

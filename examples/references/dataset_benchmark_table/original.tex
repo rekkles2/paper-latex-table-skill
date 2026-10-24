@@ -1,0 +1,32 @@
+\begin{table}[t]
+    \setlength{\tabcolsep}{1.0mm}
+    \renewcommand\arraystretch{1.1}
+    \centering
+    \vspace{-0.6cm}
+    \resizebox{1.0\linewidth}{!}{
+        \begin{tabular}{c|ccc|cccccccccc}
+        \toprule
+        \multirow{2}{*}{Benchmarks} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Prompt\\ Length\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Omni-\\ Eval\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}QA\\ Type\end{tabular}} & \multirow{2}{*}{Object} & \multirow{2}{*}{Attribute} & \multirow{2}{*}{Position} & \multirow{2}{*}{Orientation} & \multirow{2}{*}{Layout} & \multirow{2}{*}{Comparison} & \multirow{2}{*}{Proximity} & \multirow{2}{*}{Occlusion} & \multirow{2}{*}{Motion} & \multirow{2}{*}{Causal} \\
+         &  &  &  &  &  &  &  &  &  &  &  &  &  \\ 
+        \midrule
+        T2I-CompBench & S & \textcolor{black}{\emptycirc} & Yes/No & \fullcirc & \fullcirc & \textcolor{black}{\halfcirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \fullcirc & \textcolor{black}{\fullcirc} \\
+        GenEval & S & \textcolor{black}{\emptycirc} & Detect & \fullcirc & \fullcirc & \textcolor{black}{\fullcirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \fullcirc & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \fullcirc & \textcolor{black}{\emptycirc} \\
+        DPG-Bench & L & \textcolor{black}{\emptycirc} & Score & \fullcirc & \fullcirc & \fullcirc & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} \\
+        Wise & S & \textcolor{black}{\emptycirc} & Score & \fullcirc & \fullcirc & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\textcolor{black}{\emptycirc}} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\halfcirc} & \textcolor{black}{\halfcirc} \\
+        TIIF-Bench & L & \textcolor{black}{\emptycirc} & Yes/No & \fullcirc & \fullcirc & \fullcirc & \textcolor{black}{\emptycirc} & \textcolor{black}{\halfcirc} & \textcolor{black}{\halfcirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\halfcirc} & \textcolor{black}{\emptycirc} \\
+        OneIG-Bench & L,S & \textcolor{black}{\emptycirc} & Yes/No & \fullcirc & \fullcirc & \fullcirc & \textcolor{black}{\emptycirc} & \textcolor{black}{\halfcirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} & \textcolor{black}{\emptycirc} \\ 
+        \midrule
+        \rowcolor[HTML]{EFEFEF}
+        SpatialGenEval & L & \fullcirc & Multi-Choice & \fullcirc & \fullcirc & \fullcirc & \fullcirc & \fullcirc & \fullcirc & \fullcirc & \fullcirc & \fullcirc & \fullcirc \\ 
+        \bottomrule
+        \end{tabular}
+    }
+    \vspace{-0.2cm}
+    \caption{Comparisons between our SpatialGenEval and current T2I Benchmarks. 
+    % 
+    ``L'' and ``S'' denote long and short prompt. 
+    % 
+    \fullcirc, \halfcirc, and \emptycirc \ denote full, partial, and no coverage, respectively.
+    }
+    \label{tab:benchmark_comparison}
+\end{table}

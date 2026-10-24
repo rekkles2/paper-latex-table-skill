@@ -1,0 +1,43 @@
+\documentclass[10pt]{article}
+\usepackage{fix-cm}
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+\IfFontExistsTF{Courier New}{\setmonofont{Courier New}}{\setmonofont{TeX Gyre Cursor}}
+\usepackage[paperwidth=81mm,paperheight=135mm,margin=2.5mm]{geometry}
+\usepackage{booktabs,multirow,graphicx,xcolor}
+\definecolor{codecomment}{RGB}{95,150,150}
+\definecolor{codekw}{RGB}{214,69,130}
+\definecolor{codeop}{RGB}{50,110,200}
+\newcommand{\cm}[1]{\textcolor{codecomment}{#1}}
+\newcommand{\kw}[1]{\textcolor{codekw}{#1}}
+\newcommand{\fn}[1]{\textcolor{codekw}{#1}}
+\newcommand{\op}[1]{\textcolor{codeop}{#1}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\begin{document}
+\graphicspath{{assets/}}
+\noindent
+\fontsize{8.5}{10}\selectfont
+\begin{tabular}{@{}p{\linewidth}@{}}
+\toprule
+{\fontsize{10}{11.5}\selectfont\textbf{Algorithm 1} pixel MeanFlow: training.}\\
+{\fontsize{6.8}{8}\selectfont Note: in PyTorch and JAX, \texttt{jvp} returns the function output and JVP.}\\
+\midrule
+\texttt{\cm{\# net: x-prediction network}}\\
+\texttt{\cm{\# x: training batch in pixels}}\\[0.7em]
+\texttt{t, r = \fn{sample\_t\_r}()}\\
+\texttt{e = \fn{randn\_like}(x)}\\[0.7em]
+\texttt{z = (1 \op{-} t) \op{*} x \op{+} t \op{*} e}\\[0.7em]
+\texttt{\cm{\# average velocity u from x-prediction}}\\
+\texttt{\kw{def} u\_fn(z, r, t):}\\
+\texttt{\hspace*{2em}\kw{return} (z \op{-} net(z, r, t)) \op{/} t}\\[0.7em]
+\texttt{\cm{\# instantaneous velocity v at time t}}\\
+\texttt{v = u\_fn(z, t, t)}\\[0.7em]
+\texttt{\cm{\# predict u and dudt}}\\
+\texttt{u, dudt = \fn{jvp}(u\_fn, (z, r, t), (v, 0, 1))}\\[0.7em]
+\texttt{\cm{\# compound function V}}\\
+\texttt{V = u \op{+} (t \op{-} r) \op{*} \kw{stopgrad}(dudt)}\\[0.7em]
+\texttt{loss = \fn{metric}(V, e \op{-} x)}\\
+\midrule
+\end{tabular}
+\end{document}

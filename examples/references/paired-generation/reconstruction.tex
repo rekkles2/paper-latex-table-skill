@@ -1,0 +1,29 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=130mm,paperheight=56.33mm,margin=2mm]{geometry}
+\usepackage{fontspec,booktabs,multirow,graphicx,amsmath}
+\usepackage[table]{xcolor}
+\setmainfont{TeX Gyre Termes}\pagestyle{empty}\setlength{\parindent}{0pt}
+\definecolor{grayband}{gray}{.9}\definecolor{lavender}{RGB}{244,241,252}\definecolor{greenband}{RGB}{240,255,240}
+\setlength{\tabcolsep}{1.5pt}\renewcommand{\arraystretch}{.94}
+\setlength{\aboverulesep}{.8pt}\setlength{\belowrulesep}{.8pt}
+\begin{document}
+\graphicspath{{assets/}}
+{\fontsize{10}{11}\selectfont Table 1: \textbf{RCG significantly improves the unconditional generation performance of current generative models,} evaluated on ImageNet $256\times256$. All numbers are reported under the unconditional generation setting.}\par\vspace{2pt}
+\begin{center}\fontsize{8}{8.8}\selectfont\begin{tabular}{@{}llrr@{}}
+\multicolumn{2}{l}{Unconditional generation} & FID$\downarrow$ & IS$\uparrow$\\\midrule
+\multirow{2}{*}{LDM-8 \textcolor{blue}{[54]}} & baseline & 39.13 & 22.8 \\
+ & \textbf{w/ RCG} & \textbf{11.30} {\textbf{\small\textcolor{green!70!black}{(-27.83)}}} & \textbf{101.9} {\textbf{\small\textcolor{green!70!black}{(+79.1)}}} \\
+\midrule
+\multirow{2}{*}{ADM \textcolor{blue}{[18]}} & baseline & 26.21 & 39.7 \\
+ & \textbf{w/ RCG} & \textbf{6.24} {\textbf{\small\textcolor{green!70!black}{(-19.97)}}} & \textbf{136.9} {\textbf{\small\textcolor{green!70!black}{(+97.2)}}} \\
+\midrule
+\multirow{2}{*}{DiT-XL/2 \textcolor{blue}{[50]}} & baseline & 27.32 & 35.9 \\
+ & \textbf{w/ RCG} & \textbf{4.89} {\textbf{\small\textcolor{green!70!black}{(-22.43)}}} & \textbf{143.2} {\textbf{\small\textcolor{green!70!black}{(+107.3)}}} \\
+\midrule
+\multirow{2}{*}{MAGE-B \textcolor{blue}{[41]}} & baseline & 8.67 & 94.8 \\
+ & \textbf{w/ RCG} & \textbf{3.98} {\textbf{\small\textcolor{green!70!black}{(-4.69)}}} & \textbf{177.8} {\textbf{\small\textcolor{green!70!black}{(+83.0)}}} \\
+\midrule
+\multirow{2}{*}{MAGE-L \textcolor{blue}{[41]}} & baseline & 7.04 & 123.5 \\
+ & \textbf{w/ RCG} & \textbf{3.44} {\textbf{\small\textcolor{green!70!black}{(-3.60)}}} & \textbf{186.9} {\textbf{\small\textcolor{green!70!black}{(+63.4)}}} \\
+\end{tabular}\end{center}
+\end{document}

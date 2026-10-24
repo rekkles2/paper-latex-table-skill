@@ -1,0 +1,37 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=190mm,paperheight=140mm,margin=7mm]{geometry}
+\usepackage{fontspec,booktabs,multirow,amssymb,graphicx}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\setmainfont{TeX Gyre Termes}
+\definecolor{sectiongray}{gray}{0.91}
+\definecolor{selected}{RGB}{237,249,237}
+\definecolor{quiet}{gray}{0.42}
+\definecolor{gain}{RGB}{0,105,32}
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.04}
+\newcommand{\captext}[3]{\noindent Table #1: \textbf{#2} #3\par\vspace{5pt}}
+\newcommand{\band}[2]{\rowcolor{sectiongray}\multicolumn{#1}{l}{\textit{#2}}\\}
+\newcommand{\unc}[2]{#1\,{\scriptsize\textcolor{quiet}{$\pm$#2}}}
+\newcommand{\yes}{$\checkmark$}
+\newcommand{\no}{--}
+\newcommand{\full}{\begin{tikzpicture}[baseline=-.5ex]\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\filldraw[draw=black,fill=black,line width=.095ex] (0,0) circle[radius=.78ex];\end{tikzpicture}}
+\newcommand{\emptyc}{\begin{tikzpicture}[baseline=-.5ex]\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\draw[black,fill=none,line width=.095ex] (0,0) circle[radius=.78ex];\end{tikzpicture}}
+\newcommand{\halfc}{\begin{tikzpicture}[baseline=-.5ex]\path[use as bounding box] (-.89ex,-.89ex) rectangle (.89ex,.89ex);\fill[black] (0,.78ex) arc[start angle=90,end angle=270,radius=.78ex] -- cycle;\draw[black,line width=.095ex] (0,0) circle[radius=.78ex];\end{tikzpicture}}
+\begin{document}
+\captext{3}{Coverage of illustrative evaluation collections.}{Perception, temporal reasoning and definition updates are separated to expose differences in evaluation scope. Names, sizes and coverage assignments are synthetic.}
+\begin{center}\begin{tabular}{@{}lll*{6}{c}@{}}\toprule
+\multirow{2}{*}{Collection} & \multirow{2}{*}{Size} & \multirow{2}{*}{Unit} & \multicolumn{2}{c}{Perception} & \multicolumn{2}{c}{Time} & \multicolumn{2}{c}{Definitions}\\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(l){8-9}
+ & & & Spatial & Events & Order & Causal & Rules & Updates\\\midrule
+FrameSet & 12k & Image & \full & \emptyc & \emptyc & \emptyc & \emptyc & \emptyc \\
+ClipSet & 8k & Clip & \full & \full & \halfc & \emptyc & \emptyc & \emptyc \\
+EventSet & 24k & Clip & \full & \full & \full & \halfc & \emptyc & \emptyc \\
+StreamSet & 6k & Stream & \full & \full & \full & \full & \halfc & \emptyc \\
+RuleStream & 18k & Stream & \full & \full & \full & \full & \full & \halfc \\
+\rowcolor{sectiongray}
+\textbf{Atlas suite} & 32k & Mixed & \full & \full & \full & \full & \full & \full \\
+\bottomrule\end{tabular}\end{center}
+{\footnotesize\full\ full coverage;\quad\halfc\ partial coverage;\quad\emptyc\ not covered. k denotes thousand units.}
+
+\end{document}

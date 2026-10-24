@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage[paperwidth=110mm,paperheight=300mm,margin=10mm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+\usepackage{amsmath,amssymb,graphicx,booktabs,multirow,array,adjustbox,pifont,arydshln,xspace,tikz}
+\usepackage{caption,url}
+\pagestyle{empty}
+\makeatletter\setlength{\@fptop}{0pt}\makeatother
+\definecolor{ggreen}{HTML}{2E9B57}
+\definecolor{deltatext}{HTML}{7A3EB1}
+\definecolor{refgray}{RGB}{145,145,145}
+\definecolor{sectionmist}{HTML}{F3F1F7}
+\definecolor{sgaRow}{HTML}{EEE9F7}
+\definecolor{deeper-gray}{gray}{0.65}
+\definecolor{light-gray}{gray}{0.85}
+\newcommand{\refitem}[1]{\textcolor{refgray}{#1}}
+\newcommand{\increase}[1]{{\fontsize{5.2pt}{5.2pt}\selectfont\color{deltatext}{($\uparrow$\,#1)}}}
+\newcommand{\decrease}[1]{{\fontsize{5.2pt}{5.2pt}\selectfont\color{ggreen}{($\downarrow$\,#1)}}}
+\newcommand{\sectionband}[1]{\multicolumn{8}{@{}>{\columncolor{sectionmist}}l@{}}{\rule{0pt}{1.08em}\hspace{0.35em}#1}\\[-0.05em]}
+\newcommand{\sectiondash}{\hdashline\noalign{\vspace{0.03cm}}}
+\newcommand{\rot}[1]{\rotatebox{45}{#1}}
+\newcommand{\fullcirc}{\tikz[baseline=-0.5ex]\fill (0,0) circle (0.48ex);}
+\newcommand{\emptycirc}{\tikz[baseline=-0.5ex]\draw[line width=.3pt] (0,0) circle (0.48ex);}
+\newcommand{\halfcirc}{\tikz[baseline=-0.5ex]{\fill (0,.48ex) arc(90:270:.48ex)--cycle;\draw[line width=.3pt] (0,0) circle(.48ex);}}
+
+\usepackage{fix-cm}
+\renewcommand{\caption}[1]{}
+
+\begin{document}
+\graphicspath{{assets/}}
+% ============================================================
+% Table 4: Heterogeneous clinical collaborative learning results
+% Usage: \input{table/table4}
+% ============================================================
+
+\providecommand{\na}{\textcolor{refgray}{--}}
+\providecommand{\tadval}[2]{\textbf{#1}\,#2}
+
+\providecommand{\blockrow}[1]{%
+\multicolumn{6}{@{}>{\columncolor{sectionmist}}l@{}}{%
+\rule{0pt}{1.08em}\hspace{0.35em}\textbf{#1}}\\[-0.05em]
+}
+
+\setlength{\dashlinedash}{1.6pt}
+\setlength{\dashlinegap}{1.2pt}
+
+\providecommand{\sectiondashgray}{%
+\noalign{\vspace{0.03cm}}%
+\arrayrulecolor{gray!60}%
+\hdashline%
+\arrayrulecolor{black}%
+\noalign{\vspace{0.03cm}}%
+}
+
+\begin{table}[t]
+\centering
+\vspace{-0.35em}
+% Caption intentionally outside screenshot crop; immutable original retains it.
+
+\label{tab:heterogeneous_clinical_result}
+\vspace{-0.45em}
+
+\footnotesize
+\setlength{\tabcolsep}{3.15pt}
+\renewcommand{\arraystretch}{1.12}
+
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{
+    @{}
+    l
+    c
+    c
+    c
+    c
+    c
+    @{}
+}
+\toprule
+\multirow{2}{*}{\textbf{Split}} &
+\multirow{2}{*}{\textbf{Setting}} &
+\multicolumn{2}{c}{\textbf{Local Model}} &
+\multicolumn{2}{c}{\textbf{Global Model}} \\
+\cmidrule(lr){3-4}\cmidrule(l){5-6}
+& & \textbf{FedAvg} & \textbf{TDFL} & \textbf{FedAvg} & \textbf{TDFL} \\
+\midrule
+
+\blockrow{Institution-Based Distribution}
+
+Institution & $\#P=6$
+& 66.58
+& \cellcolor{sgaRow}\tadval{75.01}{\increase{8.43}}
+& 64.90
+& \cellcolor{sgaRow}\tadval{74.21}{\increase{9.31}} \\
+
+\midrule
+
+\blockrow{Taxonomy-Based Distribution}
+
+Taxonomy & $\#P=11$
+& 54.39
+& \cellcolor{sgaRow}\tadval{63.07}{\increase{8.68}}
+& 61.14
+& \cellcolor{sgaRow}\tadval{65.23}{\increase{4.09}} \\
+
+\midrule
+
+\blockrow{Random Distribution (non-IID)}
+
+\multirow{3}{*}{Heterogeneity}
+& $\alpha=0.01$
+& 69.31
+& \cellcolor{sgaRow}\tadval{76.13}{\increase{6.82}}
+& 71.81
+& \cellcolor{sgaRow}\tadval{78.78}{\increase{6.97}} \\
+
+& $\alpha=0.10$
+& 76.89
+& \cellcolor{sgaRow}\tadval{77.29}{\increase{0.40}}
+& 76.45
+& \cellcolor{sgaRow}\tadval{78.65}{\increase{2.20}} \\
+
+& $\alpha=0.50$
+& 77.16
+& \cellcolor{sgaRow}\tadval{77.35}{\increase{0.19}}
+& 78.41
+& \cellcolor{sgaRow}\tadval{79.77}{\increase{1.36}} \\
+
+\sectiondashgray
+
+\multirow{3}{*}{Scalability}
+& $\#P=10$
+& 76.89
+& \cellcolor{sgaRow}\tadval{77.29}{\increase{0.40}}
+& 76.45
+& \cellcolor{sgaRow}\tadval{78.65}{\increase{2.20}} \\
+
+& $\#P=50$
+& 76.77
+& \cellcolor{sgaRow}\tadval{78.22}{\increase{1.45}}
+& 75.52
+& \cellcolor{sgaRow}\tadval{79.51}{\increase{3.99}} \\
+
+& $\#P=100$
+& 75.91
+& \cellcolor{sgaRow}\tadval{79.49}{\increase{3.58}}
+& 74.52
+& \cellcolor{sgaRow}\tadval{80.87}{\increase{6.35}} \\
+
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\vspace{-0.65em}
+\end{table}
+\end{document}

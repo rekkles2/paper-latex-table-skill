@@ -1,0 +1,30 @@
+\documentclass[10pt]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+\usepackage{geometry}
+\geometry{paperwidth=200mm,paperheight=150mm,margin=7mm}
+\usepackage{graphicx,booktabs,array,longtable,tabularx,siunitx,multirow,makecell,adjustbox,amsmath,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\graphicspath{{assets/}}
+\pagestyle{empty}
+\begin{document}
+% Generated from an explicit data contract. Source precision preserved.
+% Packages: booktabs
+\begin{table}[t]
+\centering
+\caption{Illustrative synthetic ties-missing results; not measured experiments.}
+\label{tab:ties-missing}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Method & AUC $\uparrow$ & Error $\downarrow$ & Params \\
+\midrule
+A & \textbf{85.00} & 2.0 & 4M \\
+B & \textbf{85.00} & \textbf{1.0} & 5M \\
+C & \underline{84.00} & -- & 3M \\
+D & -- & \underline{1.5} & 2M \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
