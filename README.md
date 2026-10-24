@@ -1,62 +1,369 @@
 # Paper LaTeX Table Skill
 
-**让实验结果拥有论文主表的表达力。**
+**生成、精修与重建科研 LaTeX 表格，保留数据与比较语义。**
 
-面向 Codex 的科研 LaTeX 表格 Skill：从数据生成、已有 TeX 精修，到截图重建与参考设计复用。用分层表头、分组字体、克制配色和有依据的数值强调，建立清晰的阅读层次，同时保留原始数据与比较语义。
+面向 Codex 的论文表格 Skill。输入实验数据、已有 TeX 或表格截图，交付可编辑源码、依赖说明与分层验证记录。参考驱动的排版覆盖分组主表、旋转表头、组件消融、并排子表和成对增益；新案例与修复经验可保存为待审阅的设计记录。
 
-[English](README.en.md) · [中文教程](docs/guide.zh-CN.md) · [Skill 入口](SKILL.md) · [参考布局](references/reference-catalog.md)
+[English](README.en.md) · [中文教程](docs/guide.zh-CN.md) · [Skill 入口](SKILL.md) · [设计原则](references/table-design-principles.md)
 
-**数据 → 表格 · 代码 + 图片 → 保真重建 · 图片 → 可编辑 TeX · 好案例 → 可复用的设计经验**
+<!-- LOCAL-ONLY:BEGIN -->
+**本地私有参考速览：**[扩散主表](#diffusion-main) · [四面板消融](#representation-ablation) · [成对增益](#paired-generation) · [Guidance 对照](#guidance-comparison) · [算法框](#meanflow-algorithm) · [多模态宽表](#multimodal-main) · [数据配比](#data-mixture)
+<!-- LOCAL-ONLY:END -->
 
-## 看见表格的表达力
+## 表格示例
 
-以下三张表均由随仓库提供的 **可编辑 LaTeX 源码实际编译**。模型、数据集、数值和覆盖关系均为原创合成示例，不是真实实验结果。复杂布局由 Codex 辅助编写，不代表 JSON 生成器能一键生成任意表格。
+以下为实际编译的 LaTeX 表格，采用紧凑衬线字体、克制的横线，以及含义明确的灰色分组带或浅色重点行。caption 的位置、字重与层级按表格和子面板各自的说明角色处理，不强加统一模板，也不添加卡片式装饰。**所有名称、数值和覆盖关系均为合成示例，不代表真实实验结果。** 复杂布局由代理结合核对记录编写，不代表 JSON 生成器自动支持任意结构。
 
-### 01 / 综合主表：密集，但不拥挤
+### 分组主表与旋转表头
 
-![综合主表：分层表头、模型家族分区、淡紫方法行及最优次优强调](docs/images/showcase-main.png)
+![论文式多基准主表，包含旋转列名、灰底类别带和浅绿方法行](docs/images/showcase-main.png)
 
-**三个基准 × 两种设置**，先看清比较结构，再读数值。粗斜体区分模型家族，淡紫色定位重点方法；最优/次优在全部可比行中计算，延迟按更低更好独立强调。
+类别用灰底斜体行区分，长指标名旋转排列；粗体和下划线按声明的比较范围标记最优与次优，浅绿只定位重点方法。
 
-[可编辑 TeX](docs/examples/showcase/showcase-main.tex) · [合成数据](docs/examples/showcase/data.json)
+[TeX 源码](docs/examples/showcase/showcase-main.tex) · [原始合成数据](docs/examples/showcase/data.json)
 
-### 02 / 组件消融：把“为什么有效”排清楚
+### 并排消融子表
 
-![组件消融：开关、小号灰色标准差、基线增益与完整方法强调](docs/images/showcase-ablation.png)
+![四个并排的参数消融子表，灰底表示默认配置](docs/images/showcase-sensitivity.png)
 
-**组件开关 → 指标变化 → 平均增益**，一行读完。标准差用小号灰字退后一级；增益明确比较基线与百分点单位，均值排名不被解释为统计显著性。
+共享 caption，四个面板分别改变一个因素。灰底表示默认设置，粗体表示各面板内的列最优，两者含义独立。
 
-[可编辑 TeX](docs/examples/showcase/showcase-ablation.tex) · [合成数据](docs/examples/showcase/data.json)
+[TeX 源码](docs/examples/showcase/showcase-sensitivity.tex) · [合成数据与逐格记录](docs/examples/showcase/academic-ledger.json)
 
-### 03 / 能力矩阵：覆盖与空缺，都可见
+### 成对方法比较与增益
 
-![能力矩阵：感知、时间、定义三组表头及三态覆盖符号](docs/images/showcase-coverage.png)
+![baseline 与改进方法成对排列，增益相对各自基线计算](docs/images/showcase-paired.png)
 
-**实心 / 半实心 / 空心** 分别表达完整、部分与未覆盖，附带规模、评估单位和图例。符号形状承载语义，颜色只是辅助。
+每个编码器的 baseline 与改进方法相邻排列。准确率增益按百分点计算；延迟增加保留为黑色开销，不用绿色暗示所有变化都有利。
 
-[可编辑 TeX](docs/examples/showcase/showcase-coverage.tex) · [重建预览脚本](docs/render_showcase.py)
+[TeX 源码](docs/examples/showcase/showcase-paired.tex)
 
-## 不止是换一个 booktabs 样式
+### 组件消融
 
-| 特点 | 实际工作方式 |
+![紧凑组件消融，包含开关、标准差和明确的增益基线](docs/images/showcase-ablation.png)
+
+保留均值精度与标准差，注明组件含义和增益基线。小号不确定性辅助阅读，不代替统计显著性分析。
+
+[TeX 源码](docs/examples/showcase/showcase-ablation.tex)
+
+### 数据集能力矩阵
+
+![黑白三态符号能力矩阵及图例](docs/images/showcase-coverage.png)
+
+实心、半实心、空心分别表达完整、部分和未覆盖，附带规模、单位与图例；灰度下也能区分。
+
+[TeX 源码](docs/examples/showcase/showcase-coverage.tex) · [预览重建脚本](docs/render_showcase.py)
+
+<!-- GALLERY:BEGIN -->
+
+## 示例对照画廊
+
+公开示例统计：公共索引共 20 对；本节直接显示 15 对。
+
+另有 5 对公开示例已在上方“表格示例”小节直接显示，此处不重复：showcase-main, showcase-sensitivity, showcase-paired, showcase-ablation, showcase-coverage
+
+<!-- LOCAL-ONLY:BEGIN -->
+
+以下本地参考含私有图片与源码；公共导出会移除本标记块。
+
+### 本地参考（私有） (18)
+
+本地共 18 对私有参考，另有 20 对公开示例。
+
+### diffusion-main
+
+| 原图 | 重建 |
 | --- | --- |
-| **参考设计复用** | 检索相近布局，拆解表头、分组、字体与强调角色，再适配自己的数据；原始参考单独保存。 |
-| **数据保真精修** | 核对单元格身份、数值字符串、精度、不确定性和引用；代码与图片冲突时保留独立版本。 |
-| **有依据的强调** | 按指标方向、比较范围和并列规则标记最优/次优，不把所有参数列都当成绩。 |
-| **可编辑重建** | 恢复宏与依赖；图片先逐格转写，看不清的值标为 [?]，不猜数字。 |
-| **可追溯的学习** | 保存案例与失败修复的私有待审记录，供后续检索；稳定规则更新另经回归与审核。 |
-| **分层验证** | 数据核对、静态检查、实际编译和渲染审阅分别报告，保留源码与证据。 |
+| ![原图](assets/cases/local/diffusion-main/figure.png) | ![重建](assets/cases/local/diffusion-main/reproduced.png) |
 
-<details>
-<summary>更多示例：同数据精修与基础生成</summary>
+[重建 TeX](assets/cases/local/diffusion-main/table.tex) · [审阅记录](assets/cases/local/diffusion-main/STYLE-REVIEW.json) · [要点记录](assets/cases/local/diffusion-main/lesson.json)
 
-![同一组合成数据从网格表到 booktabs 的排版对比](docs/images/refinement.png)
+结构：分组扩散基准主表，表下注释。可见匹配点：预训练双层表头、跨正文的语义竖线、灰色分组带和粗体 roman JiT 名称。原图中 latent 标签为常规斜体，pixel 标签为粗斜体；caption 三行，表格下方无底线。
 
-[优化前](docs/examples/refinement-before.tex) · [优化后](docs/examples/refinement-after.tex)。原始单元格内容保持不变。
+### representation-ablation
 
-[基础主表规格](docs/examples/benchmark.json) · [基础消融规格](docs/examples/ablation.json)
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/representation-ablation/figure.png) | ![重建](assets/cases/local/representation-ablation/reproduced.png) |
 
-</details>
+[重建 TeX](assets/cases/local/representation-ablation/table.tex) · [审阅记录](assets/cases/local/representation-ablation/STYLE-REVIEW.json) · [要点记录](assets/cases/local/representation-ablation/lesson.json)
+
+结构：共享说明加四个并排消融面板。可见匹配点：灰色默认行、局部加粗值和各面板短说明；原图共享 caption 五行，面板表格窄且居中、表体小于 caption。
+
+### paired-generation
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/paired-generation/figure.png) | ![重建](assets/cases/local/paired-generation/reproduced.png) |
+
+[重建 TeX](assets/cases/local/paired-generation/table.tex) · [审阅记录](assets/cases/local/paired-generation/STYLE-REVIEW.json) · [要点记录](assets/cases/local/paired-generation/lesson.json)
+
+结构：按模型配对的 baseline/RCG 增益表。可见匹配点：多行方法标识、细分隔线、改进值粗体及括号内绿色增益；原图表格居中紧凑，caption 在表上方。
+
+### guidance-comparison
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/guidance-comparison/figure.png) | ![重建](assets/cases/local/guidance-comparison/reproduced.png) |
+
+[重建 TeX](assets/cases/local/guidance-comparison/table.tex) · [审阅记录](assets/cases/local/guidance-comparison/STYLE-REVIEW.json) · [要点记录](assets/cases/local/guidance-comparison/lesson.json)
+
+结构：无/有 guidance 的双层指标表头。可见匹配点：类别人群整行灰字、块边界竖线和斜体组名；灰色表示人群，不表示排名。本例作为布局控制，不需无证据的风格改动。
+
+### meanflow-algorithm
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/meanflow-algorithm/figure.png) | ![重建](assets/cases/local/meanflow-algorithm/reproduced.png) |
+
+[重建 TeX](assets/cases/local/meanflow-algorithm/table.tex) · [审阅记录](assets/cases/local/meanflow-algorithm/STYLE-REVIEW.json) · [要点记录](assets/cases/local/meanflow-algorithm/lesson.json)
+
+结构：带标题、注释和语法着色的算法伪代码。可见匹配点：窄横线、青色注释、洋红关键字/可调用项；函数名不加下划线，等号为黑色，Note 正文为小号常规衬线字。
+
+### multimodal-main
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/multimodal-main/figure.png) | ![重建](assets/cases/local/multimodal-main/reproduced.png) |
+
+[重建 TeX](assets/cases/local/multimodal-main/table.tex) · [审阅记录](assets/cases/local/multimodal-main/STYLE-REVIEW.json) · [要点记录](assets/cases/local/multimodal-main/lesson.json)
+
+结构：视频/图像指标分块的宽主表。可见匹配点：65° 旋转表头、分组底色、浅绿目标行及独立的细分隔线；缩短表头应匹配字号与间距，不改变角度。
+
+### data-mixture
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/data-mixture/figure.png) | ![重建](assets/cases/local/data-mixture/reproduced.png) |
+
+[重建 TeX](assets/cases/local/data-mixture/table.tex) · [审阅记录](assets/cases/local/data-mixture/STYLE-REVIEW.json) · [要点记录](assets/cases/local/data-mixture/lesson.json)
+
+结构：图像与视频指标分块的数据配比表。可见匹配点：旋转表头、斜体类别带、竖向块边界和浅绿 Full Mix 行；Full Mix 的标签与视频单元格加粗，图像单元格保持常规；baseline 数字字形倾斜度不确定，不据此设定统一规则。
+
+<!-- LOCAL-ONLY:END -->
+
+### 公开示例 (15)
+
+### 组件消融 (结构化合成示例)
+
+![组件消融](docs/images/public/ablation.png)
+
+[TeX 源码](assets/cases/public/ablation/table.tex)
+
+### 分组基准比较 (结构化合成示例)
+
+![分组基准比较](docs/images/public/benchmark.png)
+
+[TeX 源码](assets/cases/public/benchmark/table.tex)
+
+### 跨数据集比较 (结构化合成示例)
+
+![跨数据集比较](docs/images/public/cross-dataset.png)
+
+[TeX 源码](assets/cases/public/cross-dataset/table.tex)
+
+### 小数点对齐 (结构化合成示例)
+
+![小数点对齐](docs/images/public/decimal.png)
+
+[TeX 源码](assets/cases/public/decimal/table.tex)
+
+### 多数据集分组表头 (结构化合成示例)
+
+![多数据集分组表头](docs/images/public/multi-dataset.png)
+
+[TeX 源码](assets/cases/public/multi-dataset/table.tex)
+
+### 并列与缺失值 (结构化合成示例)
+
+![并列与缺失值](docs/images/public/ties-missing.png)
+
+[TeX 源码](assets/cases/public/ties-missing/table.tex)
+
+### 均值与不确定性 (结构化合成示例)
+
+![均值与不确定性](docs/images/public/uncertainty.png)
+
+[TeX 源码](assets/cases/public/uncertainty/table.tex)
+
+### 宽基准表 (结构化合成示例)
+
+![宽基准表](docs/images/public/wide.png)
+
+[TeX 源码](assets/cases/public/wide/table.tex)
+
+### 基础基准表示例 (文档合成示例)
+
+![基础基准表示例](docs/images/benchmark.png)
+
+[TeX 源码](docs/examples/benchmark.tex)
+
+### 基础消融表示例 (文档合成示例)
+
+![基础消融表示例](docs/images/ablation.png)
+
+[TeX 源码](docs/examples/ablation.tex)
+
+### 精修前：完整网格 (精修合成示例)
+
+![精修前：完整网格](docs/images/refinement-before.png)
+
+[TeX 源码](docs/examples/refinement-before.tex)
+
+### 精修后：分组横线 (精修合成示例)
+
+![精修后：分组横线](docs/images/refinement-after.png)
+
+[TeX 源码](docs/examples/refinement-after.tex)
+
+### 复用基线 (设计复用合成示例)
+
+![复用基线](docs/images/reuse-baseline.png)
+
+[TeX 源码](docs/examples/design-reuse/baseline.tex)
+
+### 分组复用方案 (设计复用合成示例)
+
+![分组复用方案](docs/images/reuse-grouped.png)
+
+[TeX 源码](docs/examples/design-reuse/grouped-readable.tex)
+
+### 紧凑复用方案 (设计复用合成示例)
+
+![紧凑复用方案](docs/images/reuse-compact.png)
+
+[TeX 源码](docs/examples/design-reuse/compact-readable.tex)
+
+<!-- LOCAL-ONLY:BEGIN -->
+
+以下本地参考含私有图片与源码；公共导出会移除本标记块。
+
+### 其余本地参考（11）
+
+### ablation_table-example1
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/ablation_table-example1/figure.png) | ![重建](assets/cases/local/ablation_table-example1/reproduction/image-style/reproduced.png) |
+
+[原始 TeX](assets/cases/local/ablation_table-example1/table.tex) · [重建 TeX](assets/cases/local/ablation_table-example1/reproduction/image-style/run-style-3/build/table-build.tex) · [审阅记录](assets/cases/local/ablation_table-example1/reproduction/REVIEW.md)
+
+保留源码的样式分支；源码/图片差异仍单独记录
+
+### ablation_table-example2
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/ablation_table-example2/figure.png) | ![重建](assets/cases/local/ablation_table-example2/reproduction/image-style/reproduced.png) |
+
+[原始 TeX](assets/cases/local/ablation_table-example2/table.tex) · [重建 TeX](assets/cases/local/ablation_table-example2/reproduction/image-style/run-style-4/build/table-build.tex) · [审阅记录](assets/cases/local/ablation_table-example2/reproduction/REVIEW.md)
+
+保留源码的样式分支；源码/图片差异仍单独记录
+
+### dataset_benchmark_table
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/dataset_benchmark_table/figure.png) | ![重建](assets/cases/local/dataset_benchmark_table/reproduction/image-style/reproduced.png) |
+
+[原始 TeX](assets/cases/local/dataset_benchmark_table/table.tex) · [重建 TeX](assets/cases/local/dataset_benchmark_table/reproduction/image-style/run-style-3/build/table-build.tex) · [审阅记录](assets/cases/local/dataset_benchmark_table/reproduction/REVIEW.md)
+
+保留源码的样式分支；源码/图片差异仍单独记录
+
+### main_table-example1
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/main_table-example1/figure.png) | ![重建](assets/cases/local/main_table-example1/reproduction/image-style/reproduced.png) |
+
+[原始 TeX](assets/cases/local/main_table-example1/table.tex) · [重建 TeX](assets/cases/local/main_table-example1/reproduction/image-style/run-style-3/build/table-build.tex) · [审阅记录](assets/cases/local/main_table-example1/reproduction/REVIEW.md)
+
+保留源码的样式分支；源码/图片差异仍单独记录
+
+### main_table-example2
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/main_table-example2/figure.png) | ![重建](assets/cases/local/main_table-example2/reproduction/image-style/reproduced.png) |
+
+[原始 TeX](assets/cases/local/main_table-example2/table.tex) · [重建 TeX](assets/cases/local/main_table-example2/reproduction/image-style/run-style-4/build/table-build.tex) · [审阅记录](assets/cases/local/main_table-example2/reproduction/REVIEW.md)
+
+保留源码的样式分支；源码/图片差异仍单独记录
+
+### main_table-example3
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/main_table-example3/figure.png) | ![重建](assets/cases/local/main_table-example3/reproduction/image-style/reproduced.png) |
+
+[原始 TeX](assets/cases/local/main_table-example3/table.tex) · [重建 TeX](assets/cases/local/main_table-example3/reproduction/image-style/run-style-3/build/table-build.tex) · [审阅记录](assets/cases/local/main_table-example3/reproduction/REVIEW.md)
+
+保留源码的样式分支；源码/图片差异仍单独记录
+
+### main_table-example4
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/main_table-example4/figure.png) | ![重建](assets/cases/local/main_table-example4/reproduction/image-style/reproduced.png) |
+
+[原始 TeX](assets/cases/local/main_table-example4/table.tex) · [重建 TeX](assets/cases/local/main_table-example4/reproduction/image-style/run-style-3/build/table-build.tex) · [审阅记录](assets/cases/local/main_table-example4/reproduction/REVIEW.md)
+
+保留源码的样式分支；源码/图片差异仍单独记录
+
+### others-example1
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/others-example1/figure.png) | ![重建](assets/cases/local/others-example1/reproduction/image-style/reproduced.png) |
+
+[原始 TeX](assets/cases/local/others-example1/table.tex) · [重建 TeX](assets/cases/local/others-example1/reproduction/image-style/run-style-3/build/table-build.tex) · [审阅记录](assets/cases/local/others-example1/reproduction/REVIEW.md)
+
+保留源码的样式分支；源码/图片差异仍单独记录
+
+### others-example2
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/others-example2/figure.png) | ![重建](assets/cases/local/others-example2/reproduction/image-style/reproduced.png) |
+
+[原始 TeX](assets/cases/local/others-example2/table.tex) · [重建 TeX](assets/cases/local/others-example2/reproduction/image-style/run-style-3/build/table-build.tex) · [审阅记录](assets/cases/local/others-example2/reproduction/REVIEW.md)
+
+保留源码的样式分支；源码/图片差异仍单独记录
+
+### others-example3
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/others-example3/figure.png) | ![重建](assets/cases/local/others-example3/reproduction/image-style/reproduced.png) |
+
+[原始 TeX](assets/cases/local/others-example3/table.tex) · [重建 TeX](assets/cases/local/others-example3/reproduction/image-style/run-style-3/build/table-build.tex) · [审阅记录](assets/cases/local/others-example3/reproduction/REVIEW.md)
+
+保留源码的样式分支；源码/图片差异仍单独记录
+
+### main_table-example4-image-23
+
+| 原图 | 重建 |
+| --- | --- |
+| ![原图](assets/cases/local/main_table-example4/figure.png) | ![重建](assets/cases/local/main_table-example4/reproduction/image-only/styled-reproduced-v2.png) |
+
+[重建 TeX](assets/cases/local/main_table-example4/reproduction/image-only/styled-document-v2.tex)
+
+23 列图片分支，与 25 列代码分支分开保存
+
+<!-- LOCAL-ONLY:END -->
+
+<!-- GALLERY:END -->
+
+## 核心特点
+
+| 特点 | 工作方式 |
+| --- | --- |
+| 参考驱动排版 | 先匹配论文参考的 caption、密度、字体角色、表头和强调，再适配数据；不添加海报式装饰。 |
+| 数据保真 | 核对单元格身份、数值字符串、精度、不确定性和引用；代码与图片冲突时保留独立版本。 |
+| 有依据的强调 | 显式指定指标方向、比较范围和并列规则；默认行、重点方法与最优值分别处理。 |
+| 可编辑重建 | 恢复宏与依赖；图片先逐格转写，模糊值保留 [?]，不猜数字。 |
+| 持续积累 | 保存私有待审案例和失败修复记录，供后续检索；稳定规则另经回归与审核。 |
+| 分层验证 | 分别报告数据核对、静态检查、编译与渲染审阅，保留源码和证据。 |
 
 ## 三种输入方式
 
@@ -70,7 +377,7 @@
 
 ## 已学习的布局
 
-本地完整版包含 **10 个用户提供的代码 + 图片案例**，原始 23 个文件保留哈希；每案提供恢复宏、源码保真编译及原图对比。另有 **8 个公开合成案例**供生成与回归使用。
+本地完整版包含 **17 个用户参考**：10 个"代码 + 图片"成对案例与 7 个仅图片参考；连同 main_table-example4 独立的 23 列图片分支，构成 **18 对本地 figure/TeX 对照**。源码保真编译对照适用于有原始 TeX 的成对案例；仅图片案例为手工转写与重建，不属于源码保真复现。原始 23 个文件的哈希核对仅覆盖最初的 10 个成对案例，不表示其余文件均已核验。17 个参考的全部细节见[参考示例明细](references/example-details.md)。公开画廊另有 **20 对合成示例**，由 8 个结构化案例与 showcase / basic / refinement / reuse 变体组成。
 
 | 布局 | 主要设计 | 关注细节 |
 | --- | --- | --- |
@@ -85,7 +392,7 @@
 | 联邦数据划分 | 6 列、Local/Global 成对比较 | 多行 setting、希腊字母、百分点变化 |
 | 模型资源目录 | 5 列、按家族分组、长 URL | 粗斜体家族名、正文粗体、可编辑链接 |
 
-详细经验见[参考目录](references/reference-catalog.md)。原始参考材料的再分发权尚未确认，因此本地原图、复现图及逐案审核放在 `assets/cases/local/GALLERY.md`；公开 GitHub 包不包含该私有目录。本地画廊展示的是实际重建与残差，不宣称像素完全一致。
+详细经验见[参考目录](references/reference-catalog.md)。原始参考材料的再分发权尚未确认，因此本地原图、复现图及逐案审核放在 `assets/cases/local/GALLERY.md`；公开 GitHub 包不包含该私有目录。公开演示预览使用合成数据；可选私有参考用于复现用户提供的来源，其内容主张未经独立核实。本地画廊展示的是实际重建与残差，不宣称像素完全一致。
 
 ## 安装到 Codex
 

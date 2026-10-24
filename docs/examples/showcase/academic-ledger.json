@@ -1,0 +1,705 @@
+{
+  "synthetic": true,
+  "source_data": "docs/examples/showcase/data.json",
+  "cells": [
+    {
+      "table": "main",
+      "row": "Frame encoder",
+      "column": 0,
+      "source": "74.2",
+      "rendered": "74.2"
+    },
+    {
+      "table": "main",
+      "row": "Frame encoder",
+      "column": 1,
+      "source": "69.8",
+      "rendered": "69.8"
+    },
+    {
+      "table": "main",
+      "row": "Frame encoder",
+      "column": 2,
+      "source": "67.1",
+      "rendered": "67.1"
+    },
+    {
+      "table": "main",
+      "row": "Frame encoder",
+      "column": 3,
+      "source": "61.4",
+      "rendered": "61.4"
+    },
+    {
+      "table": "main",
+      "row": "Frame encoder",
+      "column": 4,
+      "source": "58.2",
+      "rendered": "58.2"
+    },
+    {
+      "table": "main",
+      "row": "Frame encoder",
+      "column": 5,
+      "source": "52.7",
+      "rendered": "52.7"
+    },
+    {
+      "table": "main",
+      "row": "Frame encoder",
+      "column": 6,
+      "source": "63.9",
+      "rendered": "63.9"
+    },
+    {
+      "table": "main",
+      "row": "Frame encoder",
+      "column": 7,
+      "source": "7.4",
+      "rendered": "7.4"
+    },
+    {
+      "table": "main",
+      "row": "Clip encoder",
+      "column": 0,
+      "source": "78.6",
+      "rendered": "78.6"
+    },
+    {
+      "table": "main",
+      "row": "Clip encoder",
+      "column": 1,
+      "source": "73.1",
+      "rendered": "73.1"
+    },
+    {
+      "table": "main",
+      "row": "Clip encoder",
+      "column": 2,
+      "source": "71.4",
+      "rendered": "71.4"
+    },
+    {
+      "table": "main",
+      "row": "Clip encoder",
+      "column": 3,
+      "source": "65.2",
+      "rendered": "65.2"
+    },
+    {
+      "table": "main",
+      "row": "Clip encoder",
+      "column": 4,
+      "source": "61.8",
+      "rendered": "61.8"
+    },
+    {
+      "table": "main",
+      "row": "Clip encoder",
+      "column": 5,
+      "source": "55.9",
+      "rendered": "55.9"
+    },
+    {
+      "table": "main",
+      "row": "Clip encoder",
+      "column": 6,
+      "source": "67.7",
+      "rendered": "67.7"
+    },
+    {
+      "table": "main",
+      "row": "Clip encoder",
+      "column": 7,
+      "source": "9.1",
+      "rendered": "9.1"
+    },
+    {
+      "table": "main",
+      "row": "Temporal pooling",
+      "column": 0,
+      "source": "80.1",
+      "rendered": "80.1"
+    },
+    {
+      "table": "main",
+      "row": "Temporal pooling",
+      "column": 1,
+      "source": "75.6",
+      "rendered": "75.6"
+    },
+    {
+      "table": "main",
+      "row": "Temporal pooling",
+      "column": 2,
+      "source": "72.3",
+      "rendered": "72.3"
+    },
+    {
+      "table": "main",
+      "row": "Temporal pooling",
+      "column": 3,
+      "source": "67.8",
+      "rendered": "67.8"
+    },
+    {
+      "table": "main",
+      "row": "Temporal pooling",
+      "column": 4,
+      "source": "64.2",
+      "rendered": "64.2"
+    },
+    {
+      "table": "main",
+      "row": "Temporal pooling",
+      "column": 5,
+      "source": "58.1",
+      "rendered": "58.1"
+    },
+    {
+      "table": "main",
+      "row": "Temporal pooling",
+      "column": 6,
+      "source": "69.7",
+      "rendered": "69.7"
+    },
+    {
+      "table": "main",
+      "row": "Temporal pooling",
+      "column": 7,
+      "source": "8.6",
+      "rendered": "8.6"
+    },
+    {
+      "table": "main",
+      "row": "Local memory",
+      "column": 0,
+      "source": "83.4",
+      "rendered": "83.4"
+    },
+    {
+      "table": "main",
+      "row": "Local memory",
+      "column": 1,
+      "source": "78.5",
+      "rendered": "78.5"
+    },
+    {
+      "table": "main",
+      "row": "Local memory",
+      "column": 2,
+      "source": "76.1",
+      "rendered": "76.1"
+    },
+    {
+      "table": "main",
+      "row": "Local memory",
+      "column": 3,
+      "source": "70.2",
+      "rendered": "70.2"
+    },
+    {
+      "table": "main",
+      "row": "Local memory",
+      "column": 4,
+      "source": "67.8",
+      "rendered": "67.8"
+    },
+    {
+      "table": "main",
+      "row": "Local memory",
+      "column": 5,
+      "source": "62.4",
+      "rendered": "62.4"
+    },
+    {
+      "table": "main",
+      "row": "Local memory",
+      "column": 6,
+      "source": "73.1",
+      "rendered": "73.1"
+    },
+    {
+      "table": "main",
+      "row": "Local memory",
+      "column": 7,
+      "source": "12.8",
+      "rendered": "12.8"
+    },
+    {
+      "table": "main",
+      "row": "Hierarchical memory",
+      "column": 0,
+      "source": "84.7",
+      "rendered": "84.7"
+    },
+    {
+      "table": "main",
+      "row": "Hierarchical memory",
+      "column": 1,
+      "source": "80.2",
+      "rendered": "80.2"
+    },
+    {
+      "table": "main",
+      "row": "Hierarchical memory",
+      "column": 2,
+      "source": "78.6",
+      "rendered": "78.6"
+    },
+    {
+      "table": "main",
+      "row": "Hierarchical memory",
+      "column": 3,
+      "source": "72.5",
+      "rendered": "72.5"
+    },
+    {
+      "table": "main",
+      "row": "Hierarchical memory",
+      "column": 4,
+      "source": "70.1",
+      "rendered": "70.1"
+    },
+    {
+      "table": "main",
+      "row": "Hierarchical memory",
+      "column": 5,
+      "source": "65.3",
+      "rendered": "65.3"
+    },
+    {
+      "table": "main",
+      "row": "Hierarchical memory",
+      "column": 6,
+      "source": "75.2",
+      "rendered": "75.2"
+    },
+    {
+      "table": "main",
+      "row": "Hierarchical memory",
+      "column": 7,
+      "source": "15.6",
+      "rendered": "15.6"
+    },
+    {
+      "table": "main",
+      "row": "Prototype retrieval",
+      "column": 0,
+      "source": "85.1",
+      "rendered": "85.1"
+    },
+    {
+      "table": "main",
+      "row": "Prototype retrieval",
+      "column": 1,
+      "source": "79.8",
+      "rendered": "79.8"
+    },
+    {
+      "table": "main",
+      "row": "Prototype retrieval",
+      "column": 2,
+      "source": "77.9",
+      "rendered": "77.9"
+    },
+    {
+      "table": "main",
+      "row": "Prototype retrieval",
+      "column": 3,
+      "source": "73.4",
+      "rendered": "73.4"
+    },
+    {
+      "table": "main",
+      "row": "Prototype retrieval",
+      "column": 4,
+      "source": "69.7",
+      "rendered": "69.7"
+    },
+    {
+      "table": "main",
+      "row": "Prototype retrieval",
+      "column": 5,
+      "source": "64.8",
+      "rendered": "64.8"
+    },
+    {
+      "table": "main",
+      "row": "Prototype retrieval",
+      "column": 6,
+      "source": "75.1",
+      "rendered": "75.1"
+    },
+    {
+      "table": "main",
+      "row": "Prototype retrieval",
+      "column": 7,
+      "source": "11.3",
+      "rendered": "11.3"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / compact",
+      "column": 0,
+      "source": "85.8",
+      "rendered": "85.8"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / compact",
+      "column": 1,
+      "source": "81.4",
+      "rendered": "81.4"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / compact",
+      "column": 2,
+      "source": "79.2",
+      "rendered": "79.2"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / compact",
+      "column": 3,
+      "source": "74.6",
+      "rendered": "74.6"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / compact",
+      "column": 4,
+      "source": "71.8",
+      "rendered": "71.8"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / compact",
+      "column": 5,
+      "source": "66.9",
+      "rendered": "66.9"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / compact",
+      "column": 6,
+      "source": "76.6",
+      "rendered": "76.6"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / compact",
+      "column": 7,
+      "source": "10.2",
+      "rendered": "10.2"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / full",
+      "column": 0,
+      "source": "87.3",
+      "rendered": "87.3"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / full",
+      "column": 1,
+      "source": "83.0",
+      "rendered": "83.0"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / full",
+      "column": 2,
+      "source": "81.5",
+      "rendered": "81.5"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / full",
+      "column": 3,
+      "source": "77.2",
+      "rendered": "77.2"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / full",
+      "column": 4,
+      "source": "74.1",
+      "rendered": "74.1"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / full",
+      "column": 5,
+      "source": "69.8",
+      "rendered": "69.8"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / full",
+      "column": 6,
+      "source": "78.8",
+      "rendered": "78.8"
+    },
+    {
+      "table": "main",
+      "row": "Atlas / full",
+      "column": 7,
+      "source": "14.1",
+      "rendered": "14.1"
+    },
+    {
+      "table": "ablation",
+      "row": "Base",
+      "column": 0,
+      "source": "76.20",
+      "rendered": "76.20",
+      "std": "0.31"
+    },
+    {
+      "table": "ablation",
+      "row": "Base",
+      "column": 1,
+      "source": "72.10",
+      "rendered": "72.10",
+      "std": "0.28"
+    },
+    {
+      "table": "ablation",
+      "row": "Base",
+      "column": 2,
+      "source": "69.40",
+      "rendered": "69.40",
+      "std": "0.35"
+    },
+    {
+      "table": "ablation",
+      "row": "Context",
+      "column": 0,
+      "source": "78.40",
+      "rendered": "78.40",
+      "std": "0.27"
+    },
+    {
+      "table": "ablation",
+      "row": "Context",
+      "column": 1,
+      "source": "74.20",
+      "rendered": "74.20",
+      "std": "0.25"
+    },
+    {
+      "table": "ablation",
+      "row": "Context",
+      "column": 2,
+      "source": "71.60",
+      "rendered": "71.60",
+      "std": "0.30"
+    },
+    {
+      "table": "ablation",
+      "row": "Memory",
+      "column": 0,
+      "source": "79.10",
+      "rendered": "79.10",
+      "std": "0.25"
+    },
+    {
+      "table": "ablation",
+      "row": "Memory",
+      "column": 1,
+      "source": "75.80",
+      "rendered": "75.80",
+      "std": "0.22"
+    },
+    {
+      "table": "ablation",
+      "row": "Memory",
+      "column": 2,
+      "source": "72.30",
+      "rendered": "72.30",
+      "std": "0.29"
+    },
+    {
+      "table": "ablation",
+      "row": "Context + memory",
+      "column": 0,
+      "source": "81.30",
+      "rendered": "81.30",
+      "std": "0.21"
+    },
+    {
+      "table": "ablation",
+      "row": "Context + memory",
+      "column": 1,
+      "source": "78.10",
+      "rendered": "78.10",
+      "std": "0.20"
+    },
+    {
+      "table": "ablation",
+      "row": "Context + memory",
+      "column": 2,
+      "source": "75.20",
+      "rendered": "75.20",
+      "std": "0.24"
+    },
+    {
+      "table": "ablation",
+      "row": "Full model",
+      "column": 0,
+      "source": "83.60",
+      "rendered": "83.60",
+      "std": "0.18"
+    },
+    {
+      "table": "ablation",
+      "row": "Full model",
+      "column": 1,
+      "source": "80.40",
+      "rendered": "80.40",
+      "std": "0.17"
+    },
+    {
+      "table": "ablation",
+      "row": "Full model",
+      "column": 2,
+      "source": "78.10",
+      "rendered": "78.10",
+      "std": "0.22"
+    }
+  ],
+  "additional": {
+    "sensitivity": [
+      [
+        "Model depth",
+        "Blocks",
+        [
+          "6",
+          "12",
+          "18",
+          "24"
+        ],
+        [
+          "78.2",
+          "80.4",
+          "81.1",
+          "81.3"
+        ],
+        [
+          "8.1",
+          "10.2",
+          "13.8",
+          "17.6"
+        ],
+        1
+      ],
+      [
+        "Memory size",
+        "Slots",
+        [
+          "16",
+          "32",
+          "64",
+          "128"
+        ],
+        [
+          "78.9",
+          "80.4",
+          "81.0",
+          "81.2"
+        ],
+        [
+          "9.3",
+          "10.2",
+          "12.6",
+          "16.1"
+        ],
+        1
+      ],
+      [
+        "Context length",
+        "Frames",
+        [
+          "8",
+          "16",
+          "32",
+          "64"
+        ],
+        [
+          "77.1",
+          "79.2",
+          "80.4",
+          "80.9"
+        ],
+        [
+          "6.8",
+          "8.4",
+          "10.2",
+          "14.8"
+        ],
+        2
+      ],
+      [
+        "Retrieval budget",
+        "Top-k",
+        [
+          "1",
+          "2",
+          "4",
+          "8"
+        ],
+        [
+          "78.6",
+          "79.7",
+          "80.4",
+          "80.8"
+        ],
+        [
+          "8.7",
+          "9.2",
+          "10.2",
+          "12.4"
+        ],
+        2
+      ]
+    ],
+    "paired": [
+      [
+        "Small",
+        [
+          "76.2",
+          "8.0"
+        ],
+        [
+          "79.4",
+          "8.6"
+        ]
+      ],
+      [
+        "Base",
+        [
+          "80.4",
+          "10.2"
+        ],
+        [
+          "83.1",
+          "11.0"
+        ]
+      ],
+      [
+        "Large",
+        [
+          "83.6",
+          "14.1"
+        ],
+        [
+          "85.2",
+          "15.3"
+        ]
+      ]
+    ]
+  }
+}

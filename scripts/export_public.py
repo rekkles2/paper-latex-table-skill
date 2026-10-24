@@ -5,6 +5,26 @@ import zipfile
 from pathlib import Path
 from tablelib import ROOT, sha256, read_json
 
+def public_markdown(text: str) -> str:
+    """Strip explicitly marked local-only blocks; fail closed on malformed markers."""
+    begin='<!-- LOCAL-ONLY:BEGIN -->';end='<!-- LOCAL-ONLY:END -->'
+    out=[];inside=False
+    for line in text.splitlines(keepends=True):
+        if begin in line:
+            if inside or line.strip()!=begin: raise ValueError('Malformed or nested local-only block')
+            inside=True
+        elif end in line:
+            if not inside or line.strip()!=end: raise ValueError('Unmatched local-only end')
+            inside=False
+        elif not inside:out.append(line)
+    if inside:raise ValueError('Unclosed local-only block')
+    cleaned=''.join(out)
+    import re
+    if re.search(r'(?:\]\([^)]*|(?:src|href)=[\x22\x27][^\x22\x27]*)assets/cases/local/',cleaned):
+        raise ValueError('Private link outside a local-only block')
+    return cleaned
+
+
 def export(output: Path) -> list[dict]:
     entries={}
     extensions={'agents':{'.yaml'},'references':{'.md'},'scripts':{'.py'},'tests':{'.py'},'rsi':{'.md'},'rsi/templates':{'.json'},'assets/templates':{'.json','.tex'}}
@@ -14,8 +34,8 @@ def export(output: Path) -> list[dict]:
             if p.is_file() and p.suffix in extensions[directory] and not any(part.startswith('.') or part=='__pycache__' for part in relative.parts):
                 if not p.resolve().is_relative_to((ROOT/directory).resolve()):
                     raise ValueError('Export source resolves outside allowed directory')
-                entries['paper-latex-table-skill/'+p.relative_to(ROOT).as_posix()]=p.read_bytes()
-    entries['paper-latex-table-skill/SKILL.md']=(ROOT/'SKILL.md').read_bytes()
+                entries['paper-latex-table-skill/'+p.relative_to(ROOT).as_posix()]=public_markdown(p.read_text(encoding='utf-8')).encode('utf-8') if p.suffix=='.md' else p.read_bytes()
+    entries['paper-latex-table-skill/SKILL.md']=public_markdown((ROOT/'SKILL.md').read_text(encoding='utf-8')).encode('utf-8')
     # A skill can also be the repository root. Keep its README-relative media
     # together when exporting instead of relying on parent-repository files.
     for p in (ROOT/'docs').rglob('*'):
@@ -23,7 +43,7 @@ def export(output: Path) -> list[dict]:
         if p.is_file() and p.suffix in {'.md','.txt','.json','.tex','.png','.py'} and not any(part.startswith('.') or part=='__pycache__' for part in relative.parts):
             if not p.resolve().is_relative_to((ROOT/'docs').resolve()):
                 raise ValueError('Documentation resolves outside docs directory')
-            entries['paper-latex-table-skill/'+relative.as_posix()]=p.read_bytes()
+            entries['paper-latex-table-skill/'+relative.as_posix()]=public_markdown(p.read_text(encoding='utf-8')).encode('utf-8') if p.suffix=='.md' else p.read_bytes()
     public=[]
     for meta in (ROOT/'assets'/'cases'/'public').glob('*/case.json'):
         record=read_json(meta)
@@ -38,7 +58,7 @@ def export(output: Path) -> list[dict]:
     for name in ('README.md','README.en.md','LICENSE','.gitignore'):
         local=ROOT/name
         if local.is_file():
-            entries['paper-latex-table-skill/'+name]=local.read_bytes()
+            entries['paper-latex-table-skill/'+name]=public_markdown(local.read_text(encoding='utf-8')).encode('utf-8') if name.endswith('.md') else local.read_bytes()
             if name=='README.md':
                 entries[name]=b'# Paper LaTeX Table Skill\n\nRead the [illustrated README and installation guide](paper-latex-table-skill/README.md).\n'
             elif name != 'README.en.md':

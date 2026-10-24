@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "examples": [
+    {
+      "id": "public-ablation",
+      "kind": "structured-synthetic",
+      "figure": "docs/images/public/ablation.png",
+      "tex": "assets/cases/public/ablation/table.tex",
+      "sha256": {
+        "figure": "0788b3e4714542fed204cb75480c1c330528383dbfc903e5d3fcc72b14f5a2d5",
+        "tex": "3893302ba190d7521d90de9dd6d991c9ca35cd52d27922e43f7597966475d7d3"
+      }
+    },
+    {
+      "id": "public-benchmark",
+      "kind": "structured-synthetic",
+      "figure": "docs/images/public/benchmark.png",
+      "tex": "assets/cases/public/benchmark/table.tex",
+      "sha256": {
+        "figure": "a3fef0bf487ef62457945673e3fc3e48d50c166eca52354d66b3225ea03bb338",
+        "tex": "11e51ed7c9d108df19a3724b96a3c1821132c194febc65f4fcd567b394a2af84"
+      }
+    },
+    {
+      "id": "public-cross-dataset",
+      "kind": "structured-synthetic",
+      "figure": "docs/images/public/cross-dataset.png",
+      "tex": "assets/cases/public/cross-dataset/table.tex",
+      "sha256": {
+        "figure": "2d4a01a2eddcb668c27bf64c7387be24fe2c432f94ec332c083ee04d27eabb3c",
+        "tex": "560c87361470d11502a0ea9c2491b1a7f47987dd4eaa43f76f9a736dde74b8b5"
+      }
+    },
+    {
+      "id": "public-decimal",
+      "kind": "structured-synthetic",
+      "figure": "docs/images/public/decimal.png",
+      "tex": "assets/cases/public/decimal/table.tex",
+      "sha256": {
+        "figure": "76ad47f17407373c3e0ad77eeba3f60734f6beb70ed3c8da7291521746867cd7",
+        "tex": "77854d931b56596364e512d59d309af0385f96786ae51549781f5715eca13785"
+      }
+    },
+    {
+      "id": "public-multi-dataset",
+      "kind": "structured-synthetic",
+      "figure": "docs/images/public/multi-dataset.png",
+      "tex": "assets/cases/public/multi-dataset/table.tex",
+      "sha256": {
+        "figure": "80ee067cd3cbc624448a6c9e1fcc6cebe7cc69edca7e4a1ef90272405671dfe8",
+        "tex": "c67d225a2d43821bb06bebbd141b03fb3945ce95ff16b710a1b06720ba6fce5e"
+      }
+    },
+    {
+      "id": "public-ties-missing",
+      "kind": "structured-synthetic",
+      "figure": "docs/images/public/ties-missing.png",
+      "tex": "assets/cases/public/ties-missing/table.tex",
+      "sha256": {
+        "figure": "315af7a67c8dc15e5aa8a37f5de5723518720e961d858ae7337daf8f0cc0228c",
+        "tex": "0c90d4d910b7dbd8cb9333fb4b97e3cd258957737169ac6b1bc17fcac641263d"
+      }
+    },
+    {
+      "id": "public-uncertainty",
+      "kind": "structured-synthetic",
+      "figure": "docs/images/public/uncertainty.png",
+      "tex": "assets/cases/public/uncertainty/table.tex",
+      "sha256": {
+        "figure": "d9cbb671c0d787699db30d23c6cac2081f5389ef67073a997678189eb387b3c4",
+        "tex": "ff3d071a690db6ad1d3cf166d1467d26fd8db771dd92670dbe5c904e35e5afa1"
+      }
+    },
+    {
+      "id": "public-wide",
+      "kind": "structured-synthetic",
+      "figure": "docs/images/public/wide.png",
+      "tex": "assets/cases/public/wide/table.tex",
+      "sha256": {
+        "figure": "a0647ab42d4d7237502ee4525d4450634437ab19ef1222c04f8bdbdd7bae93ce",
+        "tex": "92187da8cf3b9a41cf4df64b8a94306b203ae8e4179f6692a649c9cbfa732abc"
+      }
+    },
+    {
+      "id": "showcase-main",
+      "kind": "advanced-synthetic",
+      "figure": "docs/images/showcase-main.png",
+      "tex": "docs/examples/showcase/showcase-main.tex",
+      "sha256": {
+        "figure": "29ddc5d0440b4d8665777ee4ce8d04962504708c305e60a53e7817310a281bd6",
+        "tex": "2c9aa1cac02f702f6be3204b1264139ea86a6bd26e93e7f12414a7d7d4fb9541"
+      }
+    },
+    {
+      "id": "showcase-sensitivity",
+      "kind": "advanced-synthetic",
+      "figure": "docs/images/showcase-sensitivity.png",
+      "tex": "docs/examples/showcase/showcase-sensitivity.tex",
+      "sha256": {
+        "figure": "923052d8751c14c8101a579096a5989495f09b45b2774ae0fe8c433c726da7ef",
+        "tex": "ab86ac3c165020e8907302c281d0c8b283b9e7c300457d8651afd41024cd970d"
+      }
+    },
+    {
+      "id": "showcase-paired",
+      "kind": "advanced-synthetic",
+      "figure": "docs/images/showcase-paired.png",
+      "tex": "docs/examples/showcase/showcase-paired.tex",
+      "sha256": {
+        "figure": "940ef967f7bc64df7a969f5130c3edf1fd17e7b4a8ed8aa727995470e25bc2da",
+        "tex": "f077d1d9b8ad12d1382b63e32d88d021d418be066b01d397010bf84bc01f8776"
+      }
+    },
+    {
+      "id": "showcase-ablation",
+      "kind": "advanced-synthetic",
+      "figure": "docs/images/showcase-ablation.png",
+      "tex": "docs/examples/showcase/showcase-ablation.tex",
+      "sha256": {
+        "figure": "5c0d3f3386fa6e539323832f847cd5c1c2732e682e345c46bf3a877c1561ad48",
+        "tex": "77543cd8335b3774823281dd849029b9d5690af3712aa357b340253ecc1c34ac"
+      }
+    },
+    {
+      "id": "showcase-coverage",
+      "kind": "advanced-synthetic",
+      "figure": "docs/images/showcase-coverage.png",
+      "tex": "docs/examples/showcase/showcase-coverage.tex",
+      "sha256": {
+        "figure": "8528fa05855e4dc77fc4eb5abceca747fd7f8c6f99ba1ed7a408e14b04d81aef",
+        "tex": "5839a7964d958751e59a6f6061d7d9027ce9494b5cde4d4056df9692774ae659"
+      }
+    },
+    {
+      "id": "basic-benchmark",
+      "kind": "documentation-synthetic",
+      "figure": "docs/images/benchmark.png",
+      "tex": "docs/examples/benchmark.tex",
+      "sha256": {
+        "figure": "08a09d1339892568f5d6256e98f31ec10eac76441685a3c9d46e901b49d9a523",
+        "tex": "197ef66d3035a96c6f2442f380670f9713c7219891bc8be7f17b4f0ffa5c079c"
+      }
+    },
+    {
+      "id": "basic-ablation",
+      "kind": "documentation-synthetic",
+      "figure": "docs/images/ablation.png",
+      "tex": "docs/examples/ablation.tex",
+      "sha256": {
+        "figure": "1efe63e6c3f2be38c731f078a405f295495dc460f59f89d13d00caea1c632a2a",
+        "tex": "69450a48578d7ac082f1abb8e72d6b440445a61c711a7c64ad3ff854039f504e"
+      }
+    },
+    {
+      "id": "refinement-before",
+      "kind": "refinement-synthetic",
+      "figure": "docs/images/refinement-before.png",
+      "tex": "docs/examples/refinement-before.tex",
+      "sha256": {
+        "figure": "2d50f7390df5ceb8d08e384c43f7b2d9efb8aaaecdd91817ba829b89c176571b",
+        "tex": "90c981246706ef975e34c1093c930b09e5e25dd2388b7976f9fe05b330a677c2"
+      }
+    },
+    {
+      "id": "refinement-after",
+      "kind": "refinement-synthetic",
+      "figure": "docs/images/refinement-after.png",
+      "tex": "docs/examples/refinement-after.tex",
+      "sha256": {
+        "figure": "ce25802691a9df5f8752a0d2389f64a9ecc9c54ae1104f078e91e6df2a48e503",
+        "tex": "197ef66d3035a96c6f2442f380670f9713c7219891bc8be7f17b4f0ffa5c079c"
+      }
+    },
+    {
+      "id": "reuse-baseline",
+      "kind": "design-reuse-synthetic",
+      "figure": "docs/images/reuse-baseline.png",
+      "tex": "docs/examples/design-reuse/baseline.tex",
+      "sha256": {
+        "figure": "ca689aede4ce3ef20e30c56888bba3a30b0ee31c9209d6065a26ceeca86a95bb",
+        "tex": "bf9c882cc893c44d13199d0ab9bd595d55132e600afcea31ad9ff65eaabb95c8"
+      }
+    },
+    {
+      "id": "reuse-grouped",
+      "kind": "design-reuse-synthetic",
+      "figure": "docs/images/reuse-grouped.png",
+      "tex": "docs/examples/design-reuse/grouped-readable.tex",
+      "sha256": {
+        "figure": "e92c85d4d98c0b358614b8d49566b2afa18199dda8ed8311dab9f45724d58f56",
+        "tex": "442ac1fb502dba75626663aee11b34e60713c897d55459c15e9521e7afdc001a"
+      }
+    },
+    {
+      "id": "reuse-compact",
+      "kind": "design-reuse-synthetic",
+      "figure": "docs/images/reuse-compact.png",
+      "tex": "docs/examples/design-reuse/compact-readable.tex",
+      "sha256": {
+        "figure": "ee502754a7c2205aa9e5915f81ec166a36ba284cb2681edccde55d177dfe60ea",
+        "tex": "c791be0c9ebba2e7c34a8ef0ab8f97f0a89f7cd05b1ce0f78b5e40b8b3916af4"
+      }
+    }
+  ]
+}
